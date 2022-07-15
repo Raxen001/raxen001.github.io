@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+  <html>
+    <title>Raxen's abode</title>
+    <head>
+      <link
+        rel="stylesheet"
+        href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css"
+      />
+      <link rel="icon" type="image/png" sizes="32x32"
+      href="https://raxen001.github.io/img/favicon-32x32.png" />
+
+      <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+      <meta content="utf-8" http-equiv="encoding" />
+
+      <meta name="author" content="Raxen" />
+      <meta name="description" content="This Raxen's Homepage" />
+      <link rel="stylesheet" type="text/css" href="https://raxen001.github.io/index.css" />
+    </head>
+    <body>
+      <pre>
+  ██▀███   ▄▄▄      ▒██   ██▒▓█████  ███▄    █
+ ▓██ ▒ ██▒▒████▄    ▒▒ █ █ ▒░▓█   ▀  ██ ▀█   █
+ ▓██ ░▄█ ▒▒██  ▀█▄  ░░  █   ░▒███   ▓██  ▀█ ██▒
+ ▒██▀▀█▄  ░██▄▄▄▄██  ░ █ █ ▒ ▒▓█  ▄ ▓██▒  ▐▌██▒
+ ░██▓ ▒██▒ ▓█   ▓██▒▒██▒ ▒██▒░▒████▒▒██░   ▓██░
+ ░ ▒▓ ░▒▓░ ▒▒   ▓▒█░▒▒ ░ ░▓ ░░░ ▒░ ░░ ▒░   ▒ ▒
+   ░▒ ░ ▒░  ▒   ▒▒ ░░░   ░▒ ░ ░ ░  ░░ ░░   ░ ▒░
+   ░░   ░   ░   ▒    ░    ░     ░      ░   ░ ░
+    ░           ░  ░ ░    ░     ░  ░         ░
+</pre>
+      <nav>
+        <ul>
+          <li> <a href="https://raxen001.github.io"><i class="fa fa-home"></i>HOME</a></li>
+          <li><a href="https://raxen001.github.io/where-is-my-mind">Where-Is-My-Mind</a></li>
+          <li><a href="https://raxen001.github.io/notes">NOTES</a></li>
+          <!--<li><a href="books.html"><i class="fa fa-book"></i></a></li>-->
+          <!--<li><a href="photo.html"><i class="fa fa-photo"></i></a></li>-->
+          <!--<li><a href="movie.html"><i class="fa fa-film"></i></a></li>-->
+          <!--<li><a href="https://raxen001.github.io/anime/">ANIME</a></li>-->
+          <!--<li><a href="pages/startpage.html">STARTPAGE</a></li>-->
+        </ul> 
+      </nav>
+      
+<h1 class="title">
+  searching
+</h1>
+<p class="subtitle"><strong></strong></p>
+<h1 id="unit-5">Unit 5</h1>
+<h2 id="linear-search">Linear Search</h2>
+<ul>
+<li>Sequential search for the element in the list</li>
+<li>efficiency <em>o[n]</em></li>
+</ul>
+<h3 id="advantages">Advantages</h3>
+<ul>
+<li>simple</li>
+<li>Doesn't require sorted list</li>
+</ul>
+<h3 id="disadvantages">Disadvantages</h3>
+<ul>
+<li>inefficient with large list</li>
+<li>Doesn't leverage previously sorted list</li>
+</ul>
+<h2 id="binary-search">Binary Search</h2>
+<h3 id="pre-requirements">PRE REQUIREMENTS</h3>
+<ul>
+<li>Need <strong>SORTED LIST</strong></li>
+<li>best efficiency o(1)</li>
+<li>worst O(log2n)</li>
+</ul>
+<h3 id="procedure">PROCEDURE</h3>
+<p>begins
+by comparing the element that is present at the middle of the list. If there is a match, then the
+search ends immediately and the location of the middle element is returned. However, if there
+is a mismatch then it focuses the search either in the left or the right sub list depending on
+whether the target element is lesser than or greater than middle element. The same
+methodology is repeatedly followed until the target element is found.</p>
+<h3 id="advantages-1">Advantages</h3>
+<p>Some of the key advantages of binary search technique are:</p>
+<p>• It requires lesser number of iterations.
+• It is a lot faster than linear search.</p>
+<p>###disadvantages</p>
+<p>associated with it are as follows:
+• Unlike linear search, it requires the list to be sorted before search can be performed.
+• In comparison to linear search, the binary search technique may seem to be a little
+difficult to implement.</p>
+<h3 id="function">Function</h3>
+<pre data-lang="c" style="background-color:#2b303b;color:#c0c5ce;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#b48ead;">int </span><span style="color:#8fa1b3;">BinarySearch</span><span>(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">a</span><span>[], </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">n</span><span>, </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">key</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#b48ead;">int</span><span> first, last, mid;
+</span><span>    first = </span><span style="color:#d08770;">0</span><span>;
+</span><span>    last = n - </span><span style="color:#d08770;">1</span><span>;
+</span><span>    </span><span style="color:#b48ead;">while </span><span>(first &lt;= last)
+</span><span>    {
+</span><span>        mid = (first + last) / </span><span style="color:#d08770;">2</span><span>;
+</span><span>        </span><span style="color:#b48ead;">if </span><span>(a[mid] == key)
+</span><span>        </span><span style="color:#b48ead;">return</span><span> mid;
+</span><span>    </span><span style="color:#b48ead;">else if </span><span>(a[mid] &lt; key)
+</span><span>        first = mid + </span><span style="color:#d08770;">1</span><span>;
+</span><span>    </span><span style="color:#b48ead;">else
+</span><span>        last = mid - </span><span style="color:#d08770;">1</span><span>;
+</span><span>    }
+</span><span>    </span><span style="color:#b48ead;">return </span><span>-</span><span style="color:#d08770;">1</span><span>;
+</span><span>}
+</span></code></pre>
+
+
+    </body>
+  </html>
+</DOCTYPE>

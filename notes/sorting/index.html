@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+  <html>
+    <title>Raxen's abode</title>
+    <head>
+      <link
+        rel="stylesheet"
+        href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css"
+      />
+      <link rel="icon" type="image/png" sizes="32x32"
+      href="https://raxen001.github.io/img/favicon-32x32.png" />
+
+      <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+      <meta content="utf-8" http-equiv="encoding" />
+
+      <meta name="author" content="Raxen" />
+      <meta name="description" content="This Raxen's Homepage" />
+      <link rel="stylesheet" type="text/css" href="https://raxen001.github.io/index.css" />
+    </head>
+    <body>
+      <pre>
+  ██▀███   ▄▄▄      ▒██   ██▒▓█████  ███▄    █
+ ▓██ ▒ ██▒▒████▄    ▒▒ █ █ ▒░▓█   ▀  ██ ▀█   █
+ ▓██ ░▄█ ▒▒██  ▀█▄  ░░  █   ░▒███   ▓██  ▀█ ██▒
+ ▒██▀▀█▄  ░██▄▄▄▄██  ░ █ █ ▒ ▒▓█  ▄ ▓██▒  ▐▌██▒
+ ░██▓ ▒██▒ ▓█   ▓██▒▒██▒ ▒██▒░▒████▒▒██░   ▓██░
+ ░ ▒▓ ░▒▓░ ▒▒   ▓▒█░▒▒ ░ ░▓ ░░░ ▒░ ░░ ▒░   ▒ ▒
+   ░▒ ░ ▒░  ▒   ▒▒ ░░░   ░▒ ░ ░ ░  ░░ ░░   ░ ▒░
+   ░░   ░   ░   ▒    ░    ░     ░      ░   ░ ░
+    ░           ░  ░ ░    ░     ░  ░         ░
+</pre>
+      <nav>
+        <ul>
+          <li> <a href="https://raxen001.github.io"><i class="fa fa-home"></i>HOME</a></li>
+          <li><a href="https://raxen001.github.io/where-is-my-mind">Where-Is-My-Mind</a></li>
+          <li><a href="https://raxen001.github.io/notes">NOTES</a></li>
+          <!--<li><a href="books.html"><i class="fa fa-book"></i></a></li>-->
+          <!--<li><a href="photo.html"><i class="fa fa-photo"></i></a></li>-->
+          <!--<li><a href="movie.html"><i class="fa fa-film"></i></a></li>-->
+          <!--<li><a href="https://raxen001.github.io/anime/">ANIME</a></li>-->
+          <!--<li><a href="pages/startpage.html">STARTPAGE</a></li>-->
+        </ul> 
+      </nav>
+      
+<h1 class="title">
+  sorting
+</h1>
+<p class="subtitle"><strong></strong></p>
+<h1 id="sorting">Sorting</h1>
+<p>The sorting operation arranges the numerical and alphabetical data
+present in a list, in a specific order or sequence.</p>
+<ul>
+<li><a href="https://raxen001.github.io/notes/sorting/#internal-sorting">Internal Sorting</a></li>
+<li><a href="external-sorting">External Sorting</a></li>
+</ul>
+<h2 id="internal-sorting">INTERNAL SORTING</h2>
+<p>All sorting techniques which require the data set to be present in the main memory are
+referred as internal sorting techniques. Examples:</p>
+<ul>
+<li><a href="https://raxen001.github.io/notes/sorting/#insertion-sort">Insertion sort</a></li>
+<li><a href="https://raxen001.github.io/notes/sorting/#selection-sort">Selection sort</a></li>
+<li><a href="https://raxen001.github.io/notes/sorting/#shell-sort">Shell sort</a></li>
+<li><a href="https://raxen001.github.io/notes/sorting/#bubble-sort">Bubble sort</a></li>
+<li><a href="https://raxen001.github.io/notes/sorting/#quick-sort">Quick sort</a></li>
+<li>Heap sort</li>
+</ul>
+<h2 id="external-sorting">EXTERNAL SORTING</h2>
+<p>External Sorting, takes place in the secondary memory of a computer. Since the number
+of objects to be sorted is too large to fit in main memory. Examples:</p>
+<ul>
+<li><a href="https://raxen001.github.io/notes/sorting/#merge-sort">Merge Sort</a></li>
+<li>Multiway Merge</li>
+<li>Polyphase merge</li>
+</ul>
+<h2 id="insertion-sort">Insertion sort</h2>
+<h3 id="efficiency-of-insertion-sort">EFFICIENCY OF INSERTION SORT</h3>
+<p>Assume that an array containing n elements is sorted using insertion sort technique.</p>
+<ul>
+<li>The minimum number of elements that must be scanned = n – 1.</li>
+<li>For each of the elements the maximum number of shifts possible = n – 1.</li>
+<li>Thus, efficiency of insertion sort = O(n2)</li>
+</ul>
+<h3 id="analysis-of-insertion-sort">ANALYSIS OF INSERTION SORT</h3>
+<p>Best case analysis : O(n)
+Average case analysis : O(n2)
+Worst case analysis : O(n2)</p>
+<h3 id="advantages-of-insertion-sort">ADVANTAGES OF INSERTION SORT</h3>
+<p>Some of the key advantages of insertion sorting technique are:</p>
+<ul>
+<li>It is one of the simplest sorting techniques that is easy to implement.</li>
+<li>It performs well in case of smaller lists.</li>
+<li>It leverages the presence of any existing sort pattern in the list, thus resulting in better efficiency.</li>
+</ul>
+<h3 id="limitations-of-insertion-sort">LIMITATIONS OF INSERTION SORT</h3>
+<p>The disadvantages associated with insertion sorting technique are as follows:</p>
+<ul>
+<li>The efficiency of O(n2) is not well suited for large sized lists.</li>
+<li>It is expensive because of shifting all following elements by one.</li>
+</ul>
+<h3 id="code">Code</h3>
+<pre data-lang="c" style="background-color:#2b303b;color:#c0c5ce;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">insertionSort</span><span>(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">arr</span><span>[], </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">n</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#b48ead;">int</span><span> i, key, j;
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(i = </span><span style="color:#d08770;">1</span><span>; i &lt; n; i++) {
+</span><span>        key = arr[i];
+</span><span>        j = i - </span><span style="color:#d08770;">1</span><span>;
+</span><span>
+</span><span>        </span><span style="color:#65737e;">/* Move elements of arr[0..i-1], that are
+</span><span style="color:#65737e;">          greater than key, to one position ahead
+</span><span style="color:#65737e;">          of their current position */
+</span><span>        </span><span style="color:#b48ead;">while </span><span>(j &gt;= </span><span style="color:#d08770;">0 </span><span>&amp;&amp; arr[j] &gt; key) {
+</span><span>            arr[j + </span><span style="color:#d08770;">1</span><span>] = arr[j];
+</span><span>            j = j - </span><span style="color:#d08770;">1</span><span>;
+</span><span>        }
+</span><span>        arr[j + </span><span style="color:#d08770;">1</span><span>] = key;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="selection-sort">Selection sort</h2>
+<p>Selection sort is a sorting algorithm that selects the smallest element from an unsorted list in each iteration and places that element at the beginning of the unsorted list.</p>
+<p>A <em>single iteration</em> of the selection sorting technique that brings the smallest element at
+the beginning of the list is called a <strong>pass</strong>.</p>
+<h3 id="advantages">advantages</h3>
+<p>Some of the key advantages of selection sorting technique are:</p>
+<ul>
+<li>It is one of the simplest of sorting techniques.</li>
+<li>It is easy to understand and implement.</li>
+<li>It performs well in case of smaller lists.</li>
+<li>It does not require additional memory space to perform sorting.</li>
+</ul>
+<h3 id="limitations-of-selection-sort">LIMITATIONS OF SELECTION SORT</h3>
+<p>The disadvantages associated with selection sort that prevent the programmers from
+using it often are as follows:</p>
+<ul>
+<li>The efficiency of O(n2) is not well suited for large sized lists.</li>
+<li>It does not leverage the presence of any existing sort pattern in the list.</li>
+</ul>
+<h3 id="code-1">Code</h3>
+<pre data-lang="c" style="background-color:#2b303b;color:#c0c5ce;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#65737e;">// function to swap the the position of two elements
+</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">swap</span><span>(</span><span style="color:#b48ead;">int </span><span>*</span><span style="color:#bf616a;">a</span><span>, </span><span style="color:#b48ead;">int </span><span>*</span><span style="color:#bf616a;">b</span><span>) {
+</span><span>  </span><span style="color:#b48ead;">int</span><span> temp = *a;
+</span><span>  *a = *b;
+</span><span>  *b = temp;
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">selectionSort</span><span>(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">array</span><span>[], </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">size</span><span>) {
+</span><span>  </span><span style="color:#b48ead;">for </span><span>(</span><span style="color:#b48ead;">int</span><span> step = </span><span style="color:#d08770;">0</span><span>; step &lt; size - </span><span style="color:#d08770;">1</span><span>; step++) {
+</span><span>    </span><span style="color:#b48ead;">int</span><span> min_idx = step;
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(</span><span style="color:#b48ead;">int</span><span> i = step + </span><span style="color:#d08770;">1</span><span>; i &lt; size; i++) {
+</span><span>
+</span><span>      </span><span style="color:#65737e;">// To sort in descending order, change &gt; to &lt; in this line.
+</span><span>      </span><span style="color:#65737e;">// Select the minimum element in each loop.
+</span><span>      </span><span style="color:#b48ead;">if </span><span>(array[i] &lt; array[min_idx])
+</span><span>        min_idx = i;
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#65737e;">// put min at the correct position
+</span><span>    </span><span style="color:#bf616a;">swap</span><span>(&amp;array[min_idx], &amp;array[step]);
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<h2 id="shell-sort">Shell sort</h2>
+<p><strong>Shell sort</strong> is mainly a variation of <strong>Insertion Sort</strong></p>
+<p>Shell sort is an algorithm that first sorts the elements far apart from each other and
+successively reduces the interval between the elements to be sorted. It is a generalized version
+of insertion sort.
+In shell sort, elements at a specific interval are sorted. The interval between the
+elements is gradually decreased based on the sequence used. The performance of the shell sort
+depends on the type of sequence used for a given input array.</p>
+<p>Optimal sequences used are:</p>
+<ul>
+<li>Shell's original sequence: N/2 , N/4 , ..., 1</li>
+<li>Knuth's increments: 1, 4, 13, ..., (3k – 1) / 2</li>
+<li>Sedgewick's increments: 1, 8, 23, 77, 281, 1073, 4193, 16577...4j+1+ 3·2j+ 1</li>
+<li>Hibbard's increments: 1, 3, 7, 15, 31, 63, 127, 255, 511...</li>
+<li>Papernov &amp; Stasevich increment: 1, 3, 5, 9, 17, 33, 65,...</li>
+<li>Pratt: 1, 2, 3, 4, 6, 9, 8, 12, 18, 27, 16, 24, 36, 54, 81....</li>
+</ul>
+<h3 id="analysis-of-shell-sort">ANALYSIS OF SHELL SORT</h3>
+<p>Best case analysis : O(n log n)
+Average case analysis : O(n1.5)
+Worst case analysis : O(n2)</p>
+<h3 id="advantages-of-shell-sort">ADVANTAGES OF SHELL SORT</h3>
+<p>Some of the key advantages of shell sorting technique are:</p>
+<ul>
+<li>It is one of the fastest sorting techniques for sorting small number of elements.</li>
+<li>It requires relatively small amount of memory.</li>
+</ul>
+<h3 id="code-2">Code</h3>
+<pre data-lang="c" style="background-color:#2b303b;color:#c0c5ce;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">ShellSort</span><span>(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">a</span><span>[], </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">n</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#b48ead;">int</span><span> gap, i, j, temp;
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(gap = n / </span><span style="color:#d08770;">2</span><span>; gap &gt; </span><span style="color:#d08770;">0</span><span>; gap /= </span><span style="color:#d08770;">2</span><span>)
+</span><span>    {
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(i = gap; i &lt; n; i += </span><span style="color:#d08770;">1</span><span>){
+</span><span>       temp = a[i];
+</span><span>         </span><span style="color:#b48ead;">for </span><span>(j = i; j &gt;= gap &amp;&amp; a[j - gap] &gt; temp; j -= gap) {
+</span><span>            a[j] = a[j - gap];
+</span><span>            }
+</span><span>        a[j] = temp;
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="bubble-sort">Bubble Sort</h2>
+<p>Bubble sort is a sorting algorithm that compares two adjacent elements and
+swaps them until they are not in the intended order.</p>
+<h3 id="efficiency-of-bubble-sort">EFFICIENCY OF BUBBLE SORT</h3>
+<p>Assume that an array containing n elements is sorted using bubble sort technique.
+Number of comparisons made in first pass = n–1.
+Number of comparisons made in second pass = n – 2.
+Number of comparisons made in last pass = 1.
+Total number of comparisons made = (n – 1) + (n – 2) + . . . + 1
+= n * (n – 1) / 2
+= O(n2)
+Thus, efficiency of bubble sort = O(n2).</p>
+<h3 id="analysis-of-bubble-sort">ANALYSIS OF BUBBLE SORT</h3>
+<p>Best case analysis : O(n2)
+Average case analysis : O(n2)
+Worst case analysis : O(n2)</p>
+<h3 id="advantages-of-bubble-sort">ADVANTAGES OF BUBBLE SORT</h3>
+<p>Some of the key advantages of bubble sorting technique are:</p>
+<ul>
+<li>It is easy to understand and implement.</li>
+<li>It leverages the presence of any existing sort pattern in the list, thus resulting in
+better efficiency.</li>
+</ul>
+<h3 id="disadvantages">disadvantages</h3>
+<p>The disadvantages associated with bubble sorting technique are given below:</p>
+<ul>
+<li>The efficiency of O(n2) is not well suited for large sized lists.</li>
+<li>It requires large number of elements to be shifted.</li>
+<li>It is slow in execution as large elements are moved towards the end of the list in a
+step-by-step fashion.</li>
+</ul>
+<h3 id="code-3">Code</h3>
+<pre data-lang="c" style="background-color:#2b303b;color:#c0c5ce;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">bubbleSort</span><span>(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">array</span><span>[], </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">size</span><span>) {
+</span><span>
+</span><span>  </span><span style="color:#b48ead;">for </span><span>(</span><span style="color:#b48ead;">int</span><span> step = </span><span style="color:#d08770;">0</span><span>; step &lt; size - </span><span style="color:#d08770;">1</span><span>; ++step) {
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(</span><span style="color:#b48ead;">int</span><span> i = </span><span style="color:#d08770;">0</span><span>; i &lt; size - step - </span><span style="color:#d08770;">1</span><span>; ++i) {
+</span><span>      </span><span style="color:#b48ead;">if </span><span>(array[i] &gt; array[i + </span><span style="color:#d08770;">1</span><span>]) {
+</span><span>        </span><span style="color:#b48ead;">int</span><span> temp = array[i];
+</span><span>        array[i] = array[i + </span><span style="color:#d08770;">1</span><span>];
+</span><span>        array[i + </span><span style="color:#d08770;">1</span><span>] = temp;
+</span><span>      }
+</span><span>    }
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<h2 id="quick-sort">Quick Sort</h2>
+<p>Quick Sort is the <strong>most efficient <strong><em>internal sorting</em></strong> technique</strong>.</p>
+<p>Like Merge Sort, QuickSort is a Divide and Conquer algorithm</p>
+<h3 id="analysis-of-quick-sort">ANALYSIS OF QUICK SORT</h3>
+<p>Best-case analysis : O(n log n)
+Average-case analysis : O(n log n)
+Worst-case analysis : O(n2)</p>
+<h3 id="advantages-of-quick-sort">ADVANTAGES OF QUICK SORT</h3>
+<p>Some of the key advantages of quick sorting technique are:</p>
+<ul>
+<li>It is one of the fastest sorting algorithms.</li>
+<li>Its implementation does not require any additional memory.</li>
+<li>It has better cache performance and high speed.</li>
+</ul>
+<h3 id="limitations-of-quick-sort">LIMITATIONS OF QUICK SORT</h3>
+<p>The disadvantages associated with quick sorting technique are as follows.</p>
+<ul>
+<li>The worst case efficiency of O(n2) is not well suited for large sized lists.</li>
+<li>Its algorithm is considered as a little more complex in comparison to some other
+sorting techniques.</li>
+</ul>
+<h3 id="code-4">code</h3>
+<pre data-lang="c" style="background-color:#2b303b;color:#c0c5ce;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">QuickSort</span><span>(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">a</span><span>[], </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">left</span><span>, </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">right</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#b48ead;">int</span><span> i, j, temp, pivot;
+</span><span>    </span><span style="color:#b48ead;">if </span><span>(left &lt; right) {
+</span><span>        pivot = left;
+</span><span>    i = left + </span><span style="color:#d08770;">1</span><span>;
+</span><span>    j = right;
+</span><span>    </span><span style="color:#b48ead;">while </span><span>(i &lt; j) {
+</span><span>        </span><span style="color:#b48ead;">while </span><span>(a[i] &lt; a[pivot]) i++;
+</span><span>        </span><span style="color:#b48ead;">while </span><span>(a[j] &gt; a[pivot]) j--;
+</span><span>        </span><span style="color:#b48ead;">if </span><span>(i &lt; j) {
+</span><span>            temp = a[i];
+</span><span>            a[i] = a[j];
+</span><span>            a[j] = temp;
+</span><span>        }
+</span><span>    }
+</span><span>    temp = a[pivot];
+</span><span>    a[pivot] = a[j];
+</span><span>    a[j] = temp;
+</span><span>    </span><span style="color:#bf616a;">QuickSort</span><span>(a, left, j - </span><span style="color:#d08770;">1</span><span>);
+</span><span>    </span><span style="color:#bf616a;">QuickSort</span><span>(a, j + </span><span style="color:#d08770;">1</span><span>, right);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="merge-sort">Merge sort</h2>
+<p>Algorithm follows divide and conquer</p>
+<ul>
+<li>In dividing phase, the problem is divided into smaller problem and solved
+recursively.</li>
+<li>In conquering phase, the partitioned array is merged together recursively.</li>
+</ul>
+<h3 id="code-5">code</h3>
+<pre data-lang="c" style="background-color:#2b303b;color:#c0c5ce;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">MergeSort</span><span>(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">arr</span><span>[], </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">left</span><span>, </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">right</span><span>) {
+</span><span>  </span><span style="color:#b48ead;">int</span><span> center;
+</span><span>  </span><span style="color:#b48ead;">if </span><span>(left &lt; right) {
+</span><span>    center = (left + right) / </span><span style="color:#d08770;">2</span><span>;
+</span><span>    </span><span style="color:#bf616a;">MergeSort</span><span>(arr, left, center);
+</span><span>    </span><span style="color:#bf616a;">MergeSort</span><span>(arr, center + </span><span style="color:#d08770;">1</span><span>, right);
+</span><span>    </span><span style="color:#bf616a;">Merge</span><span>(arr, left, center, right);
+</span><span>  }
+</span><span>}
+</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">Merge</span><span>(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">arr</span><span>[], </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">left</span><span>, </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">center</span><span>, </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">right</span><span>) {
+</span><span>  </span><span style="color:#b48ead;">int</span><span> a[</span><span style="color:#d08770;">20</span><span>], b[</span><span style="color:#d08770;">20</span><span>], n1, n2, aptr, bptr, cptr, i, j;
+</span><span>  n1 = center - left + </span><span style="color:#d08770;">1</span><span>;
+</span><span>  n2 = right - center;
+</span><span>  </span><span style="color:#b48ead;">for </span><span>(i = </span><span style="color:#d08770;">0</span><span>; i &lt; n1; i++)
+</span><span>    a[i] = arr[left + i];
+</span><span>  </span><span style="color:#b48ead;">for </span><span>(j = </span><span style="color:#d08770;">0</span><span>; j &lt; n2; j++)
+</span><span>    b[j] = arr[center + </span><span style="color:#d08770;">1 </span><span>+ j];
+</span><span>  aptr = </span><span style="color:#d08770;">0</span><span>;
+</span><span>  bptr = </span><span style="color:#d08770;">0</span><span>;
+</span><span>  cptr = left;
+</span><span>  </span><span style="color:#b48ead;">while </span><span>(aptr &lt; n1 &amp;&amp; bptr &lt; n2) {
+</span><span>    </span><span style="color:#b48ead;">if </span><span>(a[aptr] &lt;= b[bptr]) {
+</span><span>      arr[cptr] = a[aptr];
+</span><span>      aptr++;
+</span><span>    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>      arr[cptr] = b[bptr];
+</span><span>      bptr++;
+</span><span>    }
+</span><span>    cptr++;
+</span><span>  }
+</span><span>    arr[cptr] = a[aptr];
+</span><span>    aptr++;
+</span><span>    cptr++;
+</span><span>  }
+</span><span>  </span><span style="color:#b48ead;">while </span><span>(bptr &lt; n2) {
+</span><span>    arr[cptr] = b[bptr];
+</span><span>    bptr++;
+</span><span>    cptr++;
+</span><span>  }
+</span><span style="background-color:#bf616a;color:#2b303b;">}</span><span>
+</span></code></pre>
+<h3 id="analysis-of-merge-sort">ANALYSIS OF MERGE SORT</h3>
+<p>Worst case analysis : O(N log N)
+Best case analysis : O(N log N)
+Average case analysis : O(N log N)</p>
+<h3 id="advantages-1">ADVANTAGES</h3>
+<p>Some of the key advantages of merge sorting technique are:</p>
+<ul>
+<li>It is a fast and stable sorting method.</li>
+<li>It always ensures an efficiency of O(n log n).</li>
+<li>It has better cache performance.</li>
+<li>Merge Sort is a Stable Sort.</li>
+</ul>
+<h3 id="limitations">LIMITATIONS</h3>
+<p>The disadvantages associated with merge sorting technique are as follows</p>
+<ul>
+<li>It requires additional memory space to perform sorting. The size of the
+additional space is in direct proportion to the size of the input list.</li>
+<li>Even though the number of comparisons made by merge sort are nearly optimal,
+its performance is slightly lesser than that of quick sort.</li>
+<li>Merge sort sorts the larger amount of data making use of external storage
+device.</li>
+<li>It requires extra memory space.</li>
+</ul>
+
+
+    </body>
+  </html>
+</DOCTYPE>

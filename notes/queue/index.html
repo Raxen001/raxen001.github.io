@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+  <html>
+    <title>Raxen's abode</title>
+    <head>
+      <link
+        rel="stylesheet"
+        href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css"
+      />
+      <link rel="icon" type="image/png" sizes="32x32"
+      href="https://raxen001.github.io/img/favicon-32x32.png" />
+
+      <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+      <meta content="utf-8" http-equiv="encoding" />
+
+      <meta name="author" content="Raxen" />
+      <meta name="description" content="This Raxen's Homepage" />
+      <link rel="stylesheet" type="text/css" href="https://raxen001.github.io/index.css" />
+    </head>
+    <body>
+      <pre>
+  ██▀███   ▄▄▄      ▒██   ██▒▓█████  ███▄    █
+ ▓██ ▒ ██▒▒████▄    ▒▒ █ █ ▒░▓█   ▀  ██ ▀█   █
+ ▓██ ░▄█ ▒▒██  ▀█▄  ░░  █   ░▒███   ▓██  ▀█ ██▒
+ ▒██▀▀█▄  ░██▄▄▄▄██  ░ █ █ ▒ ▒▓█  ▄ ▓██▒  ▐▌██▒
+ ░██▓ ▒██▒ ▓█   ▓██▒▒██▒ ▒██▒░▒████▒▒██░   ▓██░
+ ░ ▒▓ ░▒▓░ ▒▒   ▓▒█░▒▒ ░ ░▓ ░░░ ▒░ ░░ ▒░   ▒ ▒
+   ░▒ ░ ▒░  ▒   ▒▒ ░░░   ░▒ ░ ░ ░  ░░ ░░   ░ ▒░
+   ░░   ░   ░   ▒    ░    ░     ░      ░   ░ ░
+    ░           ░  ░ ░    ░     ░  ░         ░
+</pre>
+      <nav>
+        <ul>
+          <li> <a href="https://raxen001.github.io"><i class="fa fa-home"></i>HOME</a></li>
+          <li><a href="https://raxen001.github.io/where-is-my-mind">Where-Is-My-Mind</a></li>
+          <li><a href="https://raxen001.github.io/notes">NOTES</a></li>
+          <!--<li><a href="books.html"><i class="fa fa-book"></i></a></li>-->
+          <!--<li><a href="photo.html"><i class="fa fa-photo"></i></a></li>-->
+          <!--<li><a href="movie.html"><i class="fa fa-film"></i></a></li>-->
+          <!--<li><a href="https://raxen001.github.io/anime/">ANIME</a></li>-->
+          <!--<li><a href="pages/startpage.html">STARTPAGE</a></li>-->
+        </ul> 
+      </nav>
+      
+<h1 class="title">
+  Queue
+</h1>
+<p class="subtitle"><strong></strong></p>
+<h1 id="unit-4">Unit 4</h1>
+<h2 id="queue-fifo-first-in-first-out">Queue FIFO ( First In First Out )</h2>
+<ul>
+<li>
+<p>Abstract data type (or) Linear data structure</p>
+<ul>
+<li>list stack data</li>
+</ul>
+</li>
+<li>
+<p>1st element <strong>REAR</strong>(or)<strong>TAIL</strong></p>
+</li>
+<li>
+<p>removal from <strong>FRONT</strong></p>
+</li>
+<li>
+<p>Once a new element is inserted into the Queue, all the elements inserted before
+the new element in the queue must be removed, to remove the new element.</p>
+</li>
+<li>
+<p><code>peek()</code> value of the first element without <strong>dequeing</strong></p>
+</li>
+<li>
+<p>storage requirement o[n]</p>
+</li>
+<li>
+<p>time operation o[1]</p>
+</li>
+</ul>
+<h3 id="applications">Applications</h3>
+<ol>
+<li>Serving requests on a single shared resource, like a printer, CPU task scheduling, etc.</li>
+<li>In a real-life scenario, Call Centre phone systems use Queues to hold people calling them in order, until a service representative is free.</li>
+<li>Handling of interrupts in real-time systems. The interrupts are handled in the same order as they arrive i.e. First come first served.</li>
+</ol>
+<h3 id="queue-using-array">Queue using array</h3>
+<pre data-lang="c" style="background-color:#2b303b;color:#c0c5ce;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#b48ead;">#include </span><span>&lt;</span><span style="color:#a3be8c;">stdio.h</span><span>&gt;
+</span><span style="color:#b48ead;">#define </span><span>n </span><span style="color:#d08770;">5
+</span><span style="color:#b48ead;">int</span><span> queue[n];
+</span><span style="color:#b48ead;">int</span><span> front = -</span><span style="color:#d08770;">1</span><span>, rear = -</span><span style="color:#d08770;">1</span><span>;
+</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">enqueue</span><span>(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">x</span><span>) {
+</span><span>  </span><span style="color:#b48ead;">if </span><span>(rear == n - </span><span style="color:#d08770;">1</span><span>)
+</span><span>    </span><span style="color:#96b5b4;">printf</span><span>(&quot;</span><span style="color:#a3be8c;">overflow</span><span>&quot;);
+</span><span>  </span><span style="color:#b48ead;">else if </span><span>(front == -</span><span style="color:#d08770;">1 </span><span>&amp;&amp; rear == -</span><span style="color:#d08770;">1</span><span>) {
+</span><span>    front = rear = </span><span style="color:#d08770;">0</span><span>;
+</span><span>    queue[rear] = x;
+</span><span>  } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>    rear++;
+</span><span>    queue[rear] = x;
+</span><span>  }
+</span><span>}
+</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">dequeue</span><span>() {
+</span><span>  </span><span style="color:#b48ead;">if </span><span>(front == -</span><span style="color:#d08770;">1 </span><span>&amp;&amp; rear == -</span><span style="color:#d08770;">1</span><span>)
+</span><span>    </span><span style="color:#96b5b4;">printf</span><span>(&quot;</span><span style="color:#a3be8c;">underflow</span><span>&quot;);
+</span><span>  </span><span style="color:#b48ead;">else if </span><span>(front == rear) </span><span style="color:#65737e;">// only element in a queue
+</span><span>    front = rear = -</span><span style="color:#d08770;">1</span><span>;
+</span><span>  </span><span style="color:#b48ead;">else </span><span>{
+</span><span>    </span><span style="color:#96b5b4;">printf</span><span>(&quot;</span><span style="color:#a3be8c;">element deleted is </span><span style="color:#d08770;">%d</span><span>&quot;, queue[front]);
+</span><span>    front++;
+</span><span>  }
+</span><span>}
+</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">display</span><span>() {
+</span><span>  </span><span style="color:#b48ead;">if </span><span>(front == -</span><span style="color:#d08770;">1 </span><span>&amp;&amp; rear == -</span><span style="color:#d08770;">1</span><span>)
+</span><span>    </span><span style="color:#96b5b4;">printf</span><span>(&quot;</span><span style="color:#a3be8c;">underflow</span><span>&quot;);
+</span><span>  </span><span style="color:#b48ead;">else </span><span>{
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(</span><span style="color:#b48ead;">int</span><span> i = front; i &lt;= rear; i++)
+</span><span>      </span><span style="color:#96b5b4;">printf</span><span>(&quot;</span><span style="color:#d08770;">%d </span><span>&quot;, queue[i]);
+</span><span>  }
+</span><span>}
+</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">peek</span><span>() {
+</span><span>  </span><span style="color:#b48ead;">if </span><span>(front == -</span><span style="color:#d08770;">1 </span><span>&amp;&amp; rear == -</span><span style="color:#d08770;">1</span><span>)
+</span><span>    </span><span style="color:#96b5b4;">printf</span><span>(&quot;</span><span style="color:#a3be8c;">underflow</span><span>&quot;);
+</span><span>  </span><span style="color:#b48ead;">else
+</span><span>    </span><span style="color:#96b5b4;">printf</span><span>(&quot;</span><span style="color:#a3be8c;">element at the front is </span><span style="color:#d08770;">%d</span><span>&quot;, queue[front]);
+</span><span>}
+</span><span style="color:#b48ead;">int </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>  </span><span style="color:#b48ead;">int</span><span> x, ch, c;
+</span><span>  </span><span style="color:#96b5b4;">printf</span><span>(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">1.enqueue</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">2.dequeue</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">3.peek</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">4.display</span><span>&quot;);
+</span><span>  </span><span style="color:#b48ead;">do </span><span>{
+</span><span>    </span><span style="color:#96b5b4;">printf</span><span>(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">enter your choice : </span><span>&quot;);
+</span><span>    </span><span style="color:#96b5b4;">scanf</span><span>(&quot;</span><span style="color:#d08770;">%d</span><span>&quot;, &amp;ch);
+</span><span>    </span><span style="color:#b48ead;">switch </span><span>(ch) {
+</span><span>    </span><span style="color:#b48ead;">case </span><span style="color:#d08770;">1</span><span>:
+</span><span>      </span><span style="color:#96b5b4;">printf</span><span>(&quot;</span><span style="color:#a3be8c;">enter the element to be inserted:</span><span>&quot;);
+</span><span>      </span><span style="color:#96b5b4;">scanf</span><span>(&quot;</span><span style="color:#d08770;">%d</span><span>&quot;, &amp;x);
+</span><span>      </span><span style="color:#bf616a;">enqueue</span><span>(x);
+</span><span>      </span><span style="color:#b48ead;">break</span><span>;
+</span><span>    </span><span style="color:#b48ead;">case </span><span style="color:#d08770;">2</span><span>:
+</span><span>      </span><span style="color:#bf616a;">dequeue</span><span>();
+</span><span>      </span><span style="color:#b48ead;">break</span><span>;
+</span><span>    </span><span style="color:#b48ead;">case </span><span style="color:#d08770;">3</span><span>:
+</span><span>      </span><span style="color:#bf616a;">peek</span><span>();
+</span><span>      </span><span style="color:#b48ead;">break</span><span>;
+</span><span>    </span><span style="color:#b48ead;">case </span><span style="color:#d08770;">4</span><span>:
+</span><span>      </span><span style="color:#bf616a;">display</span><span>();
+</span><span>    }
+</span><span>    </span><span style="color:#96b5b4;">printf</span><span>(&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">do you wish to continue press (1 - yes and 0 - no) : </span><span>&quot;);
+</span><span>    </span><span style="color:#96b5b4;">scanf</span><span>(&quot;</span><span style="color:#d08770;">%d</span><span>&quot;, &amp;c);
+</span><span>  } </span><span style="color:#b48ead;">while </span><span>(c == </span><span style="color:#d08770;">1</span><span>);
+</span><span>}
+</span></code></pre>
+<h2 id="circular-queue">Circular Queue</h2>
+<h3 id="applications-1">Applications</h3>
+<p>Ring Buffers are common data structures frequently used when the input and output to a data stream occur at different rates.</p>
+<ul>
+<li>Buffering Data Streams</li>
+<li>Computer Controlled Trafficking signal systems</li>
+<li>Memory Management</li>
+<li>CPU scheduling</li>
+<li>Advantages</li>
+<li>Circular Queues offer a quick and clean way to store FIFO data with a maximum size.</li>
+</ul>
+<h3 id="advantages">Advantages</h3>
+<ul>
+<li>Doesn’t use dynamic memory → No memory leaks</li>
+<li>Conserves memory as we only store up to our capacity (opposed to a queue which could continue to grow if input outpaces output.)</li>
+<li>Simple Implementation → easy to trust and test</li>
+<li>Never has to reorganize / copy data around</li>
+<li>All operations occur in constant time O(1)</li>
+<li>Disadvantages</li>
+<li>Circular Queues can only store the pre-determined maximum number of elements.</li>
+</ul>
+<h3 id="disadvantages">Disadvantages</h3>
+<ul>
+<li>Have to know the max size beforehand</li>
+</ul>
+<h2 id="priority-queue">Priority Queue</h2>
+<p>In a queue, the <strong>first-in-first-out</strong> rule is implemented whereas, in a <em>priority</em>
+queue, the values are removed on the basis of <strong>priority</strong>. The element with the
+<strong>highest priority is removed first</strong>.</p>
+
+
+    </body>
+  </html>
+</DOCTYPE>

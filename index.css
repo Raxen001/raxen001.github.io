@@ -1,0 +1,124 @@
+* {
+  font-family: "Hack";
+}
+:root {
+  --color-black: #1d2021;
+  --color-gray: #282828;
+  --color-red: #cc241d;
+  --color-lightred: #fb4934;
+  --color-green: #98971a;
+  --color-lightgreen: #b8bb26;
+  --color-yellow: #d79921;
+  --color-lightyellow: #fabd2f;
+  --color-blue: #458588;
+  --color-lightblue: #83a598;
+  --color-mangeta: #b16286;
+  --color-lightmagenta: #d3869b;
+  --color-cyan: #689d6a;
+  --color-lightcyan: #8ec07c;
+  --color-white: #928374;
+  --color-lightwhite: #d5c4a1;
+  --color-orange: #d65d0e;
+  --color-lightorange: #fe8019;
+}
+body {
+  padding: 0px;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin: 1vh;
+  background-color: var(--color-black);
+  color: var(--color-lightwhite);
+  font-size: 1.3rem;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+pre,
+code {
+    font-size: 1.0rem;
+  text-align: left;
+  padding: 10px;
+  margin-top: 0px;
+  border-color: var(--color-blue);
+}
+
+a {
+  font-family: "monospace";
+  color: var(--color-cyan);
+  text-decoration: none;
+}
+b, strong{
+    font-weight: 600;
+  color: var(--color-green);
+}
+h1 {
+  color: var(--color-red);
+}
+h2 {
+  color: var(--color-green);
+}
+h3 {
+  color: var(--color-yellow);
+}
+h4 {
+  color: var(--color-blue);
+}
+h5 {
+  color: var(--color-purple);
+}
+h6 {
+  color: var(--color-cyan);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding-left: 0rem;
+  text-decoration: underline;
+  text-align: left;
+}
+/* @media max-width == <= and min-width ==  >= */
+@media (max-width: 300px) {
+  html {
+    font-size: 18px;
+  }
+}
+nav {
+  background-color: var(--color-gray);
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  display: flex;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  display: inline;
+}
+nav a {
+  display: block;
+  padding: 8px;
+  background-color: var(--color-gray);
+}
+
+img {
+  border: 3px solid #282828;
+  height: auto;
+  object-fit: cover;
+  object-position: 50% 100%;
+  width: 50vw;
+  text-align: center;
+  object-position: center;
+}
+
+.footnote-definition {
+    font-size: 0.8rem;
+    padding-left: 3vw;
+    background-color: var(--color-black);
+}
