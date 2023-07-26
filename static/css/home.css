@@ -1,0 +1,52 @@
+main {
+  width: 100%;
+  padding-left: 23%;
+  padding-top: 3%;
+}
+.grid {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "dp banner banner banner"
+    "nav content content content"
+    "nav content content content";
+  /* grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr)); */
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(3, 28%);
+  gap: 1rem 3rem;
+}
+
+.dp {
+  grid-area: dp;
+}
+
+.img-con {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.img-con > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.navbar {
+  grid-area: nav;
+  background-color: var(--mauve);
+}
+
+.banner {
+  grid-area: banner;
+  background-color: var(--red);
+}
+
+.content {
+  grid-area: content;
+  background-color: var(--blue);
+}

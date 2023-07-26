@@ -1,12 +1,15 @@
 # NOTES
 
 - navbar
+
   - [HOME](#HOME)
   - [BLOG](#BLOG)
   - [PERSONAL WRITING](#PERSONAL-WRITING)
   - [PROJECTS](#PROJECTS)
   - [CONTACT](#CONTACT)
   - [RESUME](#RESUME)
+
+- inspiration [some-random-website](https://hugo-blog-theme.netlify.app/)
 
 ## HOME
 
@@ -35,6 +38,10 @@
 
 - random shit
 
+### NOTES
+
+- `data/` folder can be used to put questions in a json format - hashed answers
+
 ## PROJECTS
 
 - spotify to youtube
@@ -57,3 +64,9 @@
 - put resume there
 - add a gdrive link to all the certificates and competetions i have ever entered
   - if possible try to see if you can add view from drive
+
+## notes
+
+~- `.File.BaseFileName` wihtout extensions file name -[x]check `fileExists` using if~
+
+- add a `.Params.customcss` and set it with individual \_index.md
