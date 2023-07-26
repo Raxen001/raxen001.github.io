@@ -1,30 +1,38 @@
 main {
+  height: 100svh;
+  width: 100svw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.container {
-  width: clamp(20svw, 80svw, 90svw);
-}
 
 .grid {
   display: grid;
-  height: 100%;
+  width: 50%;
+  height: 90%;
   grid-template-areas:
     "dp banner banner"
     "nav content content"
     "nav content content";
   grid-template-columns: repeat(3, minmax(min(150px, 100%), 1fr));
   /* grid-template-columns: repeat(4, 100px); */
-  grid-template-rows: repeat(3, 28%);
+  grid-template-rows: repeat(3, minmax(min(75px, 100%), 30%));
   gap: 1rem 3rem;
+  margin: 3vw;
 }
 
 .dp {
   grid-area: dp;
+  width: 100%;
+  height: 100%;
 }
 .dp > img {
+  width: 100%;
+  max-height: 190px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
 }
 
 .navbar {
@@ -33,8 +41,10 @@ main {
 }
 
 .banner {
+  font-size: clamp(0.8rem, 1svw + 0.2rem, 1rem);
   grid-area: banner;
-  background-color: var(--red);
+  align-self: start;
+  color: var(--red);
 }
 
 .content {
