@@ -1,53 +1,79 @@
 main {
   height: 100svh;
-  width: 100svw;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .grid {
   display: grid;
-  width: 50%;
-  height: 90%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: clamp(2rem, 25%, 100rem);
+
+  /* place-content: center; */
+  justify-items: center;
+  gap: 2rem 0;
+
+  /* pic con nav ban */
   grid-template-areas:
-    "dp banner banner"
-    "nav content content"
-    "nav content content";
-  grid-template-columns: repeat(3, minmax(min(150px, 100%), 1fr));
-  /* grid-template-columns: repeat(4, 100px); */
-  grid-template-rows: repeat(3, minmax(min(75px, 100%), 30%));
-  gap: 1rem 3rem;
-  margin: 3vw;
+    "pic pic pic pic pic pic"
+    "ban ban ban ban ban ban"
+    "nav nav nav nav nav nav"
+    "con con con con con con"
+    "con con con con con con"
+    "con con con con con con";
 }
 
-.dp {
-  grid-area: dp;
-  width: 100%;
-  height: 100%;
+.pic {
+  grid-area: pic;
 }
-.dp > img {
-  width: 100%;
-  max-height: 190px;
+.pic > img {
   aspect-ratio: 1/1;
-  border-radius: 50%;
+  --min: clamp(8rem, 10vw, 20rem);
+  width: var(--min);
+  height: var(--min);
   object-fit: cover;
   object-position: top;
+  border-radius: 50%;
+  border: 10px dashed;
 }
-
-.navbar {
+.con {
+  grid-area: con;
+}
+.nav {
   grid-area: nav;
-  background-color: var(--mauve);
+}
+.ban {
+  grid-area: ban;
 }
 
-.banner {
-  font-size: clamp(0.8rem, 1svw + 0.2rem, 1rem);
-  grid-area: banner;
-  align-self: start;
-  color: var(--red);
+/* Portrait and Landscape */
+@media only screen and (min-width: 550px) {
+  .grid {
+    /* pic con nav ban */
+    grid-template-areas:
+      "pic pic ban ban ban ban"
+      "nav nav nav nav nav nav"
+      "con con con con con con"
+      "con con con con con con"
+      "con con con con con con"
+      "con con con con con con";
+  }
+  .ban {
+    justify-self: left;
+    align-self: center;
+  }
 }
 
-.content {
-  grid-area: content;
-  background-color: var(--blue);
+@media only screen and (min-width: 700px) {
+  .grid {
+    /* pic con nav ban */
+    grid-template-areas:
+      "pic pic ban ban . ."
+      "pic pic ban ban . ."
+      "nav nav con con con ."
+      "nav nav con con con ."
+      "nav nav con con con ."
+      "nav nav con con con .";
+  }
 }
