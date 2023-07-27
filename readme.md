@@ -2,12 +2,12 @@
 
 - navbar
 
-  - [HOME](#HOME)
-  - [BLOG](#BLOG)
-  - [PERSONAL WRITING](#PERSONAL-WRITING)
-  - [PROJECTS](#PROJECTS)
-  - [CONTACT](#CONTACT)
-  - [RESUME](#RESUME)
+  - [HOME](#home)
+  - [BLOG](#blog)
+  - [PERSONAL WRITING](#personal-writing)
+  - [PROJECTS](#projects)
+  - [CONTACT](#contact)
+  - [RESUME](#resume)
 
 - inspiration [some-random-website](https://hugo-blog-theme.netlify.app/)
 
