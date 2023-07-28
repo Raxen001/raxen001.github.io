@@ -31,11 +31,13 @@
 }
 
 * {
-  margin: 0;
+  box-sizing: border-box;
   padding: 0;
+  margin: 0;
   background-color: var(--black);
 }
 
-body {
-  color: var(--base);
+html {
+  height: 100vh;
+  font-size: clamp(0.75rem, 0.5702rem + 0.8219vw, 1.125rem);
 }
