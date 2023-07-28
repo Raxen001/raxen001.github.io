@@ -10,6 +10,7 @@
   - [RESUME](#resume)
 
 - inspiration [some-random-website](https://hugo-blog-theme.netlify.app/)
+- youtube video [somer-random-shit](https://www.youtube.com/watch?v=dLDn_k8GmaU)
 
 ## HOME
 

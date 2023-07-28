@@ -3,114 +3,88 @@
   src: url("../font/static/FiraCode-Regular.ttf");
 }
 
-main {
-  /* vh looks good, svh and dvh takes ui into account i guess so */
-  color: var(--base);
-  height: 100svh;
+html,
+body {
+  height: 100%;
+  background-color: var(--black);
+  color: var(--surface0);
+  font-size: clamp(0.75rem, 0.5096rem + 0.9615vw, 1.125rem);
+}
+
+body {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.grid {
-  display: grid;
-  min-height: 100%;
-  width: 100%;
-  grid-template: repeat(6, 1fr);
-  /* grid-auto-rows: clamp(2rem, 25%, 100rem); */
-  /* place-content: center; */
-  place-items: center;
-  /* gap: 2rem 0; */
 
-  /* pic con nav ban */
-  grid-template-areas:
-    "pic pic pic pic pic pic"
-    "ban ban ban ban ban ban"
-    "nav nav nav nav nav nav"
-    "con con con con con con"
-    "con con con con con con"
-    "con con con con con con";
+main {
+  height: 75%;
+  background-color: var(--gray);
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.4px);
+  -webkit-backdrop-filter: blur(14.4px);
 }
 
-/* display picture  */
+.grid {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "pic pic"
+    "ban ban"
+    "nav nav"
+    "con con";
+}
 
 .pic {
   grid-area: pic;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .pic > img {
-  aspect-ratio: 1/1;
-  /* dunno why i am doing this at all don't balme me future raxen */
-  --min: clamp(8rem, 12vw + 1rem, 20rem);
-  width: var(--min);
-  height: var(--min);
-
+  width: clamp(20%, 13rem, 50%);
+  aspect-ratio: 1;
   object-fit: cover;
   object-position: top;
-
   border-radius: 50%;
-  border: 4px solid;
-  border-color: var(--text);
-  box-shadow: 0 0 10px 6px #000;
+  border: 4px solid var(--red);
 }
-
-/* navigation */
-
+.ban {
+  grid-area: ban;
+}
 .nav {
   grid-area: nav;
-}
-.nav a {
-  text-decoration: none;
-  color: var(--base);
 }
 .nav ul {
   list-style: none;
   text-decoration: none;
 }
-.nav li {
+.nav a {
+  text-decoration: none;
+  color: var(--blue);
 }
-
-/* banner  */
-
-.ban {
-  font-family: fc;
-  grid-area: ban;
-  font-size: clamp(0.5rem, 0.4247rem + 0.4819vw, 0.75rem);
-}
-
-/* content */
-
 .con {
   grid-area: con;
-  padding-inline: 2rem;
 }
 
-/* tablet */
-@media only screen and (min-width: 550px) {
+@media (min-width: 768px) {
   .grid {
-    /* pic con nav ban */
     grid-template-areas:
-      "pic pic ban ban ban ban"
-      "nav nav nav nav nav nav"
-      "con con con con con con"
-      "con con con con con con"
-      "con con con con con con"
-      "con con con con con con";
-  }
-  .ban {
-    justify-self: left;
-    align-self: center;
+      "pic ban"
+      "nav nav"
+      "con con";
   }
 }
-
-/* desktop */
-@media only screen and (min-width: 700px) {
+@media (min-width: 1024px) {
   .grid {
-    /* pic con nav ban */
     grid-template-areas:
-      "pic pic ban ban ban ban"
-      "pic pic ban ban ban ban "
-      "nav nav con con con con"
-      "nav nav con con con con"
-      "nav nav con con con con"
-      "nav nav con con con con";
+      "pic ban"
+      "nav con";
   }
 }

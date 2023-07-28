@@ -34,10 +34,30 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-color: var(--black);
+}
+.container {
+  width: 100%;
+  padding-inline: 0.5rem;
+  margin-inline: auto;
 }
 
-html {
-  height: 100vh;
-  font-size: clamp(0.75rem, 0.5702rem + 0.8219vw, 1.125rem);
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536x;
+  }
 }
