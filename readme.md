@@ -11,6 +11,8 @@
 
 - inspiration [some-random-website](https://hugo-blog-theme.netlify.app/)
 - youtube video [somer-random-shit](https://www.youtube.com/watch?v=dLDn_k8GmaU)
+- nice website [nice](https://lynnandtonic.com/)
+- a [a](https://youtu.be/Xb8i7ytooIM)
 
 ## HOME
 

@@ -1,49 +1,39 @@
 {{ define "main" }}
 <main class="container">
-  <div class="grid">
 
+  <div class="grid">
     <div class="pic">
       <img src="img/m.jpg" />
     </div>
 
     <div class="nav">
       <nav>
-        <ul>
-        {{ range .Site.Sections }}
+          {{ range .Site.Sections }}
           <li>
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
           </li>
-        {{ end }}
-        </ul>
+          {{ end }}
       </nav>
     </div>
 
     <div class="ban">
-      <pre>
- ██▀███   ▄▄▄      ▒██   ██▒▓█████  ███▄    █ 
-▓██ ▒ ██▒▒████▄    ▒▒ █ █ ▒░▓█   ▀  ██ ▀█   █ 
-▓██ ░▄█ ▒▒██  ▀█▄  ░░  █   ░▒███   ▓██  ▀█ ██▒
-▒██▀▀█▄  ░██▄▄▄▄██  ░ █ █ ▒ ▒▓█  ▄ ▓██▒  ▐▌██▒
-░██▓ ▒██▒ ▓█   ▓██▒▒██▒ ▒██▒░▒████▒▒██░   ▓██░
-░ ▒▓ ░▒▓░ ▒▒   ▓▒█░▒▒ ░ ░▓ ░░░ ▒░ ░░ ▒░   ▒ ▒ 
-  ░▒ ░ ▒░  ▒   ▒▒ ░░░   ░▒ ░ ░ ░  ░░ ░░   ░ ▒░
-  ░░   ░   ░   ▒    ░    ░     ░      ░   ░ ░ 
-   ░           ░  ░ ░    ░     ░  ░         ░ 
-      </pre>
+      <h1>Raxen 001</h1>
     </div>
 
     <div class="con">
       <article>
-        <h4>
-          HELLO THERE,
-        </h4>
-        <h1>
-          I am Rithesh
-        </h1>
-        <br>
-        <p> I am just a computer nerd who fell in love with linux and FOSS. </p>
-        <p>i like to spend my free time listening to music and customizing my linux setup to my liking</p>
-        <p>If i am away from my computer. I am gonna be enjoying some good murder mystery novel.</p>
+        <h4>HELLO THERE,</h4>
+        <h1>I am Rithesh</h1>
+        <br />
+        <p>I am just a computer nerd who fell in love with linux and FOSS.</p>
+        <p>
+          i like to spend my free time listening to music and customizing my
+          linux setup to my liking
+        </p>
+        <p>
+          If i am away from my computer. I am gonna be enjoying some good murder
+          mystery novel.
+        </p>
         <p>FUN FACT ABOUT ME: I am Dead on the inside...</p>
       </article>
     </div>
