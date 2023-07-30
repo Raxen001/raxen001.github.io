@@ -1,5 +1,7 @@
 :root {
-  --black: #0f0f0f;
+  --black: #222222;
+  --black2: #232323;
+  --black3: #333333;
   --gray: #3f3f3f;
 
   --rosewater: #dc8a78;
@@ -31,14 +33,12 @@
 }
 
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 .container {
   width: 100%;
-  padding-inline: 0.5rem;
-  margin-inline: auto;
 }
 
 @media (min-width: 475px) {
@@ -51,9 +51,9 @@
     max-width: 768px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1124px) {
   .container {
-    max-width: 1024px;
+    max-width: 1124px;
   }
 }
 @media (min-width: 1536px) {
