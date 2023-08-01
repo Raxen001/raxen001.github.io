@@ -1,5 +1,15 @@
-{{ define "main" }}
-
-{{.Content}}
-
+{{ define "main" }} 
+  {{ if isset .Params "banimg" }}
+<main class="container">
+<div class="header">
+  <div class="header_img_con">
+    <img class="header__img" src="{{ .Params.banimg }}"/>
+  </div>
+  {{ end }}
+  <div class="header__title"><strong>Title: </strong><i>{{ .Title }}</i></div>
+  <div class="header__author"><strong>Author: </strong><i>{{ .Params.Author }}</i></div>  
+  <div class="header__date"><strong>Date: </strong><i>{{ .Params.Date }}</i></div>
+</div>
+<div class="con">{{ .Content }}</div>  
+</main>
 {{ end }}

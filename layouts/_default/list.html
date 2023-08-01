@@ -1,3 +1,11 @@
-{{ define "main" }} {{ range .Pages }}
-<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-{{ end }} {{ end }}
+{{ define "main" }}
+<div class="wrapper">
+  {{ range .Pages }}
+  <article class="card">
+    <a class="card__link" href="{{ .Permalink }}">
+      <span class="card__title">{{ .Title }}</span>
+    </a>
+  </article>
+  {{ end }}
+</div>
+{{ end }}

@@ -4,25 +4,10 @@
 }
 html,
 body {
-  font-family: fc;
+  font-family: fc, monospace, Cambria, Cochin, Georgia, Times, "Times New Roman",
+    serif;
   background-color: var(--bg);
   line-height: 1.5;
-}
-
-body {
-  color: var(--surface0);
-  background-color: var(--black);
-  font-size: clamp(1.05rem, 0.8496rem + 0.9615vw, 1.325rem);
-  padding: 4rem;
-  margin: 2rem;
-}
-
-img {
-  max-width: 90%;
-  padding: 3rem;
-}
-
-code {
 }
 
 h1 {
@@ -42,4 +27,34 @@ h5 {
 }
 h6 {
   color: var(--teal);
+}
+
+body {
+  width: 100%;
+  color: var(--surface0);
+  font-size: clamp(1.05rem, 0.8496rem + 0.9615vw, 1.325rem);
+  display: flex;
+  justify-content: center;
+}
+main {
+  width: 100%;
+  background-color: var(--black2);
+  line-height: 1.5;
+  padding: 10%;
+}
+
+main img {
+  width: 90%;
+}
+
+.header {
+  padding: 1rem;
+}
+
+.header__img_con {
+  width: 100%;
+}
+
+.header__img {
+  width: 100%;
 }
