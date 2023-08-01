@@ -1,6 +1,5 @@
 {{ define "main" }}
 <main class="container">
-
   <div class="grid">
     <div class="pic">
       <img src="img/m.jpg" />
@@ -8,11 +7,29 @@
 
     <div class="nav">
       <nav>
-          {{ range .Site.Sections }}
-          <li>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-          </li>
-          {{ end }}
+        <!-- {{ range .Site.Sections }} -->
+        <!-- <li> -->
+        <!--   <a href="{{ .Permalink }}">{{ .Title }}</a> -->
+        <!-- </li> -->
+        <!-- {{ end }} -->
+        <li>
+          <a href="#">RESUME</a>
+        </li>
+        <li>
+          <a href="#">PROJECTS</a>
+        </li>
+        <li>
+          <a href="#">BLOG</a>
+        </li>
+        <li>
+          <a href="#">WRITES</a>
+        </li>
+        <li>
+          <a href="#">GALLERY</a>
+        </li>
+        <li>
+          <a href="#">CONTACT</a>
+        </li>
       </nav>
     </div>
 
@@ -37,7 +54,6 @@
         <p>FUN FACT ABOUT ME: I am Dead on the inside...</p>
       </article>
     </div>
-
   </div>
 </main>
 {{ end }}
