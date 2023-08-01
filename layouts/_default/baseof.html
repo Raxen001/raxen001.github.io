@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Raxen's abode</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="/css/style.css" rel="stylesheet" />
 
-    {{ if isset .Params "customcss" }}
-    <link href="/css/{{ .Params.customcss }}" rel="stylesheet" />
-    {{end}}
-  </head>
+<head>
+  <title>Raxen's abode</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/jpg" href="/img/favicon-32x32.png" />
+  <link href="/css/style.css" rel="stylesheet" />
 
-  <body>
-    {{ block "main" . }} {{end }}
-  </body>
+  {{ if isset .Params "customcss" }}
+  <link href="/css/{{ .Params.customcss }}" rel="stylesheet" />
+  {{end}}
+</head>
+
+<body>
+  {{ block "main" . }} {{end }}
+</body>
+
 </html>

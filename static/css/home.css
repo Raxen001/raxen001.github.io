@@ -13,13 +13,12 @@ body {
   height: 100%;
   background-color: var(--bg);
   /* background-color: #000; */
-  color: var(--surface0);
   font-size: clamp(0.95rem, 0.6496rem + 0.9615vw, 1.125rem);
 }
 
 main {
   height: 100%;
-
+  color: var(--surface0);
   /* From https://css.glass */
   /* background: rgba(255, 255, 255, 0.14); */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -247,4 +246,23 @@ nav {
   .nav li:hover a {
     color: var(--green);
   }
+}
+
+h1 {
+  color: var(--peach);
+}
+h2 {
+  color: var(--blue);
+}
+h3 {
+  color: var(--yellow);
+}
+h4 {
+  color: var(--green);
+}
+h5 {
+  color: var(--sky);
+}
+h6 {
+  color: var(--teal);
 }
