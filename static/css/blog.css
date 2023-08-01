@@ -1,0 +1,45 @@
+@font-face {
+  font-family: fc;
+  src: url("/font/static/FiraCode-Regular.ttf");
+}
+html,
+body {
+  font-family: fc;
+  background-color: var(--bg);
+  line-height: 1.5;
+}
+
+body {
+  color: var(--surface0);
+  background-color: var(--black);
+  font-size: clamp(1.05rem, 0.8496rem + 0.9615vw, 1.325rem);
+  padding: 4rem;
+  margin: 2rem;
+}
+
+img {
+  max-width: 90%;
+  padding: 3rem;
+}
+
+code {
+}
+
+h1 {
+  color: var(--peach);
+}
+h2 {
+  color: var(--blue);
+}
+h3 {
+  color: var(--yellow);
+}
+h4 {
+  color: var(--green);
+}
+h5 {
+  color: var(--sky);
+}
+h6 {
+  color: var(--teal);
+}
