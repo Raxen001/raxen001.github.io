@@ -1,8 +1,16 @@
+@font-face {
+  font-family: fc;
+  src: url("../font/static/FiraCode-Regular.ttf");
+}
+@font-face {
+  font-family: banner;
+  src: url("../font/Color\ Basic.otf");
+}
 :root {
   --bg: #141414;
   --black: #1f1f1f;
-  --black1: #2a2a2a;
-  --black2: #232323;
+  --black1: #232323;
+  --black2: #2a2a2a;
   --black3: #333333;
   --gray: #3f3f3f;
 
@@ -115,3 +123,76 @@
     filter: hue-rotate(0deg);
   }
 }
+
+/* nav */
+.mnav {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  border: 0;
+  width: 3rem;
+  z-index: 1000;
+  aspect-ratio: 1;
+  border-radius: 20%;
+  /* debug */
+  background: #d20f39a2;
+  backdrop-filter: blur(2rem);
+}
+.nav__wrapper {
+  position: fixed;
+  /* debug */
+  inset: 0 0 0 50%;
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  background: #0a1f1f1f;
+  backdrop-filter: blur(2rem);
+}
+
+.nav__a {
+  width: 100%;
+  text-decoration: none;
+  color: var(--crust);
+  transition: all 250ms linear;
+  padding: 1rem;
+}
+.nav__a:hover {
+  background: var(--gray);
+}
+.pnav {
+  transform: translateX(100%);
+}
+.pnav[data-visible="true"] {
+  transform: translateX(00%);
+}
+@media (min-width: 600px) {
+  .mobile_nav {
+    display: none;
+  }
+  .nav__wrapper {
+    background: var(--gray);
+    font-size: 0.7rem;
+    height: 3rem;
+    position: fixed;
+    inset: 0 0 0 0;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav__a {
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* nav */

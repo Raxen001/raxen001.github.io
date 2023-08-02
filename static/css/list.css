@@ -2,28 +2,119 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
-  width: 100%;
-
+  padding: 1rem;
   display: grid;
   grid-auto-flow: row;
   gap: 2rem;
 }
 
 .card {
-  /* debug */
+  font-size: clamp(0.95rem, 0.6496rem + 0.9615vw, 1.225rem);
   width: 100%;
-  height: 20vh;
-  border: 2px var(--red) solid;
-  background: var(--blue);
-
   display: flex;
+  background: var(--black1);
+  border-radius: 4px;
+  padding: 1rem;
+  border: 2px var(--gray) solid;
+  transition: all 200ms linear;
+}
+
+.card:hover {
+  background: var(--black3);
+  border: 2px var(--green) solid;
 }
 
 .card__link {
+  font-family: fc;
   width: 100%;
   height: 100%;
-  background-color: var(--green);
+
+  padding: 0.3rem;
+  line-height: 1.6;
+
+  display: flex;
+  flex-flow: column;
+
+  text-decoration: none;
+  color: var(--surface0);
+  cursor: pointer;
+}
+
+.card__text__wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.card__text__wrap > span {
+  display: flex;
+  padding: 0.7rem;
+}
+.card__title,
+.card__desc,
+.card__author,
+.card__date,
+.card__tag {
+  padding: 0.3rem;
+}
+
+.card__title,
+.card__author,
+.card__date,
+.card__tag {
+  font-family: banner;
+  background: var(--black);
+}
+
+.card__title {
+  color: var(--teal);
+}
+.card__author {
+  color: var(--yellow);
+}
+.card__date {
+  color: var(--lavender);
+}
+
+.card__link img {
+  width: 100%;
+  max-height: 50%;
+  padding-block: 1rem;
+  object-fit: cover;
+  justify-self: center;
+  align-self: center;
+  border: 1px var(--mauve) solid;
+}
+
+footer {
+  /* debug */
+  background: var(--black);
+  color: var(--surface2);
+  padding: 2rem;
+}
+
+@media (min-width: 475px) {
+  .container {
+    max-width: 100%;
+  }
+}
+@media (min-width: 668px) {
+  .container {
+    max-width: 668px;
+  }
+}
+@media (min-width: 1124px) {
+  .container {
+    max-width: 1124px;
+  }
+}
+@media (min-width: 1236px) {
+  .container {
+    max-width: 1236x;
+  }
 }

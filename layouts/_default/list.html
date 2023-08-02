@@ -1,9 +1,27 @@
 {{ define "main" }}
 <div class="wrapper">
   {{ range .Pages }}
-  <article class="card">
+  <article class="container card">
     <a class="card__link" href="{{ .Permalink }}">
-      <span class="card__title">{{ .Title }}</span>
+      {{if isset .Params "banimg"}}
+      <img src="{{ .Params.banimg }}"></img>
+      {{end}}
+      <div class="card__text__wrap">
+        <span class="card__title">
+          <h3>Title: </h3>
+          <p>{{ .Title }}</p>
+        </span>
+        <span class="card__author">
+          <h3>Author: </h3>
+          <p>{{ .Params.Author }}</p>
+        </span>
+        <span class="card__date">
+          <h3>Date: </h3>
+          <p>{{ .Params.Date | time.Format ":date_long" }}</p>
+        </span>
+      </div>
+      <!-- <span class="card__tag">{{ .Params.Tag }}</span> -->
+      <span class="card__desc">{{ .Summary}}</span>
     </a>
   </article>
   {{ end }}

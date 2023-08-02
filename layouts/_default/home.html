@@ -1,59 +1,76 @@
-{{ define "main" }}
-<main class="container">
-  <div class="grid">
-    <div class="pic">
-      <img src="img/m.jpg" />
-    </div>
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="nav">
-      <nav>
-        <!-- {{ range .Site.Sections }} -->
-        <!-- <li> -->
-        <!--   <a href="{{ .Permalink }}">{{ .Title }}</a> -->
-        <!-- </li> -->
-        <!-- {{ end }} -->
-        <li>
-          <a href="/resume.pdf/">RESUME</a>
-        </li>
-        <li>
-          <a href="/projects">PROJECTS</a>
-        </li>
-        <li>
-          <a href="/blog">BLOG</a>
-        </li>
-        <li>
-          <a href="/personal_writing">WRITES</a>
-        </li>
-        <li>
-          <a href="/gallery">GALLERY</a>
-        </li>
-        <li>
-          <a href="/contact/">CONTACT</a>
-        </li>
-      </nav>
-    </div>
+<head>
+  <title>Raxen's abode</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="/css/style.css" rel="stylesheet" />
+  {{ if isset .Params "customcss" }}
+  <link href="/css/{{ .Params.customcss }}" rel="stylesheet" />
+  {{ end }}
+</head>
 
-    <div class="ban">
-      <h1>Raxen 001</h1>
-    </div>
+<body>
+  <main class="container">
+    <div class="grid">
+      <div class="pic">
+        <img src="img/m.jpg" />
+      </div>
 
-    <div class="con">
-      <article>
-        <h4>HELLO THERE,</h4>
-        <h1>I am Rithesh</h1>
-        <br />
-        <p>I am just a computer nerd who fell in love with linux and FOSS.</p>
-        <p>
-          i like to spend my free time listening to music and customizing my
-          linux setup to my liking
-        </p>
-        <p>
-          If i am away from my computer. I am gonna be enjoying some good murder
-          mystery novel.
-        </p>
-        <p>FUN FACT ABOUT ME: I am Dead on the inside...</p>
-      </article>
+      <div class="nav">
+        <nav>
+          <!-- {{ range .Site.Sections }} -->
+          <!-- <li> -->
+          <!--   <a href="{{ .Permalink }}">{{ .Title }}</a> -->
+          <!-- </li> -->
+          <!-- {{ end }} -->
+          <li>
+            <a href="/resume.pdf/">RESUME</a>
+          </li>
+          <li>
+            <a href="/projects">PROJECTS</a>
+          </li>
+          <li>
+            <a href="/blog">BLOG</a>
+          </li>
+          <li>
+            <a href="/personal_writing">WRITES</a>
+          </li>
+          <li>
+            <a href="/gallery">GALLERY</a>
+          </li>
+          <li>
+            <a href="/contact/">CONTACT</a>
+          </li>
+        </nav>
+      </div>
+
+      <div class="ban">
+        <h1>Raxen 001</h1>
+      </div>
+
+      <div class="con">
+        <article>
+          <h4>HELLO THERE,</h4>
+          <h1>I am Rithesh</h1>
+          <br />
+          <p>
+            I am just a computer nerd who fell in love with linux and FOSS.
+          </p>
+          <p>
+            i like to spend my free time listening to music and customizing my
+            linux setup to my liking
+          </p>
+          <p>
+            If i am away from my computer. I am gonna be enjoying some good
+            murder mystery novel.
+          </p>
+          <p>FUN FACT ABOUT ME: I am Dead on the inside...</p>
+        </article>
+      </div>
     </div>
-  </div>
-</main>
-{{ end }}
+  </main>
+</body>
+
+</html>

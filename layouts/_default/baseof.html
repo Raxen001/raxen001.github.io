@@ -14,7 +14,9 @@
 </head>
 
 <body>
-  {{ block "main" . }} {{end }}
+  {{ partial "header.html" . }} {{ block "main" . }} {{ end }} {{ partial
+  "footer.html" . }}
 </body>
+<script src="/js/nav.js"></script>
 
 </html>

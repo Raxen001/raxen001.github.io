@@ -1,7 +1,8 @@
 ---
-title: "blog 3"
+title: "blog 1"
 author: "Raxen"
 date: 2023-07-27
+banimg: "/img/banimg.png"
 draft: false
 customcss: "blog.css"
 ---

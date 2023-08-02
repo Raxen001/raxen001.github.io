@@ -6,7 +6,7 @@ html,
 body {
   font-family: fc, monospace, Cambria, Cochin, Georgia, Times, "Times New Roman",
     serif;
-  background-color: var(--bg);
+  background: var(--bg);
   line-height: 1.5;
 }
 
@@ -34,11 +34,12 @@ body {
   color: var(--surface0);
   font-size: clamp(1.05rem, 0.8496rem + 0.9615vw, 1.325rem);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
+
 main {
   width: 100%;
-  background-color: var(--black2);
   line-height: 1.5;
   padding: 10%;
 }
