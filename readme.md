@@ -14,6 +14,16 @@
 - nice website [nice](https://lynnandtonic.com/)
 - a [a](https://youtu.be/Xb8i7ytooIM)
 
+## TODO
+
+- [ ] gallery css
+  - [ ] add photos in gallery
+- [ ] footer
+  - [ ] css
+- [ ] write blogs
+- [ ] add contact page
+  - [ ] add github and linked to footer
+
 ## HOME
 
 - should contain profile pic left side
