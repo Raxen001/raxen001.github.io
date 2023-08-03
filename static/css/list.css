@@ -107,6 +107,9 @@ footer {
   .container {
     max-width: 668px;
   }
+  body {
+    padding-top: 3rem;
+  }
 }
 @media (min-width: 1124px) {
   .container {

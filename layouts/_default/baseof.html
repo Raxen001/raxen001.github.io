@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Raxen's abode</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/jpg" href="/img/favicon-32x32.png" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/header.css" rel="stylesheet" />
+    <link href="/css/footer.css" rel="stylesheet" />
 
-<head>
-  <title>Raxen's abode</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="shortcut icon" type="image/jpg" href="/img/favicon-32x32.png" />
-  <link href="/css/style.css" rel="stylesheet" />
+    {{ if isset .Params "customcss" }}
+    <link href="/css/{{ .Params.customcss }}" rel="stylesheet" />
+    {{end}}
+  </head>
 
-  {{ if isset .Params "customcss" }}
-  <link href="/css/{{ .Params.customcss }}" rel="stylesheet" />
-  {{end}}
-</head>
-
-<body>
-  {{ partial "header.html" . }} {{ block "main" . }} {{ end }} {{ partial
-  "footer.html" . }}
-</body>
-<script src="/js/nav.js"></script>
-
+  <body>
+    {{ partial "header.html" . }} {{ block "main" . }} {{ end }} {{ partial
+    "footer.html" . }}
+  </body>
+  <script src="/js/nav.js"></script>
 </html>
