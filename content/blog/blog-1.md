@@ -1,6 +1,7 @@
 ---
 title: "blog 1"
 author: "Raxen"
+tags: ["tag1", "tag2"]
 date: 2023-07-27
 banimg: "/img/banimg.png"
 draft: false

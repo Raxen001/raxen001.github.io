@@ -57,14 +57,15 @@
   }
   .pnav {
     transform: translateX(0);
+    font-size: clamp(1rem, 0.8096rem + 0.9015vw, 1.325rem);
+    font-family: fc;
   }
   .nav {
+    background: var(--black1);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: var(--gray);
-    font-size: 0.9rem;
     height: 3rem;
     position: fixed;
     inset: 0 0 0 0;

@@ -1,0 +1,40 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.gallery {
+  display: grid;
+  gap: 2rem;
+  padding-inline: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100vw, 40rem), 1fr));
+  transition: all 250ms linear;
+}
+
+.gallery a {
+  padding-inline: 1rem;
+}
+
+.gallery__img {
+  max-width: 100%;
+  object-fit: cover;
+  border: 0.1rem var(--teal) solid;
+  transition: all 200ms ease-in;
+}
+
+.gallery__img:hover {
+  transform: scale(1.05);
+  border-color: var(--red);
+  border-radius: 0.1rem;
+}

@@ -39,7 +39,6 @@ ol {
 body {
   color: var(--surface0);
   background: var(--bg);
-  font-size: clamp(1rem, 0.8096rem + 0.9015vw, 1.325rem);
   padding-inline: 1ch;
 
   display: flex;
@@ -52,6 +51,7 @@ main {
   width: 100%;
   background: var(--black);
   line-height: 1.5;
+  font-size: clamp(1rem, 0.8096rem + 0.9015vw, 1.325rem);
 }
 
 .header {

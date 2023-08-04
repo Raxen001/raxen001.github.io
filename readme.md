@@ -23,6 +23,7 @@
 - [ ] write blogs
 - [ ] add contact page
   - [ ] add github and linked to footer
+- [ ] rss
 
 ## HOME
 
