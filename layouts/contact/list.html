@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Raxen's abode</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="/css/style.css" rel="stylesheet" />
+  <link href="/css/contact.css" rel="stylesheet" />
+  <link href="/css/header.css" rel="stylesheet" />
+  <link href="/css/footer.css" rel="stylesheet" />
+</head>
+
+<body>
+  {{ partial "header.html" . }}
+  <div class="wrapper">
+    <div class="container">{{ .Content}}</div>
+  </div>
+  {{ partial "footer.html" . }}
+</body>
+<script src="/js/nav.js"></script>
+
+</html>

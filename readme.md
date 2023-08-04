@@ -16,8 +16,8 @@
 
 ## TODO
 
-- [ ] gallery css
-  - [ ] add photos in gallery
+- [x] gallery css
+  - [x] add photos in gallery
 - [ ] footer
   - [ ] css
 - [ ] write blogs
