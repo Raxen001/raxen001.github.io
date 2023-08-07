@@ -11,19 +11,15 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem;
+  padding-top: 5rem;
 }
 
 .gallery {
   display: grid;
-  gap: 2rem;
-  padding-inline: 2rem;
+  gap: 3rem;
+  padding-inline: 8%;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
   transition: all 250ms linear;
-}
-
-.gallery a {
-  padding-inline: 1rem;
 }
 
 .gallery__img {
