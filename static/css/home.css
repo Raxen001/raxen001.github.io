@@ -42,7 +42,7 @@ main {
     "con con";
 
   /* background-color: var(--black2); */
-  --stagger-delay: 150ms;
+  --stagger-delay: 250ms;
 }
 
 .pic {
@@ -74,7 +74,7 @@ main {
 .ban {
   font-size: 150%;
   grid-area: ban;
-  animation: card_entrance-2 700ms ease-out;
+  animation: card_entrance-2 700ms ease-in-out;
   animation-fill-mode: backwards;
   animation-delay: calc(2 * var(--stagger-delay));
 
@@ -99,6 +99,8 @@ main {
 
 .ban > h1:hover {
   color: var(--red);
+  border: 0.3rem var(--green) solid;
+  border-radius: 1ch;
 }
 
 @keyframes animate {
@@ -255,7 +257,7 @@ nav {
   }
   .nav a svg {
     align-self: center;
-    justify-self: center;
+    justify-self: right;
     margin-left: 60%;
   }
   .nav a:hover {
@@ -276,6 +278,14 @@ nav {
   }
   .nav li:hover a svg {
     color: var(--teal);
+  }
+  .con {
+    border: 0.1rem var(--black3) solid;
+    transition: all 250ms linear;
+  }
+  .con:hover {
+    border: 0.1rem var(--yellow) solid;
+    background-color: var(--black2);
   }
 }
 
