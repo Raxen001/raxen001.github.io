@@ -25,14 +25,15 @@ main {
 .gallery__img {
   max-width: 100%;
   object-fit: cover;
-  border: 0.1rem var(--teal) solid;
   transition: all 200ms ease-in;
   animation: animate 1s ease-in-out;
+  padding: 2rem 1rem 4rem 1rem;
+  background: var(--black3);
+  border-radius: 1ch;
 }
 
 .gallery__img:hover {
   transform: scale(1.05);
-  border-color: var(--red);
   border-radius: 0.1rem;
 }
 
