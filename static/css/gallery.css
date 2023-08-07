@@ -18,7 +18,7 @@ main {
   display: grid;
   gap: 2rem;
   padding-inline: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100vw, 40rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
   transition: all 250ms linear;
 }
 
