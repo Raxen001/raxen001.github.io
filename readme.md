@@ -73,6 +73,11 @@
 - reddit
 - whatsapp
 
+### Using email JS
+
+- by using email js visitors can send email directly to me without
+  opening their mail client
+
 ## RESUME
 
 - put resume there

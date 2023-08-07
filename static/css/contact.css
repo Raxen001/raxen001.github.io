@@ -1,28 +1,176 @@
+html,
 body {
   width: 100%;
   background: var(--bg);
 }
-.wrapper {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8rem;
-}
+
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(12rem, 60%), 1fr));
-  grid-auto-rows: 15rem;
-  aspect-ratio: 1;
+  font-family: fc;
+  width: 100%;
+  padding-top: 4rem;
+  margin-inline: auto;
 }
 
-a {
-  background: #ffffffaa;
-  color: var(--black3);
+.container h1 {
+  color: var(--teal);
+  text-align: center;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 1.3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(8rem, 100%), 1fr));
+  gap: 3rem;
+}
+
+#contact_form {
+  color: var(--surface1);
+  padding-inline: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+#name {
+  transition: all 250ms linear;
+  animation: cards 700ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: calc(1 * var(--stagger-delay));
+}
+#email {
+  transition: all 250ms linear;
+  animation: cards 700ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: calc(4 * var(--stagger-delay));
+}
+#message {
+  transition: all 250ms linear;
+  animation: cards 700ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: calc(8 * var(--stagger-delay));
+}
+#btn-submit {
+  transition: all 150ms linear;
+  animation: cards 700ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: calc(18 * var(--stagger-delay));
+}
+#contact_form label {
+  color: white;
+  text-align: center;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+#btn-submit {
+  border: 0;
+  padding: 1rem;
+  font-family: banner;
+  font-size: 1.7rem;
+  color: var(--base);
+  /* background-color: var(--green); */
+  background: linear-gradient(
+    to right,
+    var(--teal),
+    var(--green),
+    var(--yellow)
+  );
+  transition: all 300ms linear;
+}
+
+#btn-submit:hover {
+  transform: scale(1.2);
+  border-radius: 18px;
+}
+#name,
+#email,
+#message {
+  padding: 2rem;
+  background: var(--surface2);
+  border: 2px var(--gray) solid;
+  border-radius: 8px;
+}
+#name:focus,
+#email:focus,
+#message:focus {
+  background: var(--base);
+  border-color: var(--red);
+}
+
+.card {
+  text-align: center;
+  text-decoration: none;
+
+  /* display: grid; */
+  /* grid-template-columns: 1fr; */
+  /* grid-template-rows: 1fr 1fr; */
+  /* align-items: center; */
+  /* justify-items: center; */
+  aspect-ratio: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100px;
-  backdrop-filter: blue(2rem);
+  justify-content: center;
+
+  padding: 2rem;
+  gap: 1rem;
+  color: var(--mantle);
+  background: var(--black1);
+  border-radius: 4px;
+
+  transition: all 250ms linear;
+
+  animation: cards 700ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: calc(1 * var(--stagger-delay));
+}
+
+.card svg {
+  width: 100%;
+  aspect-ratio: 1;
+  transition: all 200ms linear;
+
+  fill: var(--red);
+  stroke: var(--red);
+}
+
+.card:hover {
+  border-color: var(--pink);
+  border-radius: 8px;
+  color: var(--base);
+  transform: scale(1.1) translateY(-5%) translateX(8%);
+  border: 3px var(--gray) solid;
+}
+.card:hover svg {
+  color: var(--surface2);
+  transform: scale(1.1) translateY(-10%);
+}
+
+@keyframes cards {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0%);
+  }
+}
+
+@media (min-width: 700px) {
+  #contact_form {
+    padding-inline: 4rem;
+    grid-template-columns: auto 1fr;
+  }
+
+  #btn-submit {
+    margin-inline: 20%;
+    grid-column: 1/3;
+  }
 }

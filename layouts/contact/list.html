@@ -11,11 +11,40 @@
   <link href="/css/footer.css" rel="stylesheet" />
 </head>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function () {
+    emailjs.init("ZyKbmI93rz0_3ly68");
+  })();
+</script>
+
+<script src="/js/mail.js"></script>
+
 <body>
   {{ partial "header.html" . }}
-  <div class="wrapper">
-    <div class="container">{{ .Content}}</div>
-  </div>
+
+  <main class="container">
+    <h1>If you want to hire, contact me</h1>
+    <form id="contact_form">
+      <label for="name">Name: </label>
+      <input id="name" type="text" placeholder="NAME..." name="name" required />
+      <label for="email">Email: </label>
+      <input id="email" type="email" placeholder="EMAIL-ID..." name="email" required />
+      <label for="message">leave a message for me</label>
+      <textarea id="message" placeholder="MESSAGE..." name="message" required></textarea>
+      <input type="submit" id="btn-submit" value="SUBMIT"></input>
+    </form>
+
+    <div class="wrapper">
+      {{ range .Site.Author.links }} {{ range $type, $link := . }} {{ $svg :=
+      (path.Join "/static" "img" "icons" (printf "%s.svg" $type) ) }}
+      <a class="card" href="{{ $link }}" target="_blank">
+        <div class="icon">{{ readFile $svg | safeHTML}}</div>
+        <div class="desc">{{$type}}</div>
+      </a>
+      {{ end }} {{ end }}
+    </div>
+  </main>
   {{ partial "footer.html" . }}
 </body>
 <script src="/js/nav.js"></script>

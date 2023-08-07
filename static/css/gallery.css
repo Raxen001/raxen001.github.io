@@ -31,10 +31,26 @@ main {
   object-fit: cover;
   border: 0.1rem var(--teal) solid;
   transition: all 200ms ease-in;
+  animation: animate 1s ease-in-out;
 }
 
 .gallery__img:hover {
   transform: scale(1.05);
   border-color: var(--red);
   border-radius: 0.1rem;
+}
+
+@keyframes animate {
+  0% {
+    clip-path: circle(0%);
+    transform: translateX(+50%);
+  }
+  50% {
+    clip-path: circle(50%);
+    transform: translateX(+25%);
+  }
+  100% {
+    clip-path: circle(100%);
+    transform: translateX(0%);
+  }
 }

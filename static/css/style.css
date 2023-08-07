@@ -74,52 +74,51 @@
 
 /* animation for stagger */
 @keyframes card_entrance-1 {
-  from {
+  0% {
     opacity: 0;
-    transform: scale(0);
-    transform: translateX(-100%);
+    transform: scale(0) translateX(-50%);
   }
-  to {
+  50% {
     opacity: 1;
-    transform: scale(1);
-    transform: translateX(0);
-    filter: hue-rotate(0deg);
+    transform: scale(1.1) translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateX(0%);
   }
 }
 @keyframes card_entrance-2 {
-  from {
+  0% {
     opacity: 0;
-    transform: scale(0.2);
-    transform: translateY(-50%);
+    transform: scale(0.4) translateY(-50%);
   }
-  to {
+  50% {
     opacity: 1;
-    transform: scale(1);
-    filter: hue-rotate(0deg);
+    transform: scale(0.9) translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0%);
   }
 }
 
 @keyframes card_entrance-3 {
   from {
     opacity: 0;
-    transform: scale(0.2);
-    transform: translateX(50%);
+    transform: scale(0.5) translateX(+100%);
   }
   to {
     opacity: 1;
-    transform: scale(1);
-    filter: hue-rotate(0deg);
+    transform: scale(1) translateX(0);
   }
 }
 @keyframes card_entrance-4 {
   from {
     opacity: 0;
-    transform: scale(0.2);
-    transform: translateY(50%);
+    transform: scale(0.1) translateY(50%);
   }
   to {
     opacity: 1;
-    transform: scale(1);
-    filter: hue-rotate(0deg);
+    transform: scale(1) translateY(0);
   }
 }
