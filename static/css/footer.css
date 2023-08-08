@@ -1,7 +1,57 @@
 footer {
+  font-family: banner;
+  color: var(--base);
   width: 100vw;
-  padding: 1rem;
+  padding: 4rem 1rem;
   display: flex;
-  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.contact__link {
+  width: 100%;
+  height: 100%;
+  color: var(--surface1);
+}
+
+.contact svg {
+  width: 3rem;
+  color: var(--surface1);
+  transition: all 250ms linear;
+}
+
+.contact svg:hover {
+  transform: scale(1.1);
+  color: var(--base);
+}
+
+.center__text {
+  text-align: center;
+}
+.made {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.made img {
+  width: 3rem;
+  transition: all 250ms linear;
+}
+
+.made img:hover {
+  transform: scale(1.1);
 }

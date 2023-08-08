@@ -91,13 +91,6 @@ body {
   border: 1px var(--mauve) solid;
 }
 
-footer {
-  /* debug */
-  background: var(--black);
-  color: var(--surface2);
-  padding: 2rem;
-}
-
 @media (min-width: 475px) {
   .container {
     max-width: 100%;

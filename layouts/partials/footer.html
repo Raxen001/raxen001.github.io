@@ -1,1 +1,42 @@
-<footer>Raxen - © copyright reserved</footer>
+<footer>
+  <div class="center__text">Raxen - © copyright reserved</div>
+  <div class="contact">
+    <h3>Quick contact:</h3>
+    {{ $site := index .Site.Author.links 0 }} {{ range $type, $link := $site }}
+    {{ $svg := (path.Join "/static" "img" "icons" (printf "%s.svg" $type) ) }}
+    <a class="contact__link" href="{{ $link }}" target="_blank">
+      <div class="icon">{{ readFile $svg | safeHTML}}</div>
+      <!-- <div class="desc">{{$type}}</div> -->
+    </a>
+    {{ end }} {{ $site := index .Site.Author.links 1 }} {{ range $type, $link :=
+    $site }} {{ $svg := (path.Join "/static" "img" "icons" (printf "%s.svg"
+    $type) ) }}
+    <a class="contact__link" href="{{ $link }}" target="_blank">
+      <div class="icon">{{ readFile $svg | safeHTML}}</div>
+      <!-- <div class="desc">{{$type}}</div> -->
+    </a>
+    {{ end }} {{ $site := index .Site.Author.links 2 }} {{ range $type, $link :=
+    $site }} {{ $svg := (path.Join "/static" "img" "icons" (printf "%s.svg"
+    $type) ) }}
+    <a class="contact__link" href="{{ $link }}" target="_blank">
+      <div class="icon">{{ readFile $svg | safeHTML}}</div>
+      <!-- <div class="desc">{{$type}}</div> -->
+    </a>
+    {{ end }}
+  </div>
+  <div class="made">
+    <h3>Made Using:</h3>
+    <a href="https://mozilla.org"
+      ><img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/330px-Firefox_logo%2C_2019.svg.png"
+    /></a>
+    <a href="https://neovim.io/"
+      ><img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Neovim-mark.svg/738px-Neovim-mark.svg.png?20150131093814"
+    /></a>
+    <a href="https://www.fedoraproject.org/"
+      ><img
+        src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Fedora-logo.svg"
+    /></a>
+  </div>
+</footer>

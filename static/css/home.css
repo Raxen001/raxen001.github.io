@@ -42,7 +42,7 @@ main {
     "con con";
 
   /* background-color: var(--black2); */
-  --stagger-delay: 250ms;
+  --stagger-delay: 200ms;
 }
 
 .pic {
@@ -52,7 +52,7 @@ main {
   justify-content: center;
   align-items: center;
 
-  animation: card_entrance-1 700ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: card_entrance-1 800ms cubic-bezier(0.075, 0.12, 0.165, 1);
   animation-fill-mode: backwards;
   animation-delay: calc(1 * var(--stagger-delay));
 
