@@ -8,3 +8,5 @@ next=$((latest + 1))
 
 # Create a new blog post using the archetype template
 hugo new projects/project-$next.md
+
+nvim /content/projects/project-$next.md
