@@ -13,6 +13,10 @@ img {
   max-width: min(100%, 36rem);
 }
 
+.con p {
+  padding-inline: 2ch;
+}
+
 h1 {
   color: var(--peach);
 }
