@@ -91,7 +91,8 @@ button:focus {
 #name,
 #email,
 #message {
-  padding: 2rem;
+  font-size: 1.3rem;
+  padding: 1ch;
   background: var(--surface2);
   border: 2px var(--gray) solid;
   border-radius: 8px;
