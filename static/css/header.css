@@ -37,6 +37,7 @@
   background: var(--gray);
 }
 .pnav {
+  font-family: fc;
   transform: translateX(100%);
 }
 .pnav[data-visible="true"] {
@@ -49,7 +50,11 @@
   fill: var(--surface2);
 }
 .mnav svg {
-  height: 50%;
+  height: 60%;
+
+  /* hack to look good */
+  /* please bring my sanity back css3 */
+  padding-top: 3px;
 }
 @media (min-width: 680px) {
   .mnav {
@@ -58,7 +63,6 @@
   .pnav {
     transform: translateX(0);
     font-size: clamp(1rem, 0.8096rem + 0.9015vw, 1.325rem);
-    font-family: fc;
   }
   .nav {
     background: var(--black1);

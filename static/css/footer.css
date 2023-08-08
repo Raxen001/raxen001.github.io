@@ -1,5 +1,6 @@
 footer {
   font-family: banner;
+  font-size: clamp(0.7rem, 9vw + 0.1rem, 1.1rem);
   color: var(--base);
   width: 100vw;
   padding: 4rem 1rem;
@@ -54,4 +55,8 @@ footer {
 
 .made img:hover {
   transform: scale(1.1);
+}
+
+footer h3 {
+  color: var(--base);
 }

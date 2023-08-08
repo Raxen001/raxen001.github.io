@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Raxen's abode</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/header.css" rel="stylesheet" />
+    <link href="/css/footer.css" rel="stylesheet" />
+    <link href="/css/gallery.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <title>Raxen's abode</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="/css/style.css" rel="stylesheet" />
-  <link href="/css/header.css" rel="stylesheet" />
-  <link href="/css/footer.css" rel="stylesheet" />
-  <link href="/css/gallery.css" rel="stylesheet" />
-</head>
-
-<body>
-  {{ partial "header" . }}
-  <!-- layouts/gallery.html -->
+  <body>
+    {{ partial "header" . }}
+    <!-- layouts/gallery.html -->
     <main>
-  <div class="gallery">
-    {{ with .Site.GetPage "/gallery" }}
-      {{ range .Resources.ByType "image" }}
-        <a href="{{.}}"><img class="gallery__img" src="{{.}}" ></a>
-      {{end }}
-    {{end}}
-
-  </div></main>
-  {{ partial "footer" . }}
-
-</body>
+      <div class="gallery">
+        {{ with .Site.GetPage "/gallery" }} 
+          {{ range .Resources.ByType "image"}}
+            {{ with .Resize (printf "%dx%d webp q90" .Width .Height)}}
+            <a href="{{.}}" >
+          <figure>
+          <img class="gallery__img" src="{{.RelPermalink}}" />
+        </figure>
+        </a>
+            {{ end }}
+          {{end }} 
+        {{end}}
+      </div>
+    </main>
+    {{ partial "footer" . }}
+  </body>
   <script src="/js/nav.js"></script>
 </html>

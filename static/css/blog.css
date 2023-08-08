@@ -57,6 +57,7 @@ main {
   background: var(--black);
   line-height: 1.5;
   font-size: clamp(1rem, 0.8096rem + 0.9015vw, 1.325rem);
+  padding-block: 3rem;
 }
 
 .header {
@@ -65,9 +66,10 @@ main {
 
 .header__img_con {
   width: 100%;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem;
 }
 
 .header__img {
