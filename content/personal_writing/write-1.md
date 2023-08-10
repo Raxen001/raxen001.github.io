@@ -2,7 +2,7 @@
 title: "Write 1 - a few favourite quotes"
 date: 2023-08-10T21:20:34+05:30
 draft: false
-banimg: "/img/ascii-ghostskull.jpg"
+banimg: "ascii-ghostskull.jpg"
 customcss: "blog.css"
 ---
 

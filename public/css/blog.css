@@ -1,28 +1,34 @@
-@font-face {
-  font-family: fc;
-  src: url("/font/static/FiraCode-Regular.ttf");
-}
 html,
 body {
-  font-family: fc;
-  background-color: var(--bg);
+  font-family: fc, monospace, Cambria, Cochin, Georgia, Times, "Times New Roman",
+    serif;
   line-height: 1.5;
 }
 
-body {
-  color: var(--surface0);
-  background-color: var(--black);
-  font-size: clamp(1.05rem, 0.8496rem + 0.9615vw, 1.325rem);
-  padding: 4rem;
-  margin: 2rem;
-}
-
 img {
-  max-width: 90%;
-  padding: 3rem;
+  max-width: min(100%, 36rem);
 }
 
-code {
+.con p {
+  padding-inline: 2ch;
+}
+blockquote {
+  font-weight: light;
+  font-style: italic;
+  color: var(--base);
+  border-left: 10px solid var(--flamingo);
+  margin: 1em 10px 0 0;
+  padding: 0.5em 3em 0 2em;
+}
+
+blockquote figcaption {
+  position: relative;
+  margin: 1em 10px 0 0;
+}
+
+:lang(en) > blockquote::before {
+  content: " ";
+  font-weight: bolder;
 }
 
 h1 {
@@ -42,4 +48,55 @@ h5 {
 }
 h6 {
   color: var(--teal);
+}
+
+ul,
+ol {
+  margin-left: 1.3rem;
+  text-align: left;
+}
+body {
+  color: var(--surface0);
+  background: var(--bg);
+  padding-inline: 1ch;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px var(--black3) solid;
+}
+
+main {
+  width: 100%;
+  background: var(--black);
+  line-height: 1.5;
+  font-size: clamp(1rem, 0.8096rem + 0.9015vw, 1.325rem);
+  padding-block: 2rem 8rem;
+  margin-bottom: 3rem;
+}
+
+.header {
+  padding: 1rem;
+}
+
+.header__img_con {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+
+.header__img {
+  width: 100%;
+  max-width: 60rem;
+}
+
+@media (min-width: 668px) {
+  body {
+    padding: 3rem;
+  }
+  main {
+    padding-inline: 3ch;
+  }
 }

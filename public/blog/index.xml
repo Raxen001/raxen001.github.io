@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on Raxen abode</title>
+    <title>Blog on Raxen abode</title>
     <link>https://raxen001.github.io/blog/</link>
-    <description>Recent content in Blogs on Raxen abode</description>
+    <description>Recent content in Blog on Raxen abode</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://raxen001.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Aug 2023 19:59:02 +0530</lastBuildDate><atom:link href="https://raxen001.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>blog 1</title>
+      <title>Blog 1</title>
       <link>https://raxen001.github.io/blog/blog-1/</link>
-      <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 08 Aug 2023 19:59:02 +0530</pubDate>
       
       <guid>https://raxen001.github.io/blog/blog-1/</guid>
-      <description>Heading 1 this is text
-this is sub-text something something
-something
-done code here
-import os a = int(input()) print(a) youtube this is a para 1
-this is para 2
-I just love bold text.
-I just love bold text.
-Love is bold
-Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 </description>
+      <description>This is the first blog i am writing do go easy on me Hello world. For the longest time i wanted to have my own blogging website.</description>
     </item>
     
   </channel>

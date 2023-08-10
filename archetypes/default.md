@@ -2,6 +2,6 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
-banimg: "/img/banimg.png"
+banimg: "banimg.png"
 customcss: "blog.css"
 ---

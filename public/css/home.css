@@ -1,34 +1,23 @@
-@font-face {
-  font-family: fc;
-  src: url("../font/static/FiraCode-Regular.ttf");
-}
-@font-face {
-  font-family: banner;
-  src: url("../font/Color\ Basic.otf");
-}
-
 html,
 body {
   font-family: fc;
   height: 100%;
   background-color: var(--bg);
   /* background-color: #000; */
-  color: var(--surface0);
   font-size: clamp(0.95rem, 0.6496rem + 0.9615vw, 1.125rem);
 }
 
 main {
   height: 100%;
-
+  color: var(--surface0);
   /* From https://css.glass */
   /* background: rgba(255, 255, 255, 0.14); */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(14.4px);
-  -webkit-backdrop-filter: blur(14.4px);
-
-  -webkit-box-shadow: -80px 33px 64px 0px rgba(0, 0, 0, 0.81);
-  -moz-box-shadow: -80px 33px 64px 0px rgba(0, 0, 0, 0.81);
-  box-shadow: -80px 33px 64px 0px rgba(0, 0, 0, 0.81);
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+  /* backdrop-filter: blur(14.4px); */
+  /* -webkit-backdrop-filter: blur(14.4px); */
+  /* -webkit-box-shadow: -80px 33px 64px 0px rgba(0, 0, 0, 0.81); */
+  /*   -moz-box-shadow: -80px 33px 64px 0px rgba(0, 0, 0, 0.81); */
+  /*   box-shadow: -80px 33px 64px 0px rgba(0, 0, 0, 0.81); */
 }
 
 .grid {
@@ -43,7 +32,7 @@ main {
     "con con";
 
   /* background-color: var(--black2); */
-  --stagger-delay: 150ms;
+  --stagger-delay: 200ms;
 }
 
 .pic {
@@ -53,9 +42,11 @@ main {
   justify-content: center;
   align-items: center;
 
-  animation: card_entrance-1 700ms ease-out;
+  animation: card_entrance-1 800ms cubic-bezier(0.075, 0.12, 0.165, 1);
   animation-fill-mode: backwards;
   animation-delay: calc(1 * var(--stagger-delay));
+
+  transition: all 500ms linear;
 
   height: 100%;
   background-color: var(--black);
@@ -75,7 +66,7 @@ main {
 .ban {
   font-size: 150%;
   grid-area: ban;
-  animation: card_entrance-2 700ms ease-out;
+  animation: card_entrance-2 700ms ease-in-out;
   animation-fill-mode: backwards;
   animation-delay: calc(2 * var(--stagger-delay));
 
@@ -100,6 +91,9 @@ main {
 
 .ban > h1:hover {
   color: var(--red);
+  border: 0.3rem var(--green) solid;
+  border-radius: 1ch;
+  padding: 1rem;
 }
 
 @keyframes animate {
@@ -149,13 +143,19 @@ nav {
 }
 .nav a {
   width: 90%;
-  display: flex;
-  justify-content: center;
   background-color: var(--gray);
   border-radius: 4%;
   text-decoration: none;
   color: var(--surface0);
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* gap between text and icon */
+.nav a svg {
+  margin-right: 1ch;
 }
 
 .nav a:hover {
@@ -173,6 +173,11 @@ nav {
   background-color: var(--black3);
 }
 
+@media (min-width: 475px) {
+  .container {
+    max-height: 75rem;
+  }
+}
 @media (min-width: 768px) {
   body {
     display: flex;
@@ -180,7 +185,8 @@ nav {
     align-items: center;
   }
   main {
-    height: 90%;
+    height: 95%;
+    max-height: 72rem;
     border-top-left-radius: 2%;
   }
   .grid {
@@ -215,36 +221,85 @@ nav {
   }
   nav {
     display: grid;
-    align-items: center;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
     background-color: var(--black);
+    place-items: center;
+
+    padding: 0;
+    margin: 0;
   }
   .nav li {
+    display: block;
+    grid-column: span 2;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 0 2rem;
+    padding: 0;
+    margin: 0;
   }
   .nav a {
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: left;
+    justify-items: left;
+    min-width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     border-radius: 0%;
     background-color: unset;
+    padding: 0;
+    margin: 0;
+    transition: all 200ms linear;
+  }
+  .nav a svg {
+    align-self: center;
+    justify-self: right;
+    margin-left: 60%;
   }
   .nav a:hover {
     background-color: unset;
+  }
+  .nav a svg {
+    transition: all 200ms linear;
+  }
+  .nav a:hover svg {
+    transform: translateX(-40%) scale(1.1);
   }
   .nav li:hover {
     cursor: pointer;
     background-color: var(--gray);
   }
   .nav li:hover a {
-    color: var(--green);
+    color: var(--mantle);
+    transform: translateX(-1%) scale(1.1);
   }
+  .nav li:hover a svg {
+    color: var(--teal);
+  }
+  .con {
+    border: 0.1rem var(--black3) solid;
+    transition: all 250ms linear;
+  }
+  .con:hover {
+    border: 0.1rem var(--yellow) solid;
+    background-color: var(--black2);
+  }
+}
+
+h1 {
+  color: var(--peach);
+}
+h2 {
+  color: var(--blue);
+}
+h3 {
+  color: var(--yellow);
+}
+h4 {
+  color: var(--green);
+}
+h5 {
+  color: var(--sky);
+}
+h6 {
+  color: var(--teal);
 }

@@ -3,7 +3,7 @@ title: "Hello Friend"
 author: "Raxen"
 draft: false
 date: 2023-08-10
-banimg: "/img/heart-art-minimal.jpg"
+banimg: "heart-art-minimal.jpg"
 customcss: "blog.css"
 ---
 

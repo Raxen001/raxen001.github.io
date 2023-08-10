@@ -3,7 +3,10 @@
   <div class="header">
     {{ if isset .Params "banimg" }}
     <div class="header__img_con">
-      <img class="header__img" src="{{ .Params.banimg }}" />
+      {{if isset .Params "banimg"}} {{ $image := resources.GetMatch (path.Join
+      "banimg" .Params.banimg )}} {{ $image := $image.Resize (printf "%dx%d webp q70" $image.Width $image.Height )}}
+      <img class="header__img" src="{{ $image.RelPermalink }}" />
+      {{end}}
     </div>
     {{ end }}
     <div class="header__title"><strong>Title: </strong><i>{{ .Title }}</i></div>
@@ -11,7 +14,8 @@
       <strong>Author: </strong><i>{{ .Params.Author }}</i>
     </div>
     <div class="header__date">
-      <strong>Date: </strong><i>{{ .Params.Date | time.Format ":date_long" }}</i>
+      <strong>Date: </strong
+      ><i>{{ .Params.Date | time.Format ":date_long" }}</i>
     </div>
   </div>
   <div class="con">{{ .Content }}</div>

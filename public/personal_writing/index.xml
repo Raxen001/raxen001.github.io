@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Personal_writings on Raxen abode</title>
+    <title>Personal Writings on Raxen abode</title>
     <link>https://raxen001.github.io/personal_writing/</link>
-    <description>Recent content in Personal_writings on Raxen abode</description>
+    <description>Recent content in Personal Writings on Raxen abode</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://raxen001.github.io/personal_writing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Aug 2023 21:20:34 +0530</lastBuildDate><atom:link href="https://raxen001.github.io/personal_writing/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>personal_blog</title>
-      <link>https://raxen001.github.io/personal_writing/writing-1/</link>
-      <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
+      <title>Write 1 - a few favourite quotes</title>
+      <link>https://raxen001.github.io/personal_writing/write-1/</link>
+      <pubDate>Thu, 10 Aug 2023 21:20:34 +0530</pubDate>
       
-      <guid>https://raxen001.github.io/personal_writing/writing-1/</guid>
-      <description>what what</description>
+      <guid>https://raxen001.github.io/personal_writing/write-1/</guid>
+      <description>A few of my favourite quotes The moments that define lives aren&amp;rsquo;t always obvious. They don&amp;rsquo;t scream LEDGE, and nine times out of ten there&amp;rsquo;s no rope to duck under, no line to cross, no blood pact, no official letter on fancy paper.</description>
+    </item>
+    
+    <item>
+      <title>Hello Friend</title>
+      <link>https://raxen001.github.io/personal_writing/hell0-friend/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://raxen001.github.io/personal_writing/hell0-friend/</guid>
+      <description>Hello Friend. If you are reading this then you might have stumbled upon my website by a random chance or your friend might have showed you this website There isn&amp;rsquo;t much to personal_writings.</description>
     </item>
     
   </channel>
