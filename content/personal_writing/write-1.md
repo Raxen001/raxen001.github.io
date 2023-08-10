@@ -12,8 +12,8 @@ customcss: "blog.css"
 > and nine times out of ten there's no rope to duck under, no line to cross, no
 > blood pact, no official letter on fancy paper. They aren't always protracted,
 > heavy with meaning.
-
-            - V.E. Schwab
+>
+> -- V.E. Schwab
 
 > “ Cowards die many times before their deaths;
 > The valiant never taste of death but once.
@@ -21,12 +21,12 @@ customcss: "blog.css"
 > It seems to me most strange that men should fear;
 > Seeing that death, a necessary end,
 > Will come when it will come. ”
-
-            ― William Shakespeare, Julius Caesar
+>
+> -- William Shakespeare, Julius Caesar
 
 > " WE SUFFER NOT FROM
 > THE EVENTS IN OUR LIVES
 > BUT FROM OUR
 > JUDGEMENT ABOUT THEM "
-
-            - epictetus
+>
+> -- epictetus
