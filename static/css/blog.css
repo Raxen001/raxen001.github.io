@@ -12,6 +12,24 @@ img {
 .con p {
   padding-inline: 2ch;
 }
+blockquote {
+  font-weight: light;
+  font-style: italic;
+  color: var(--base);
+  border-left: 10px solid var(--flamingo);
+  margin: 1em 10px 0 0;
+  padding: 0.5em 3em 0 2em;
+}
+
+blockquote figcaption {
+  position: relative;
+  margin: 1em 10px 0 0;
+}
+
+:lang(en) > blockquote::before {
+  content: " ";
+  font-weight: bolder;
+}
 
 h1 {
   color: var(--peach);
@@ -53,7 +71,8 @@ main {
   background: var(--black);
   line-height: 1.5;
   font-size: clamp(1rem, 0.8096rem + 0.9015vw, 1.325rem);
-  padding-block: 3rem;
+  padding-block: 2rem 8rem;
+  margin-bottom: 3rem;
 }
 
 .header {
