@@ -1,7 +1,3 @@
-@font-face {
-  font-family: fc;
-  src: url("/font/static/FiraCode-Regular.ttf");
-}
 html,
 body {
   font-family: fc, monospace, Cambria, Cochin, Georgia, Times, "Times New Roman",
