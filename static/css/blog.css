@@ -38,10 +38,10 @@ blockquote figcaption {
 }
 
 h1 {
-  color: var(--peach);
+  color: var(--sky);
 }
 h2 {
-  color: var(--blue);
+  color: var(--maroon);
 }
 h3 {
   color: var(--yellow);
@@ -74,15 +74,14 @@ body {
 
 main {
   width: 100%;
-  background: var(--black);
   line-height: 1.5;
-  font-size: clamp(1rem, 0.8096rem + 0.9015vw, 1.325rem);
+  font-size: clamp(1rem, 0.8096rem + 0.9015vw, 1.225rem);
   padding-block: 2rem 8rem;
   margin-bottom: 3rem;
 }
 
 .header {
-  padding: 1rem;
+  padding-inline: 8%;
 }
 
 .header__img_con {
@@ -90,12 +89,35 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 
 .header__img {
   width: 100%;
   max-width: 60rem;
+  border: 1px var(--mauve) solid;
+}
+
+.header > * > strong {
+  font-family: banner;
+  font-weight: 600;
+  font-style: bold;
+}
+
+.header__title {
+  color: var(--teal);
+}
+.header__author {
+  color: var(--yellow);
+}
+.header__date {
+  color: var(--lavender);
+}
+
+.header__title,
+.header__author,
+.header__date {
+  padding-block: 0.5rem;
 }
 
 @media (min-width: 668px) {
