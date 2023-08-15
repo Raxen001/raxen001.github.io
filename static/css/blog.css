@@ -74,14 +74,16 @@ body {
 
 main {
   width: 100%;
-  line-height: 1.5;
-  font-size: clamp(1rem, 0.8096rem + 0.9015vw, 1.225rem);
-  padding-block: 2rem 8rem;
+  line-height: 1.3;
+  font-size: clamp(1rem, 0.8096rem + 0.9015vw, 1.115rem);
+  padding-block: 2rem 6rem;
   margin-bottom: 3rem;
+  text-align: justify;
 }
 
 .header {
   padding-inline: 8%;
+  padding-bottom: 3%;
 }
 
 .header__img_con {
