@@ -61,22 +61,22 @@
 }
 @media (min-width: 475px) {
   .container {
-    max-width: 100%;
+    max-width: 99%;
   }
 }
 @media (min-width: 700px) {
   .container {
-    max-width: 98%;
+    max-width: 97%;
   }
 }
 @media (min-width: 1124px) {
   .container {
-    max-width: 93%;
+    max-width: 63rem;
   }
 }
 @media (min-width: 1536px) {
   .container {
-    max-width: 85rem;
+    max-width: 69rem;
   }
 }
 
