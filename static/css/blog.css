@@ -17,6 +17,9 @@ img {
   padding: 1ch 2ch;
   margin-block: 1ch;
 }
+.highlight {
+  overflow-x: scroll;
+}
 blockquote {
   font-weight: light;
   font-style: italic;
