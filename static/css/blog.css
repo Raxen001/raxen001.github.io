@@ -9,6 +9,10 @@ img {
   max-width: min(100%, 36rem);
 }
 
+.con a {
+  color: var(--lavender);
+}
+
 .con p {
   padding: 1ch 2ch;
   margin-block: 1ch;
@@ -141,7 +145,7 @@ main {
 
 @media (min-width: 668px) {
   body {
-    padding: 3rem;
+    padding: 1rem 3rem;
   }
   main {
     padding-inline: 3ch;
