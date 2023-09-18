@@ -134,3 +134,8 @@ And you are done
 Now you can access your devices from anywhere.
 Since, it is a mesh network. There is to data limit. as Data isn't going through Tailscale servers.
 They only helping in making the mesh network.
+
+# NOTES
+
+installing everything using a single docker compose file
+script to make it so i can be reproducible everywhere
