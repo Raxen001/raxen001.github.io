@@ -2,6 +2,7 @@
 title: "Project 0"
 author: "Rithesh"
 date: 2023-07-27
+draft: true
 banimg: "dragon.jpg"
 customcss: "blog.css"
 ---

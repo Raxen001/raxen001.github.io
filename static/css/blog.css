@@ -6,7 +6,7 @@ body {
 }
 
 img {
-  max-width: min(100%, 36rem);
+  max-width: max(100%, 36rem);
 }
 
 .con a {
