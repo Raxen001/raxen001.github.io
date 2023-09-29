@@ -1,7 +1,7 @@
 ---
 title: "Raven"
 date: 2023-09-06T15:45:01+05:30
-draft: true
+draft: false
 banimg: "raven.jpg"
 customcss: "blog.css"
 ---
