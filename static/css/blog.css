@@ -7,6 +7,11 @@ body {
 
 img {
   width: clamp(100%, 30vw + 3rem + 10%, 100vw);
+  margin-block: 1rem;
+}
+
+hr {
+  margin-block: 1ch 2rem;
 }
 
 .con a {
