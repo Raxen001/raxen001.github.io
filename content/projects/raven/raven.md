@@ -43,7 +43,13 @@ It was fairly straightforward all you ever need to install a linux distro is usb
 You can use _rufus_ or media creation tool of your choice.
 
 For Linux users you have a lot of choice you can do something like
-`dd if=debian.iso of=/dev/sdb bs=4M status=progress` **i made it up from memory don't copy paste**
+
+```bash
+dd if=debian.iso of=/dev/sdb bs=4M status=progress
+```
+
+**i made it up from memory don't copy paste**
+
 or use the `cat` command or use media creation tool already present in your Operating System if your running a normie distro.
 
 #### RECOMMENDED
@@ -96,7 +102,9 @@ easy installation
 
 ##### Remove if installed previous
 
-`for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done`
+```bash
+for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
+```
 
 #### install fresh
 
