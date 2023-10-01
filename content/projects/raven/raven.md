@@ -154,9 +154,9 @@ Most the docker images i am using are from
 [linuxserver](https://www.linuxserver.io/)
 They have the docker compose for everything. Which makes it very easy for me to copy paste everything
 
-- [qBittorrent](#qBittorrent)
-- [Jellyfin](#Jellyfin)
-- [Jellyseerr](#Jellyseerr)
+- [qBittorrent](#qbittorrent)
+- [Jellyfin](#jellyfin)
+- [Jellyseerr](#jellyseerr)
 - [prowlarr](#prowlarr)
 - [lidarr](#lidarr)
 - [sonarr](#sonarr)
