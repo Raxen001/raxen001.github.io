@@ -6,7 +6,7 @@ body {
 }
 
 img {
-  max-width: max(100%, 36rem);
+  width: clamp(100%, 30vw + 3rem + 10%, 100vw);
 }
 
 .con a {

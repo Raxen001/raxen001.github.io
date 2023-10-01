@@ -1,5 +1,6 @@
 ---
 title: "Raven"
+author: "Raxen"
 date: 2023-09-06T15:45:01+05:30
 draft: false
 banimg: "raven.jpg"
@@ -9,7 +10,7 @@ customcss: "blog.css"
 # Home media server
 
 I was bored and wanted to created my own personal netflix at home. So, naturally i wanted some kind of hardware that can run a media server
-Fortunately, I had a spare laptop lying around a toshiba ![toshiba](laptop.jpg).
+Fortunately, I had a spare laptop lying around a toshiba ![toshiba](../laptop.jpg).
 
 ## specs
 
@@ -173,9 +174,12 @@ as you can see from the image below i have added my tailscale ip to the whitelis
 Media server to serve all the medias you _legally own_
 
 Jellyfin allows you to serve all the media you _legally own_. Rip Your own stuff
+
 ![home](../jel-home.png)
+
 Jellyfin allows you to have transcoding when possible to allow hardware acceleration
 go to Settings -> dashboard -> playback -> vaapi
+
 ![hardware-acceleration](../jel-hw.png)
 ![syncplay](../jel-syn1.png)
 ![syncplay](../jel-syn2.png)
@@ -198,22 +202,26 @@ this is where prowlarr comes in. this will help you search through all the sites
 ### lidarr
 
 ok enough with the linux isos pun. lidarr helps you with keeping you up with your music needs. It allows you track Artist. It tracks all the albums you already have and any upcoming ones. It will automatically download them and rename them. **You goto enable rename files**
+
 ![lidarr](../lidarr.png)
 
 ### sonarr
 
 same stuff but for TV Shows. This lets you track all the shows you watch and keep them organised
+
 ![sonarr](../sonarr.png)
 
 ### radarr
 
 To keep track of all your Movies.
+
 ![radarr](../radarr.png)
 
 ### heimdall
 
 Having lot of applciations running on your server can quickly become a hassle to keep track of.
 You gonna need some kind of link list. Why not go for a homepage. It talks with most the popular homelab applications and puts it on the homepage
+
 ![homepage](../heimdall.png)
 
 ### ip2cam
@@ -221,6 +229,10 @@ You gonna need some kind of link list. Why not go for a homepage. It talks with 
 This is one the few fun things i wanted to do. This basically allows you to stream your webcam.
 
 ![cam2ip](../cam2ip.png)
+
+It's pretty dark here. but the point is you can stream your webcam through http which is pretty cool.
+combine it with text to speech program like GNUstep. You can mess around with your family.
+(They shut down my server (raven) when i messed with them too much... :( )
 
 ### Final docker compose
 
