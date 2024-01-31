@@ -9,6 +9,8 @@
   <link href="/css/header.css" rel="stylesheet" />
   <link href="/css/footer.css" rel="stylesheet" />
   
+  <meta property="og:description" content="Raxen001's abode'" />
+  <meta name="description" content="Raxen001's abode'">
   {{ if isset .Params "title" }}
     <meta property="og:title" content="{{.Params.title}}" />
   {{end}}
@@ -17,9 +19,28 @@
   {{ if isset .Params "banimg" }}
       {{ $image := resources.GetMatch (path.Join "banimg" .Params.banimg )}} 
       {{ $image := $image.Resize (printf "%dx%d webp q70" $image.Width $image.Height )}}
-      <meta property="og:image:url" content="{{ $image.RelPermalink }}" />
+      <meta property="og:image" content="{{ $image.RelPermalink }}" />
   {{end}}
-  <meta property="og:description" content="Raxen001's abode'" />
+
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="raxen001.github.io">
+{{ if isset .Params "title" }}
+    <meta property="twitter:title" content="{{.Params.title}}" />
+{{end}}
+<meta name="twitter:description" content="Raxen001's abode'">
+  {{ if isset .Params "banimg" }}
+      {{ $image := resources.GetMatch (path.Join "banimg" .Params.banimg )}} 
+      {{ $image := $image.Resize (printf "%dx%d webp q70" $image.Width $image.Height )}}
+      <meta name="twitter:image" content="{{ $image.RelPermalink }}">
+  {{end}}
+
+
+
+
+
+
 
   {{ if isset .Params "customcss" }}
   <link href="/css/{{ .Params.customcss }}" rel="stylesheet" />
