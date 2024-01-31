@@ -19,7 +19,7 @@
   {{ if isset .Params "banimg" }}
       {{ $image := resources.GetMatch (path.Join "banimg" .Params.banimg )}} 
       {{ $image := $image.Resize (printf "%dx%d webp q70" $image.Width $image.Height )}}
-      <meta property="og:image" content="{{ $image.Permalink }}" />
+      <meta property="og:image" itemprop="image" content="{{ $image.Permalink }}" />
   {{end}}
 
 
