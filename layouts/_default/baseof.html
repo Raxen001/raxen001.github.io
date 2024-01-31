@@ -18,7 +18,7 @@
   <meta property="og:url" content="http://raxen001.github.io" />
   {{ if isset .Params "banimg" }}
       {{ $image := resources.GetMatch (path.Join "banimg" .Params.banimg )}} 
-      {{ $image := $image.Resize (printf "%dx%d webp q70" $image.Width $image.Height )}}
+      {{ $image := $image.Resize (printf "256x256 webp q70")}}
       <meta property="og:image" itemprop="image" content="{{ $image.Permalink }}" />
   {{end}}
 
