@@ -8,6 +8,18 @@
   <link href="/css/style.css" rel="stylesheet" />
   <link href="/css/header.css" rel="stylesheet" />
   <link href="/css/footer.css" rel="stylesheet" />
+  
+  {{ if isset .Params "title" }}
+    <meta property="og:title" content="{{.Params.title}}" />
+  {{end}}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://raxen001.github.io" />
+  {{ if isset .Params "banimg" }}
+      {{ $image := resources.GetMatch (path.Join "banimg" .Params.banimg )}} 
+      {{ $image := $image.Resize (printf "%dx%d webp q70" $image.Width $image.Height )}}
+      <meta property="og:image:url" content="{{ $image.RelPermalink }}" />
+  {{end}}
+  <meta property="og:description" content="Raxen001's abode'" />
 
   {{ if isset .Params "customcss" }}
   <link href="/css/{{ .Params.customcss }}" rel="stylesheet" />
