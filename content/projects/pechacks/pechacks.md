@@ -20,13 +20,13 @@ We wanted to bring the cryptocurrencies to the masses. So we questioned ourselve
 ### Our great solution.
 
 - A paytm like box. Speaker capable of connecting to the polygon network and use Test-To-Speech to read the latest transaction in your wallet id
-- We wanted the users to convert their cryptocurrencies ipositionnto fiat currencies on the fly when making payments. Thus allowing integration upi and card payments. 
+- We wanted the users to convert their cryptocurrencies into  fiat currencies on the fly when making payments. Thus allowing integration upi and card payments. 
 
 
 ## Hour 0 
 
 We all met up near the registration spot. There were 5 of us.
-Dhruv, Noumaan, Dhanush, Me, Harrish. The thing this is the first time we are meeting regarding the hackathon. Since we were very chill about the whole hackathon. We all had 0 coordination and didn't know what we were building in the first place. Partially because as mentioned in [solution](#our-great-solution). On looking back we did have a lot of meetings to make sure we were all on the same page but not everyone was there in those meetings. So pro tip for anyone who wants to do hackathons. Have regular meets. Make sure everyone knows what their role is. 
+Dhruv, Noumaan, Dhanush, Me, Harish. The thing this is the first time we are meeting regarding the hackathon. Since we were very chill about the whole hackathon. We all had 0 coordination and didn't know what we were building in the first place. Partially because as mentioned in [solution](#our-great-solution). On looking back we did have a lot of meetings to make sure we were all on the same page but not everyone was there in those meetings. So pro tip for anyone who wants to do hackathons. Have regular meets. Make sure everyone knows what their role is. 
 
 We quickly setup our laptops in our booths after registration. The college infrastructure was very good except the internet issues at the start of the event which made it near impossible for me to download any libraries or packages or docker container. 
 Another pro tip. Install all the necessary libraries and packages before the hackathon. Don't waste your time there.
@@ -35,16 +35,18 @@ Since PECHACKS had a lot of sponsors which meant just for participating we walke
 
 ![freestuff](../freestuff.jpg)
 
-We got a Thermoflask bottle which showed the temperature of the fluid on the side. Which was pretty cool.
+We got a Thermo flask bottle which showed the temperature of the fluid on the side. Which was pretty cool.
 And as you can see from the image. Stickers
+
+![ThermoFlask](../flask.jpg)
 
 ## Hour 1 - 3
 
-We decided on a a tech stack and started to working.
+We decided on a tech stack and started to working.
 
 ### Problem 1.
 
-Only one of us actually knew how to work with blockchain. 2 knew flutter. 2 were wildcards helping wherever needed. 
+Only one of us actually knew how to work with blockchain. 2 knew flutter. 2 were wild cards helping wherever needed. 
 
 ### Problem 2.
 
@@ -59,7 +61,7 @@ We were still trying out different libraries and ended up with [thirdweb](https:
 ## Hour 6 - 12
 
 We got all the pieces we need and started hacking away to bring them together. Our flutter team were hard at work on making an awesome frontend. 
-We were workign away at making a mock bank api and api for our swift app.
+We were working away at making a mock bank api and api for our swift app.
 
 ## Hour 12 - 24 
 
@@ -67,26 +69,26 @@ You are probably thinking why haven't i explained about my app yet. The thing is
 So here is how it works
 
 We had 2 databases ( don't ask me why ).
-One for our mock Bank database hosted in aiven. It was a postgres database
+One for our mock Bank database hosted in Aiven. It was a postgres database
 One for our swift app users. It was a mongodb cluster.
 We made connections and had backend api ready in expressjs and python flask. 
 
 So our application will talk with the bank api to do transactions.
-At this point in time we had 2 api services running. and 2 backend being built one for the web and one for the mobile using flutter. 
+At this point in time we had 2 api services running and 2 backend being built one for the web and one for the mobile using flutter. 
 
-Everything going smooth we thought. we can win this we thought. Oh boy were we ever wrong.
+Everything going smooth we thought. We can win this we thought. Oh boy were we ever wrong.
 
 ## Hour 12 - 18
 
-Misery strikes and it struck hard. We had a rasberrypi connected with a speaker and it didn't want to work at all. We had a websocket on our rasberrypi listening. Once it receives data from certain ip address it will then read out the transaction
+Misery strikes and it struck hard. We had a rasberrypi connected with a speaker and it didn't want to work at all. We had a websocket on our rasberrypi listening. Once it receives data from certain IP address it will then read out the transaction
 it was perfect. Another services was created to talk with the rasberrypi. So number of services running were 4.
-I still don't get how it happened or why but somehow the pysttx3 the python package we were using for Test-To-Speech was behaving weirdly. When trying it out in the pi. It works flawlessly. Whenever we used the websocket the data is was reading couldn't be modified(not exactly).
-If say `message` is the parameter of a function. We take the variable `message` do some operations on it and pass it the the Test-To-Speech function but it worked with `print()` doesn't matter if you are using a different variable or copied the entire variable into a new one. It always spoke the original `message`.
+I still don't get how it happened or why but somehow the `pysttx3` the python package we were using for Test-To-Speech was behaving weirdly. When trying it out in the pi. It works flawlessly. Whenever we used the websocket the data is was reading couldn't be modified(not exactly).
+If say `message` is the parameter of a function. We take the variable `message` do some operations on it and pass it the Test-To-Speech function but it worked with `print()` doesn't matter if you are using a different variable or copied the entire variable into a new one. It always spoke the original `message`.
 example say `message` was "65.000" and we wanted it to be "65". Whatever we did to convert it into "65" would work and print out in `print()` either say turning it into `int` or using string operations but when the goes to Test-To-Speech. it would say "65.000"
 
-Then the another problem was we couldn't figure out why our code wasn't working we named the Test-To-Speech file `ttl.py` it might have had some other python file in the same name in the path i guess (not in the same directory thoguh).
+Then the another problem was we couldn't figure out why our code wasn't working we named the Test-To-Speech file `ttl.py` it might have had some other python file in the same name in the path i guess (not in the same directory though).
 
-Once we resolved these issues by changing the `ttl.py` to `speaker.py` and balckmagic we moved onto other problems
+Once we resolved these issues by changing the `ttl.py` to `speaker.py` and black magic (BigInt number system in javascript problem) we moved onto other problems
 
 
 At this point in time. The blockchain smart contracts was in a great state and all that there was to do was work on api integration and frontend. It was a stupid thought that it was easy.
@@ -111,7 +113,7 @@ So we had 4 types of transactions. Since our token was called as MCT(polygon tok
 4. MCR - MCR bank to bank transfer
 
 All these were successfully implemented and was working.
-And when the transaction occurs in merchants wallet id. it will be read by the rasberrypi speaker.
+And when the transaction occurs in merchants wallet id. It will be read by the rasberrypi speaker.
 
 
 ## Hour 30 - 36
@@ -119,10 +121,29 @@ And when the transaction occurs in merchants wallet id. it will be read by the r
 We were all burnt out and were exhausted. The frontend wasn't working on the web as expected. We just had the frontend in android. 
 Overall we gave it our best
 
+
+Some screenshots of our project
+
+![1](../ss1.jpg)
+![2](../ss2.jpg)
+![3](../ss3.jpg)
+![4](../ss4.jpg)
+![5](../ss5.jpg)
+
+## Content provided by flutter team
+
+The Flutter team was entrusted with only the Metamask login and they were made to believe that all the other apis will be provided on demand. So they started off with searching resources with integrating the Metamask login in our app. Although there were plenty of packages available, majority of them were only supported for the web and were useless to us as our app was centered for Mobile platforms only. After 4 - 5 hours of painful grinding, they found a package that took care of the metamask login by itself and now they required only the APIs. When they were able to do this, it was only logical to try out to carry crypto transactions keeping the metamask as the mediator. But that package was not supportive of all the functions for carrying out such transactions. After a 5 hours of futile efforts, we came to a conclusion to carry out the transactions at the backend, with the Flutter frontend only requiring to create users for our app and login. After successful users management, we made a list of checkpoints for our app as follows: Login, Register, Scan QR, Initiate transactions, Process them at the backend, and display the result of success or failure. We completed the checkpoints one after the other and after our app was fully functional, we made our UI more attractive and responsive. That way, our app was ready for demonstration and we displayed our app to the juries with all the use cases and scenarios of transactions mentioned before.
+
 # Conclusion
 
 Even though we didn't win. We learnt a lot and most importantly we enjoyed a lot. The MLH workshops were interesting. The prizes were crazy. Got a lot of free stuff that would be the 1st prize in our college 🤣.
 Learnt a great deal about blockchain and rules surrounding it in various countries.
 What is limiting its growth. How governments are against it and why. How they are taxed.
 We were quite happy with the results. Cause by the end of the event we had a working app with all the intended features we planned.
+
+
+# Project repos
+
+- [backend](https://github.com/Raxen001/new_rec_companion_app)
+- [frontend](https://github.com/dhruvrjain/crypto_swift)
 
