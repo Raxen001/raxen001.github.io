@@ -146,6 +146,7 @@ nav {
 
   display: flex;
   justify-content: center;
+  background: var(--black);
 }
 .nav a {
   width: 90%;
