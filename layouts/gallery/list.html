@@ -16,13 +16,15 @@
     <main>
       <div class="gallery">
         {{ with .Site.GetPage "/gallery" }} {{ range .Resources.ByType "image"}}
-        {{ with .Resize (printf "%dx%d webp q90" .Width .Height)}}
-        <a href="{{.}}">
-          <figure>
-            <img class="gallery__img" src="{{.RelPermalink}}" />
-          </figure>
-        </a>
-        {{ end }} {{end }} {{end}}
+          {{ with .Resize (printf "%dx%d webp q90" .Width .Height)}}
+            <a class="gallery__item" href="{{.}}">
+              <figure>
+                <img class="gallery__img" src="{{.RelPermalink}}"/>
+              </figure>
+            </a>
+          {{ end }} 
+        {{ end }}
+        {{ end }}
       </div>
     </main>
     {{ partial "footer" . }}

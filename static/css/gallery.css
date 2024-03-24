@@ -24,18 +24,25 @@ main {
 
 .gallery {
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
   padding-inline: 4%;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 27rem), 1fr));
   transition: all 250ms linear;
 }
+.gallery__item{
+  max-width: 100%;
+  max-height: 100%;
+}
 
 .gallery__img {
   max-width: 100%;
-  object-fit: cover;
+  max-height: 100%;
+  object-fit: contain;
   transition: all 200ms ease-in;
   animation: animate 1s ease-in-out;
-  padding: 1rem 0.5rem;
+  /* padding: 1rem 0.5rem; */
   background: var(--black3);
   border-radius: 1ch;
 }
