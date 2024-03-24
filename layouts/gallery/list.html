@@ -16,7 +16,7 @@
     <main>
       <div class="gallery">
         {{ with .Site.GetPage "/gallery" }} {{ range .Resources.ByType "image"}}
-        {{ with .Resize (printf "%dx%d webp q50" .Width .Height)}}
+        {{ with .Resize (printf "%dx%d webp q90" .Width .Height)}}
         <a href="{{.}}">
           <figure>
             <img class="gallery__img" src="{{.RelPermalink}}" />
