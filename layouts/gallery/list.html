@@ -15,15 +15,22 @@
     <!-- layouts/gallery.html -->
     <main>
       <div class="gallery">
-        {{ with .Site.GetPage "/gallery" }} {{ range .Resources.ByType "image"}}
-          {{ with .Resize (printf "%dx%d webp q90" .Width .Height)}}
-            <a class="gallery__item" target="_blank" href="{{.}}">
-              <figure>
-                <img class="gallery__img" src="{{.RelPermalink}}"/>
-              </figure>
-            </a>
-          {{ end }} 
-        {{ end }}
+        {{ with .Site.GetPage "/gallery" }} 
+          {{ range .Resources.ByType "image"}}
+            {{ with .Resize (printf "%dx webp q90" 420)}}
+              {{ $maxh := 500 }}
+              {{ $height := .Height }}
+              {{ if ge $height $maxh }}
+                <a class="gallery__item double__row" target="_blank" href="{{.}}">
+              {{ else }}
+                <a class="gallery__item" target="_blank" href="{{.}}">
+              {{ end }}
+                <figure>
+                  <img class="gallery__img" src="{{.RelPermalink}}"/>
+                </figure>
+              </a>
+            {{ end }} 
+          {{ end }}
         {{ end }}
       </div>
     </main>

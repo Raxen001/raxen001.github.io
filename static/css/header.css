@@ -21,20 +21,23 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+  /* gap: 1rem; */
   background: #0a1f1f1f;
   backdrop-filter: blur(2rem);
 }
 
 .nav__a {
   width: 100%;
+  height: 100%;
   text-decoration: none;
   color: var(--crust);
   transition: all 250ms linear;
-  padding: 1rem;
 }
 .nav__a:hover {
   background: var(--gray);
+}
+.nav__a:active{
+  transform: scale(1.1);
 }
 .pnav {
   font-family: fc;
@@ -56,7 +59,7 @@
   /* please bring my sanity back css3 */
   padding-top: 3px;
 }
-@media (min-width: 680px) {
+@media (min-width: 65rem) {
   .mnav {
     display: none;
   }
@@ -67,7 +70,7 @@
     margin: 1rem 4rem;
     background: var(--black1);
     position: static;
-    max-width: 75rem;
+    max-width: 63rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
