@@ -13,6 +13,7 @@
   backdrop-filter: blur(2rem);
 }
 
+
 .nav {
   position: fixed;
   /* debug */
@@ -21,6 +22,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   /* gap: 1rem; */
   background: #0a1f1f1f;
   backdrop-filter: blur(2rem);
@@ -28,7 +30,10 @@
 
 .nav__a {
   width: 100%;
-  height: 100%;
+  height: clamp(10%, 12vh + 0.1rem,17rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: var(--crust);
   transition: all 250ms linear;
@@ -40,11 +45,11 @@
   transform: scale(1.1);
 }
 .pnav {
-  font-family: fc;
+  font-family: banner;
   transform: translateX(100%);
 }
 .pnav[data-visible="true"] {
-  transform: translateX(00%);
+  transform: translateX(0);
 }
 .mnav {
   color: var(--surface1);
