@@ -5,7 +5,7 @@
     <a class="card__link" href="{{ .Permalink }}">
       {{if isset .Params "banimg"}} 
         {{ $image := resources.GetMatch (path.Join "banimg" .Params.banimg )}}
-        {{ $image := $image.Resize (printf "%dx%d webp q70" $image.Width $image.Height )}}
+        {{ $image := $image.Resize (printf "%dx%d webp q100" $image.Width $image.Height )}}
         <img src="{{ $image.RelPermalink }}">
       {{end}}
 

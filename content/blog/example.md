@@ -3,7 +3,7 @@ title: "Example Blog"
 author: "Raxen"
 tags: ["tag1", "tag2"]
 date: 2023-07-27
-banimg: "banimg.png"
+banimg: "banimg.webp"
 draft: True
 customcss: "blog.css"
 ---

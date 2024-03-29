@@ -18,11 +18,14 @@
   <meta property="og:url" content="http://raxen001.github.io" />
   {{ if isset .Params "banimg" }}
       {{ $image := resources.GetMatch (path.Join "banimg" .Params.banimg )}} 
-      {{ $image := $image.Resize (printf "1200x630 webp q70")}}
+      {{ $image := $image.Resize (printf "1200x630 webp q100")}}
       <meta property="og:image" itemprop="image" content="{{ $image.Permalink }}" />
-      <meta property="og:image:height" content="630">
-      <meta property="og:image:width" content="1200">
+  {{ else }}
+      {{ $image := resources.GetMatch (path.Join "banimg" "banimg.webp" )}} 
+      <meta property="og:image" itemprop="image" content="{{ $image.Permalink }}" />
   {{end}}
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
 
 
 <!-- Twitter Meta Tags -->

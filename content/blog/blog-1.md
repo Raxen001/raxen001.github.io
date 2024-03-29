@@ -2,7 +2,7 @@
 title: "Blog 1"
 date: 2023-08-08T19:59:02+05:30
 draft: false
-banimg: "banimg.png"
+banimg: "banimg.webp"
 customcss: "blog.css"
 ---
 
