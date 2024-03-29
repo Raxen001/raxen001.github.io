@@ -137,9 +137,10 @@ button:focus {
 
   transition: all 250ms linear;
 
+  --stagger-delay: 80ms;
   animation: cards 700ms ease-out;
   animation-fill-mode: backwards;
-  animation-delay: calc(1 * var(--stagger-delay));
+  animation-delay: calc(var(--count) * var(--stagger-delay));
 }
 
 .card svg {

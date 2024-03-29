@@ -30,7 +30,8 @@
 
 .nav__a {
   width: 100%;
-  height: clamp(10%, 12vh + 0.1rem,17rem);
+  /* height: clamp(10%, 12vh + 0.1rem,17rem); */
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

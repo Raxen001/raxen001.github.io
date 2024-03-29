@@ -36,13 +36,18 @@
     </form>
 
     <div class="wrapper">
-      {{ range .Site.Author.links }} {{ range $type, $link := . }} {{ $svg :=
-      (path.Join "/static" "img" "icons" (printf "%s.svg" $type) ) }}
-      <a class="card" href="{{ $link }}" target="_blank">
-        <div class="icon">{{ readFile $svg | safeHTML}}</div>
-        <div class="desc">{{$type}}</div>
-      </a>
-      {{ end }} {{ end }}
+      {{ $.Scratch.Set "counter" 0 }}
+      {{ range .Site.Author.links }} 
+        {{ range $type, $link := . }} 
+        {{ $svg := (path.Join "/static" "img" "icons" (printf "%s.svg" $type) ) }}
+          {{ $count := $.Scratch.Get "counter" }}
+          <a class="card" style="--count: {{ $count }}" href="{{ $link }}" target="_blank">
+            <div class="icon">{{ readFile $svg | safeHTML}}</div>
+            <div class="desc">{{$type}}</div>
+          </a>
+        {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
+        {{ end }} 
+      {{ end }}
     </div>
   </main>
 </body>
