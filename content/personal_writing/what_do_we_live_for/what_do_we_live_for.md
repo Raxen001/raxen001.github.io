@@ -47,8 +47,7 @@ from them. To summarize my college life so far. I have learnt a lot about
 people than ever before I learnt a lot of things in life. That no book could
 have taught me. There's no tutorial to life.
 
->                   "You Live your life your way. You are writing your
->                   autobiography now."
+> "You Live your life your way. You are writing your autobiography now."
 >
 > \- Me                                               
 
