@@ -60,7 +60,7 @@ main {
 .gallery__item.double__column{
   grid-column: span 2;
 }
-.gallery__item__double{
+.gallery__item.double{
   grid-row: span 2;
   grid-column: span 2;
 }
@@ -73,11 +73,12 @@ main {
   /* padding: 1rem 0.5rem; */
   background: var(--black3);
   border-radius: 1ch;
+  transition-duration: 500ms;
 }
 
 .gallery__img:hover {
-  transform: scale(1.05);
-  border-radius: 0.1rem;
+  transform: scale(1.03);
+  border-radius: 0.5ch;
 }
 
 @keyframes animate {
