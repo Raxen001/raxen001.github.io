@@ -9,13 +9,16 @@
   <link href="/css/header.css" rel="stylesheet" />
   <link href="/css/footer.css" rel="stylesheet" />
   
-  <meta property="og:description" content="Raxen001's abode'" />
-  <meta name="description" content="Raxen001's abode'">
+  <meta name="description" content="Hello guys welcome to my website. This is just where is post my stuff. hope you don't care">
+
+  <meta property="og:description" content="Hello guys welcome to my website. This is just where is post my stuff. hope you don't care" />
   {{ if isset .Params "title" }}
     <meta property="og:title" content="{{.Params.title}}" />
+  {{ else }}
+    <meta property="og:title" content="Raxen's Adobe" />
   {{end}}
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://raxen001.github.io" />
+  <meta property="og:url" content="{{.Permalink}}">
   {{ if isset .Params "banimg" }}
       {{ $image := resources.GetMatch (path.Join "banimg" .Params.banimg )}} 
       {{ $image := $image.Resize (printf "1200x630 webp q100")}}
@@ -53,8 +56,10 @@
 </head>
 
 <body>
-  {{ partial "header.html" . }} {{ block "main" . }} {{ end }} {{ partial
-  "footer.html" . }}
+  {{ partial "header.html" . }} 
+    {{ block "main" . }} 
+   {{ end }} 
+  {{ partial "footer.html" . }}
 </body>
 <script src="/js/nav.js"></script>
 
