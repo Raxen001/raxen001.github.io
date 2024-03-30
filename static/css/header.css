@@ -11,7 +11,7 @@
   /* debug */
   background-color: #0000000a;
   backdrop-filter: blur(2rem);
-}
+} 
 
 
 .nav {
@@ -24,6 +24,7 @@
   justify-content: center;
   align-items: center;
   /* gap: 1rem; */
+  padding-block: 5rem;
   background: #0a1f1f1f;
   backdrop-filter: blur(2rem);
 }
@@ -83,6 +84,7 @@
     align-items: center;
     height: 3rem;
     inset: 0 0 0 0;
+    padding: 0;
   }
   .nav__a {
     width: 10rem;
