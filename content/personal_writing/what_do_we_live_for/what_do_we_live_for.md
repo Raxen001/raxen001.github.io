@@ -166,7 +166,7 @@ anything. Maybe today's is just a bad day. Fuck it then try again tomorrow.
 I don't really know. Maybe it is to enjoy, maybe it is not. Yeah life might get
 hard sometimes. I may not achieve my dreams. I may not always get what i want
 and it is Alright. As long as i am having fun i don't care. I wanna enjoy what
-i do. I am the kind of person who can sit in a cubicle with a job i hate. If i
+i do. I not am the kind of person who can sit in a cubicle with a job i hate. If i
 do something it have to enjoy doing it. I can't force myself to do something i
 don't like. I was never able to and never will be able to. Maybe life gets so
 hard i might not be able to the same point of view as i am having today. Well
