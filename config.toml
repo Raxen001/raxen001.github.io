@@ -1,11 +1,11 @@
 baseURL = 'https://raxen001.github.io/'
 languageCode = 'en-us'
 title = 'Raxen abode'
-summaryLength = 20
+summaryLength = 25
 
 [markup]
   [markup.highlight]
-    anchorLineNos = false
+    anchorLineNos = true
     codeFences = true
     guessSyntax = true
     hl_Lines = ''
@@ -33,7 +33,7 @@ summaryLength = 20
      { discord = "https://discord.gg/2Dw7bK3Uba" },
      { steam = "https://steamcommunity.com/profiles/76561199059739788/" },
      { youtube = "https://youtube.com/@raxengamer001" },
-     { pinterest = "https://pinterest.com/RaxenGamer001" },
+     { pinterest = "https://pinterest.cm/RaxenGamer001" },
      { reddit = "https://reddit.com/user/raxengamer001" },
      { lastfm = "https://lastfm.com/user/raxen001" },
      { listenbrainz = "https://listenbrainz.org/user/raxen001/" },

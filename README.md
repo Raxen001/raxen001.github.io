@@ -16,13 +16,14 @@
 
 ## TODO
 
+- [ ] Use hugo opengraph implementation
 - [x] gallery css
   - [x] add photos in gallery
-- [ ] footer
-  - [ ] css
+- [x] footer
+  - [x] css
 - [ ] write blogs
-- [ ] add contact page
-  - [ ] add github and linked to footer
+- [x] add contact page
+  - [x] add github and linked to footer
 - [ ] rss
 
 ## HOME
