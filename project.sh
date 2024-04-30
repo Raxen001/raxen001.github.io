@@ -1,10 +1,14 @@
 #!/bin/bash
 
 printf "Project name: "
-read file_name
-file="$file_name".md
+read name
+file="index.md"
+
+# create the leaf bundle directory
+mkdir ./content/projects/"$name"
 
 # Create a new blog post using the archetype template
-hugo new ./content/projects/"$file"
+hugo new ./content/projects/"$name"/"$file"
 
-$EDITOR ./content/projects/"$file"
+cd ./content/projects/"$name"
+$EDITOR ./"$file"

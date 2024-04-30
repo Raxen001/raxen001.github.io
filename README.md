@@ -91,3 +91,6 @@
 
 - add a `.Params.customcss` and set it with individual \_index.md
 - how to make list.html page good [check it out](https://github.com/adityatelange/hugo-PaperMod/blob/54a3c6073518005182f3c3250ddb7e8c0cacd7ad/layouts/_default/list.html)
+
+fuck the opengraph and schema
+probs need to restucture using leafbundle method and fix a few things in config.toml and use opengraph.html and schema.html
