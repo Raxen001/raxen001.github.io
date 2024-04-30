@@ -3,9 +3,10 @@
   <div class="header">
     {{ if isset .Params "banimg" }}
     <div class="header__img_con">
-      {{if isset .Params "banimg"}} {{ $image := resources.GetMatch (path.Join
-      "banimg" .Params.banimg )}} {{ $image := $image.Resize (printf "%dx%d webp q100" $image.Width $image.Height )}}
-      <img class="header__img" src="{{ $image.RelPermalink }}" />
+      {{if isset .Params "banimg"}} 
+        {{ $image := resources.GetMatch (path.Join "banimg" .Params.banimg )}} 
+        {{ $image := $image.Resize (printf "%dx%d webp q100" $image.Width $image.Height )}}
+        <img class="header__img" src="{{ $image.RelPermalink }}" />
       {{end}}
     </div>
     {{ end }}

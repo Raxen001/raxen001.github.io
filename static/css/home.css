@@ -266,7 +266,7 @@ nav {
     background-color: unset;
   }
   .nav a svg {
-    transition: all 200ms linear;
+    transition: all 100ms ease-out;
   }
   .nav a:hover svg {
     transform: translateX(-10%) scale(1.09);
@@ -275,12 +275,23 @@ nav {
     cursor: pointer;
     background-color: var(--gray);
   }
-  .nav li:hover a {
-    color: var(--mantle);
-    transform: translateX(-1%) scale(1.1);
+  .nav li:nth-child(1):hover a svg {
+    color: var(--green);
   }
-  .nav li:hover a svg {
-    color: var(--teal);
+  .nav li:nth-child(2):hover a svg {
+    color: var(--pink);
+  }
+  .nav li:nth-child(3):hover a svg {
+    color: var(--peach);
+  }
+  .nav li:nth-child(4):hover a svg {
+    color: var(--mauve);
+  }
+  .nav li:nth-child(5):hover a svg {
+    color: var(--sapphire);
+  }
+  .nav li:nth-child(6):hover a svg {
+    color: var(--sky);
   }
 }
 
