@@ -14,6 +14,7 @@
       <meta property="og:image" itemprop="image" content="{{ $image.Permalink }}" />
   {{ else }}
       {{ $image := resources.GetMatch (path.Join "default" "thumbnail.png" )}} 
+      {{ $image := $image.Resize (printf "1200x630 webp q100")}}
       <meta property="og:image" itemprop="image" content="{{ $image.Permalink }}" />
   {{end}}
   <meta property="og:image:alt" content="the banner image of my website"/>
