@@ -1,7 +1,6 @@
 {{ define "main" }}
 <main class="container">
   <div class="header">
-    {{ if isset .Params "banimg" }}
     <div class="header__img_con">
       {{ with .Resources.Get "thumbnail.png" }}
         {{ $image := . }} 
@@ -9,7 +8,6 @@
         <img class="header__img" src="{{ $image.RelPermalink }}" />
       {{end}}
     </div>
-    {{ end }}
     <div class="header__title"><strong>Title: </strong><i>{{ .Title }}</i></div>
     <div class="header__author">
       <strong>Author: </strong><i>{{ .Params.Author }}</i>
