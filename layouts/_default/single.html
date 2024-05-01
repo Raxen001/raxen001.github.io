@@ -4,7 +4,7 @@
     <div class="header__img_con">
       {{ with .Resources.Get "thumbnail.png" }}
         {{ $image := . }} 
-        {{ $image := $image.Resize (printf "%dx%d webp q100" $image.Width $image.Height )}}
+        {{ $image := $image.Resize (printf "%dx%d webp q90" $image.Width $image.Height )}}
         <img class="header__img" src="{{ $image.RelPermalink }}" />
       {{end}}
     </div>

@@ -5,7 +5,7 @@
     <a class="card__link" href="{{ .Permalink }}">
     {{ with .Resources.Get "thumbnail.png" }}
       {{$img := . }}
-      {{ $img := $img.Resize (printf "%dx%d webp q100" $img.Width $img.Height )}}
+      {{ $img := $img.Resize (printf "%dx%d webp q90" $img.Width $img.Height )}}
       <img src="{{ $img.RelPermalink }}">
     {{end}}
       <div class="card__text__wrap">
