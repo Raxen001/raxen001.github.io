@@ -1,4 +1,7 @@
 <span class="">
-  {{ $icon := resources.Get (printf "/img/icons/%s.svg" ($.Get 0)) }} {{ if
-  $icon }} {{ $icon.Content | safeHTML }} {{ else }} {{ end }}
+  {{ $icon := resources.Get (printf "/img/icons/%s.svg" ($.Get 0)) }} 
+  {{ if $icon }} 
+    {{ $icon.Content | safeHTML }} 
+  {{ else }} 
+  {{ end }}
 </span>

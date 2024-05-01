@@ -3,7 +3,6 @@ title: "Raven"
 author: "Raxen"
 date: 2023-09-06T15:45:01+05:30
 draft: false
-banimg: "raven.jpg"
 customcss: "blog.css"
 ---
 

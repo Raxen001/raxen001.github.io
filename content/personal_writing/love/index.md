@@ -2,7 +2,6 @@
 title: "Love"
 date: 2023-09-15T23:53:37+05:30
 draft: true
-banimg: "love.jpg"
 customcss: "blog.css"
 ---
 

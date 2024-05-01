@@ -8,12 +8,12 @@
   {{end}}
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{.Permalink}}" />
-  {{ if isset .Params "banimg" }}
-      {{ $image := resources.GetMatch (path.Join "banimg" .Params.banimg )}} 
+  {{ with .Resources.Get "thumbnail.png" }}
+      {{ $image := . }}
       {{ $image := $image.Resize (printf "1200x630 webp q100")}}
       <meta property="og:image" itemprop="image" content="{{ $image.Permalink }}" />
   {{ else }}
-      {{ $image := resources.GetMatch (path.Join "banimg" "banimg.webp" )}} 
+      {{ $image := resources.GetMatch (path.Join "default" "thumbnail.png" )}} 
       <meta property="og:image" itemprop="image" content="{{ $image.Permalink }}" />
   {{end}}
   <meta property="og:image:alt" content="the banner image of my website"/>
@@ -28,12 +28,9 @@
     <meta property="twitter:title" content="{{.Params.title}}" />
 {{end}}
 <meta name="twitter:description" content="Raxen001's abode'">
-  {{ if isset .Params "banimg" }}
-      {{ $image := resources.GetMatch (path.Join "banimg" .Params.banimg )}} 
+  {{ with .Resources.Get "thumbnail.png" }}
+      {{ $image := . }}
       {{ $image := $image.Resize (printf "%dx%d webp q70" $image.Width $image.Height )}}
       <meta name="twitter:image" content="{{ $image.Permalink }}">
   {{end}}
-
-
-
 

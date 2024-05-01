@@ -3,7 +3,6 @@ title: "PECHACKS_MLH"
 date: 2024-01-31T00:23:23+05:30
 author: "RAXEN"
 draft: false
-banimg: "pechacks.jpg"
 customcss: "blog.css"
 ---
 

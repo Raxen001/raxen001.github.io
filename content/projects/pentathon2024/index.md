@@ -3,7 +3,6 @@ title: "Pentathon2024"
 date: 2024-05-01T01:39:25+05:30
 author: "RAXEN"
 draft: true
-banimg: "banimg.webp"
 tags: ["ctf"]
 categories: ["ctf"]
 customcss: "blog.css"

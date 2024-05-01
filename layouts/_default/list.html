@@ -3,12 +3,11 @@
   {{ range .Pages }}
   <article class="container card">
     <a class="card__link" href="{{ .Permalink }}">
-      {{if isset .Params "banimg"}} 
-        {{ $image := resources.GetMatch (path.Join "banimg" .Params.banimg )}}
-        {{ $image := $image.Resize (printf "%dx%d webp q100" $image.Width $image.Height )}}
-        <img src="{{ $image.RelPermalink }}">
-      {{end}}
-
+    {{ with .Resources.Get "thumbnail.png" }}
+      {{$img := . }}
+      {{ $img := $img.Resize (printf "%dx%d webp q100" $img.Width $img.Height )}}
+      <img src="{{ $img.RelPermalink }}">
+    {{end}}
       <div class="card__text__wrap">
         <span class="card__title">
           <h3>Title:</h3>

@@ -1,12 +1,14 @@
 #!/bin/bash
 
-# Find the highest numbered blog post
-latest=$(ls -r content/personal_writing/write* | grep -oE '[0-9]+' | sort -n | tail -1)
+printf "Project name: "
+read name
+file="index.md"
 
-# Calculate the next blog number
-next=$((latest + 1))
+# create the leaf bundle directory
+mkdir ./content/projects/"$name"
 
 # Create a new blog post using the archetype template
-hugo new personal_writing/write-$next.md
+hugo new ./content/projects/"$name"/"$file"
 
-nvim content/personal_writing/write-$next.md
+cd ./content/projects/"$name"
+$EDITOR ./"$file"

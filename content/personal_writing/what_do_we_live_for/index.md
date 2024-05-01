@@ -3,7 +3,6 @@ title: "What Do We Live for ? 20 years old and down low"
 date: 2024-03-29T17:27:18+05:30 
 author: "RAXEN" 
 draft: false 
-banimg: "whatdowelivefor.webp" 
 customcss: "blog.css" 
 ---
 

@@ -21,7 +21,7 @@ summaryLength = 25
 
 
 [author]
-  name = "Raxen"
+#  name = "Raxen"
   # headline = "An awesome person"
   # image = "img/author.jpg"  # path relative to static directory
 

@@ -3,7 +3,6 @@ title: "Rec_companion_app"
 date: 2024-04-11T22:55:32+05:30
 author: "RAXEN"
 draft: true
-banimg: "banimg.webp"
 tags: []
 categories: []
 customcss: "blog.css"

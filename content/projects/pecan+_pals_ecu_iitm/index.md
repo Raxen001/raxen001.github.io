@@ -3,7 +3,6 @@ title: "Pecan+_pals_ecu_iitm"
 date: 2024-05-01T01:29:13+05:30
 author: "RAXEN"
 draft: true
-banimg: "banimg.webp"
 tags: ["ctf"]
 categories: ["computer"]
 customcss: "blog.css"
