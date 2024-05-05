@@ -9,11 +9,11 @@ customcss: "blog.css"
 # Home media server
 
 I was bored and wanted to created my own personal netflix at home. So, naturally i wanted some kind of hardware that can run a media server
-Fortunately, I had a spare laptop lying around a toshiba ![toshiba](../laptop.jpg).
+Fortunately, I had a spare laptop lying around a toshiba ![toshiba](laptop.jpg).
 
 ## specs
 
-![Neofetch](../neofetch.png)
+![Neofetch](neofetch.png)
 Not too shabby if i say so myself.
 
 ## STEP 0
@@ -64,7 +64,7 @@ Once the usb is flashed properly now we need to boot from it
 Booting from the usb is fairly simple.
 While booting you simply have to hold down the button that makes it go into the UEFI / BIOS menu.
 It was _F2_ for me.
-Once insde the UEFI menu [UEFI_MENU](../uefi_menu.jpg) go to
+Once insde the UEFI menu [UEFI_MENU](uefi_menu.jpg) go to
 
 In boot menu
 
@@ -168,13 +168,13 @@ They have the docker compose for everything. Which makes it very easy for me to 
 qBittorrent is an open source bittorrent downloader. It allows for webui to manage it.
 sweet.
 
-![Qbittorrent](../qbit.png)
+![Qbittorrent](qbit.png)
 
 setting it up is easy. Go to settings -> enable webui
 
 as you can see from the image below i have added my tailscale ip to the whitelist so i don't need to authentiate using username and password.
 
-![qbit-admin](../qbit-admin.png)
+![qbit-admin](qbit-admin.png)
 
 ### Jellyfin
 
@@ -182,60 +182,60 @@ Media server to serve all the medias you _legally own_
 
 Jellyfin allows you to serve all the media you _legally own_. Rip Your own stuff
 
-![home](../jel-home.png)
+![home](jel-home.png)
 
 Jellyfin allows you to have transcoding when possible to allow hardware acceleration
 go to Settings -> dashboard -> playback -> vaapi
 
-![hardware-acceleration](../jel-hw.png)
-![syncplay](../jel-syn1.png)
-![syncplay](../jel-syn2.png)
-![syncplay](../jel-syn3.png)
+![hardware-acceleration](jel-hw.png)
+![syncplay](jel-syn1.png)
+![syncplay](jel-syn2.png)
+![syncplay](jel-syn3.png)
 
 ### Jellyseerr
 
 Jellyseer allows the users you are serving the jellyfin to request you media they want to see.
 It is a media requesting thingy. it is quite nice ;) _wink wink_
 
-![jellyseerr](../jellyseerr.png)
+![jellyseerr](jellyseerr.png)
 
 ### prowlarr
 
 Say if you want to download linux isos but there are like 1000 sites.
 this is where prowlarr comes in. this will help you search through all the sites that provide linux isos.
 
-![prowlarr](../prowlarr.png)
+![prowlarr](prowlarr.png)
 
 ### lidarr
 
 ok enough with the linux isos pun. lidarr helps you with keeping you up with your music needs. It allows you track Artist. It tracks all the albums you already have and any upcoming ones. It will automatically download them and rename them. **You goto enable rename files**
 
-![lidarr](../lidarr.png)
+![lidarr](lidarr.png)
 
 ### sonarr
 
 same stuff but for TV Shows. This lets you track all the shows you watch and keep them organised
 
-![sonarr](../sonarr.png)
+![sonarr](sonarr.png)
 
 ### radarr
 
 To keep track of all your Movies.
 
-![radarr](../radarr.png)
+![radarr](radarr.png)
 
 ### heimdall
 
 Having lot of applciations running on your server can quickly become a hassle to keep track of.
 You gonna need some kind of link list. Why not go for a homepage. It talks with most the popular homelab applications and puts it on the homepage
 
-![homepage](../heimdall.png)
+![homepage](heimdall.png)
 
 ### ip2cam
 
 This is one the few fun things i wanted to do. This basically allows you to stream your webcam.
 
-![cam2ip](../cam2ip.png)
+![cam2ip](cam2ip.png)
 
 It's pretty dark here. but the point is you can stream your webcam through http which is pretty cool.
 combine it with text to speech program like GNUstep. You can mess around with your family.
