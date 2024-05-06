@@ -3,8 +3,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 4ch;
-  margin-inline: 3vw;
+  height: 3rem;
   border-radius: 1vw;
   background: var(--black1);
 }
@@ -52,7 +51,7 @@ body {
 }
 
 .wrapper {
-  padding: 1rem;
+  margin-inline: 1ch;
   display: grid;
   grid-auto-flow: row;
   gap: 2rem;
