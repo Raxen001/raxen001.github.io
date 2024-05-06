@@ -15,7 +15,8 @@ body {
 }
 
 main {
-  width: 100%;
+  width: 90%;
+  max-width: 70rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,18 +45,28 @@ main {
   align-items: center;
 
   --stagger-delay: 50ms;
-  animation: card_entrance-1 800ms cubic-bezier(0.075, 0.12, 0.165, 1);
-  animation-fill-mode: backwards;
-  animation-delay: calc(var(--count) * var(--stagger-delay));
+  /* animation: card_entrance-1 800ms cubic-bezier(0.075, 0.12, 0.165, 1); */
+  /* animation-fill-mode: backwards; */
+  /* animation-delay: calc(var(--count) * var(--stagger-delay)); */
+
+  animation: card_entrance-1 linear;
+  animation-fill-mode: both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 10%;
 }
 
 .gallery__item.double__row{
   grid-row: span 2;
 
   --stagger-delay: 50ms;
-  animation: card_entrance-2 800ms cubic-bezier(0.075, 0.12, 0.165, 1);
-  animation-fill-mode: backwards;
-  animation-delay: calc(var(--count) * var(--stagger-delay));
+  /* animation: card_entrance-2 800ms cubic-bezier(0.075, 0.12, 0.165, 1); */
+  /* animation-fill-mode: backwards; */
+  /* animation-delay: calc(var(--count) * var(--stagger-delay)); */
+
+  animation: card_entrance-2 linear;
+  animation-fill-mode: both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%;
 }
 .gallery__item.double__column{
   grid-column: span 2;
