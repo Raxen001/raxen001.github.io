@@ -1,6 +1,7 @@
 {{ define "main" }}
 <div class="wrapper">
-  {{ range .Pages }}
+  {{ partial "pagination" . }}
+  {{ range .Paginator.Pages }}
   <article class="container card">
     <a class="card__link" href="{{ .Permalink }}">
     {{ with .Resources.Get "thumbnail.png" }}

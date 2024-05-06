@@ -2,6 +2,7 @@ baseURL = 'https://raxen001.github.io/'
 languageCode = 'en-us'
 title = 'Raxen abode'
 summaryLength = 25
+paginate = 5
 
 [markup]
   [markup.highlight]

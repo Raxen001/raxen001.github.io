@@ -49,7 +49,7 @@
 .pnav {
   font-family: banner;
   transform: translateX(100%);
-  transition-duration: 300ms;
+  transition-duration: 100ms;
 }
 .pnav[data-visible="true"] {
   transform: translateX(0);
