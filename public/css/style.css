@@ -14,11 +14,15 @@
   font-family: space;
   src: url("../font/Space_Mono/SpaceMono-Regular.ttf");
 }
+@font-face {
+  font-family: vt;
+  src: url("../font/vt/VT323-Regular.ttf");
+}
 :root {
-  --bg: #141414;
-  --black: #1f1f1f;
-  --black1: #232323;
-  --black2: #2a2a2a;
+  --bg: #000000;
+  --black: #1e1e1e;
+  --black1: #303030;
+  --black2: #242424;
   --black3: #333333;
   --gray: #3f3f3f;
 
@@ -61,22 +65,22 @@
 }
 @media (min-width: 475px) {
   .container {
-    max-width: 100%;
+    max-width: 99%;
   }
 }
 @media (min-width: 700px) {
   .container {
-    max-width: 98%;
+    max-width: 97%;
   }
 }
 @media (min-width: 1124px) {
   .container {
-    max-width: 93%;
+    max-width: 63rem;
   }
 }
 @media (min-width: 1536px) {
   .container {
-    max-width: 85rem;
+    max-width: 69rem;
   }
 }
 
