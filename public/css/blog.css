@@ -6,19 +6,37 @@ body {
 }
 
 img {
-  max-width: min(100%, 36rem);
+  width: clamp(100%, 30vw + 3rem + 10%, 100vw);
+  margin-block: 1rem;
+}
+
+hr {
+  margin-block: 1ch 2rem;
+}
+
+.con a {
+  color: var(--lavender);
 }
 
 .con p {
-  padding-inline: 2ch;
+  padding: 1ch 2ch;
+  margin-block: 1ch;
+}
+.highlight {
+  overflow-x: scroll;
 }
 blockquote {
   font-weight: light;
   font-style: italic;
-  color: var(--base);
-  border-left: 10px solid var(--flamingo);
-  margin: 1em 10px 0 0;
-  padding: 0.5em 3em 0 2em;
+  color: var(--crust);
+  border-left: 0.3rem solid var(--flamingo);
+  padding-left: 0.3rem;
+  margin-left: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+blockquote p:last-child {
+  text-align: right;
 }
 
 blockquote figcaption {
@@ -31,11 +49,28 @@ blockquote figcaption {
   font-weight: bolder;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: left;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding-block: 0.7ch;
+  padding-left: 0.5ch;
+}
+
 h1 {
-  color: var(--peach);
+  color: var(--sky);
 }
 h2 {
-  color: var(--blue);
+  color: var(--maroon);
 }
 h3 {
   color: var(--yellow);
@@ -68,15 +103,16 @@ body {
 
 main {
   width: 100%;
-  background: var(--black);
-  line-height: 1.5;
-  font-size: clamp(1rem, 0.8096rem + 0.9015vw, 1.325rem);
-  padding-block: 2rem 8rem;
+  line-height: 1.3;
+  font-size: clamp(0.93rem, 0.6513rem + 0.4947vw, 1.125rem);
+  padding-block: 2rem 6rem;
   margin-bottom: 3rem;
+  text-align: justify;
 }
 
 .header {
-  padding: 1rem;
+  padding-inline: 8%;
+  padding-bottom: 3%;
 }
 
 .header__img_con {
@@ -84,17 +120,40 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 
 .header__img {
   width: 100%;
   max-width: 60rem;
+  border: 1px var(--mauve) solid;
+}
+
+.header > * > strong {
+  font-family: banner;
+  font-weight: 600;
+  font-style: bold;
+}
+
+.header__title {
+  color: var(--teal);
+}
+.header__author {
+  color: var(--yellow);
+}
+.header__date {
+  color: var(--lavender);
+}
+
+.header__title,
+.header__author,
+.header__date {
+  padding-block: 0.5rem;
 }
 
 @media (min-width: 668px) {
   body {
-    padding: 3rem;
+    padding: 1rem 3rem;
   }
   main {
     padding-inline: 3ch;

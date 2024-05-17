@@ -2,21 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Raxen abode</title>
-    <link>https://raxen001.github.io/projects/</link>
+    <link>http://localhost:1313/projects/</link>
     <description>Recent content in Projects on Raxen abode</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://raxen001.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 May 2024 01:39:25 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pentathon2024</title>
+      <link>http://localhost:1313/projects/pentathon2024/</link>
+      <pubDate>Wed, 01 May 2024 01:39:25 +0530</pubDate>
+      <guid>http://localhost:1313/projects/pentathon2024/</guid>
+      <description>HELLO_WORLD NOTES prelims 2nd place flight to delhi views lot of redbull landing bus at 4am installed kali os at 5 am round 1 starts did challenges bricked my os reinstall kali os 12pm did more challenges drank a lot of redbull round 1 results came 10th position able to progress to round 2 round 2 was able to hack the laptop was tired af gg We got the consoloation prize left bonus india gate </description>
+    </item>
+    <item>
+      <title>Pecan&#43;_pals_ecu_iitm</title>
+      <link>http://localhost:1313/projects/pecan&#43;_pals_ecu_iitm/</link>
+      <pubDate>Wed, 01 May 2024 01:29:13 +0530</pubDate>
+      <guid>http://localhost:1313/projects/pecan&#43;_pals_ecu_iitm/</guid>
+      <description>&amp;lt;HELLO_WORLD&amp;gt; NOTES prelims 1st place day of evet ctf finalist badge sign up getting ready competetion starts we weren&amp;rsquo;t in the top teams initially somehow came top 1 in the last possible minute won the competetion got ardiuno thanks to crossbow labs </description>
+    </item>
+    <item>
+      <title>PECHACKS_MLH</title>
+      <link>http://localhost:1313/projects/pechacks/</link>
+      <pubDate>Wed, 31 Jan 2024 00:23:23 +0530</pubDate>
+      <guid>http://localhost:1313/projects/pechacks/</guid>
+      <description>How we almost made an centralised blockchain based universal currency during PECHACKS 2024 We enter the hackathon So my friend Noumaan approaches me and tells there is this hackathon in Panimalar college and wanted to go and had a spot left.</description>
+    </item>
+    <item>
+      <title>REC comapnion app frontend</title>
+      <link>http://localhost:1313/projects/rec_companion_app/</link>
+      <pubDate>Wed, 08 Nov 2023 20:02:50 +0530</pubDate>
+      <guid>http://localhost:1313/projects/rec_companion_app/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Andoird Linux Interconnectivity</title>
+      <link>http://localhost:1313/projects/andoir-linux-connectivity/</link>
+      <pubDate>Tue, 26 Sep 2023 22:21:55 +0530</pubDate>
+      <guid>http://localhost:1313/projects/andoir-linux-connectivity/</guid>
+      <description>NOTES scrcpy adb kdeconnect bluetooth</description>
+    </item>
+    <item>
+      <title>Raven</title>
+      <link>http://localhost:1313/projects/raven/</link>
+      <pubDate>Wed, 06 Sep 2023 15:45:01 +0530</pubDate>
+      <guid>http://localhost:1313/projects/raven/</guid>
+      <description>Home media server I was bored and wanted to created my own personal netflix at home. So, naturally i wanted some kind of hardware that can run a media server Fortunately, I had a spare laptop lying around a toshiba .</description>
+    </item>
     <item>
       <title>Project 0</title>
-      <link>https://raxen001.github.io/projects/project-1/</link>
+      <link>http://localhost:1313/projects/project-0/</link>
       <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://raxen001.github.io/projects/project-1/</guid>
-      <description>coming soon&amp;hellip; Spotify ==&amp;gt; Youtube ==&amp;gt; youtube-dl &amp;hellip;
-REC UNIFIED PORTAL &amp;hellip;
-REC ID card &amp;hellip;</description>
+      <guid>http://localhost:1313/projects/project-0/</guid>
+      <description>coming soon&amp;hellip; Spotify ==&amp;gt; Youtube ==&amp;gt; youtube-dl &amp;hellip;&#xA;REC UNIFIED PORTAL &amp;hellip;&#xA;REC ID card &amp;hellip;</description>
     </item>
-    
   </channel>
 </rss>
