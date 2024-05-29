@@ -11,11 +11,12 @@
   
   {{ partial "opengraph.html" . }}
 
-
-
-  {{ if isset .Params "customcss" }}
-  <link href="/css/{{ .Params.customcss }}" rel="stylesheet" />
+  {{ block "list_css" . }} {{ end }}
+  {{ block "blog_css" . }} {{ end }}
+  {{ if (and (isset .Params "customcss") ( ne .Params.customcss "" )) }}
+    <link href="/css/{{ .Params.customcss }}" rel="stylesheet" />
   {{end}}
+
 </head>
 
 <body>

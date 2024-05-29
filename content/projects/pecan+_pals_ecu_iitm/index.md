@@ -5,7 +5,7 @@ author: "RAXEN"
 draft: true
 tags: ["ctf"]
 categories: ["computer"]
-customcss: "blog.css"
+customcss: ""
 ---
 
 

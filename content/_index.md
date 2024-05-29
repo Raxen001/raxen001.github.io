@@ -1,3 +1,0 @@
----
-customcss: "home.css"
----
