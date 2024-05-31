@@ -3,6 +3,7 @@ body {
   font-family: fc, monospace, Cambria, Cochin, Georgia, Times, "Times New Roman",
     serif;
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -149,6 +150,21 @@ main {
 .header__author,
 .header__date {
   padding-block: 0.5rem;
+}
+
+.toc{
+  font-family: space;
+  background: var(--black2);
+  padding: 3vw;
+  overflow: hidden;
+  a {
+    color: var(--maroon);
+  }
+  
+  li li a{
+    color: var(--flamingo);
+  }
+  
 }
 
 @media (min-width: 668px) {
