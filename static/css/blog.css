@@ -153,6 +153,14 @@ main {
 }
 
 .toc{
+  .toc__header {
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+  }
+  border: 1px solid var(--mauve);
+  margin: 10%;
   font-family: space;
   background: var(--black2);
   padding: 3vw;

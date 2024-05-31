@@ -22,7 +22,10 @@
     </div>
   </div>
   <hr/>
-  <div class="toc">{{ .TableOfContents }}</div>
+  <div class="toc">
+    <h3 class="toc__header">TABLE OF CONTENTS</h3>
+    {{ .TableOfContents }}
+  </div>
   <div class="con">{{ .Content }}</div>
 </main>
 {{ end }}
