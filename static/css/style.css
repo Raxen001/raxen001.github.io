@@ -2,23 +2,34 @@
   font-family: fc;
   src: url("../font/static/FiraCode-Regular.ttf");
 }
+
 @font-face {
   font-family: banner;
   src: url("../font/Color\ Basic.otf");
 }
+
 @font-face {
   font-family: fira;
   src: url("../font/Fira_Sans/FiraSans-Regular.ttf");
 }
+
 @font-face {
   font-family: space;
   src: url("../font/Space_Mono/SpaceMono-Regular.ttf");
 }
+
 @font-face {
   font-family: vt;
   src: url("../font/vt/VT323-Regular.ttf");
 }
+
 :root {
+
+  --bga1: #0000001a;
+  --bga2: #1E1E1E1a;
+  --bga3: #3030304c;
+  --bgah: #0000006f;
+
   --bg: #000000;
   --black: #1e1e1e;
   --black1: #303030;
@@ -59,25 +70,30 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 .container {
   width: 100%;
   transition: all 250ms linear;
 }
+
 @media (min-width: 475px) {
   .container {
     max-width: 99%;
   }
 }
+
 @media (min-width: 700px) {
   .container {
     max-width: 97%;
   }
 }
+
 @media (min-width: 1124px) {
   .container {
     max-width: 63rem;
   }
 }
+
 @media (min-width: 1536px) {
   .container {
     max-width: 69rem;
@@ -92,26 +108,31 @@
     clip-path: circle(10%);
     transform: scale(0) translateX(-50%);
   }
+
   50% {
     opacity: 1;
     clip-path: circle(45%);
     transform: scale(1.1) translateX(50%);
   }
+
   100% {
     opacity: 1;
     clip-path: circle(100%);
     transform: scale(1) translateX(0%);
   }
 }
+
 @keyframes card_entrance-2 {
   0% {
     opacity: 0;
     transform: scale(0.4) translateY(-50%);
   }
+
   50% {
     opacity: 1;
     transform: scale(0.9) translateY(50%);
   }
+
   100% {
     opacity: 1;
     transform: scale(1) translateY(0%);
@@ -123,16 +144,19 @@
     opacity: 0;
     transform: scale(0.5) translateX(+100%);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateX(0);
   }
 }
+
 @keyframes card_entrance-4 {
   from {
     opacity: 0;
     transform: scale(0.1) translateY(50%);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
