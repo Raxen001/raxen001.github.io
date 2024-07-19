@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: cant;
+  src: url("../font/Cantarell/Cantarell-Regular.ttf");
+}
+
+@font-face {
   font-family: banner;
   src: url("../font/Color\ Basic.otf");
 }
