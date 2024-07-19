@@ -9,9 +9,9 @@
   aspect-ratio: 1;
   border-radius: 20%;
   /* debug */
-  background-color: #0000000a;
+  background-color: var(--bgah);
   backdrop-filter: blur(2rem);
-} 
+}
 
 
 .nav {
@@ -25,7 +25,7 @@
   align-items: center;
   /* gap: 1rem; */
   padding-block: 5rem;
-  background: #0a1f1f1f;
+  background: var(--bgda1);
   backdrop-filter: blur(2rem);
 }
 
@@ -40,26 +40,35 @@
   color: var(--crust);
   transition: all 250ms linear;
 }
+
 .nav__a:hover {
-  background: var(--gray);
+  background: var(--bgah);
 }
-.nav__a:active{
+
+.nav__a:active {
   transform: scale(1.1);
 }
+
 .pnav {
   font-family: banner;
   transform: translateX(100%);
   transition-duration: 100ms;
+  /* cause z-index of mnav the button is 1000 */
+  z-index: 999;
 }
+
 .pnav[data-visible="true"] {
   transform: translateX(0);
 }
+
 .mnav {
   color: var(--surface1);
 }
+
 .mnav svg path {
   fill: var(--surface2);
 }
+
 .mnav svg {
   height: 60%;
 
@@ -67,16 +76,19 @@
   /* please bring my sanity back css3 */
   padding-top: 3px;
 }
+
 @media (min-width: 65rem) {
   .mnav {
     display: none;
   }
+
   .pnav {
     transform: translateX(0);
   }
+
   .nav {
     margin: 1rem 4rem;
-    background: var(--black1);
+    background: var(--bgda1);
     position: static;
     max-width: 63rem;
     display: flex;
@@ -87,6 +99,7 @@
     inset: 0 0 0 0;
     padding: 0;
   }
+
   .nav__a {
     width: 10rem;
     display: flex;

@@ -1,3 +1,11 @@
+.pagination,
+.page-item,
+.card {
+  background: var(--bgda1);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+}
+
 .pagination {
   display: flex;
   flex-direction: row;
@@ -5,7 +13,7 @@
   align-items: center;
   height: 3rem;
   border-radius: 1vw;
-  background: var(--black1);
+
 }
 
 .page-item {
@@ -21,7 +29,7 @@
 .page-link {
   /* height: clamp(10%, 12vh + 0.1rem,17rem); */
   font-family: banner;
-  font-size: 1.3rem;
+  font-size: 1rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -38,7 +46,7 @@
 }
 
 .active {
-  background: var(--gray);
+  background: var(--bga3);
   opacity: 1;
 }
 
@@ -71,7 +79,7 @@ body {
   font-size: clamp(0.95rem, 0.6496rem + 0.9615vw, 1.225rem);
   width: 100%;
   display: flex;
-  background: var(--black1);
+  /* background: var(--black1); */
   border-radius: 4px;
   padding: 1rem;
   border: 2px var(--gray) solid;
@@ -79,7 +87,7 @@ body {
 }
 
 .card:hover {
-  background: var(--black3);
+  background: var(--bgah);
   border: 2px var(--green) solid;
 }
 
@@ -108,6 +116,7 @@ body {
 .card__text__wrap {
   display: grid;
   grid-template-columns: 1fr;
+  background-color: var(--bgda1);
 }
 
 .card__text__wrap>span {
@@ -128,10 +137,10 @@ body {
 .card__date,
 .card__tag {
   font-family: banner;
-  background: var(--black);
 }
 
 .card__title {
+  font-size: clamp(0.55rem, 0.6496rem + 0.9615vw, 0.925rem);
   display: flex;
   flex-wrap: wrap;
   color: var(--teal);

@@ -3,8 +3,12 @@ body {
   padding: 0;
   margin: 0;
   width: 100%;
-  background: var(--bg);
+  /* background: var(--bg); */
+  background: var(--bg) url("/img/cowboy-ship.gif") no-repeat;
+  background-size: cover;
+  background-position: top;
 }
+
 body {
   width: 100%;
   height: 100%;
@@ -31,6 +35,7 @@ body {
   padding: 1.3rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(8rem, 100%), 1fr));
+  background-color: var(--bgda1);
   gap: 3rem;
 }
 
@@ -43,34 +48,40 @@ body {
   gap: 1rem;
   padding: 2rem;
 }
+
 #name {
   transition: all 250ms linear;
   animation: cards 700ms ease-out;
   animation-fill-mode: backwards;
   animation-delay: calc(1 * var(--stagger-delay));
 }
+
 #email {
   transition: all 250ms linear;
   animation: cards 700ms ease-out;
   animation-fill-mode: backwards;
   animation-delay: calc(4 * var(--stagger-delay));
 }
+
 #message {
   transition: all 250ms linear;
   animation: cards 700ms ease-out;
   animation-fill-mode: backwards;
   animation-delay: calc(8 * var(--stagger-delay));
 }
+
 #btn-submit {
   transition: all 150ms linear;
   animation: cards 700ms ease-out;
   animation-fill-mode: backwards;
   animation-delay: calc(18 * var(--stagger-delay));
 }
+
 #contact_form label {
   color: white;
   text-align: center;
 }
+
 input:focus,
 select:focus,
 textarea:focus,
@@ -85,12 +96,10 @@ button:focus {
   font-size: 1.7rem;
   color: var(--base);
   /* background-color: var(--green); */
-  background: linear-gradient(
-    to right,
-    var(--teal),
-    var(--green),
-    var(--yellow)
-  );
+  background: linear-gradient(to right,
+      var(--teal),
+      var(--green),
+      var(--yellow));
   transition: all 300ms linear;
 }
 
@@ -98,6 +107,7 @@ button:focus {
   transform: scale(1.2);
   border-radius: 18px;
 }
+
 #name,
 #email,
 #message {
@@ -107,6 +117,7 @@ button:focus {
   border: 2px var(--gray) solid;
   border-radius: 8px;
 }
+
 #name:focus,
 #email:focus,
 #message:focus {
@@ -132,8 +143,10 @@ button:focus {
   padding: 2rem;
   gap: 1rem;
   color: var(--mantle);
-  background: var(--black1);
+  background: var(--bgda1);
   border-radius: 4px;
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(2rem);
 
   transition: all 250ms linear;
 
@@ -141,6 +154,7 @@ button:focus {
   animation: cards 700ms ease-out;
   animation-fill-mode: backwards;
   animation-delay: calc(var(--count) * var(--stagger-delay));
+
 }
 
 .card svg {
@@ -153,15 +167,14 @@ button:focus {
 }
 
 .card:hover {
-  border-color: var(--pink);
-  border-radius: 8px;
   color: var(--base);
-  transform: scale(1.1) translateY(-5%) translateX(8%);
+  transform: scale(1.05) translateY(-3%) translateX(4%);
+  border-radius: 8px;
   border: 3px var(--gray) solid;
 }
+
 .card:hover svg {
-  color: var(--surface2);
-  transform: scale(1.1) translateY(-10%);
+  transform: scale(1.07) translateY(-5%) translateX(-3%);
 }
 
 @keyframes cards {
@@ -169,6 +182,7 @@ button:focus {
     opacity: 0;
     transform: scale(0) translateY(-50%);
   }
+
   100% {
     opacity: 1;
     transform: scale(1) translateY(0%);
