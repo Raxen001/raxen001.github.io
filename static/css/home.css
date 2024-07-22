@@ -6,8 +6,11 @@ body {
   background-color: var(--bg);
   font-size: clamp(0.95rem, 0.6396rem + 0.9515vw, 1.125rem);
 
-  background: url("/img/bg.gif") repeat;
+  background: url("/img/bg.gif");
+  background-position: center;
   background-size: cover;
+  background-repeat: no-repeat repeat;
+  background-clip: border-box;
 }
 
 main {
@@ -44,6 +47,7 @@ main {
 .pic {
   grid-area: pic;
   padding: 2rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +63,7 @@ main {
 }
 
 .pic>img {
-  width: clamp(20%, 33vw, 100%);
+  width: clamp(50%, 33vw, 100%);
   aspect-ratio: 1;
   object-fit: cover;
   object-position: top;
@@ -216,7 +220,6 @@ nav {
   }
 
   main {
-    height: 95%;
     max-height: 72rem;
     border-top-left-radius: 2%;
 
