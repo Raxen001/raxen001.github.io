@@ -189,7 +189,7 @@ nav {
   grid-area: con;
   height: 100%;
   width: 100%;
-  padding: 1rem 3rem;
+  padding: 2ch 4ch 5ch 2ch;
   background-color: var(--bgda2);
 
   p,
