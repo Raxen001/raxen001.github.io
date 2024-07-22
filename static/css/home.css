@@ -266,10 +266,10 @@ nav {
     background-color: var(--bga3);
   }
 
-  .nav li,
-  .nav a {
-    background-color: unset;
-  }
+  /* .nav li, */
+  /* .nav a { */
+  /*   background-color: unset; */
+  /* } */
 }
 
 @media (min-width: 1024px) {
@@ -288,6 +288,11 @@ nav {
 
     padding: 0;
     margin: 0;
+  }
+
+  .nav li,
+  .nav a {
+    background-color: unset;
   }
 
   .nav li {
@@ -311,6 +316,7 @@ nav {
     margin: 0;
     transition: all 200ms linear;
   }
+
 
   .nav a svg {
     align-self: center;

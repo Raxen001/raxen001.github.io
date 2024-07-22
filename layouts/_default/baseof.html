@@ -8,21 +8,28 @@
   <link href="/css/style.css" rel="stylesheet" />
   <link href="/css/header.css" rel="stylesheet" />
   <link href="/css/footer.css" rel="stylesheet" />
-  
+
+  <link rel="preload" href="/" as="document">
+  <link rel="preload" href="/gallery" as="document">
+  <link rel="preload" href="/contacts" as="document">
+  <link rel="preload" href="/projects" as="document">
+  <link rel="preload" href="/blog" as="document">
+  <link rel="preload" href="/personal_writing" as="document">
+
   {{ partial "opengraph.html" . }}
 
   {{ block "list_css" . }} {{ end }}
   {{ block "blog_css" . }} {{ end }}
   {{ if (and (isset .Params "customcss") ( ne .Params.customcss "" )) }}
-    <link href="/css/{{ .Params.customcss }}" rel="stylesheet" />
+  <link href="/css/{{ .Params.customcss }}" rel="stylesheet" />
   {{end}}
 
 </head>
 
 <body>
-  {{ partial "header.html" . }} 
-    {{ block "main" . }} 
-   {{ end }} 
+  {{ partial "header.html" . }}
+  {{ block "main" . }}
+  {{ end }}
   {{ partial "footer.html" . }}
 </body>
 <script src="/js/nav.js"></script>
