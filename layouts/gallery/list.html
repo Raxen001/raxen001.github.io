@@ -1,43 +1,46 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Raxen's abode</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="/css/style.css" rel="stylesheet" />
-    <link href="/css/header.css" rel="stylesheet" />
-    <link href="/css/footer.css" rel="stylesheet" />
-    <link href="/css/gallery.css" rel="stylesheet" />
-  </head>
 
-  <body>
-    {{ partial "header" . }}
-    <!-- layouts/gallery.html -->
-    <main>
-      <div class="gallery">
-        {{ with .Site.GetPage "/gallery" }} 
-          {{ $.Scratch.Set "counter" 0 }}
-          {{ range .Resources.ByType "image"}}
-            {{ with .Resize (printf "%dx webp q90" 420)}}
-              {{ $count := $.Scratch.Get "counter" }}
-              {{ $maxh := 500 }}
-              {{ $height := .Height }}
-              {{ if ge $height $maxh }}
-                <a class="gallery__item double__row" style="--count:{{$count}}" target="_blank" href="{{.}}">
-              {{ else }}
-                <a class="gallery__item" style="--count:{{$count}}"  target="_blank" href="{{.}}">
-              {{ end }}
-              {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
-                <figure>
-                  <img class="gallery__img" src="{{.RelPermalink}}"/>
-                </figure>
-              </a>
-            {{ end }} 
+<head>
+  <title>Raxen's abode</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="/css/style.css" rel="stylesheet" />
+  <link href="/css/header.css" rel="stylesheet" />
+  <link href="/css/footer.css" rel="stylesheet" />
+  <link href="/css/gallery.css" rel="stylesheet" />
+</head>
+
+<body>
+  {{ partial "header" . }}
+  <!-- layouts/gallery.html -->
+  <main>
+    <div class="gallery">
+      {{ with .Site.GetPage "/gallery" }}
+      {{ $.Scratch.Set "counter" 0 }}
+      {{ range .Resources.ByType "image"}}
+      {{ with .Resize (printf "%dx webp q90" 420)}}
+      {{ $count := $.Scratch.Get "counter" }}
+      {{ $maxh := 500 }}
+      {{ $height := .Height }}
+      {{ if ge $height $maxh }}
+      <a class="gallery__item double__row" style="--count:{{$count}}" target="_blank" href="{{.}}">
+        {{ else }}
+        <a class="gallery__item" style="--count:{{$count}}" target="_blank" href="{{.}}">
           {{ end }}
+          {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
+          <figure>
+            <img class="gallery__img" src="{{.RelPermalink}}" />
+          </figure>
+        </a>
         {{ end }}
-      </div>
-    </main>
-    {{ partial "footer" . }}
-  </body>
+        {{ end }}
+        {{ end }}
+    </div>
+  </main>
+  {{ partial "footer" . }}
   <script src="/js/nav.js"></script>
+  {{ partial "speculate.html" . }}
+</body>
+
 </html>

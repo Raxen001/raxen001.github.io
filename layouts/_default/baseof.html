@@ -9,13 +9,6 @@
   <link href="/css/header.css" rel="stylesheet" />
   <link href="/css/footer.css" rel="stylesheet" />
 
-  <link rel="prefetch" href="/" as="document">
-  <link rel="prefetch" href="/gallery" as="document">
-  <link rel="prefetch" href="/contacts" as="document">
-  <link rel="prefetch" href="/projects" as="document">
-  <link rel="prefetch" href="/blog" as="document">
-  <link rel="prefetch" href="/personal_writing" as="document">
-
   {{ partial "opengraph.html" . }}
 
   {{ block "list_css" . }} {{ end }}
@@ -31,7 +24,8 @@
   {{ block "main" . }}
   {{ end }}
   {{ partial "footer.html" . }}
+  <script src="/js/nav.js"></script>
+  {{ partial "speculate.html" . }}
 </body>
-<script src="/js/nav.js"></script>
 
 </html>
