@@ -1,9 +1,13 @@
 <script type="speculationrules">
 {
-  "prerender": [
-    {
-      "urls": ["/gallery/", "/contact/", "/projects/", "/blog/", "/personal_writing/"]
+  "prerender": [{
+    "where": {
+      "and": [
+        { "href_matches": "/*" },
+        { "not": {"selector_matches": ".do-not-prerender"}},
+        { "not": {"selector_matches": "[rel~=nofollow]"}}
+      ]
     }
-  ]
+  }]
 }
 </script>
