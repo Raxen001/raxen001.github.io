@@ -3,6 +3,7 @@ body {
   font-family: fc, monospace, Cambria, Cochin, Georgia, Times, "Times New Roman",
     serif;
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -22,9 +23,11 @@ hr {
   padding: 1ch 2ch;
   margin-block: 1ch;
 }
+
 .highlight {
   overflow-x: scroll;
 }
+
 blockquote {
   font-weight: light;
   font-style: italic;
@@ -44,7 +47,7 @@ blockquote figcaption {
   margin: 1em 10px 0 0;
 }
 
-:lang(en) > blockquote::before {
+:lang(en)>blockquote::before {
   content: " ";
   font-weight: bolder;
 }
@@ -57,6 +60,7 @@ h5,
 h6 {
   text-align: left;
 }
+
 h2,
 h3,
 h4,
@@ -69,18 +73,23 @@ h6 {
 h1 {
   color: var(--sky);
 }
+
 h2 {
   color: var(--maroon);
 }
+
 h3 {
   color: var(--yellow);
 }
+
 h4 {
   color: var(--green);
 }
+
 h5 {
   color: var(--sky);
 }
+
 h6 {
   color: var(--teal);
 }
@@ -90,6 +99,7 @@ ol {
   margin-left: 1.3rem;
   text-align: left;
 }
+
 body {
   color: var(--surface0);
   background: var(--bg);
@@ -129,7 +139,7 @@ main {
   border: 1px var(--mauve) solid;
 }
 
-.header > * > strong {
+.header>*>strong {
   font-family: banner;
   font-weight: 600;
   font-style: bold;
@@ -138,9 +148,11 @@ main {
 .header__title {
   color: var(--teal);
 }
+
 .header__author {
   color: var(--yellow);
 }
+
 .header__date {
   color: var(--lavender);
 }
@@ -151,10 +163,37 @@ main {
   padding-block: 0.5rem;
 }
 
+.toc {
+  .toc__header {
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  border: 1px solid var(--mauve);
+  margin: 10%;
+  font-family: space;
+  background: var(--black2);
+  padding: 3vw;
+  overflow: hidden;
+
+  a {
+    color: var(--maroon);
+  }
+
+  li li a {
+    color: var(--flamingo);
+  }
+
+}
+
 @media (min-width: 668px) {
   body {
     padding: 1rem 3rem;
   }
+
   main {
     padding-inline: 3ch;
   }

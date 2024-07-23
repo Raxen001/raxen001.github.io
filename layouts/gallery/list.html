@@ -24,9 +24,9 @@
       {{ $maxh := 500 }}
       {{ $height := .Height }}
       {{ if ge $height $maxh }}
-      <a class="gallery__item double__row" style="--count:{{$count}}" target="_blank" href="{{.}}">
+      <a class="gallery__item double__row no_pre_render" style="--count:{{$count}}" target="_blank" href="{{.}}">
         {{ else }}
-        <a class="gallery__item" style="--count:{{$count}}" target="_blank" href="{{.}}">
+        <a class="gallery__item no_pre_render" style="--count:{{$count}}" target="_blank" href="{{.}}">
           {{ end }}
           {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
           <figure>

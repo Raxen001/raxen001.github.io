@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <title>Raxen's abode</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="/css/style.css" rel="stylesheet" />
   <link href="/css/header.css" rel="stylesheet" />
   <link href="/css/footer.css" rel="stylesheet" />
-  
+
     <meta name="description" content="Hello guys welcome to my website. This is just where is post my stuff. hope you don't care">
 
   <meta property="og:description" content="Hello guys welcome to my website. This is just where is post my stuff. hope you don't care" />
@@ -16,11 +16,11 @@
     <meta property="og:title" content="Blog 1" />
   
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://localhost:1313/blog/blog-1/" />
+  <meta property="og:url" content="https://raxen001.github.io/blog/blog-1/" />
   
       
       
-      <meta property="og:image" itemprop="image" content="http://localhost:1313/blog/blog-1/thumbnail_hu0d83286229f76223ca02e073b688c5c3_279246_1200x630_resize_q100_h2_box_3.webp" />
+      <meta property="og:image" itemprop="image" content="https://raxen001.github.io/blog/blog-1/thumbnail_hu0d83286229f76223ca02e073b688c5c3_279246_1200x630_resize_q100_h2_box_3.webp" />
   
   <meta property="og:image:alt" content="the banner image of my website"/>
   <meta property="og:image:height" content="630"/>
@@ -37,16 +37,19 @@
   
       
       
-      <meta name="twitter:image" content="http://localhost:1313/blog/blog-1/thumbnail_hu0d83286229f76223ca02e073b688c5c3_279246_1920x1080_resize_q70_h2_box_3.webp">
+      <meta name="twitter:image" content="https://raxen001.github.io/blog/blog-1/thumbnail_hu0d83286229f76223ca02e073b688c5c3_279246_1920x1080_resize_q70_h2_box_3.webp">
   
 
 
 
-
+   
+  
+  <link href="/css/blog.css" rel="stylesheet" />
 
   
   <link href="/css/blog.css" rel="stylesheet" />
   
+
 </head>
 
 <body>
@@ -66,8 +69,8 @@
   <a class="nav__a" href="/gallery">GALLERY</a>
   <a class="nav__a" href="/contact/">CONTACT</a>
 </nav>
- 
-    
+
+  
 <main class="container">
   <div class="header">
     <div class="header__img_con">
@@ -87,6 +90,24 @@
     </div>
   </div>
   <hr/>
+  <div class="toc">
+    <h3 class="toc__header">TABLE OF CONTENTS</h3>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#this-is-the-first-blog-i-am-writing-do-go-easy-on-me">This is the first blog i am writing do go easy on me</a>
+      <ul>
+        <li><a href="#hello-world">Hello world.</a></li>
+        <li><a href="#hugo">HUGO</a></li>
+      </ul>
+    </li>
+    <li><a href="#reasons-for-not-using-react-angularjs-or-other-such-frameworks">Reasons for not using React, AngularJS or other such frameworks</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
   <div class="con"><h1 id="this-is-the-first-blog-i-am-writing-do-go-easy-on-me">This is the first blog i am writing do go easy on me</h1>
 <h2 id="hello-world">Hello world.</h2>
 <p>For the longest time i wanted to have my own blogging website.
@@ -134,7 +155,7 @@ the things i want to do are</p>
 which makes development and testing of your webpage easy as hell.</p>
 </div>
 </main>
- 
+
   <footer>
   <div class="center__text">Raxen - © copyright reserved</div>
   <div class="contact">
@@ -174,7 +195,22 @@ which makes development and testing of your webpage easy as hell.</p>
   </div>
 </footer>
 
+  <script src="/js/nav.js"></script>
+  <script type="speculationrules">
+{
+  "prerender": [{
+    "where": {
+      "and": [
+        { "href_matches": "/*" },
+        { "not": {"selector_matches": ".do-not-prerender"}},
+        { "not": {"selector_matches": "[rel~=nofollow]"}}
+      ]
+    },
+    "eagerness": "eager"
+  }]
+}
+</script>
+
 </body>
-<script src="/js/nav.js"></script>
 
 </html>
