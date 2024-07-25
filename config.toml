@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'Raxen abode'
 summaryLength = 25
 paginate = 5
+enableRobotsTXT = true
 
 [markup]
   [markup.tableOfContents]
