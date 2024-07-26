@@ -1,5 +1,5 @@
 {{ define "blog_css"}}
-  <link href="/css/blog.css" rel="stylesheet" />
+<link href="/css/blog.css" rel="stylesheet" />
 {{ end }}
 
 {{ define "main" }}
@@ -7,9 +7,9 @@
   <div class="header">
     <div class="header__img_con">
       {{ with .Resources.Get "thumbnail.png" }}
-        {{ $image := . }} 
-        {{ $image := $image.Resize (printf "%dx%d webp q90" $image.Width $image.Height )}}
-        <img class="header__img" src="{{ $image.RelPermalink }}" />
+      {{ $image := . }}
+      {{ $image := $image.Resize (printf "%dx%d webp q90" $image.Width $image.Height )}}
+      <img class="header__img" src="{{ $image.RelPermalink }}" />
       {{end}}
     </div>
     <div class="header__title"><strong>Title: </strong><i>{{ .Title }}</i></div>
@@ -17,15 +17,15 @@
       <strong>Author: </strong><i>{{ .Params.Author }}</i>
     </div>
     <div class="header__date">
-      <strong>Date: </strong
-      ><i>{{ .Params.Date | time.Format ":date_long" }}</i>
+      <strong>Date: </strong><i>{{ .Params.Date | time.Format ":date_long" }}</i>
     </div>
   </div>
-  <hr/>
+  <hr />
   <div class="toc">
     <h3 class="toc__header">TABLE OF CONTENTS</h3>
     {{ .TableOfContents }}
   </div>
   <div class="con">{{ .Content }}</div>
+  {{ partial "giscus.html" . }}
 </main>
 {{ end }}
