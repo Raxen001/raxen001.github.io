@@ -2,7 +2,11 @@
 <html lang="en">
 
 <head>
+  {{ if isset .Params "title" }}
+  <title>{{ .Params.title }}</title>
+  {{ else }}
   <title>Raxen's abode</title>
+  {{ end }}
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="/css/style.css" rel="stylesheet" />
