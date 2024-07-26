@@ -20,3 +20,7 @@
 [giscus](https://giscus.app/)
 [how-to-implement](https://www.justinjbird.me/blog/2023/adding-comments-to-a-hugo-site-using-giscus/)
 
+
+## to-do
+
+add `<menu>` tag around the`<li>` in home page navigation bar and other places

@@ -6,7 +6,7 @@ body {
   background-color: var(--bg);
   font-size: clamp(0.95rem, 0.6396rem + 0.9515vw, 1.125rem);
 
-  background: var(--black) url("/img/bg.gif");
+  background: var(--black) url("/img/bg.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat repeat;
