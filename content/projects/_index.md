@@ -1,4 +1,4 @@
 ---
-title: "~/Personal_Writings"
+title: "~/projects"
 customcss: "list.css"
 ---
