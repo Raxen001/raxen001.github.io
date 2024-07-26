@@ -92,8 +92,8 @@ body {
 }
 
 .card:active {
-  width: 1920px;
-  height: 100svh;
+  /* width: 100svw; */
+  /* height: 100svh; */
   background: var(--bg);
 }
 
