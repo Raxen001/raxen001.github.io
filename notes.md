@@ -6,3 +6,6 @@ convert cowboy.webp -coalesce -duplicate 1,-2-1 -quiet -layers OptimizePlus -loo
 
 # prerender pages
 https://developer.chrome.com/docs/web-platform/prerender-pages#prerendering-from-the-address-bar
+
+# convert gif to webp
+https://developers.google.com/speed/webp/docs/precompiled
