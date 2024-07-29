@@ -1,7 +1,7 @@
 html,
 body {
   font-family: space;
-  height: 100%;
+  /* height: 100%; */
   min-height: 100%;
   background-color: var(--bg);
   font-size: clamp(0.98rem, 0.635rem + 0.9515vw, 1.125rem);
@@ -74,10 +74,10 @@ main {
 }
 
 .pic>img:hover {
-  transform: scale(1.07);
+  /* transform: scale(1.00); */
   width: 100%;
   border-radius: 0%;
-  border: 0.1rem solid var(--red);
+  /* border: 0.1rem solid var(--red); */
 }
 
 .ban {
@@ -107,8 +107,8 @@ main {
 }
 
 .ban>h1:hover {
-  color: var(--red);
-  border: 0.3rem var(--green) solid;
+  color: var(--maroon);
+  /* border: 0.3rem var(--green) solid; */
   border-radius: 1ch;
   padding: 1rem;
 }
@@ -216,8 +216,7 @@ main {
 
   html,
   body {
-    /* max-height: 100svh; */
-    height: 100svh;
+    min-height: 100svh;
     font-size: clamp(0.95rem, 0.61rem + 0.9515vw, 1.125rem);
     /* overflow: hidden; */
   }
@@ -230,7 +229,7 @@ main {
   }
 
   .pic>img {
-    width: 50%;
+    width: clamp(39%, 13vw, 55%);
   }
 
   .ban {
