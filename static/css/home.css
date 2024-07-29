@@ -215,7 +215,7 @@ main {
 
   html,
   body {
-    max-height: 100svh;
+    /* max-height: 100svh; */
     height: 100svh;
     font-size: clamp(0.95rem, 0.61rem + 0.9515vw, 1.125rem);
     /* overflow: hidden; */
