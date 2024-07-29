@@ -142,7 +142,7 @@ main {
   font-size: clamp(0.95rem, 0.6396rem + 0.9515vw, 1.125rem);
 }
 
-nav {
+.nav>menu {
   height: 100%;
   width: 100%;
 
@@ -235,12 +235,12 @@ nav {
       "con con";
   }
 
-  nav {
+  .nav>menu {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 
-  nav li {
+  .nav li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -280,7 +280,7 @@ nav {
       "nav con";
   }
 
-  nav {
+  .nav>menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
