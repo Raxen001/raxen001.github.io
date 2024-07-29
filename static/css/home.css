@@ -25,8 +25,9 @@ main {
   /*   -moz-box-shadow: -80px 33px 64px 0px rgba(0, 0, 0, 0.81); */
   /*   box-shadow: -80px 33px 64px 0px rgba(0, 0, 0, 0.81); */
   /* background blur */
-  backdrop-filter: blur(2rem);
-  -webkit-backdrop-filter: blur(2rem);
+  --blur-strength: 2rem;
+  backdrop-filter: blur(var(--blur-strength));
+  -webkit-backdrop-filter: blur(var(--blur-strength));
 }
 
 .grid {
@@ -237,7 +238,7 @@ main {
   }
 
   .container {
-    max-height: 98%;
+    /* max-height: 100%; */
     border-top-left-radius: 2%;
 
     /* background: unset; */
