@@ -4,7 +4,7 @@ body {
   height: 100%;
   min-height: 100%;
   background-color: var(--bg);
-  font-size: clamp(0.95rem, 0.6396rem + 0.9515vw, 1.125rem);
+  font-size: clamp(0.98rem, 0.635rem + 0.9515vw, 1.125rem);
 
   background: var(--black) url("/img/bg.webp");
   background-position: center;
@@ -212,6 +212,15 @@ main {
 
 /* tablet */
 @media (min-width: 768px) {
+
+  html,
+  body {
+    max-height: 100svh;
+    height: 100svh;
+    font-size: clamp(0.95rem, 0.61rem + 0.9515vw, 1.125rem);
+    /* overflow: hidden; */
+  }
+
   body {
     display: flex;
     justify-content: center;
@@ -219,14 +228,23 @@ main {
 
   }
 
-  main {
-    max-height: 72rem;
+  .pic>img {
+    width: 50%;
+  }
+
+  .ban {
+    font-size: 120%;
+  }
+
+  .container {
+    max-height: 98%;
     border-top-left-radius: 2%;
 
     /* background: unset; */
   }
 
   .grid {
+    height: 100%;
     border-radius: 2%;
     grid-template-columns: 50% 50%;
     grid-template-areas:
@@ -251,7 +269,7 @@ main {
   }
 
   .grid,
-  .main {
+  .container {
     background: unset;
   }
 
@@ -273,6 +291,15 @@ main {
 }
 
 @media (min-width: 1024px) {
+
+  .pic>img {
+    width: 100%;
+  }
+
+  .ban {
+    font-size: 150%;
+  }
+
   .grid {
     grid-template-columns: 25% auto;
     grid-template-areas:
