@@ -1,31 +1,37 @@
 @font-face {
   font-family: fc;
   src: url("../font/static/FiraCode-Regular.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: cant;
   src: url("../font/Cantarell/Cantarell-Regular.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: banner;
   src: url("../font/Color\ Basic.otf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: fira;
   src: url("../font/Fira_Sans/FiraSans-Regular.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: space;
   src: url("../font/Space_Mono/SpaceMono-Regular.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: vt;
   src: url("../font/vt/VT323-Regular.ttf");
+  font-display: swap;
 }
 
 :root {

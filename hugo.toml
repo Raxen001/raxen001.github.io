@@ -8,6 +8,18 @@ enableRobotsTXT = true
 [Params]
   giscusTheme = "noborder_gray"
 
+[imaging]
+  bgColor = '#000000'
+  hint = 'image'
+  quality = 90
+  resampleFilter = 'box'
+
+  [imaging.exif]
+    disableDate = true
+    disableLatLong = true
+    excludeFields = ''
+    includeFields = ''
+
 [markup]
   [markup.tableOfContents]
     endLevel = 2

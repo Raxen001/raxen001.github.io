@@ -1,10 +1,10 @@
 html,
 body {
   font-family: space;
-  height: 100%;
+  /* height: 100%; */
   min-height: 100%;
   background-color: var(--bg);
-  font-size: clamp(0.95rem, 0.6396rem + 0.9515vw, 1.125rem);
+  font-size: clamp(0.98rem, 0.635rem + 0.9515vw, 1.125rem);
 
   background: var(--black) url("/img/bg.webp");
   background-position: center;
@@ -25,8 +25,9 @@ main {
   /*   -moz-box-shadow: -80px 33px 64px 0px rgba(0, 0, 0, 0.81); */
   /*   box-shadow: -80px 33px 64px 0px rgba(0, 0, 0, 0.81); */
   /* background blur */
-  backdrop-filter: blur(2rem);
-  -webkit-backdrop-filter: blur(2rem);
+  --blur-strength: 2rem;
+  backdrop-filter: blur(var(--blur-strength));
+  -webkit-backdrop-filter: blur(var(--blur-strength));
 }
 
 .grid {
@@ -73,10 +74,10 @@ main {
 }
 
 .pic>img:hover {
-  transform: scale(1.07);
+  /* transform: scale(1.00); */
   width: 100%;
   border-radius: 0%;
-  border: 0.1rem solid var(--red);
+  /* border: 0.1rem solid var(--red); */
 }
 
 .ban {
@@ -106,8 +107,8 @@ main {
 }
 
 .ban>h1:hover {
-  color: var(--red);
-  border: 0.3rem var(--green) solid;
+  color: var(--maroon);
+  /* border: 0.3rem var(--green) solid; */
   border-radius: 1ch;
   padding: 1rem;
 }
@@ -142,7 +143,7 @@ main {
   font-size: clamp(0.95rem, 0.6396rem + 0.9515vw, 1.125rem);
 }
 
-nav {
+.nav>menu {
   height: 100%;
   width: 100%;
 
@@ -212,6 +213,14 @@ nav {
 
 /* tablet */
 @media (min-width: 768px) {
+
+  html,
+  body {
+    min-height: 100svh;
+    font-size: clamp(0.95rem, 0.61rem + 0.9515vw, 1.125rem);
+    /* overflow: hidden; */
+  }
+
   body {
     display: flex;
     justify-content: center;
@@ -219,14 +228,23 @@ nav {
 
   }
 
-  main {
-    max-height: 72rem;
+  .pic>img {
+    width: clamp(39%, 13vw, 55%);
+  }
+
+  .ban {
+    font-size: 120%;
+  }
+
+  .container {
+    /* max-height: 100%; */
     border-top-left-radius: 2%;
 
     /* background: unset; */
   }
 
   .grid {
+    height: 100%;
     border-radius: 2%;
     grid-template-columns: 50% 50%;
     grid-template-areas:
@@ -235,12 +253,12 @@ nav {
       "con con";
   }
 
-  nav {
+  .nav>menu {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 
-  nav li {
+  .nav li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -251,7 +269,7 @@ nav {
   }
 
   .grid,
-  .main {
+  .container {
     background: unset;
   }
 
@@ -273,6 +291,15 @@ nav {
 }
 
 @media (min-width: 1024px) {
+
+  .pic>img {
+    width: 100%;
+  }
+
+  .ban {
+    font-size: 150%;
+  }
+
   .grid {
     grid-template-columns: 25% auto;
     grid-template-areas:
@@ -280,7 +307,7 @@ nav {
       "nav con";
   }
 
-  nav {
+  .nav>menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
