@@ -15,7 +15,7 @@
       {{$width := 720}}
       {{$height := 420}}
       {{$img := $img.Resize (printf "%dx webp q80" $width )}}
-      <img src="{{ $img.RelPermalink }}" width="{{$width}}" />
+      <img src="{{ $img.RelPermalink }}" width="{{$width}}" height="{{$img.Height}}" />
       {{end}}
       <div class="card__text__wrap">
         <span class="card__title">
