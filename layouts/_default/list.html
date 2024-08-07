@@ -1,5 +1,5 @@
 {{ define "list_css"}}
-  <link href="/css/list.css" rel="stylesheet" />
+<link href="/css/list.css" rel="stylesheet" />
 {{ end }}
 
 {{ define "main" }}
@@ -8,11 +8,15 @@
   {{ range .Paginator.Pages }}
   <article class="container card">
     <a class="card__link" href="{{ .Permalink }}">
-    {{ with .Resources.Get "thumbnail.png" }}
+      {{with .Resources.Get "thumbnail.png"}}
       {{$img := . }}
-      {{ $img := $img.Resize (printf "%dx%d webp q90" $img.Width $img.Height )}}
-      <img src="{{ $img.RelPermalink }}">
-    {{end}}
+      {{/* $width := $img.Width */}}
+      {{/* $height := $img.Height */}}
+      {{$width := 720}}
+      {{$height := 420}}
+      {{$img := $img.Resize (printf "%dx webp q80" $width )}}
+      <img src="{{ $img.RelPermalink }}" width="{{$width}}" />
+      {{end}}
       <div class="card__text__wrap">
         <span class="card__title">
           <h3>Title:</h3>
