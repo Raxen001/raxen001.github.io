@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   preserveAspectRatio="xMidYMid"
+   width="73"
+   height="73"
+   viewBox="0 0 172 172"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="anilist.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.6395349"
+     inkscape:cx="85.892231"
+     inkscape:cy="86"
+     inkscape:window-width="952"
+     inkscape:window-height="996"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">
+      .cls-1 {
+        fill: #02a9ff;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #fefefe;
+      }
+    </style>
+  </defs>
+  <g
+     id="g2">
+    <path
+       d="M111.322,111.157 L111.322,41.029 C111.322,37.010 109.105,34.792 105.086,34.792 L91.365,34.792 C87.346,34.792 85.128,37.010 85.128,41.029 C85.128,41.029 85.128,56.337 85.128,74.333 C85.128,75.271 94.165,79.626 94.401,80.547 C101.286,107.449 95.897,128.980 89.370,129.985 C100.042,130.513 101.216,135.644 93.267,132.138 C94.483,117.784 99.228,117.812 112.869,131.610 C112.986,131.729 115.666,137.351 115.833,137.351 C131.170,137.351 148.050,137.351 148.050,137.351 C152.069,137.351 154.286,135.134 154.286,131.115 L154.286,117.394 C154.286,113.375 152.069,111.157 148.050,111.157 L111.322,111.157 Z"
+       class="cls-1"
+       id="path1"
+       style="fill:#e6e9ef;fill-opacity:1" />
+    <path
+       d="M 54.365,34.792 18.331,137.351 h 27.996 l 6.098,-17.74 h 30.49 l 5.96,17.74 h 27.857 L 80.836,34.792 Z m 4.435,62.09 8.731,-28.412 9.563,28.412 z"
+       class="cls-2"
+       id="path2"
+       style="mix-blend-mode:darken;fill:#c3cada;fill-opacity:1" />
+  </g>
+</svg>
