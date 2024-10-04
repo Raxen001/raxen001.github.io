@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# depends on : hugo 
+
 declare -A types
 prompt="=> "
 path_to_thumb="./assets/default/thumbnail.png"
