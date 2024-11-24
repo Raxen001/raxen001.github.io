@@ -435,7 +435,7 @@ calsses and absent calsses
 <!-- - ![attendance after modification](img/after-modification-attendance.png) -->
 - ![attendance](img/attendance.png)
 
-## ACHIEVED FEAUTRE PARITY WITH OFFICIAL UNIFIED 🎉🎉🎉
+## ACHIEVED FEATURE PARITY WITH OFFICIAL UNIFIED 🎉🎉🎉
 
 This took about 2 years in the making, I worked on this project on and off
 as it was really my first real passion project. I learnt a lot. This project will always
