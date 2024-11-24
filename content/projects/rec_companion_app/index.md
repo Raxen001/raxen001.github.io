@@ -369,7 +369,7 @@ and will return
 ]
 ```
 
-- so the the `AttendanceData` specifies the date of attendance,
+- so the the `AttendanceDate` specifies the date of attendance,
 - we have to iterate through a list of json data.
 - we can assume A means absent
 - we can assume P means present
