@@ -1,5 +1,5 @@
 ---
-title: "DEVS COMPNAION APP"
+title: "DEVS COMPANION APP"
 #date: 2023-11-08T20:02:50+05:30
 date: 2024-11-24
 author: "Raxen"
@@ -12,10 +12,9 @@ customcss: "blog.css"
 
 ## PREAMBLE
 
-My college has switched their erp solution to a new one. So, i think everything
-i say would
-be obsolute by the time I publish this blog.
-Thanks to this project i learnt API protection, multithreading, agricutlure
+My college has switched their ERP solution to a new one. So, i think everything
+I say would be obsolute by the time I publish this blog.
+Thanks to this project I learnt about API protection, multithreading and agricutlure
 seems to be a easier field of work.
 
 ## WHERE IT ALL STARTED
@@ -44,15 +43,15 @@ portal that didn't suck.
 
 ## REVERSE ENGINEERING
 
-By 2022. I wanted to build a better portal for my peers. Cause the official one
-from college was shit The backend apis had 0 authentication they were simply
-quried and data was returned. It made it really easy to reverse engineer and
+By 2022. I wanted to build a better portal for my peers because the official one
+from college was shit. The backend APIS had 0 authentication they
+queried and data was returned. It made it really easy to reverse engineer and
 build applications around it. In fact there was already an existing solution as
-a telegram bot. Okay, I should just use it and call it a day right. Wrong. I
-didn't have telegram and using a telgram bot was unintutive and i really wanted
+a telegram bot. Okay, I should just use it and call it a day right. Wrong.
+I didn't have telegram and using a telgram bot was unintutive and I really wanted
 it to be a standalone application or a website.
 
-## 0 AUTH ON BACKEND
+## 0 AUTHENTHICATION WAS DONE ON THE BACKEND
 
 Just going through how the reqeusts work in Chrome/Firefox devtools. In the
 network tab i quickly found that they had 0 authentication for the api
@@ -484,7 +483,7 @@ module.exports = function(app) {
 - nginx - docker - volume - fucked up service worker not registering properly
   aws decided to fuck us by only allowing 1 gb ram on free tier
 Lot of code changes on the production server to make it run
-Don't depend on other services, they might change how their apis behave any
+Don't depend on other services, they might change how their APIs behave any
 moment and your application will stop working
 
 ## PWA
@@ -532,7 +531,7 @@ if (token !== "") {
 ```
 
 i later learnt this was not how it was supposed to be done
-`sw.js` can do it so whenever we use fetch it does a custom funcation
+`sw.js` can do it so whenever we use fetch it does a custom functions
 But everything worked having old unified as benchmark. Anything was better
 ![Great success](https://y.yarn.co/08c741c0-dde1-4946-b9f0-51f0d30d2b70_text.gif "great success")
 
@@ -565,6 +564,10 @@ But everything worked having old unified as benchmark. Anything was better
 ![events-page-made-by-thiru](img/events-page.png)
 
 ![360-page-made-by-swayam](img/360deg.png "tihs was made by swayam")
+
+## WON DESIGN THINKING
+
+![design thinking won 2nd place](img/won-designthinking.png)
 
 ## CONCLUSION
 
