@@ -172,10 +172,11 @@ main {
     text-decoration: none;
   }
 
-  border: 1px solid var(--mauve);
+  border: 4px solid var(--gray);
+  border-radius: 4px;
   margin: 10%;
   font-family: space;
-  background: var(--black2);
+  background: var(--bga1);
   padding: 3vw;
   overflow: hidden;
 

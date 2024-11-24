@@ -22,9 +22,9 @@ enableRobotsTXT = true
 
 [markup]
   [markup.tableOfContents]
-    endLevel = 2
+    endLevel = 3
     ordered = false
-    startLevel = 1
+    startLevel = 2
   [markup.highlight]
     anchorLineNos = true
     codeFences = true
