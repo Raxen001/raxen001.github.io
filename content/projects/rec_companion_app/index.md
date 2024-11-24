@@ -1,8 +1,8 @@
 ---
-title: "REC comapnion app frontend"
+title: "DEVS COMPNAION APP"
 #date: 2023-11-08T20:02:50+05:30
 date: 2024-11-24
-author: "RAXEN"
+author: "Raxen"
 draft: false
 customcss: "blog.css"
 ---
