@@ -79,13 +79,6 @@
       <description>How we almost made an centralised blockchain based universal currency during PECHACKS 2024 We enter the hackathon So my friend Noumaan approaches me and tells there is this hackathon in Panimalar college and wanted to go and had a spot left.</description>
     </item>
     <item>
-      <title>Andoird Linux Interconnectivity</title>
-      <link>http://0.0.0.0:1313/projects/andoir-linux-connectivity/</link>
-      <pubDate>Tue, 26 Sep 2023 22:21:55 +0530</pubDate>
-      <guid>http://0.0.0.0:1313/projects/andoir-linux-connectivity/</guid>
-      <description>NOTES scrcpy adb kdeconnect bluetooth</description>
-    </item>
-    <item>
       <title>Love</title>
       <link>http://0.0.0.0:1313/personal_writing/love/</link>
       <pubDate>Fri, 15 Sep 2023 23:53:37 +0530</pubDate>
@@ -126,13 +119,6 @@
       <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
       <guid>http://0.0.0.0:1313/blog/example/</guid>
       <description>Heading 1 this is text&#xA;this is sub-text something something&#xA;something&#xA;done code here&#xA;1 2 3 4 import os a = int(input()) print(a) youtube this is a para 1</description>
-    </item>
-    <item>
-      <title>Project 0</title>
-      <link>http://0.0.0.0:1313/projects/project-0/</link>
-      <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://0.0.0.0:1313/projects/project-0/</guid>
-      <description>coming soon&amp;hellip; Spotify ==&amp;gt; Youtube ==&amp;gt; youtube-dl &amp;hellip;&#xA;REC UNIFIED PORTAL &amp;hellip;&#xA;REC ID card &amp;hellip;</description>
     </item>
   </channel>
 </rss>

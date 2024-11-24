@@ -489,10 +489,52 @@ moment and your application will stop working
 
 ## PWA
 
-Somehow i got the Progressive Web Apps to work and using a caching method
-which made it so that user won't send request to the server everytime they want something
-instead requests will be cached and be reused and only when needed network requests are done
+Somehow i got the Progressive Web Apps to work and using a caching method which
+made it so that user won't send request to the server everytime they want
+something instead requests will be cached and be reused and only when needed
+network requests are done
 
+### PLEASE DO NOT DO THIS READ PWA DOCS AND USER SERVICE WORKERS TO PROPERLY CACHE THINGS
+
+```js
+useEffect(() => {
+if (localStorage.getItem("JWT_TOKEN") === null) {
+  console.log("NOT LOGGED IN");
+  navigate("/login");
+} else {
+  setToken(localStorage.getItem("JWT_TOKEN"));
+}
+}, []);
+```
+
+the nightmare continues
+
+```js
+if (token !== "") {
+  if(localStorage.getItem('sem-marks') === null){
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}` 
+    const url = `/api/sem-marks/`;
+    axios
+      .get(url, {})
+      .then(function(response) {
+        setData(response.data);
+        localStorage.setItem('sem-marks', JSON.stringify(response.data));
+        console.log("grade:", data);
+      })
+      .catch(function(error) {
+        console.log(error);
+        localStorage.clear();
+        navigate("/login");
+      });
+  }
+  else{
+    setData(JSON.parse(localStorage.getItem("sem-marks")));
+```
+
+i later learnt this was not how it was supposed to be done
+`sw.js` can do it so whenever we use fetch it does a custom funcation
+But everything worked having old unified as benchmark. Anything was better
+![Great success](https://y.yarn.co/08c741c0-dde1-4946-b9f0-51f0d30d2b70_text.gif "great success")
 
 ## SCREENSHOTS
 
