@@ -19,7 +19,7 @@ customcss: "blog.css"
 
 `code here`
 
-```python3
+```python
 import os
 
 a = int(input())

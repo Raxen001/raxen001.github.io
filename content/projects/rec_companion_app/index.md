@@ -79,7 +79,7 @@ is soo fucking overkill.
 
 ### util/scraper.py
 
-```python3
+```python
 def add_user(unified_id, rollno, name, email):
 
     print(f"ADDING USER {rollno} {unified_id} {name} {email}")

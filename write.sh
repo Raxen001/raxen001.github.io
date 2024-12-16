@@ -27,6 +27,7 @@ run() {
   #mkdir ./content/"${types[${option}]}"/"$name"
   hugo new ./content/"${types[${option}]}"/"$name"/index.md
   cp "$path_to_thumb" ./content/"${types[${option}]}"/"$name"/thumbnail.png
+  mkdir ./content/"${types[${option}]}"/"$name"/img
   cd ./content/"${types[${option}]}"/"$name"/
 }
 
