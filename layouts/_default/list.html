@@ -19,16 +19,16 @@
       {{end}}
       <div class="card__text__wrap">
         <span class="card__title">
-          <h3>Title:</h3>
-          <p>{{ .Title }}</p>
+          <p class="card__header__title">Title:</p>
+          <p class="card__con__title">{{ .Title }}</p>
         </span>
         <span class="card__author">
-          <h3>Author:</h3>
-          <p>{{ .Params.Author }}</p>
+          <p class="card__header__author">Author:</p>
+          <p class="card__con__date">{{ .Params.Author }}</p>
         </span>
         <span class="card__date">
-          <h3>Date:</h3>
-          <p>{{ .Date | time.Format ":date_long" }}</p>
+          <p class="card__header__date">Date:</p>
+          <p class="card__con__date">{{ .Date | time.Format ":date_long" }}</p>
         </span>
       </div>
       <!-- <span class="card__tag">{{ .Params.Tag }}</span> -->

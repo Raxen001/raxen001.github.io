@@ -120,7 +120,7 @@ body {
 }
 
 .card__text__wrap>span {
-  display: flex;
+  /*display: flex;*/
   padding: 0.7rem;
 }
 
@@ -139,20 +139,41 @@ body {
   font-family: banner;
 }
 
-.card__title {
-  font-size: clamp(0.55rem, 0.6496rem + 0.9615vw, 0.925rem);
+
+.card__title p[class^="card__header"] {
+  /*font-size: clamp(0.55rem, 0.6496rem + 0.9615vw, 0.925rem);*/
   display: flex;
   flex-wrap: wrap;
   color: var(--teal);
 }
 
-.card__author {
+.card__author p[class^="card__header"] {
   color: var(--yellow);
 }
 
-.card__date {
+.card__date p[class^="card__header"] {
   color: var(--lavender);
 }
+
+/*span[class^="card__"] {*/
+.card__title,
+.card__author,
+.card__date {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card__desc {
+    display: flex;
+    background-color: var(--bgda1);
+    padding: 1rem;
+    text-align: justify;
+}
+
+/*p[class^="card__con"]{*/
+/*    color: var(--white);*/
+/*}*/
+
 
 .card__link img {
   width: 100%;
