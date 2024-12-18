@@ -2,93 +2,99 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://0.0.0.0:41955/blog/</loc>
+    <loc>http://0.0.0.0:1313/blog/</loc>
     <lastmod>2024-12-16T20:23:18+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/blog/blog-2/</loc>
+    <loc>http://0.0.0.0:1313/blog/blog-2/</loc>
     <lastmod>2024-12-16T20:23:18+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/tags/college/</loc>
+    <loc>http://0.0.0.0:1313/tags/college/</loc>
     <lastmod>2024-12-16T20:23:18+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/tags/personal/</loc>
+    <loc>http://0.0.0.0:1313/tags/notes/</loc>
     <lastmod>2024-12-16T20:23:18+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/</loc>
+    <loc>http://0.0.0.0:1313/tags/personal/</loc>
     <lastmod>2024-12-16T20:23:18+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/tags/</loc>
+    <loc>http://0.0.0.0:1313/</loc>
     <lastmod>2024-12-16T20:23:18+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/projects/</loc>
+    <loc>http://0.0.0.0:1313/blog/software-testing-notes/</loc>
+    <lastmod>2024-12-16T20:23:18+05:30</lastmod>
+  </url><url>
+    <loc>http://0.0.0.0:1313/tags/</loc>
+    <lastmod>2024-12-16T20:23:18+05:30</lastmod>
+  </url><url>
+    <loc>http://0.0.0.0:1313/projects/</loc>
     <lastmod>2024-12-15T19:26:27+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/projects/sih_2024_1664/</loc>
+    <loc>http://0.0.0.0:1313/projects/sih_2024_1664/</loc>
     <lastmod>2024-12-15T19:26:27+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/projects/rec_companion_app/</loc>
+    <loc>http://0.0.0.0:1313/projects/rec_companion_app/</loc>
     <lastmod>2024-11-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/personal_writing/</loc>
+    <loc>http://0.0.0.0:1313/personal_writing/</loc>
     <lastmod>2024-10-13T19:43:09+00:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/personal_writing/farewell-rec/</loc>
+    <loc>http://0.0.0.0:1313/personal_writing/farewell-rec/</loc>
     <lastmod>2024-10-13T19:43:09+00:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/projects/raven_2.0/</loc>
+    <loc>http://0.0.0.0:1313/projects/raven_2.0/</loc>
     <lastmod>2024-10-04T21:33:38+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/categories/</loc>
+    <loc>http://0.0.0.0:1313/categories/</loc>
     <lastmod>2024-05-01T01:39:25+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/tags/ctf/</loc>
+    <loc>http://0.0.0.0:1313/tags/ctf/</loc>
     <lastmod>2024-05-01T01:39:25+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/categories/ctf/</loc>
+    <loc>http://0.0.0.0:1313/categories/ctf/</loc>
     <lastmod>2024-05-01T01:39:25+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/projects/pentathon2024/</loc>
+    <loc>http://0.0.0.0:1313/projects/pentathon2024/</loc>
     <lastmod>2024-05-01T01:39:25+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/categories/computer/</loc>
+    <loc>http://0.0.0.0:1313/categories/computer/</loc>
     <lastmod>2024-05-01T01:29:13+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/projects/pecan&#43;_pals_ecu_iitm/</loc>
+    <loc>http://0.0.0.0:1313/projects/pecan&#43;_pals_ecu_iitm/</loc>
     <lastmod>2024-05-01T01:29:13+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/personal_writing/what_do_we_live_for/</loc>
+    <loc>http://0.0.0.0:1313/personal_writing/what_do_we_live_for/</loc>
     <lastmod>2024-03-29T17:27:18+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/projects/pechacks/</loc>
+    <loc>http://0.0.0.0:1313/projects/pechacks/</loc>
     <lastmod>2024-01-31T00:23:23+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/personal_writing/love/</loc>
+    <loc>http://0.0.0.0:1313/personal_writing/love/</loc>
     <lastmod>2023-09-15T23:53:37+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/projects/raven/</loc>
+    <loc>http://0.0.0.0:1313/projects/raven/</loc>
     <lastmod>2023-09-06T15:45:01+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/personal_writing/write-1/</loc>
+    <loc>http://0.0.0.0:1313/personal_writing/write-1/</loc>
     <lastmod>2023-08-10T21:20:34+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/personal_writing/hell0-friend/</loc>
+    <loc>http://0.0.0.0:1313/personal_writing/hell0-friend/</loc>
     <lastmod>2023-08-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/blog/blog-1/</loc>
+    <loc>http://0.0.0.0:1313/blog/blog-1/</loc>
     <lastmod>2023-08-08T19:59:02+05:30</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/contact/</loc>
+    <loc>http://0.0.0.0:1313/contact/</loc>
     <lastmod>2023-07-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/blog/example/</loc>
+    <loc>http://0.0.0.0:1313/blog/example/</loc>
     <lastmod>2023-07-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/tags/tag1/</loc>
+    <loc>http://0.0.0.0:1313/tags/tag1/</loc>
     <lastmod>2023-07-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/tags/tag2/</loc>
+    <loc>http://0.0.0.0:1313/tags/tag2/</loc>
     <lastmod>2023-07-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:41955/gallery/</loc>
+    <loc>http://0.0.0.0:1313/gallery/</loc>
   </url>
 </urlset>

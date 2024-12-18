@@ -2,31 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>~/blog on Raxen abode</title>
-    <link>http://0.0.0.0:41955/blog/</link>
+    <link>http://0.0.0.0:1313/blog/</link>
     <description>Recent content in ~/blog on Raxen abode</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 16 Dec 2024 20:23:18 +0530</lastBuildDate>
-    <atom:link href="http://0.0.0.0:41955/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://0.0.0.0:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog 3</title>
-      <link>http://0.0.0.0:41955/blog/blog-2/</link>
+      <link>http://0.0.0.0:1313/blog/blog-2/</link>
       <pubDate>Mon, 16 Dec 2024 20:23:18 +0530</pubDate>
-      <guid>http://0.0.0.0:41955/blog/blog-2/</guid>
+      <guid>http://0.0.0.0:1313/blog/blog-2/</guid>
       <description>Random Shit Wow its been almost 4 years since I started my college life. Turns out life moves fast and slow at the same time. It always felt like I had something to do.</description>
     </item>
     <item>
+      <title>software testing notes</title>
+      <link>http://0.0.0.0:1313/blog/software-testing-notes/</link>
+      <pubDate>Mon, 16 Dec 2024 20:23:18 +0530</pubDate>
+      <guid>http://0.0.0.0:1313/blog/software-testing-notes/</guid>
+      <description>SOFTWARE TESTING SOFTWARE FUNCTIONAL QUALITY it reflects how well it satisfies a given design, based on the functinoal requirements or specifications&#xA;SOFTWARE STRUCTURAL QUALITY deals with the handling of non-functional requirements that support the delivevry of the functional requirements, such as robustness - maintainability, degree of the software was produced correctly</description>
+    </item>
+    <item>
       <title>Blog 1</title>
-      <link>http://0.0.0.0:41955/blog/blog-1/</link>
+      <link>http://0.0.0.0:1313/blog/blog-1/</link>
       <pubDate>Tue, 08 Aug 2023 19:59:02 +0530</pubDate>
-      <guid>http://0.0.0.0:41955/blog/blog-1/</guid>
+      <guid>http://0.0.0.0:1313/blog/blog-1/</guid>
       <description>This is the first blog i am writing do go easy on me Hello world. For the longest time i wanted to have my own blogging website.</description>
     </item>
     <item>
       <title>Example Blog</title>
-      <link>http://0.0.0.0:41955/blog/example/</link>
+      <link>http://0.0.0.0:1313/blog/example/</link>
       <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://0.0.0.0:41955/blog/example/</guid>
+      <guid>http://0.0.0.0:1313/blog/example/</guid>
       <description>Heading 1 this is text&#xA;this is sub-text something something&#xA;something&#xA;done code here&#xA;1 2 3 4 import os a = int(input()) print(a) youtube this is a para 1</description>
     </item>
   </channel>

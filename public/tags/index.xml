@@ -2,45 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Raxen abode</title>
-    <link>http://0.0.0.0:41955/tags/</link>
+    <link>http://0.0.0.0:1313/tags/</link>
     <description>Recent content in Tags on Raxen abode</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 16 Dec 2024 20:23:18 +0530</lastBuildDate>
-    <atom:link href="http://0.0.0.0:41955/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://0.0.0.0:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>College</title>
-      <link>http://0.0.0.0:41955/tags/college/</link>
+      <link>http://0.0.0.0:1313/tags/college/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://0.0.0.0:41955/tags/college/</guid>
+      <guid>http://0.0.0.0:1313/tags/college/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Notes</title>
+      <link>http://0.0.0.0:1313/tags/notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://0.0.0.0:1313/tags/notes/</guid>
       <description></description>
     </item>
     <item>
       <title>Personal</title>
-      <link>http://0.0.0.0:41955/tags/personal/</link>
+      <link>http://0.0.0.0:1313/tags/personal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://0.0.0.0:41955/tags/personal/</guid>
+      <guid>http://0.0.0.0:1313/tags/personal/</guid>
       <description></description>
     </item>
     <item>
       <title>Ctf</title>
-      <link>http://0.0.0.0:41955/tags/ctf/</link>
+      <link>http://0.0.0.0:1313/tags/ctf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://0.0.0.0:41955/tags/ctf/</guid>
+      <guid>http://0.0.0.0:1313/tags/ctf/</guid>
       <description></description>
     </item>
     <item>
       <title>Tag1</title>
-      <link>http://0.0.0.0:41955/tags/tag1/</link>
+      <link>http://0.0.0.0:1313/tags/tag1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://0.0.0.0:41955/tags/tag1/</guid>
+      <guid>http://0.0.0.0:1313/tags/tag1/</guid>
       <description></description>
     </item>
     <item>
       <title>Tag2</title>
-      <link>http://0.0.0.0:41955/tags/tag2/</link>
+      <link>http://0.0.0.0:1313/tags/tag2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://0.0.0.0:41955/tags/tag2/</guid>
+      <guid>http://0.0.0.0:1313/tags/tag2/</guid>
       <description></description>
     </item>
   </channel>

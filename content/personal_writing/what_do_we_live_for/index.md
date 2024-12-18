@@ -182,6 +182,6 @@ As once the great Spike Spiegel said
 >
 > \- Spike Spiegel
 
-![Whatever happens happens](cowboy.gif)
+![Whatever happens happens](cowboy.gif "cowboy bebop")
 
 

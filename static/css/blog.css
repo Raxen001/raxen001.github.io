@@ -20,8 +20,13 @@ hr {
 }
 
 .con p {
-  padding: 1ch 2ch;
+  padding: 1.25ch 1ch;
   margin-block: 1ch;
+}
+.con ul, .con ol {
+    padding: 1.25ch 1ch;
+    margin-block: 1ch;
+    text-align: justify;
 }
 
 .highlight {
@@ -67,7 +72,6 @@ h4,
 h5,
 h6 {
   padding-block: 0.7ch;
-  padding-left: 0.5ch;
 }
 
 h1 {
@@ -76,27 +80,32 @@ h1 {
 
 h2 {
   color: var(--maroon);
+  padding-left: 0.2ch;
 }
 
 h3 {
   color: var(--yellow);
+  padding-left: 0.3ch;
 }
 
 h4 {
   color: var(--green);
+  padding-left: 0.4ch;
 }
 
 h5 {
   color: var(--sky);
+  padding-left: 0.5ch;
 }
 
 h6 {
   color: var(--teal);
+  padding-left: 0.6ch;
 }
 
 ul,
 ol {
-  margin-left: 1.3rem;
+  /*margin-left: 1.3rem;*/
   text-align: left;
 }
 
@@ -164,8 +173,16 @@ main {
 }
 
 .toc {
-  .toc__header {
-    text-align: center;
+
+  .toc__header, #TableOfContents {
+        text-align: center;
+      --blur-strength: 2rem;
+      backdrop-filter: blur(var(--blur-strength));
+      -webkit-backdrop-filter: blur(var(--blur-strength));
+  }
+  #TableOfContents{
+    padding: 1ch 3ch;
+    text-align: justify;
   }
 
   a {
@@ -174,9 +191,18 @@ main {
 
   border: 4px solid var(--gray);
   border-radius: 4px;
-  margin: 10%;
+  margin: 2%;
   font-family: space;
-  background: var(--bga1);
+  font-size: clamp(0.85rem, 0.6396rem + 0.9515vw, 1.095rem);
+
+  background-color: var(--bga1);
+  background: var(--black) url("/img/bg.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat repeat;
+  background-clip: border-box;
+
+
   padding: 3vw;
   overflow: hidden;
 
@@ -197,5 +223,9 @@ main {
 
   main {
     padding-inline: 3ch;
+  }
+  .toc {
+    line-height: 1.5rem;
+    margin: 10%;
   }
 }
