@@ -12,18 +12,31 @@
       <img class="header__img" src="{{ $image.RelPermalink }}" />
       {{end}}
     </div>
-    <div class="header__title"><strong>Title: </strong><i>{{ .Title }}</i></div>
-    <div class="header__author">
-      <strong>Author: </strong><i>{{ .Params.Author }}</i>
-    </div>
-    <div class="header__date">
-      <strong>Date: </strong><i>{{ .Params.Date | time.Format ":date_long" }}</i>
+    <div class="header__meta__wrapper">
+      <div class="blur__wrapper">
+        <div class="header__title">
+          <strong>Title:</strong>
+          <i>{{ .Title }}</i>
+        </div>
+        <div class="header__author">
+          <strong>Author:</strong>
+          <i>{{ .Params.Author }}</i>
+        </div>
+        <div class="header__date">
+          <strong>Date:</strong>
+          <i>{{ .Params.Date | time.Format ":date_long" }}</i>
+        </div>
+      </div>
     </div>
   </div>
+
   <hr />
+
   <div class="toc">
-    <h3 class="toc__header">TABLE OF CONTENTS</h3>
-    {{ .TableOfContents }}
+    <div class="blur__wrapper">
+      <h3 class="toc__header">TABLE OF CONTENTS</h3>
+      {{ .TableOfContents }}
+    </div>
   </div>
   <div class="con">{{ .Content }}</div>
   {{ partial "giscus.html" . }}

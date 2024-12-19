@@ -22,8 +22,8 @@ enableRobotsTXT = true
 
 [markup]
   [markup.tableOfContents]
-    endLevel = 3
-    ordered = false
+    endLevel = 2
+    ordered = true
     startLevel = 2
   [markup.highlight]
     anchorLineNos = true

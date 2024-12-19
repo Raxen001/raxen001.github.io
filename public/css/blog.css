@@ -4,6 +4,8 @@ body {
     serif;
   line-height: 1.5;
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -26,6 +28,7 @@ hr {
 .con ul, .con ol {
     padding: 1.25ch 1ch;
     margin-block: 1ch;
+    margin-left: 3ch;
     text-align: justify;
 }
 
@@ -57,54 +60,54 @@ blockquote figcaption {
   font-weight: bolder;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.con h1,
+.con h2,
+.con h3,
+.con h4,
+.con h5,
+.con h6 {
   text-align: left;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
+.con h2,
+.con h3,
+.con h4,
+.con h5,
+.con h6 {
   padding-block: 0.7ch;
 }
 
-h1 {
+.con h1 {
   color: var(--sky);
 }
 
-h2 {
+.con h2 {
   color: var(--maroon);
   padding-left: 0.2ch;
 }
 
-h3 {
+.con h3 {
   color: var(--yellow);
   padding-left: 0.3ch;
 }
 
-h4 {
+.con h4 {
   color: var(--green);
   padding-left: 0.4ch;
 }
 
-h5 {
+.con h5 {
   color: var(--sky);
   padding-left: 0.5ch;
 }
 
-h6 {
+.con h6 {
   color: var(--teal);
   padding-left: 0.6ch;
 }
 
-ul,
-ol {
+.con ul,
+.con ol {
   /*margin-left: 1.3rem;*/
   text-align: left;
 }
@@ -123,7 +126,7 @@ body {
 main {
   width: 100%;
   line-height: 1.3;
-  font-size: clamp(0.93rem, 0.6513rem + 0.4947vw, 1.125rem);
+  font-size: clamp(1.0rem, 0.6513rem + 0.4947vw, 1.125rem);
   padding-block: 2rem 6rem;
   margin-bottom: 3rem;
   text-align: justify;
@@ -144,7 +147,9 @@ main {
 
 .header__img {
   width: 100%;
-  max-width: 60rem;
+  /*max-width: 60rem;*/
+  max-height: 30rem;
+  aspect-ratio: 1;
   border: 1px var(--mauve) solid;
 }
 
@@ -153,6 +158,32 @@ main {
   font-weight: 600;
   font-style: bold;
 }
+
+.header__meta__wrapper{
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(1.4rem, 0.9513rem + 0.9947vw, 2.325rem);
+
+  background-color: var(--bga1);
+  background: var(--black) url("/img/bg.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  border: 0.125rem solid var(--red);
+  border-radius: 0.125rem;
+}
+
+.header__title,
+.header__author,
+.header__date{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  text-align: left;
+  padding-inline: 6vw;
+}
+
 
 .header__title {
   color: var(--teal);
@@ -175,14 +206,18 @@ main {
 .toc {
 
   .toc__header, #TableOfContents {
-        text-align: center;
-      --blur-strength: 2rem;
-      backdrop-filter: blur(var(--blur-strength));
-      -webkit-backdrop-filter: blur(var(--blur-strength));
+    text-align: center;
+    color: var(--yellow)
+      
   }
   #TableOfContents{
+    font-size: clamp(1.2rem, 0.6396rem + 0.9515vw, 1.895rem);
     padding: 1ch 3ch;
-    text-align: justify;
+    text-align: left;
+    margin-left: 1.3ch;
+    li {
+      margin-block: 1ch;
+    }
   }
 
   a {
@@ -191,19 +226,17 @@ main {
 
   border: 4px solid var(--gray);
   border-radius: 4px;
-  margin: 2%;
   font-family: space;
-  font-size: clamp(0.85rem, 0.6396rem + 0.9515vw, 1.095rem);
+  font-size: clamp(1rem, 0.6396rem + 0.9515vw, 1.095rem);
 
   background-color: var(--bga1);
   background: var(--black) url("/img/bg.webp");
-  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
-  background-repeat: no-repeat repeat;
-  background-clip: border-box;
 
-
-  padding: 3vw;
+  /*margin: 2%;*/
+  margin-block: 1ch 3ch;
   overflow: hidden;
 
   a {
@@ -214,6 +247,16 @@ main {
     color: var(--flamingo);
   }
 
+}
+
+/*utility class*/
+.blur__wrapper {
+  --blur-strength: 1rem;
+  backdrop-filter: blur(var(--blur-strength));
+  -webkit-backdrop-filter: blur(var(--blur-strength));
+  padding: 1vw;
+  
+  
 }
 
 @media (min-width: 668px) {
