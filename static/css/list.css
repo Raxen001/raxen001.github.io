@@ -160,7 +160,7 @@ body {
 .card__author,
 .card__date {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
 }
 
 .card__desc {

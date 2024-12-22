@@ -2,6 +2,7 @@ html,
 body {
   font-family: fc, monospace, Cambria, Cochin, Georgia, Times, "Times New Roman",
     serif;
+  font-weight: 800;
   line-height: 1.5;
   scroll-behavior: smooth;
   margin: 0;
@@ -17,15 +18,24 @@ hr {
   margin-block: 1ch 2rem;
 }
 
+.con {
+    border-color: var(--gray);
+    border-style: solid;
+    border-inline: 2px;
+    padding: 0.5ch;
+}
+
 .con a {
   color: var(--lavender);
 }
 
 .con p {
+  font-size: clamp(1.2rem, 0.65rem + 1vw, 1.9rem);
   padding: 1.25ch 1ch;
   margin-block: 1ch;
 }
 .con ul, .con ol {
+    font-size: clamp(1.2rem, 0.65rem + 1vw, 1.9rem);
     padding: 1.25ch 1ch;
     margin-block: 1ch;
     margin-left: 3ch;
@@ -123,10 +133,10 @@ body {
   border: 2px var(--black3) solid;
 }
 
-main {
+.container {
   width: 100%;
   line-height: 1.3;
-  font-size: clamp(1.0rem, 0.6513rem + 0.4947vw, 1.125rem);
+  font-size: clamp(1.2rem, 0.6513rem + 0.4947vw, 1.825rem);
   padding-block: 2rem 6rem;
   margin-bottom: 3rem;
   text-align: justify;
@@ -147,15 +157,15 @@ main {
 
 .header__img {
   width: 100%;
-  /*max-width: 60rem;*/
-  max-height: 30rem;
-  aspect-ratio: 1;
+  max-width: 60rem;
+  /*max-height: 30rem;*/
+  /*aspect-ratio: 1;*/
   border: 1px var(--mauve) solid;
 }
 
 .header>*>strong {
   font-family: banner;
-  font-weight: 600;
+  font-weight: 900;
   font-style: bold;
 }
 
@@ -178,7 +188,7 @@ main {
 .header__author,
 .header__date{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
   text-align: left;
   padding-inline: 6vw;
@@ -271,4 +281,8 @@ main {
     line-height: 1.5rem;
     margin: 10%;
   }
+  .con {
+      padding: 2ch;
+      margin: 2ch;
+    }
 }
