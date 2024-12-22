@@ -16,15 +16,15 @@
       <div class="blur__wrapper">
         <div class="header__title">
           <strong>Title:</strong>
-          <i>{{ .Title }}</i>
+          <p>{{ .Title }}</p>
         </div>
         <div class="header__author">
           <strong>Author:</strong>
-          <i>{{ .Params.Author }}</i>
+          <p>{{ .Params.Author }}</p>
         </div>
         <div class="header__date">
           <strong>Date:</strong>
-          <i>{{ .Params.Date | time.Format ":date_long" }}</i>
+          <p>{{ .Params.Date | time.Format ":date_long" }}</p>
         </div>
       </div>
     </div>

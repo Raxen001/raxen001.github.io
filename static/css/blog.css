@@ -6,16 +6,17 @@ body {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+
 }
 
 /*utility class*/
 .blur__wrapper {
-  --blur-strength: 2rem;
+  --blur-strength: 1rem;
   backdrop-filter: blur(var(--blur-strength));
   -webkit-backdrop-filter: blur(var(--blur-strength));
   padding: 1vw;
-  
-  
+
+
 }
 
 img {
@@ -58,28 +59,19 @@ hr {
 .header__meta__wrapper{
   display: flex;
   flex-direction: column;
-  font-size: clamp(0.7rem, 0.9513rem + 0.9947vw, 1.325rem);
+  font-size: clamp(0.8rem, 0.9513rem + 0.9947vw, 1.325rem);
+  font-weight: 900;
 
-  background-color: var(--bga1);
-  background: var(--black) url("/img/pic.jpg");
+  /*background-color: var(--black);*/
+  background: var(--black) url("/img/blog/cat-on-window.gif");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: bottom;
   background-size: cover;
 
   border: 0.125rem solid var(--red);
   border-radius: 0.125rem;
 }
-
-.header__title,
-.header__author,
-.header__date{
-  display: grid;
-  grid-template-rows: 1fr 2fr;
-  align-items: center;
-  text-align: center;
-  padding-inline: 6vw;
-}
-
 
 .header__title {
   color: var(--teal);
@@ -95,6 +87,20 @@ hr {
 
 .header__title,
 .header__author,
+.header__date{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  text-align: left;
+  padding-inline: 6vw;
+  p {
+        color: var(--crust);
+    }
+}
+
+
+.header__title,
+.header__author,
 .header__date {
   padding-block: 0.5rem;
 }
@@ -105,7 +111,7 @@ hr {
   .toc__header, #TableOfContents {
     text-align: center;
     color: var(--yellow)
-      
+
   }
   #TableOfContents{
     font-size: clamp(1.2rem, 0.6396rem + 0.9515vw, 1.795rem);
@@ -127,10 +133,11 @@ hr {
   font-size: clamp(1rem, 0.6396rem + 0.9515vw, 1.095rem);
 
   background-color: var(--bga1);
-  /*background: var(--black) url("/img/bg.webp");*/
-  background: var(--black) url("/img/pic.jpg");
+  /*background: var(--black) url("/img/blog/witcher-geralt-torch.gif");*/
+  background: var(--black) url("/img/blog/cat-on-window.gif");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: bottom;
   background-size: cover;
 
   /*margin: 2%;*/
@@ -255,8 +262,28 @@ blockquote figcaption {
 
 body {
   color: var(--surface0);
-  background: var(--bg);
   padding-inline: 1ch;
+
+ /* background stripes */
+  background: var(--bg);
+  /*--size: 0.5px;*/
+  /*--height_width: 3.9rem;*/
+  /*background-size: var(--height_width) var(--height_width);*/
+  /*background-image:*/
+  /*  linear-gradient(to right, var(--gray) var(--size), transparent var(--size)),*/
+  /*  linear-gradient(to bottom, var(--gray) var(--size), transparent var(--size));*/
+
+    /*https://css-pattern.com/graph-paper/*/
+  --s: 100px; /* control the size*/
+  --c1: var(--bga3);
+  --c2: var(--bg);
+
+  --_g: #0000 90deg,var(--c1) 0;
+  background:
+    conic-gradient(from 90deg at 2px 2px,var(--_g)),
+    conic-gradient(from 90deg at 1px 1px,var(--_g)),
+    var(--c2);
+  background-size: var(--s) var(--s), calc(var(--s)/5) calc(var(--s)/5);
 
   display: flex;
   flex-direction: column;
