@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>~/projects on Raxen abode</title>
-    <link>http://0.0.0.0:1313/projects/</link>
+    <link>http://0.0.0.0:43193/projects/</link>
     <description>Recent content in ~/projects on Raxen abode</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Dec 2024 19:26:27 +0530</lastBuildDate>
-    <atom:link href="http://0.0.0.0:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://0.0.0.0:43193/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sih_2024_1664</title>
-      <link>http://0.0.0.0:1313/projects/sih_2024_1664/</link>
+      <link>http://0.0.0.0:43193/projects/sih_2024_1664/</link>
       <pubDate>Sun, 15 Dec 2024 19:26:27 +0530</pubDate>
-      <guid>http://0.0.0.0:1313/projects/sih_2024_1664/</guid>
+      <guid>http://0.0.0.0:43193/projects/sih_2024_1664/</guid>
       <description>SMART INDIA HACKATHON 2024 This is about my project which I made for SIH2024.</description>
     </item>
     <item>
       <title>DEVS COMPANION APP</title>
-      <link>http://0.0.0.0:1313/projects/rec_companion_app/</link>
+      <link>http://0.0.0.0:43193/projects/rec_companion_app/</link>
       <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://0.0.0.0:1313/projects/rec_companion_app/</guid>
+      <guid>http://0.0.0.0:43193/projects/rec_companion_app/</guid>
       <description>REC COMPANION APP and how I OVERENGIEERED IT&amp;hellip; PREAMBLE My college has switched their ERP solution to a new one. So, i think everything I say would be obsolute by the time I publish this blog.</description>
     </item>
     <item>
       <title>Raven_2.0</title>
-      <link>http://0.0.0.0:1313/projects/raven_2.0/</link>
+      <link>http://0.0.0.0:43193/projects/raven_2.0/</link>
       <pubDate>Fri, 04 Oct 2024 21:33:38 +0530</pubDate>
-      <guid>http://0.0.0.0:1313/projects/raven_2.0/</guid>
+      <guid>http://0.0.0.0:43193/projects/raven_2.0/</guid>
       <description>Raven 2.0 New spec upgrade lenovo ideapad gaming 3 - ryzen 7 4800h with gtx 1650ti - 256gb ssd along with 1tb hdd&#xA;new softwares immich jellyfin jellyseer lidarr radarr sonarr prowlarr (flaresolevarr for captcha) working well with nvidia using nvidia container toolkit for letting docker containers access nvidia card</description>
     </item>
     <item>
       <title>Pentathon2024</title>
-      <link>http://0.0.0.0:1313/projects/pentathon2024/</link>
+      <link>http://0.0.0.0:43193/projects/pentathon2024/</link>
       <pubDate>Wed, 01 May 2024 01:39:25 +0530</pubDate>
-      <guid>http://0.0.0.0:1313/projects/pentathon2024/</guid>
+      <guid>http://0.0.0.0:43193/projects/pentathon2024/</guid>
       <description>HELLO_WORLD NOTES prelims 2nd place flight to delhi views lot of redbull landing bus at 4am installed kali os at 5 am round 1 starts did challenges bricked my os reinstall kali os 12pm did more challenges drank a lot of redbull round 1 results came 10th position able to progress to round 2 round 2 was able to hack the laptop was tired af gg We got the consoloation prize left bonus india gate </description>
     </item>
     <item>
       <title>Pecan&#43;_pals_ecu_iitm</title>
-      <link>http://0.0.0.0:1313/projects/pecan&#43;_pals_ecu_iitm/</link>
+      <link>http://0.0.0.0:43193/projects/pecan&#43;_pals_ecu_iitm/</link>
       <pubDate>Wed, 01 May 2024 01:29:13 +0530</pubDate>
-      <guid>http://0.0.0.0:1313/projects/pecan&#43;_pals_ecu_iitm/</guid>
+      <guid>http://0.0.0.0:43193/projects/pecan&#43;_pals_ecu_iitm/</guid>
       <description>&amp;lt;HELLO_WORLD&amp;gt; NOTES prelims 1st place day of evet ctf finalist badge sign up getting ready competetion starts we weren&amp;rsquo;t in the top teams initially somehow came top 1 in the last possible minute won the competetion got ardiuno thanks to crossbow labs </description>
     </item>
     <item>
       <title>PECHACKS_MLH</title>
-      <link>http://0.0.0.0:1313/projects/pechacks/</link>
+      <link>http://0.0.0.0:43193/projects/pechacks/</link>
       <pubDate>Wed, 31 Jan 2024 00:23:23 +0530</pubDate>
-      <guid>http://0.0.0.0:1313/projects/pechacks/</guid>
+      <guid>http://0.0.0.0:43193/projects/pechacks/</guid>
       <description>How we almost made an centralised blockchain based universal currency during PECHACKS 2024 We enter the hackathon So my friend Noumaan approaches me and tells there is this hackathon in Panimalar college and wanted to go and had a spot left.</description>
     </item>
     <item>
       <title>Raven</title>
-      <link>http://0.0.0.0:1313/projects/raven/</link>
+      <link>http://0.0.0.0:43193/projects/raven/</link>
       <pubDate>Wed, 06 Sep 2023 15:45:01 +0530</pubDate>
-      <guid>http://0.0.0.0:1313/projects/raven/</guid>
+      <guid>http://0.0.0.0:43193/projects/raven/</guid>
       <description>Home media server I was bored and wanted to created my own personal netflix at home. So, naturally i wanted some kind of hardware that can run a media server Fortunately, I had a spare laptop lying around a toshiba .</description>
     </item>
   </channel>

@@ -2,7 +2,6 @@ html,
 body {
   font-family: fc, monospace, Cambria, Cochin, Georgia, Times, "Times New Roman",
     serif;
-  font-weight: 800;
   line-height: 1.5;
   scroll-behavior: smooth;
   margin: 0;
@@ -30,7 +29,7 @@ hr {
 }
 
 .con p {
-  font-size: clamp(1.2rem, 0.65rem + 1vw, 1.9rem);
+  font-size: clamp(1.1rem, 0.5rem + 1vw, 1.85rem);
   padding: 1.25ch 1ch;
   margin-block: 1ch;
 }
