@@ -32,12 +32,12 @@ Another pro tip. Install all the necessary libraries and packages before the hac
 
 Since PECHACKS had a lot of sponsors which meant just for participating we walked away with a lot of free stuff.
 
-![freestuff](freestuff.jpg)
+![freestuff](img/freestuff.jpg)
 
 We got a Thermo flask bottle which showed the temperature of the fluid on the side. Which was pretty cool.
 And as you can see from the image. Stickers
 
-![ThermoFlask](flask.jpg)
+![ThermoFlask](img/flask.jpg)
 
 ## Hour 1 - 3
 
@@ -123,11 +123,11 @@ Overall we gave it our best
 
 Some screenshots of our project
 
-![1](ss1.jpg)
-![2](ss2.jpg)
-![3](ss3.jpg)
-![4](ss4.jpg)
-![5](ss5.jpg)
+![1](img/ss1.jpg)
+![2](img/ss2.jpg)
+![3](img/ss3.jpg)
+![4](img/ss4.jpg)
+![5](img/ss5.jpg)
 
 ## Content provided by flutter team
 
