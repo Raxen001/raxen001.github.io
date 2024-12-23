@@ -344,8 +344,11 @@ body {
     padding-inline: 3ch;
   }
   .toc {
-    line-height: 1.5rem;
-    margin: 10%;
+    line-height: 1.8rem;
+    margin: 15%;
+    li {
+      padding-block: 0.5ch;
+    }
   }
   .con {
       padding: 2ch;
