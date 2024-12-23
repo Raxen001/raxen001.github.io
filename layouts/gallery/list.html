@@ -28,25 +28,25 @@
   <main>
     <div class="gallery">
       {{ with .Site.GetPage "/gallery" }}
-      {{ $.Scratch.Set "counter" 0 }}
-      {{ range .Resources.ByType "image"}}
-      {{ with .Resize (printf "%dx webp q90" 420)}}
-      {{ $count := $.Scratch.Get "counter" }}
-      {{ $maxh := 500 }}
-      {{ $height := .Height }}
-      {{ if ge $height $maxh }}
-      <a class="gallery__item double__row no_pre_render" style="--count:{{$count}}" target="_blank" href="{{.}}">
-        {{ else }}
-        <a class="gallery__item no_pre_render" style="--count:{{$count}}" target="_blank" href="{{.}}">
+        {{ $.Scratch.Set "counter" 0 }}
+        {{ range .Resources.ByType "image"}}
+          {{ with .Resize (printf "%dx webp q90" 420)}}
+            {{ $count := $.Scratch.Get "counter" }}
+            {{ $maxh := 500 }}
+            {{ $height := .Height }}
+            {{ if ge $height $maxh }}
+              <a class="gallery__item double__row no_pre_render" style="--count:{{$count}}" target="_blank" href="{{.}}">
+            {{ else }}
+              <a class="gallery__item no_pre_render" style="--count:{{$count}}" target="_blank" href="{{.}}">
+            {{ end }}
+            {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
+            <figure>
+              <img class="gallery__img" src="{{.RelPermalink}}" />
+            </figure>
+          </a>
           {{ end }}
-          {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
-          <figure>
-            <img class="gallery__img" src="{{.RelPermalink}}" />
-          </figure>
-        </a>
         {{ end }}
-        {{ end }}
-        {{ end }}
+      {{ end }}
     </div>
   </main>
   {{ partial "footer" . }}

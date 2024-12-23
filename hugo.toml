@@ -8,6 +8,19 @@ enableRobotsTXT = true
 [Params]
   giscusTheme = "noborder_gray"
 
+[params]
+  [params.author]
+    email = 'raxen001@tutamail.com'
+    name = 'Raxen001'
+
+
+[outputs]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
+  taxonomy = ['html', 'rss']
+  term = ['html', 'rss']
+
+
 [imaging]
   bgColor = '#000000'
   hint = 'image'
@@ -41,6 +54,11 @@ enableRobotsTXT = true
     noHl = false
     style = 'github-dark'
     tabWidth = 4
+
+# image hooks setup
+  # [markup.goldmark]
+  #   [markup.goldmark.parser]
+  #     wrapStandAloneImageWithinParagraph = false
 
 
 [author]
