@@ -300,7 +300,7 @@ and forward a different email addres than the one you just entered it allows you
 with that Email (ie: gain elevated privilages 🙀). Well I ain't gonna show the screenshots do it yourself.
 
 - Need another way to get the the attendance meet
-**http://rajalakshmi.in/UI/Modules/Profile/Profile.aspx/GetStudentAttendanceDetail** endpoint
+[http://rajalakshmi.in/UI/Modules/Profile/Profile.aspx/GetStudentAttendanceDetail](#)endpoint
 This endpoint takes
 
 ```python3

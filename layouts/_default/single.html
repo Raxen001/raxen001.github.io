@@ -34,10 +34,13 @@
 
   <div class="toc">
     <div class="blur__wrapper">
-      <h3 class="toc__header">TABLE OF CONTENTS</h3>
-      {{ .TableOfContents }}
+      <details>
+        <summary> <h3 class="toc__header">TABLE OF CONTENTS</h3> </summary>
+        {{ .TableOfContents }}
+      </details>
     </div>
   </div>
+
   <div class="con">{{ .Content }}</div>
   {{ partial "giscus.html" . }}
 </main>

@@ -2,17 +2,18 @@
 .mnav {
   position: fixed;
   right: 2rem;
-  top: 2rem;
+  top: var(--header-stick);
   border: 0;
   width: 2.5rem;
   z-index: 1000;
   aspect-ratio: 1;
   border-radius: 20%;
-  /* debug */
-  background-color: var(--bgah);
-  backdrop-filter: blur(2rem);
-}
 
+  /* debug */
+  /*background-color: var(--bgah);*/
+  background-color: #00000000;
+  /*backdrop-filter: blur(2rem);*/
+}
 
 .nav {
   position: fixed;

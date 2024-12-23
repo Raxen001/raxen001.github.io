@@ -104,12 +104,38 @@ hr {
 .header__date {
   padding-block: 0.5rem;
 }
-
+/*--------------------------------------------------------------------*/
 /*table of contents section*/
+
 .toc {
+
+  a {
+    color: var(--maroon);
+  }
+
+  li > li a {
+    color: var(--flamingo);
+  }
+  details {
+    summary {
+      list-style: none;
+    }
+    nav {
+      max-height: 50vh;
+      overflow: scroll;
+    }
+    cursor: pointer;
+  }
+
+  details[open] {
+    h3 {
+      margin-bottom: 1.2ch;
+    }
+  }
 
   .toc__header, #TableOfContents {
     text-align: center;
+    text-decoration: underline;
     color: var(--yellow)
 
   }
@@ -140,17 +166,14 @@ hr {
   margin-block: 1ch 3ch;
   overflow: hidden;
 
-  a {
-    color: var(--maroon);
-  }
-
-  li li a {
-    color: var(--flamingo);
-  }
+  position: sticky;
+  top: var(--header-stick);
 
 }
 
 
+
+/*----------------------------------------------------------*/
 /*container body section*/
 .con {
     border-color: var(--gray);
@@ -260,6 +283,11 @@ blockquote figcaption {
 body {
   color: var(--surface0);
   padding-inline: 1ch;
+  /* 
+  * this is needed for url wrapping to work similar to on firefox otherwise the
+  * url doesn't wrap on / in chromium browsers 
+  */
+  overflow-wrap: break-word;
 
  /* background stripes */
   background: var(--bg);
@@ -284,6 +312,7 @@ body {
 
   display: flex;
   flex-direction: column;
+  flex-wrap:wrap;
   align-items: center;
   border: 2px var(--black3) solid;
 }
