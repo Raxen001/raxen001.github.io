@@ -7,6 +7,8 @@ html {
   * there for 0 reason 
   */
   overflow-x: hidden;
+  scrollbar-color: var(--lavender) transparent;
+  scrollbar-width: thin;
 }
 body {
   font-family: fc, monospace, Cambria, Cochin, Georgia, Times, "Times New Roman",
