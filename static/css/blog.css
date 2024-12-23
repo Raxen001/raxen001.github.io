@@ -150,11 +150,11 @@ hr {
   }
   #TableOfContents{
     font-size: clamp(1.2rem, 0.6396rem + 0.9515vw, 1.795rem);
-    padding: 1ch 3ch;
+    padding: 1ch 2ch;
     text-align: left;
-    margin-left: 1.3ch;
+    margin-left: 1ch;
     li {
-      margin-block: 1ch;
+      margin-left: 2ch;
     }
   }
 
