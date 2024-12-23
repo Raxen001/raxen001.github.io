@@ -127,7 +127,9 @@ hr {
     }
     nav {
       max-height: 50vh;
-      overflow: scroll;
+      overflow: auto;
+      scrollbar-color: var(--sapphire) #00000000;
+      scrollbar-width: thin;
     }
     cursor: pointer;
   }
