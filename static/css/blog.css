@@ -123,10 +123,6 @@ hr {
     }
   }
 
-  a {
-    text-decoration: none;
-  }
-
   border: 4px solid var(--gray);
   border-radius: 4px;
   font-family: space;
@@ -182,6 +178,7 @@ hr {
 
 .highlight {
   overflow-x: scroll;
+  font-size: clamp(1rem, 0.5rem + 1vw, 1.35rem);
 }
 
 blockquote {

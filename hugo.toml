@@ -21,10 +21,12 @@ enableRobotsTXT = true
     includeFields = ''
 
 [markup]
+
   [markup.tableOfContents]
     endLevel = 2
     ordered = true
     startLevel = 2
+
   [markup.highlight]
     anchorLineNos = true
     codeFences = true
@@ -37,7 +39,7 @@ enableRobotsTXT = true
     lineNumbersInTable = true
     noClasses = true
     noHl = false
-    style = 'solarized-dark256'
+    style = 'github-dark'
     tabWidth = 4
 
 
