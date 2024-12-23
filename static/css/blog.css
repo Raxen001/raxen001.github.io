@@ -1,11 +1,17 @@
-html,
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  /* CHROMIUM FIX 
+  * needed for chromium to work proplery otherwise some random scroll bar is
+  * there for 0 reason 
+  */
+  overflow-x: hidden;
+}
 body {
   font-family: fc, monospace, Cambria, Cochin, Georgia, Times, "Times New Roman",
     serif;
   line-height: 1.5;
-  scroll-behavior: smooth;
-  margin: 0;
-  padding: 0;
 }
 
 /*utility class*/
@@ -282,7 +288,7 @@ blockquote figcaption {
 body {
   color: var(--surface0);
   padding-inline: 1ch;
-  /* 
+  /* CHROMIUM FIX 
   * this is needed for url wrapping to work similar to on firefox otherwise the
   * url doesn't wrap on / in chromium browsers 
   */
