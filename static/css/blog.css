@@ -141,6 +141,19 @@ hr {
       margin-bottom: 1.2ch;
     }
   }
+/* animate toc opening and closing */
+/*  details::details-content{*/
+/*    block-size: 0;*/
+/*    transition-property: block-size, content-visibility;*/
+/*    transition-duration: 250ms;*/
+/*    transition-behavior: allow-discrete;*/
+/**/
+/*  }*/
+/*  details[open]::details-content{*/
+/*    block-size: calc-size(auto);*/
+/*    block-size: 50rem;*/
+/*  }*/
+/* animation */
 
   .toc__header, #TableOfContents {
     text-align: center;
