@@ -2,18 +2,46 @@ html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  /* CHROMIUM FIX 
+  /* CHROMIUM FIX
   * needed for chromium to work proplery otherwise some random scroll bar is
-  * there for 0 reason 
+  * there for 0 reason
   */
   overflow-x: hidden;
   scrollbar-color: var(--lavender) transparent;
   scrollbar-width: thin;
 }
 body {
-  font-family: fc, monospace, Cambria, Cochin, Georgia, Times, "Times New Roman",
-    serif;
+  /* fonts */
+  font-family: fc, monospace, Cambria, Cochin, Georgia, Times,
+    "Times New Roman", serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: var(--surface0);
+  border: 2px var(--black3) solid;
+  padding-inline: 1ch;
   line-height: 1.5;
+  /* CHROMIUM FIX
+  * this is needed for url wrapping to work similar to on firefox otherwise the
+  * url doesn't wrap on / in chromium browsers
+  */
+  overflow-wrap: break-word;
+
+  /* background stripes */
+  background: var(--bg);
+  /*https://css-pattern.com/graph-paper/*/
+  --s: 100px; /* control the size*/
+  --c1: var(--bga3);
+  --c2: var(--bg);
+  --_g: #0000 90deg, var(--c1) 0;
+  background: conic-gradient(from 90deg at 2px 2px, var(--_g)),
+    conic-gradient(from 90deg at 1px 1px, var(--_g)), var(--c2);
+  background-size:
+    var(--s) var(--s),
+    calc(var(--s) / 5) calc(var(--s) / 5);
+
 }
 
 /*utility class*/
@@ -22,8 +50,6 @@ body {
   backdrop-filter: blur(var(--blur-strength));
   -webkit-backdrop-filter: blur(var(--blur-strength));
   padding: 1vw;
-
-
 }
 
 img {
@@ -57,13 +83,13 @@ hr {
   border: 1px var(--mauve) solid;
 }
 
-.header>*>strong {
+.header > * > strong {
   font-family: banner;
   font-weight: 900;
   font-style: bold;
 }
 
-.header__meta__wrapper{
+.header__meta__wrapper {
   display: flex;
   flex-direction: column;
   font-size: clamp(0.8rem, 0.9513rem + 0.9947vw, 1.325rem);
@@ -94,17 +120,16 @@ hr {
 
 .header__title,
 .header__author,
-.header__date{
+.header__date {
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
   text-align: left;
   padding-inline: 6vw;
   p {
-        color: var(--crust);
-    }
+    color: var(--crust);
+  }
 }
-
 
 .header__title,
 .header__author,
@@ -115,7 +140,6 @@ hr {
 /*table of contents section*/
 
 .toc {
-
   a {
     color: var(--maroon);
   }
@@ -141,27 +165,27 @@ hr {
       margin-bottom: 1.2ch;
     }
   }
-/* animate toc opening and closing */
-/*  details::details-content{*/
-/*    block-size: 0;*/
-/*    transition-property: block-size, content-visibility;*/
-/*    transition-duration: 250ms;*/
-/*    transition-behavior: allow-discrete;*/
-/**/
-/*  }*/
-/*  details[open]::details-content{*/
-/*    block-size: calc-size(auto);*/
-/*    block-size: 50rem;*/
-/*  }*/
-/* animation */
+  /* animate toc opening and closing */
+  /*  details::details-content{*/
+  /*    block-size: 0;*/
+  /*    transition-property: block-size, content-visibility;*/
+  /*    transition-duration: 250ms;*/
+  /*    transition-behavior: allow-discrete;*/
+  /**/
+  /*  }*/
+  /*  details[open]::details-content{*/
+  /*    block-size: calc-size(auto);*/
+  /*    block-size: 50rem;*/
+  /*  }*/
+  /* animation */
 
-  .toc__header, #TableOfContents {
+  .toc__header,
+  #TableOfContents {
     text-align: center;
     text-decoration: underline;
-    color: var(--yellow)
-
+    color: var(--yellow);
   }
-  #TableOfContents{
+  #TableOfContents {
     font-size: clamp(1.2rem, 0.6396rem + 0.9515vw, 1.795rem);
     padding: 1ch 2ch;
     text-align: left;
@@ -190,18 +214,15 @@ hr {
 
   position: sticky;
   top: var(--header-stick);
-
 }
-
-
 
 /*----------------------------------------------------------*/
 /*container body section*/
 .con {
-    border-color: var(--gray);
-    border-style: solid;
-    border-inline: 2px;
-    padding: 0.5ch;
+  border-color: var(--gray);
+  border-style: solid;
+  border-inline: 2px;
+  padding: 0.5ch;
 }
 
 .con a {
@@ -213,12 +234,13 @@ hr {
   padding: 1.25ch 1ch;
   margin-block: 1ch;
 }
-.con ul, .con ol {
-    font-size: clamp(1.2rem, 0.65rem + 1vw, 1.9rem);
-    padding: 1.25ch 1ch;
-    margin-block: 1ch;
-    margin-left: 3ch;
-    text-align: justify;
+.con ul,
+.con ol {
+  font-size: clamp(1.2rem, 0.65rem + 1vw, 1.9rem);
+  padding: 1.25ch 1ch;
+  margin-block: 1ch;
+  margin-left: 3ch;
+  text-align: justify;
 }
 
 .highlight {
@@ -245,7 +267,7 @@ blockquote figcaption {
   margin: 1em 10px 0 0;
 }
 
-:lang(en)>blockquote::before {
+:lang(en) > blockquote::before {
   content: " ";
   font-weight: bolder;
 }
@@ -302,42 +324,6 @@ blockquote figcaption {
   text-align: left;
 }
 
-body {
-  color: var(--surface0);
-  padding-inline: 1ch;
-  /* CHROMIUM FIX 
-  * this is needed for url wrapping to work similar to on firefox otherwise the
-  * url doesn't wrap on / in chromium browsers 
-  */
-  overflow-wrap: break-word;
-
- /* background stripes */
-  background: var(--bg);
-  /*--size: 0.5px;*/
-  /*--height_width: 3.9rem;*/
-  /*background-size: var(--height_width) var(--height_width);*/
-  /*background-image:*/
-  /*  linear-gradient(to right, var(--gray) var(--size), transparent var(--size)),*/
-  /*  linear-gradient(to bottom, var(--gray) var(--size), transparent var(--size));*/
-
-    /*https://css-pattern.com/graph-paper/*/
-  --s: 100px; /* control the size*/
-  --c1: var(--bga3);
-  --c2: var(--bg);
-
-  --_g: #0000 90deg,var(--c1) 0;
-  background:
-    conic-gradient(from 90deg at 2px 2px,var(--_g)),
-    conic-gradient(from 90deg at 1px 1px,var(--_g)),
-    var(--c2);
-  background-size: var(--s) var(--s), calc(var(--s)/5) calc(var(--s)/5);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px var(--black3) solid;
-}
-
 .container {
   width: 100%;
   line-height: 1.3;
@@ -345,8 +331,9 @@ body {
   padding-block: 2rem 6rem;
   margin-bottom: 3rem;
   text-align: justify;
-}
 
+
+}
 
 @media (min-width: 668px) {
   body {
@@ -364,7 +351,7 @@ body {
     }
   }
   .con {
-      padding: 2ch;
-      margin: 2ch;
-    }
+    padding: 2ch;
+    margin: 2ch;
+  }
 }
