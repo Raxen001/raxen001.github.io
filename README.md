@@ -11,6 +11,10 @@ this reduces the clutter in the default directory and html
 
 ## CHECKLIST
 
+- [ ] change `.Site.Author` to something else
+    - [ ] contact page
+    - [ ] footer
+- [ ] reuse code from baseof.html in home.html
 - [ ] opengraph
 - [ ] googleverification id
 - [ ] extra imports
