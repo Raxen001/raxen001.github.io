@@ -1,96 +1,16 @@
-# NOTES
+# Documentation (only for personal use by raxen001 )
 
-- navbar
+`customcss` has been implemented
+in the `_index.md` of gallery and contact
+`customcss` property has to be set the relevant css
 
-  - [HOME](#home)
-  - [BLOG](#blog)
-  - [PERSONAL WRITING](#personal-writing)
-  - [PROJECTS](#projects)
-  - [CONTACT](#contact)
-  - [RESUME](#resume)
+contact -> customcss: contact.css
+gallery -> customcss: gallery.css
 
-- inspiration [some-random-website](https://hugo-blog-theme.netlify.app/)
-- youtube video [somer-random-shit](https://www.youtube.com/watch?v=dLDn_k8GmaU)
-- nice website [nice](https://lynnandtonic.com/)
-- a [a](https://youtu.be/Xb8i7ytooIM)
+this reduces the clutter in the default directory and html
 
-## TODO
+## CHECKLIST
 
-- [ ] Use hugo opengraph implementation
-- [x] gallery css
-  - [x] add photos in gallery
-- [x] footer
-  - [x] css
-- [ ] write blogs
-- [x] add contact page
-  - [x] add github and linked to footer
-- [ ] rss
-
-## HOME
-
-- should contain profile pic left side
-- should give a small detail about me
-
-## BLOG
-
-- either use hugo or zolo to create blogs from mardown
-
-- create blog for rec unified portal
-- spotify to youtube converter blog
-- interest in networking blog
-
-- create a blog about how you made personal-writing page
-
-## PERSONAL-WRITING
-
-- main feature would be that only a few can access this site
-  by locking away the contents behind 3 random personal questions about me
-  so strangers can't enter.
-
-  - possible try to have 6 different questions. 2 are randomly picked and asked
-    if the answer is correct they get a cookie
-    or special flag. have to do it somehow in githubpages
-
-- random shit
-
-### NOTES
-
-- `data/` folder can be used to put questions in a json format - hashed answers
-
-## PROJECTS
-
-- spotify to youtube
-- unified rec exploits
-- websites for college
-
-## CONTACT
-
-- email
-- linkedin
-
-- matrix
-
-- discord
-- reddit
-- whatsapp
-
-### Using email JS
-
-- by using email js visitors can send email directly to me without
-  opening their mail client
-
-## RESUME
-
-- put resume there
-- add a gdrive link to all the certificates and competetions i have ever entered
-  - if possible try to see if you can add view from drive
-
-## notes
-
-~- `.File.BaseFileName` wihtout extensions file name -[x]check `fileExists` using if~
-
-- add a `.Params.customcss` and set it with individual \_index.md
-- how to make list.html page good [check it out](https://github.com/adityatelange/hugo-PaperMod/blob/54a3c6073518005182f3c3250ddb7e8c0cacd7ad/layouts/_default/list.html)
-
-fuck the opengraph and schema
-probs need to restucture using leafbundle method and fix a few things in config.toml and use opengraph.html and schema.html
+- [ ] opengraph
+- [ ] googleverification id
+- [ ] extra imports
