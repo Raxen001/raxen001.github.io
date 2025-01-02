@@ -231,16 +231,24 @@ hr {
 
 .con p {
   font-size: clamp(1.1rem, 0.5rem + 1vw, 1.85rem);
+  font-weight: normal;
   padding: 1.25ch 1ch;
   margin-block: 1ch;
 }
+
+.con strong {
+  font-weight: bolder;
+  color: var(--base);
+  font-size: clamp(1.2rem, 0.535rem + 1vw, 1.95rem);
+}
+
 .con ul,
 .con ol {
   font-size: clamp(1.2rem, 0.65rem + 1vw, 1.9rem);
   padding: 1.25ch 1ch;
   margin-block: 1ch;
   margin-left: 3ch;
-  text-align: justify;
+  text-align: left;
 }
 
 .highlight {
@@ -318,11 +326,6 @@ blockquote figcaption {
   padding-left: 0.6ch;
 }
 
-.con ul,
-.con ol {
-  /*margin-left: 1.3rem;*/
-  text-align: left;
-}
 
 .container {
   width: 100%;
