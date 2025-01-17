@@ -1,10 +1,10 @@
-.pagination,
-.page-item,
-.card {
-  background: var(--bgda1);
-  backdrop-filter: blur(1rem);
-  -webkit-backdrop-filter: blur(1rem);
-}
+/*.pagination,*/
+/*.page-item,*/
+/*.card {*/
+  /*background: var(--bgda2);*/
+  /*backdrop-filter: blur(1rem);*/
+  /*-webkit-backdrop-filter: blur(1rem);*/
+/*}*/
 
 .pagination {
   display: flex;
@@ -13,6 +13,11 @@
   align-items: center;
   height: 3rem;
   border-radius: 1vw;
+  li:hover {
+    background-color: black;
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+  }
 
 }
 
@@ -24,6 +29,7 @@
   width: 100%;
   height: 100%;
   opacity: 0.7;
+  background-color: var(--bgda2);
 }
 
 .page-link {
@@ -41,12 +47,11 @@
 }
 
 .disabled {
-  background: var(--black);
-  opacity: 0.2;
+  opacity: 0;
 }
 
 .active {
-  background: var(--bga3);
+  background: var(--black);
   opacity: 1;
 }
 
@@ -56,7 +61,6 @@ html {
   background-size: cover;
   background-attachment: fixed;
   background-position: left bottom;
-
 }
 
 body {
@@ -89,6 +93,7 @@ body {
 .card:hover {
   background: var(--bgah);
   border: 2px var(--green) solid;
+
 }
 
 .card:active {

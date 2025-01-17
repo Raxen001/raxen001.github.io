@@ -1,0 +1,31 @@
+{{- define "main"}}
+<link href="/css/gallery_post.css" rel="stylesheet" />
+<main>
+  <div class="metadata">
+    <h1>{{ .Params.Date | time.Format ":date_long" }}</h1>
+  </div>
+  <div class="gallery">
+      {{ $.Scratch.Set "counter" 0 }}
+      {{ range .Resources.ByType "image"}}
+        {{ with .Resize (printf "%dx webp q90" 420)}}
+          {{ $count := $.Scratch.Get "counter" }}
+          {{ $maxh := 500 }}
+          {{ $height := .Height }}
+          {{ $name := .Name }}
+          {{ if ge $height $maxh }}
+            <a class="gallery__item double__row no_pre_render" style="--count:{{$count}}" target="_blank" href="{{.}}">
+          {{ else }}
+            <a class="gallery__item no_pre_render" style="--count:{{$count}}" target="_blank" href="{{.}}">
+          {{ end }}
+          {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
+          <figure>
+            <img loading="lazy" class="gallery__img" src="{{.RelPermalink}}" />
+        <figcaption class="gallery__img__caption">"{{$name}}"</figcaption>
+          </figure>
+        </a>
+        {{ end }}
+      {{ end }}
+  </div>
+</main>
+
+{{- end }}
