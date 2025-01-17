@@ -6,6 +6,13 @@ main {
 </style>
   <main>
     <div class="gallery">
+      <!--<ul>-->
+        {{/* range .Paginator.Pages */}}
+          <!--<li><a href="{{ .Permalink }}">{{.LinkTitle}}</a></li>-->
+          <!--<br />-->
+        {{/*end */}}
+      <!--</ul>-->
+
     {{ range .Paginator.Pages }}
         {{ $.Scratch.Set "counter" 0 }}
         {{ $link := .Permalink }}
