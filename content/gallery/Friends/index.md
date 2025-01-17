@@ -1,5 +1,4 @@
 ---
+title: "Friends"
 draft: false
-title: "snapchat"
 ---
-

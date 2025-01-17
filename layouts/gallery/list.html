@@ -1,18 +1,26 @@
 {{ define "main" }}
+<style>
+main {
+  color: red;
+}
+</style>
   <main>
     <div class="gallery">
-      {{ with .Site.GetPage "/gallery" }}
+    {{ range .Paginator.Pages }}
         {{ $.Scratch.Set "counter" 0 }}
+        {{ $link := .Permalink }}
+        {{ $name := .LinkTitle }}
         {{ range .Resources.ByType "image"}}
           {{ with .Resize (printf "%dx webp q90" 420)}}
             {{ $count := $.Scratch.Get "counter" }}
             {{ $maxh := 500 }}
             {{ $height := .Height }}
-            {{ $name := .Name }}
             {{ if ge $height $maxh }}
-              <a class="gallery__item double__row no_pre_render" style="--count:{{$count}}" target="_blank" href="{{.}}">
+              <a class="gallery__item double__row no_pre_render"
+      style="--count:{{$count}}"  href="{{$link}}">
             {{ else }}
-              <a class="gallery__item no_pre_render" style="--count:{{$count}}" target="_blank" href="{{.}}">
+              <a class="gallery__item no_pre_render" style="--count:{{$count}}"
+         href="{{$link}}">
             {{ end }}
             {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
             <figure>
@@ -21,6 +29,7 @@
             </figure>
           </a>
           {{ end }}
+          {{break}}
         {{ end }}
       {{ end }}
     </div>

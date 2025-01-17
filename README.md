@@ -9,6 +9,10 @@ gallery -> customcss: gallery.css
 
 this reduces the clutter in the default directory and html
 
+## gallery
+
+renders the first image of each leaf bundle
+
 ## CHECKLIST
 
 - [ ] change `.Site.Author` to something else
