@@ -66,6 +66,8 @@ figure {
     -webkit-backdrop-filter: blur(var(--blur-strength));
 
     p {
+      /* TODO check it out later */
+      /*word-break: break-all;*/
       display: inline-flex;
       flex-wrap: wrap;
       justify-content: center;
