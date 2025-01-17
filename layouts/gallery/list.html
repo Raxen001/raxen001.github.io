@@ -25,7 +25,9 @@ main {
             {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
             <figure>
               <img loading="lazy" class="gallery__img" src="{{.RelPermalink}}" />
-          <figcaption class="gallery__img__caption">"{{$name}}"</figcaption>
+          <figcaption class="gallery__img__caption">
+            <p>"{{$name}}"</p>
+          </figcaption>
             </figure>
           </a>
           {{ end }}

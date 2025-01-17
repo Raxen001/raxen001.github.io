@@ -47,22 +47,33 @@ figure {
   width: 100%;
   height: 100%;
   figcaption {
-    width: 100%;
     height: 100%;
+    width: 100%;
 
     text-decoration-style: none;
     color: var(--crust);
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 10%;
 
     background: var(--bgda1);
     --blur-strength: 8px;
     backdrop-filter: blur(var(--blur-strength));
     -webkit-backdrop-filter: blur(var(--blur-strength));
+    p {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      text-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      max-width: 1ch;
+
+    }
 
   }
 }

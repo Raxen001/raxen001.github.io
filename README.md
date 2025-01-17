@@ -18,7 +18,8 @@ renders the first image of each leaf bundle
 - [ ] change `.Site.Author` to something else
     - [ ] contact page
     - [ ] footer
-- [ ] reuse code from baseof.html in home.html
+- [ ] fix animation in gallery
+- [ ] fix text wrap in gallery css
+- [x] reuse code from baseof.html in home.html
 - [ ] opengraph
-- [ ] googleverification id
-- [ ] extra imports
+- [x] googleverification id
