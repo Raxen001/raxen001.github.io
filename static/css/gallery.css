@@ -36,21 +36,22 @@ main {
 }
 
 figure {
-  font-size: clamp(0.95rem, 0.6496rem + 0.9615vw, 1.225rem);
+  font-size: clamp(0.95rem, 0.65rem + 0.96vw, 1.1rem);
+
+  width: 100%;
+  height: 100%;
 
   display: grid;
   justify-items: center;
   align-items: center;
   margin: auto;
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 3fr 8ch;
 
-  width: 100%;
-  height: 100%;
-  figcaption {
+
+  .gallery__img__caption {
     height: 100%;
     width: 100%;
 
-    text-decoration-style: none;
     color: var(--crust);
 
     display: flex;
@@ -63,18 +64,15 @@ figure {
     --blur-strength: 8px;
     backdrop-filter: blur(var(--blur-strength));
     -webkit-backdrop-filter: blur(var(--blur-strength));
+
     p {
       display: inline-flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      text-wrap: wrap;
-      width: 100%;
-      height: 100%;
-      max-width: 1ch;
+      max-width: 30ch;
 
     }
-
   }
 }
 
@@ -93,21 +91,21 @@ figure {
   display: grid;
   align-items: center;
   justify-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 30rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
 
-  padding-inline: 2%;
-  gap: 5rem;
+  /*padding-inline: 2%;*/
+  gap: 2svw;
 
   transition: all 250ms linear;
 }
 
 .gallery__item {
-  width: 100%;
-  max-height: 100%;
-
+  
+  width: min(100%, 30rem);
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: underline;
 
   background: var(--bga3);
   --blur-strength: 4px;
@@ -117,8 +115,10 @@ figure {
   border: 0.3rem solid var(--black);
 
   transition-duration: 250ms;
+  vertical-align: middle;
 
-  --stagger-delay: 50ms;
+
+  /*--stagger-delay: 50ms;*/
   /*animation: card_entrance-1 800ms cubic-bezier(0.075, 0.12, 0.165, 1);*/
   /*animation-fill-mode: backwards;*/
   /*animation-delay: calc(var(--count) * var(--stagger-delay));*/
@@ -132,10 +132,10 @@ figure {
 .gallery__item.double__row {
   grid-row: span 2;
 
-  --stagger-delay: 50ms;
-  animation: card_entrance-2 800ms cubic-bezier(0.075, 0.12, 0.165, 1);
-  animation-fill-mode: backwards;
-  animation-delay: calc(var(--count) * var(--stagger-delay));
+  /*--stagger-delay: 50ms;*/
+  /*animation: card_entrance-2 800ms cubic-bezier(0.075, 0.12, 0.165, 1);*/
+  /*animation-fill-mode: backwards;*/
+  /*animation-delay: calc(var(--count) * var(--stagger-delay));*/
 
   /* animation: card_entrance-2 linear; */
   /* animation-fill-mode: both; */
@@ -153,8 +153,8 @@ figure {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  display: inline-flex;
-  vertical-align: middle;
+  /*display: inline-flex;*/
+  /*vertical-align: middle;*/
 
   /* padding: 1rem 0.5rem; */
   background: var(--black);
