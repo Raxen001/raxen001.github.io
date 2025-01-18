@@ -2,9 +2,9 @@
 title: "Parallax With Only Css"
 date: 2025-01-02T12:52:06+05:30
 author: "Raxen"
-draft: true
-tags: []
-categories: []
+draft: false
+tags: ['html', 'css']
+categories: ['programming']
 customcss: ""
 ---
 
@@ -24,8 +24,20 @@ the foreground.
 ## How does it work
 
 ### wrapper
+
+wrapper makes sures to take up your entire screenspace and let the content
+overflow.
+so when you are actually scrolling you are scrolling inside the wrapper instead
+of the html
+
 ### background
+
+the perspective is set.
+the background is set behind the content. 
+
 ### perserve-3d
+
+this preserve the perspective
 
 
 ## DISADVANTAGES
