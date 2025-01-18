@@ -7,12 +7,13 @@
   width: 2.5rem;
   z-index: 1000;
   aspect-ratio: 1;
-  border-radius: 20%;
+  border-radius: 10%;
 
   /* debug */
-  /*background-color: var(--bgah);*/
-  background-color: #00000000;
-  /*backdrop-filter: blur(2rem);*/
+  background-color: var(--bgah);
+  /*background-color: #00000000;*/
+  color: var(--surface1);
+  backdrop-filter: blur(2rem);
 }
 
 .nav {
@@ -60,10 +61,6 @@
 
 .pnav[data-visible="true"] {
   transform: translateX(0);
-}
-
-.mnav {
-  color: var(--surface1);
 }
 
 .mnav svg path {

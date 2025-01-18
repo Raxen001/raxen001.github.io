@@ -10,6 +10,16 @@ html {
   scrollbar-color: var(--lavender) transparent;
   scrollbar-width: thin;
 }
+
+/* so that list pages can have the mnav as blur 
+* and only the blog pages will have no blur
+* but will have blur for the gallery page
+*/
+.mnav {
+  background-color: #00000000;
+  backdrop-filter: blur(0);
+}
+
 body {
   /* fonts */
   font-family: fc, monospace, Cambria, Cochin, Georgia, Times,
