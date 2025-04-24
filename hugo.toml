@@ -1,4 +1,4 @@
-baseURL = 'https://raxen001.github.io/'
+baseURL = 'https://raxen001.xyz/'
 languageCode = 'en-us'
 title = 'Raxen abode'
 summaryLength = 25
@@ -70,7 +70,7 @@ enableRobotsTXT = true
      { linkedin = "https://linkedin.com/in/rithesh-s-05617b22a" },
      { github = "https://github.com/Raxen001" },
      { email = "mailto:rithesh.satheesh@gmail.com" },
-     { link = "https://raxen001.github.io" },
+     { link = "https://raxen001.xyz" },
      { discord = "https://discord.gg/2Dw7bK3Uba" },
      { steam = "https://steamcommunity.com/id/raxen001/" },
      { youtube = "https://youtube.com/@raxen001" },
