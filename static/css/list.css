@@ -169,9 +169,12 @@ body {
 
 .card__desc {
     display: flex;
-    background-color: var(--bgda1);
+    flex-flow: row wrap;
+
     padding: 1rem;
-    text-align: justify;
+    background-color: var(--bgda1);
+    text-align: left;
+    
 }
 
 /*p[class^="card__con"]{*/
