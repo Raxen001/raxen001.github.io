@@ -32,7 +32,9 @@
         </span>
       </div>
       <!-- <span class="card__tag">{{ .Params.Tag }}</span> -->
-      <span class="card__desc">{{ .Summary}}</span>
+      <span class="card__desc">
+        {{ .Summary | plainify }}
+      </span>
     </a>
   </article>
   {{ end }}
