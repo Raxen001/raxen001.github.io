@@ -22,7 +22,7 @@
   <!-- </form> -->
 
   <div class="wrapper">
-    {{ $.Scratch.Set "counter" 0 }} {{ range .Site.Author.links }} {{ range
+    {{ $.Scratch.Set "counter" 0 }} {{ range .Site.Params.Author.links }} {{ range
     $type, $link := . }} {{ $svg := (path.Join "/static" "img" "icons" (printf
     "%s.svg" $type) ) }} {{ $count := $.Scratch.Get "counter" }}
     <a
