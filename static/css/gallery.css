@@ -6,7 +6,8 @@ html {
 
   background: var(--bg);
   /*https://css-pattern.com/graph-paper/*/
-  --s: 100px; /* control the size*/
+  --s: 100px;
+  /* control the size*/
   --c1: var(--bga3);
   --c2: var(--bg);
   --_g: #0000 90deg, var(--c1) 0;
@@ -82,13 +83,16 @@ figure {
   color: var(--base);
   margin-block: 2ch;
 }
-.metadata > * {
+
+.metadata>* {
   margin: 1ch;
 }
 
 .gallery {
   min-height: 65svh;
   width: 100%;
+  max-width: 90rem;
+  margin: auto;
 
   display: grid;
   align-items: center;
@@ -102,7 +106,7 @@ figure {
 }
 
 .gallery__item {
-  
+
   width: min(100%, 30rem);
   display: flex;
   justify-content: center;
@@ -144,13 +148,16 @@ figure {
   /* animation-timeline: view(); */
   /* animation-range: entry 50% cover 50%; */
 }
+
 .gallery__item.double__column {
   grid-column: span 2;
 }
+
 .gallery__item.double {
   grid-row: span 2;
   grid-column: span 2;
 }
+
 .gallery__img {
   width: 100%;
   height: 100%;
