@@ -100,3 +100,11 @@ enableRobotsTXT = true
     noHl = false
     style = 'github-dark'
     tabWidth = 4
+
+[module]
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    source = 'static'
+    target = 'assets'

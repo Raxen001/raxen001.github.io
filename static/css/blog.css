@@ -62,6 +62,20 @@ body {
   padding: 1vw;
 }
 
+table {
+  width: 100%;
+  border: 1px var(--crust) solid;
+  border-collapse: collapse;
+  tr, td, th {
+    border: 1px var(--crust) solid;
+    padding: 1ch;
+    background: var(--bgah);
+  }
+  th {
+    text-align: center;
+  }
+}
+
 img {
   width: clamp(100%, 30vw + 3rem + 10%, 100vw);
   margin-block: 1rem;
