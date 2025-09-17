@@ -1,0 +1,3 @@
+{{ with .Page.Resources.Get (.Get "src") }}
+  <script defer src="{{ .RelPermalink }}"></script>
+{{ end }}

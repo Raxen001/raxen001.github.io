@@ -10,6 +10,9 @@ customcss: ""
 
 # Farewell
 
+Hi, welcome to my farewell blog ladies and gentleman.
+
+
 ## 1st year
 
 ### HOSTEL
