@@ -42,6 +42,8 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       # - name: Install Dart Sass
       #   run: sudo snap install dart-sass
+      - name: Index pagefind
+        run: npx -y pagefind --source "public"
       - name: Checkout
         uses: actions/checkout@v4
         with:
