@@ -23,5 +23,6 @@
 
 ## to-do
 
-add `<menu>` tag around the`<li>` in home page navigation bar and other places
-covnert contacts into key val pair and redo hugo.toml
+- add `<menu>` tag around the`<li>` in home page navigation bar and other places
+- convert contacts into key val pair and redo hugo.toml
+- convert mnav into a dialog with `showModal()`

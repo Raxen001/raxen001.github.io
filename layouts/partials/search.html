@@ -3,8 +3,8 @@
 <script src="/pagefind/pagefind-ui.js"></script>
 
 <dialog id="dialog__search" class="dialog__search">
-  <button autofocus class="dialog__close-btn">Close</button>
-  <div id="search" class="search"></div>
+    <button class="dialog__close-btn">X</button>
+    <div id="search" class="search"></div>
 </dialog>
 
 <button class="dialog__show">
@@ -32,6 +32,12 @@
     });
 
     window.addEventListener('DOMContentLoaded', (event) => {
-        new PagefindUI({ element: "#search", showSubResults: true });
+        new PagefindUI(
+        { 
+          element: "#search", 
+          showSubResults: true,
+          autofocus: true
+        }
+      );
     });
 </script>

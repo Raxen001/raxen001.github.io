@@ -78,12 +78,31 @@
   --crust: #dce0e8;
 
   --header-stick: 2svh;
+  --blur-strength: 1rem;
+
+  /* search settings */
+  --search-image-width: clamp(1rem, 100% + 0.123rem, 15rem);
+  --search-image-height: clamp(1rem, 100% +0.123rem, 15rem);
+}
+
+html {
+  /* CHROMIUM FIX
+  * needed for chromium to work proplery otherwise some random scroll bar is
+  * there for 0 reason
+  */
+  overflow-x: hidden;
+  scrollbar-color: var(--lavender) transparent;
+  scrollbar-width: thin;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
 }
 
 .container {
@@ -95,6 +114,12 @@
   display: flex;
   justify-items: center;
   align-self: center;
+}
+
+.blur {
+  background: var(--bgda2);
+  backdrop-filter: blur(var(--blur-strength));
+  -webkit-backdrop-filter: blur(var(--blur-strength));
 }
 
 @media (min-width: 475px) {
