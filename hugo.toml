@@ -1,110 +1,110 @@
-baseURL = 'https://raxen001.xyz/'
-languageCode = 'en-us'
-title = 'Raxen abode'
+baseURL = "https://raxen001.xyz/"
+languageCode = "en-us"
+title = "Raxen abode"
 summaryLength = 25
 enableRobotsTXT = true
 
 [pagination]
-    pagerSize = 5
-
+pagerSize = 5
 
 [Params]
-  giscusTheme = "noborder_gray"
-  [Params.author]
-    email = 'raxen001@tutamail.com'
-    name = 'Raxen001'
-    links = [
-       { linkedin = "https://linkedin.com/in/rithesh-s-05617b22a" },
-       { github = "https://github.com/Raxen001" },
-       { email = "mailto:rithesh.satheesh@gmail.com" },
-       { link = "https://raxen001.xyz" },
-       { discord = "https://discord.gg/2Dw7bK3Uba" },
-       { steam = "https://steamcommunity.com/id/raxen001/" },
-       { youtube = "https://youtube.com/@raxen001" },
-       { pinterest = "https://pinterest.com/RaxenGamer001" },
-       { reddit = "https://reddit.com/user/raxengamer001" },
-       { lastfm = "https://last.fm/user/raxen001" },
-       { listenbrainz = "https://listenbrainz.org/user/raxen001/" },
-       { instagram = "https://instagram.com/raxen001" },
-       { snapchat = "https://snapchat.com/add/raxen001" },
-       { anilist  = "https://anilist.co/user/raxen001/" },
-       # { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
-       # { apple = "https://www.apple.com" },
-       # { codepen = "https://codepen.io/username" },
-       # { dev = "https://dev.to/username" },
-       # { dribbble = "https://dribbble.com/username" },
-       # { facebook = "https://facebook.com/username" },
-       # { flickr = "https://www.flickr.com/photos/username/" },
-       # { foursquare = "https://foursquare.com/username" },
-       # { gitlab = "https://gitlab.com/username" },
-       # { google = "https://www.google.com/" },
-       # { keybase = "https://keybase.io/username" },
-       # { kickstarter = "https://www.kickstarter.com/profile/username" },
-       # { mastodon = "https://mastodon.instance/@username" },
-       # { medium = "https://medium.com/username" },
-       # { microsoft = "https://www.microsoft.com/" },
-       # { patreon = "https://www.patreon.com/username" },
-       # { slack = "https://workspace.url/team/userid" },
-       # { soundcloud = "https://soundcloud.com/username" },
-       # { stack-exchange = "https://stackexchange.com/users/userid/username" },
-       # { stack-overflow = "https://stackoverflow.com/users/userid/username" },
-       # { telegram = "https://t.me/username" },
-       # { tiktok = "https://tiktok.com/@username" },
-       # { tumblr = "https://username.tumblr.com" },
-       # { twitch = "https://twitch.tv/username" },
-       # { twitter = "https://twitter.com/username" },
-       # { whatsapp = "https://wa.me/phone-number" },
-    ]
+giscusTheme = "noborder_gray"
+
+[Params.author]
+email = "raxen001@tutamail.com"
+name = "Raxen001"
+links = [
+  { linkedin = "https://linkedin.com/in/rithesh-s-05617b22a" },
+  { github = "https://github.com/Raxen001" },
+  { email = "mailto:rithesh.satheesh@gmail.com" },
+  { link = "https://raxen001.xyz" },
+  { discord = "https://discord.gg/2Dw7bK3Uba" },
+  { steam = "https://steamcommunity.com/id/raxen001/" },
+  { youtube = "https://youtube.com/@raxen001" },
+  { pinterest = "https://pinterest.com/RaxenGamer001" },
+  { reddit = "https://reddit.com/user/raxengamer001" },
+  { lastfm = "https://last.fm/user/raxen001" },
+  { listenbrainz = "https://listenbrainz.org/user/raxen001/" },
+  { instagram = "https://instagram.com/raxen001" },
+  { snapchat = "https://snapchat.com/add/raxen001" },
+  { anilist = "https://anilist.co/user/raxen001/" },
+  { resume = "/resume.pdf" }
+  # { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
+  # { apple = "https://www.apple.com" },
+  # { codepen = "https://codepen.io/username" },
+  # { dev = "https://dev.to/username" },
+  # { dribbble = "https://dribbble.com/username" },
+  # { facebook = "https://facebook.com/username" },
+  # { flickr = "https://www.flickr.com/photos/username/" },
+  # { foursquare = "https://foursquare.com/username" },
+  # { gitlab = "https://gitlab.com/username" },
+  # { google = "https://www.google.com/" },
+  # { keybase = "https://keybase.io/username" },
+  # { kickstarter = "https://www.kickstarter.com/profile/username" },
+  # { mastodon = "https://mastodon.instance/@username" },
+  # { medium = "https://medium.com/username" },
+  # { microsoft = "https://www.microsoft.com/" },
+  # { patreon = "https://www.patreon.com/username" },
+  # { slack = "https://workspace.url/team/userid" },
+  # { soundcloud = "https://soundcloud.com/username" },
+  # { stack-exchange = "https://stackexchange.com/users/userid/username" },
+  # { stack-overflow = "https://stackoverflow.com/users/userid/username" },
+  # { telegram = "https://t.me/username" },
+  # { tiktok = "https://tiktok.com/@username" },
+  # { tumblr = "https://username.tumblr.com" },
+  # { twitch = "https://twitch.tv/username" },
+  # { twitter = "https://twitter.com/username" },
+  # { whatsapp = "https://wa.me/phone-number" },
+]
 
 [caches]
-  [caches.images]
-    dir = ':cacheDir/images'
+[caches.images]
+dir = ":cacheDir/images"
 
 [outputs]
-  home = ['html', 'rss']
-  section = ['html', 'rss']
-  taxonomy = ['html', 'rss']
-  term = ['html', 'rss']
-
+home = ["html", "rss"]
+section = ["html", "rss"]
+taxonomy = ["html", "rss"]
+term = ["html", "rss"]
 
 [imaging]
-  bgColor = '#000000'
-  hint = 'image'
-  quality = 90
-  resampleFilter = 'box'
+bgColor = "#000000"
+hint = "image"
+quality = 90
+resampleFilter = "box"
 
-  [imaging.exif]
-    disableDate = true
-    disableLatLong = true
-    excludeFields = ''
-    includeFields = ''
+[imaging.exif]
+disableDate = true
+disableLatLong = true
+excludeFields = ""
+includeFields = ""
 
 [markup]
+[markup.tableOfContents]
+endLevel = 2
+ordered = true
+startLevel = 2
 
-  [markup.tableOfContents]
-    endLevel = 2
-    ordered = true
-    startLevel = 2
-
-  [markup.highlight]
-    anchorLineNos = true
-    codeFences = true
-    guessSyntax = true
-    hl_Lines = ''
-    hl_inline = false
-    lineAnchors = ''
-    lineNoStart = 1
-    lineNos = true
-    lineNumbersInTable = true
-    noClasses = true
-    noHl = false
-    style = 'github-dark'
-    tabWidth = 4
+[markup.highlight]
+anchorLineNos = true
+codeFences = true
+guessSyntax = true
+hl_Lines = ""
+hl_inline = false
+lineAnchors = ""
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = true
+noClasses = true
+noHl = false
+style = "github-dark"
+tabWidth = 4
 
 [module]
-  [[module.mounts]]
-    source = 'assets'
-    target = 'assets'
-  [[module.mounts]]
-    source = 'static'
-    target = 'assets'
+[[module.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.mounts]]
+source = "static"
+target = "assets"
