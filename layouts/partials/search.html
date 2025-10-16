@@ -1,8 +1,27 @@
-<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<!-- will override this css. Leaving it here for reference-->
+<!-- <link href="/pagefind/pagefind-ui.css" rel="stylesheet"> -->
 <script src="/pagefind/pagefind-ui.js"></script>
 
-<div id="search"></div>
+<dialog id="dialog__search" class="dialog__search">
+  <button autofocus class="dialog__close-btn">Close</button>
+  <div id="search" class="search"></div>
+</dialog>
+
+<button class="dialog__show"> SEARCH </button>
+
 <script>
+    const dialog = document.querySelector("#dialog__search");
+    const showButton = document.querySelector(".dialog__show");
+    const closeButton = document.querySelector(".dialog__close-btn");
+
+    showButton.addEventListener("click", () => {
+      dialog.showModal();
+    });
+
+    closeButton.addEventListener("click", () => {
+      dialog.close();
+    });
+
     window.addEventListener('DOMContentLoaded', (event) => {
         new PagefindUI({ element: "#search", showSubResults: true });
     });
