@@ -83,6 +83,8 @@
   /* search settings */
   --search-image-width: clamp(1rem, 100% + 0.123rem, 15rem);
   --search-image-height: clamp(1rem, 100% +0.123rem, 15rem);
+  --search-font-size-big: clamp(1.2rem, 0.6396rem + 0.9515vw, 1.795rem);
+  --search-font-size-small: clamp(0.8rem, 0.9513rem + 0.9947vw, 1.325rem);
 }
 
 html {

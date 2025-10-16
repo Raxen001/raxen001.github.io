@@ -2,7 +2,7 @@
   border: none;
   background: inherit;
   color: inherit;
-  font: inherit;
+  font-family: inherit;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -47,6 +47,8 @@
   min-width: 50vw;
   max-width: 70vw;
   max-height: 60svh;
+  font-family: vt;
+  font-size: var(--search-font-size-small);
 
   display: flex;
   flex-direction: column;
@@ -63,21 +65,22 @@
 
 .dialog__close-btn {
   padding: 1ch 2ch;
-  font-size: 1.1rem;
+  font-size: var(--search-font-size-small);
   color: inherit;
   background-color: inherit;
   border: none;
   outline: none;
 }
 
-.pagefind-ui{
+.pagefind-ui {
   width: inherit;
 }
 
-.pagefind-ui__form{
+.pagefind-ui__form {
   display: grid;
   grid-template-columns: 1fr 5rem;
 }
+
 .pagefind-ui__search-input {
   background-color: inherit;
   color: inherit;
@@ -86,7 +89,7 @@
   padding: 1ch 2ch;
 }
 
-.pagefind-ui__drawer{
+.pagefind-ui__drawer {
   grid-column: 1 / span 2;
 }
 
@@ -100,7 +103,7 @@
 
 .pagefind-ui__message {
   color: inherit;
-  font-size: 1.2rem;
+  font-size: var(--search-font-size-big);
   padding-block: 1ch;
   text-align: center;
 }
@@ -117,6 +120,8 @@
   border: 1px var(--black2) solid;
   max-height: 15rem;
   margin-block: 2ch;
+  text-wrap: wrap;
+  overflow: hidden;
 
   display: grid;
   grid-template-columns: var(--search-image-width) 1fr;
@@ -126,6 +131,13 @@
     background-color: var(--yellow);
     color: var(--black);
   }
+}
+
+.pagefind-ui__results-area {
+  display: flex;
+  justify-items: center;
+  align-content: center;
+  flex-direction: column;
 }
 
 .pagefind-ui__result-thumb {
@@ -144,13 +156,43 @@
 }
 
 .pagefind-ui__result-inner {
-  padding-left: 1ch;
+  padding-left: 2ch;
+  width: 100%;
+  background: var(--black3);
 
   .pagefind-ui__result-title {
-    font-size: 1.3rem;
+    font-size: var(--search-font-size-big);
 
     .pagefind-ui__result-link {
       color: var(--teal);
     }
+  }
+}
+
+.pagefind-ui__button {
+  background: inherit;
+  color: inherit;
+  border: 1px var(--black1) solid;
+  padding: 1ch 2ch;
+}
+
+@media (max-width: 50rem) {
+  :root {
+    --search-font-size-big: 1.0rem;
+    --search-font-size-small: 0.8rem;
+  }
+  .dialog__search:open {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    font-size: var(--search-font-size-small);
+    left: 0%;
+    top: 0%;
+    transform: translateX(0);
+  }
+  .pagefind-ui__result-link {
+    width: 100%;
   }
 }
