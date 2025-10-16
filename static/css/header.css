@@ -29,6 +29,7 @@
   padding-block: 5rem;
   background: var(--bgda1);
   backdrop-filter: blur(2rem);
+  color: var(--crust);
 }
 
 .nav__a {
@@ -39,7 +40,7 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: var(--crust);
+  color: inherit;
   transition: all 250ms linear;
 }
 

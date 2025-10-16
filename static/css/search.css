@@ -1,0 +1,39 @@
+.dialog__search::backdrop {
+  opacity: 0.5;
+  background-image: linear-gradient(
+    45deg,
+    var(--black1),
+    var(--black2),
+    var(--black3)
+  );
+}
+
+.dialog__show {
+  display: grid;
+  border: none;
+  background: inherit;
+  color: inherit;
+  font: inherit;
+
+
+  grid-template-columns: 1fr 1fr;
+  justify-items: left;
+
+  min-width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  padding: 0;
+  margin: 0;
+  transition: all 200ms linear;
+
+  .search_icon {
+    align-self: center;
+    justify-self: right;
+    margin-right: 1ch;
+  }
+}
+
+.dialog__show:hover {
+  background: inherit;
+  color: inherit;
+}

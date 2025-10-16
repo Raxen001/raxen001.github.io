@@ -91,6 +91,12 @@
   transition: all 250ms linear;
 }
 
+.center {
+  display: flex;
+  justify-items: center;
+  align-self: center;
+}
+
 @media (min-width: 475px) {
   .container {
     max-width: 99%;

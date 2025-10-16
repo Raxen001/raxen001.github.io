@@ -1,6 +1,6 @@
-{{ $icon := resources.Get (print "icons/" . ".svg") }}
+{{- $icon_name := (.Get "path") }}
+{{- $icon := resources.Get (print "icons/" . $icon_name . ".svg") }}
+
 {{ if $icon }}
-  <span class="relative inline-block align-text-bottom icon">
     {{ $icon.Content | safeHTML }}
-  </span>
 {{ end }}

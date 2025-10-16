@@ -7,7 +7,9 @@
     </svg>
 </button>
 <nav class="nav pnav" data-visible="false">
-    {{ partial "search.html" .}}
+    <div class="nav__search">
+        {{ partial "search.html" .}}
+    </div>
     <a class="nav__a" href="/">HOME</a>
     <a class="nav__a" href="/projects/">PROJECTS</a>
     <a class="nav__a" href="/blog/">BLOG</a>

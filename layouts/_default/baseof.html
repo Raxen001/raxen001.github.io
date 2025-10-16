@@ -3,15 +3,18 @@
 
 <head>
   {{ if isset .Params "title" }}
-  <title>{{ .Params.title }}</title>
+    <title>{{ .Params.title }}</title>
   {{ else }}
-  <title>Raxen's abode</title>
+    <title>Raxen's abode</title>
   {{ end }}
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <link href="/css/style.css" rel="stylesheet" />
   <link href="/css/header.css" rel="stylesheet" />
   <link href="/css/footer.css" rel="stylesheet" />
+  <link href="/css/search.css" rel="stylesheet" />
 
   {{ partial "font-preload.html" . }}
   {{ partial "google-verify.html" . }}
@@ -20,6 +23,7 @@
   {{ block "list_css" . }} {{ end }}
   {{ block "blog_css" . }} {{ end }}
   {{ block "gallery_css" . }} {{ end }}
+
   {{ if (and (isset .Params "customcss") ( ne .Params.customcss "" )) }}
     <link href="/css/{{ .Params.customcss }}" rel="stylesheet" />
   {{end}}
@@ -35,8 +39,7 @@
 
 <body>
   {{ partial "header.html" . }}
-  {{ block "main" . }}
-  {{ end }}
+  {{ block "main" . }} {{ end }}
   {{ partial "footer.html" . }}
   <script src="/js/nav.js"></script>
   {{ partial "speculate.html" . }}
