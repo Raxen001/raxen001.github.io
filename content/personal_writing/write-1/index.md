@@ -29,3 +29,6 @@ customcss: "blog.css"
 > JUDGEMENT ABOUT THEM "
 >
 > -- epictetus
+
+> " CARPE DIEM "
+> -- Death Poet's society
