@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-zellij run --name "hugo" -- zsh -ic 'hugo serve --disableFastRender -D --navigateToChanged --bind "localhost" --baseURL "http://localhost/"'
+# zellij run --name "hugo" -- zsh -ic 'hugo serve --disableFastRender -D --navigateToChanged --bind "localhost" --baseURL "http://localhost/"'
+zellij run --name "hugo" -- zsh -ic 'docker compose up'

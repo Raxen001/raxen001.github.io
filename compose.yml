@@ -1,0 +1,10 @@
+name: raxen001.xyz
+services:
+  website:
+    build: 
+      context: .
+      dockerfile: Containerfile
+    ports:
+      - 1313:1313
+    volumes:
+      - ".:/app"
