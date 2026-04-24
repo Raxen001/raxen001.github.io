@@ -69,9 +69,9 @@ term = ["html", "rss"]
 
 [imaging]
 bgColor = "#000000"
-hint = "image"
+hint = "picture"
 quality = 90
-resampleFilter = "box"
+resampleFilter = "Box"
 
 [imaging.exif]
 disableDate = true
