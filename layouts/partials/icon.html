@@ -1,6 +1,5 @@
-{{- $icon_name := (.Get "path") }}
-{{- $icon := resources.Get (print "icons/" . $icon_name . ".svg") }}
-
+{{- $icon_name := .path }}
+{{ $icon := path.Join "/static" "img" "icons" (printf "%s.svg" .path)  }}
 {{ if $icon }}
-    {{ $icon.Content | safeHTML }}
+    {{ readFile $icon | safeHTML }}
 {{ end }}

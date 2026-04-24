@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+zellij run --name "hugo" -- zsh -ic 'hugo serve --disableFastRender -D --navigateToChanged --bind "localhost" --baseURL "http://localhost/"'

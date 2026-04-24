@@ -1,4 +1,4 @@
-<span class="">
+<span class="icons">
   {{ $icon := resources.Get (printf "/img/icons/%s.svg" ($.Get 0)) }} 
   {{ if $icon }} 
     {{ $icon.Content | safeHTML }} 

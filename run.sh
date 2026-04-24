@@ -1,7 +1,0 @@
-#IP="$(hostname -I | awk '{print $1}')"
-# IP="0.0.0.0"
-# IP="fedora.tailaadcc.ts.net"
-IP="localhost"
-LOCAL_IP="127.0.0.1"
-xdg-open "http://$IP:1313"
-hugo serve --disableFastRender -D --navigateToChanged --bind "$IP" --baseURL "http://$IP/"

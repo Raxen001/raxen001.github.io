@@ -1,10 +1,9 @@
 html,
 body {
   font-family: space;
-  /* height: 100%; */
+  font-size: clamp(0.98rem, 0.635rem + 0.9515vw, 1.125rem);
   min-height: 100%;
   background-color: var(--bg);
-  font-size: clamp(0.98rem, 0.635rem + 0.9515vw, 1.125rem);
 
   background: var(--black) url("/img/bg.webp");
   background-position: center;
@@ -25,7 +24,7 @@ main {
   /*   -moz-box-shadow: -80px 33px 64px 0px rgba(0, 0, 0, 0.81); */
   /*   box-shadow: -80px 33px 64px 0px rgba(0, 0, 0, 0.81); */
   /* background blur */
-  --blur-strength: 2rem;
+  --blur-strength: 2.5rem;
   backdrop-filter: blur(var(--blur-strength));
   -webkit-backdrop-filter: blur(var(--blur-strength));
 }
@@ -141,6 +140,11 @@ main {
   width: 100%;
   font-family: vt;
   font-size: clamp(0.95rem, 0.6396rem + 0.9515vw, 1.125rem);
+
+  .dialog__show>p {
+    font-size: inherit;
+    font-size: clamp(0.95rem, 0.6396rem + 0.9515vw, 1.125rem);
+  }
 }
 
 .nav>menu {
