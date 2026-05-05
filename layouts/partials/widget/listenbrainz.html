@@ -1,0 +1,14 @@
+{{ range .Site.Params.Author.links }} 
+  {{ range $type, $link := . }} 
+    {{ if eq $type "listenbrainz" }}
+    <iframe
+      src="{{ . }}/embed/pin"
+      id="widget__listenbrainz"
+      class="widget__listenbrainz"
+      frameborder="2"
+      width="650"
+      height="80">
+    </iframe>
+    {{end}}
+  {{ end }}
+{{ end }}
