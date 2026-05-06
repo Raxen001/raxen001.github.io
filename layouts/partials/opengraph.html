@@ -1,37 +1,43 @@
-  <meta name="description" content="Hello guys welcome to my website. This is just where is post my stuff. hope you don't care">
-  <meta property="og:description" content="Hello guys welcome to my website. This is just where is post my stuff. hope you don't care" />
+{{ if isset .Params "title" }}
+  <meta property="og:title" content="{{.Params.title}}" />
+{{ else }}
+  <meta property="og:title" content="Raxen's Adobe" />
+{{end}}
 
-  {{ if isset .Params "title" }}
-    <meta property="og:title" content="{{.Params.title}}" />
-  {{ else }}
-    <meta property="og:title" content="Raxen's Adobe" />
+
+<meta name="description" content="Hello guys welcome to my website. This is just where is post my stuff. hope you don't care">
+<meta property="og:description" content="Hello guys welcome to my website. This is just where is post my stuff. hope you don't care" />
+
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{.Permalink}}" />
+
+
+{{ with resources.Get "default/thumbnail.webp" }}
+  {{ if reflect.IsImageResourceProcessable . }}
+      {{ with .Process "resize 300x200 webp" }}
+        <meta property="og:image" itemprop="image" content="{{ .Permalink }}" />
+      {{end}}
   {{end}}
+{{end}}
 
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{.Permalink}}" />
 
-  {{ with resources.Get "default/thumbnail.webp" }}
-    {{ if reflect.IsImageResourceProcessable . }}
-        {{ with .Process "resize 300x200 webp" }}
-          <meta property="og:image" itemprop="image" content="{{ .Permalink }}" />
-        {{end}}
-    {{end}}
-  {{end}}
-
-  <meta property="og:image:alt" content="the banner image of my website"/>
-  <meta property="og:image:height" content="630"/>
-  <meta property="og:image:width" content="1200"/>
+<meta property="og:image:alt" content="the banner image of my website"/>
+<meta property="og:image:height" content="300"/>
+<meta property="og:image:width" content="200"/>
 
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:domain" content="raxen001.github.io">
+<meta property="twitter:domain" content="raxen001.xyz">
+
 {{ if isset .Params "title" }}
-    <meta property="twitter:title" content="{{.Params.title}}" />
+  <meta property="twitter:title" content="{{.Params.title}}" />
 {{end}}
+
 <meta name="twitter:description" content="Raxen001's abode'">
-  {{ with .Resources.Get "thumbnail.webp" }}
-      {{ $image := . }}
-      {{ $image := $image.Resize (printf "%dx%d webp q70" $image.Width $image.Height )}}
-      <meta name="twitter:image" content="{{ $image.Permalink }}">
-  {{end}}
+{{ with .Resources.Get "thumbnail.webp" }}
+    {{ $image := . }}
+    {{ $image := $image.Resize (printf "%dx%d webp q70" $image.Width $image.Height )}}
+    <meta name="twitter:image" content="{{ $image.Permalink }}">
+{{end}}
