@@ -15,7 +15,7 @@
 
 {{ with resources.Get "default/thumbnail.webp" }}
   {{ if reflect.IsImageResourceProcessable . }}
-      {{ with .Process "resize 1200x630 png" }}
+      {{ with .Process "resize 1200x630 webp" }}
         <meta property="og:image" itemprop="image" content="{{ .Permalink }}" />
       {{end}}
   {{end}}
