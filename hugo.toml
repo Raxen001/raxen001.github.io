@@ -1,6 +1,6 @@
 baseURL = "https://raxen001.xyz/"
 languageCode = "en-us"
-title = "Raxen's abode"
+title = "Raxen abode"
 summaryLength = 25
 enableRobotsTXT = true
 
@@ -8,7 +8,6 @@ enableRobotsTXT = true
 pagerSize = 5
 
 [Params]
-description = "Personal website of Raxen001, featuring projects, writing, travel galleries, and notes."
 giscusTheme = "noborder_gray"
 
 [Params.author]

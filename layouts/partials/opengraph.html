@@ -1,94 +1,43 @@
-{{- $title := site.Title -}}
-{{- if not .IsHome -}}
-  {{- with .Title -}}
-    {{- $title = . -}}
-  {{- end -}}
-{{- end -}}
+{{ if isset .Params "title" }}
+  <meta property="og:title" content="{{.Params.title}}" />
+{{ else }}
+  <meta property="og:title" content="Raxen's Adobe" />
+{{end}}
 
-{{- $description := site.Params.description | default site.Title -}}
-{{- if not .IsHome -}}
-  {{- with .Summary -}}
-    {{- $description = . -}}
-  {{- end -}}
-{{- end -}}
-{{- with .Description -}}
-  {{- $description = . -}}
-{{- end -}}
-{{- with .Params.description -}}
-  {{- $description = . -}}
-{{- end -}}
-{{- $description = $description | plainify | htmlUnescape | replaceRE "\\s+" " " | truncate 160 -}}
 
-{{- $imageAlt := printf "%s preview image" $title -}}
-{{- with .Params.thumbnailAlt -}}
-  {{- $imageAlt = . -}}
-{{- end -}}
-{{- with .Params.imageAlt -}}
-  {{- $imageAlt = . -}}
-{{- end -}}
+<meta name="description" content="Hello guys welcome to my website. This is just where is post my stuff. hope you don't care">
+<meta property="og:description" content="Hello guys welcome to my website. This is just where is post my stuff. hope you don't care" />
 
-{{- $image := false -}}
-{{- range slice "thumbnail.jpg" "thumbnail.jpeg" "thumbnail.png" "thumbnail.webp" -}}
-  {{- if not $image -}}
-    {{- with $.Resources.Get . -}}
-      {{- if reflect.IsImageResourceProcessable . -}}
-        {{- $image = . -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-{{- end -}}
 
-{{- if not $image -}}
-  {{- with resources.Get "default/thumbnail.png" -}}
-    {{- if reflect.IsImageResourceProcessable . -}}
-      {{- $image = . -}}
-    {{- end -}}
-  {{- else -}}
-    {{- with resources.Get "default/thumbnail.webp" -}}
-      {{- if reflect.IsImageResourceProcessable . -}}
-        {{- $image = . -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-{{- end -}}
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{.Permalink}}" />
 
-{{- $socialImage := false -}}
-{{- with $image -}}
-  {{- $socialImage = .Fill "1200x630 Center jpg q65" -}}
-{{- end -}}
 
-<link rel="canonical" href="{{ .Permalink }}" />
-<meta name="description" content="{{ $description }}" />
+{{ with resources.Get "default/thumbnail.webp" }}
+  {{ if reflect.IsImageResourceProcessable . }}
+      {{ with .Process "resize 1200x630 webp" }}
+        <meta property="og:image" itemprop="image" content="{{ .Permalink }}" />
+      {{end}}
+  {{end}}
+{{end}}
 
-<meta property="og:site_name" content="{{ site.Title }}" />
-<meta property="og:title" content="{{ $title }}" />
-<meta property="og:description" content="{{ $description }}" />
-<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
-<meta property="og:url" content="{{ .Permalink }}" />
 
-{{- with $socialImage }}
-<meta property="og:image" content="{{ .Permalink }}" />
-<meta property="og:image:secure_url" content="{{ .Permalink }}" />
-<meta property="og:image:type" content="image/jpeg" />
-<meta property="og:image:width" content="{{ .Width }}" />
-<meta property="og:image:height" content="{{ .Height }}" />
-<meta property="og:image:alt" content="{{ $imageAlt }}" />
-{{- end }}
+<meta property="og:image:alt" content="the banner image of my website"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
 
-{{- if .IsPage }}
-{{- with .PublishDate }}
-<meta property="article:published_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}" />
-{{- end }}
-{{- with .Lastmod }}
-<meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}" />
-{{- end }}
-{{- end }}
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="{{ $title }}" />
-<meta name="twitter:description" content="{{ $description }}" />
-<meta name="twitter:url" content="{{ .Permalink }}" />
-{{- with $socialImage }}
-<meta name="twitter:image" content="{{ .Permalink }}" />
-<meta name="twitter:image:alt" content="{{ $imageAlt }}" />
-{{- end }}
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="raxen001.xyz">
+
+{{ if isset .Params "title" }}
+  <meta property="twitter:title" content="{{.Params.title}}" />
+{{end}}
+
+<meta name="twitter:description" content="Raxen001's abode'">
+{{ with .Resources.Get "thumbnail.webp" }}
+    {{ $image := . }}
+    {{ $image := $image.Resize (printf "%dx%d webp q70" $image.Width $image.Height )}}
+    <meta name="twitter:image" content="{{ $image.Permalink }}">
+{{end}}
