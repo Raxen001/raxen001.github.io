@@ -1,6 +1,6 @@
 baseURL = "https://raxen001.xyz/"
-languageCode = "en-us"
-title = "Raxen abode"
+languageCode = "en_US"
+title = "Raxen's abode"
 summaryLength = 25
 enableRobotsTXT = true
 

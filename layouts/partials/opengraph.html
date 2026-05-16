@@ -35,7 +35,7 @@
   <meta property="twitter:title" content="{{.Params.title}}" />
 {{end}}
 
-<meta name="twitter:description" content="Raxen001's abode'">
+<meta name="twitter:description" content="Raxen001's abode">
 {{ with .Resources.Get "thumbnail.webp" }}
     {{ $image := . }}
     {{ $image := $image.Resize (printf "%dx%d webp q70" $image.Width $image.Height )}}
