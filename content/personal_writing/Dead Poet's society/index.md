@@ -18,9 +18,8 @@ customcss: ""
 > To put to rout all that was not life...
 > And not, when I came to die, discover
 > that I had not lived...
->   - Dead poet's society
 
-# Dead Poet's honor
+# Dead Poet's honour
 
 
 # CHILLS CHILLS!!

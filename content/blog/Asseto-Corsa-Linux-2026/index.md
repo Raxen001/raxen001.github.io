@@ -17,6 +17,7 @@ customcss: ""
 Then run this
 
 ```bash
+protontricks 244210 -q remove_mono
 protontricks 244210 -q vcrun2019
 protontricks 244210 -q dotnet48
 protontricks 244210 -q d3dcompiler_43 d3dx11_43

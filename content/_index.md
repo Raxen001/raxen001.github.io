@@ -4,22 +4,28 @@ draft: false
 ---
 # Hello World,
 
-## I am RITHESH
+## I am Raxen
 
-Who I am is what I wished to be, who I will be is what I am fighting for
+Welcome to my humble site.
 
 ### About me:
 
-I suck at writing about myself so heres a list of all the stuff i like, Video Games, Music, Books(detective novels and fictional; been reading phiolosphy recently) and F1
+Just a guy with multiple hobbies.
+I like books and manga. I follow F1. I spend my free time on
+Sim-racing or gaming. Recently I have been trying to get back into playing piano.
 
-### How i live my life ?
 
-Well people tend to regret the decisions they make but i don't want to do that. Gonna live each day like its your last.
+### Why does this site exist ?
 
-### Quotes i live by\.\.\.
+This site exists purely to express my thoughts, ideas and emotions uncensored. Moreover I always wanted to become a
+writer if I failed as an Engineer.
 
-> Whatever happens happens\.\.\.
+
+### Few of my favourites quotes
+
 
 > C'est La Vie
 
 > Memento Mori
+
+> Whatever happens happens\.\.\.
