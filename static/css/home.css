@@ -445,3 +445,11 @@ h5 {
 h6 {
   color: var(--teal);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee ul {
+    animation: none;
+    text-decoration: overline;
+  }
+}
+
