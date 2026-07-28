@@ -24,8 +24,8 @@ writer if I failed as an Engineer.
 ### Few of my favourites quotes
 
 
-> C'est La Vie
-
-> Memento Mori
-
-> Whatever happens happens\.\.\.
+{{<marquee>}}
+- C'est La Vie
+- Memento Mori
+- Whatever happens happens\.\.\.
+{{< /marquee >}}

@@ -210,3 +210,8 @@ html {
     transform: scale(1) translateY(0);
   }
 }
+
+@keyframes marquee_animation {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(-100%); }
+}
