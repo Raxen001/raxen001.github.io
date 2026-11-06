@@ -1,4 +1,3 @@
----
-title: "~/Pictures/"
-customcss: "gallery.css"
----
++++
+title = "~/Pictures/"
++++

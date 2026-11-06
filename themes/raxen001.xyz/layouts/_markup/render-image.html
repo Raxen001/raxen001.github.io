@@ -1,0 +1,30 @@
+{{- $image_url := urls.Parse .Destination }}
+{{- $img := "" }}
+
+{{- if not $image_url.IsAbs }}
+  {{- $path := strings.TrimPrefix "./" $image_url.Path }}
+  {{- $img = or (.PageInner.Resources.Get $path) (resources.Get $path) }}
+{{- end }}
+
+{{- $html := "" }}
+{{- with $img }}
+  {{- $html = partial "image.html" (dict "image" . "alt" $.PlainText "sizes" "(width >= 64rem) 60rem, 100vw") }}
+  {{- /* processed images open full size in a lightbox, like the gallery */}}
+  {{- if reflect.IsImageResourceProcessable . }}
+    {{- $id := printf "img-%d" $.Ordinal }}
+    {{- $caption := or $.Title $.PlainText (path.BaseName .Name) }}
+    {{- $html = printf `<button class="zoom" type="button" popovertarget="%s"><span class="hidden">Open full size: %s</span>%s</button>%s` $id ($caption | htmlEscape) $html (partial "lightbox.html" (dict "image" . "id" $id "caption" $caption)) }}
+  {{- end }}
+{{- else }}
+  {{- $html = printf `<img src=%q alt=%q loading="lazy" decoding="async">` .Destination .PlainText }}
+{{- end }}
+
+<!--set image as figure if title or img -->
+{{- if and .IsBlock .Title }}
+<figure>
+  {{- $html | safeHTML }}
+  <figcaption>{{ .Title }}</figcaption>
+</figure>
+{{- else }}
+  {{- $html | safeHTML }}
+{{- end -}}

@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <div class="list container flex flex-col gap-m">
+    <h1 class="hidden">{{ .Title }}</h1>
+
+    {{- if in (slice "blog" "categories") .Section }}
+      {{- partial "list/categories.html" . }}
+    {{- end }}
+
+    {{- range .Paginator.Pages }}
+      {{- partial "list/card.html" . }}
+    {{- end }}
+
+    {{- partial "list/pagination.html" . }}
+  </div>
+{{ end }}

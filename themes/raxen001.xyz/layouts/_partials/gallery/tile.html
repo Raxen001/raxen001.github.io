@@ -1,0 +1,28 @@
+{{- /*
+  One gallery tile.
+
+  @context {resource} image The image.
+  @context {string} caption The caption.
+  @context {string} href Where the tile links to (album covers).
+  @context {string} id Instead of href: opens the image full size in a popover with this id.
+*/}}
+{{- $span := partial "gallery/span.html" .image }}
+<li class="tile{{ with $span }} {{ . }}{{ end }}">
+  {{- $tile := partial "image.html" (dict "image" .image "widths" (slice 480 960) "sizes" "(width >= 40rem) 30rem, 100vw") }}
+  {{- with .id }}
+    <button class="glass" type="button" popovertarget="{{ . }}">
+      <figure>
+        {{ $tile }}
+        <figcaption>{{ $.caption }}</figcaption>
+      </figure>
+    </button>
+    {{- partial "lightbox.html" (dict "image" $.image "id" . "caption" $.caption) }}
+  {{- else }}
+    <a class="glass" href="{{ .href }}">
+      <figure>
+        {{ $tile }}
+        <figcaption>{{ .caption }}</figcaption>
+      </figure>
+    </a>
+  {{- end }}
+</li>

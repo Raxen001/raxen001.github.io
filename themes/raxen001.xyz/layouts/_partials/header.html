@@ -1,0 +1,14 @@
+<header>
+  <button class="glass" type="button" popovertarget="site-nav">
+    {{- partialCached "icon.html" "menu" "menu" }}
+    <span class="hidden">Menu</span>
+  </button>
+
+  <nav id="site-nav" class="glass" popover aria-label="Main">
+    <button type="button" popovertarget="site-nav" popovertargetaction="hide">
+      {{- partialCached "icon.html" "x" "x" }}
+      <span class="hidden">Close menu</span>
+    </button>
+    {{- partial "menu.html" (dict "menuID" "main" "page" . "class" "list-none" "search" true "icons" true) }}
+  </nav>
+</header>

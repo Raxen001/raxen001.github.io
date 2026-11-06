@@ -1,0 +1,42 @@
+{{- /*
+  Spotlight-style search. Opened by any [commandfor="search"] button,
+  ⌘K / Ctrl+K or "/"; results come from Pagefind (assets/js/main.js).
+*/}}
+<dialog
+  id="search"
+  class="spotlight"
+  aria-label="Search"
+  closedby="any"
+  data-pagefind="{{ "pagefind/" | relURL }}"
+>
+  <div class="spotlight__field" role="search">
+    <label for="search-input">
+      {{- partialCached "icon.html" "search" "search" }}
+      <span class="hidden">Search</span>
+    </label>
+    <input
+      id="search-input"
+      type="search"
+      placeholder="Search posts, writes, photos…"
+      autocomplete="off"
+      spellcheck="false"
+      autofocus
+      role="combobox"
+      aria-expanded="false"
+      aria-controls="search-results"
+      aria-autocomplete="list"
+    />
+    <button type="button" commandfor="search" command="close">
+      <kbd aria-hidden="true">esc</kbd>
+      <span class="hidden">Close search</span>
+    </button>
+  </div>
+
+  <ul id="search-results" class="spotlight__results" role="listbox" aria-label="Results" hidden></ul>
+  <p class="spotlight__status" role="status"></p>
+
+  {{- /* icons per section, cloned into results by main.js */}}
+  {{- range slice (slice "blog" "edit") (slice "personal_writings" "pen-tool") (slice "gallery" "camera") (slice "contact" "user") (slice "page" "link") }}
+    <template data-section="{{ index . 0 }}">{{ partialCached "icon.html" (index . 1) (index . 1) }}</template>
+  {{- end }}
+</dialog>

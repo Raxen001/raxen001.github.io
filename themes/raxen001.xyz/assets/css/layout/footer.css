@@ -1,0 +1,12 @@
+body>footer {
+  font-family: var(--font-banner);
+  margin-block-start: var(--space-l);
+  padding: var(--space-s) 25svw;
+  color: var(--fg);
+  border-radius: var(--radius-m) var(--radius-m) 0 0;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

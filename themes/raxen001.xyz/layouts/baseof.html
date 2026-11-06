@@ -1,0 +1,25 @@
+<!doctype html>
+<html
+  lang="{{ site.Language.Locale }}"
+  dir="{{ or site.Language.Direction `ltr` }}"
+>
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    {{ block "header" . }}
+      {{ partial "header.html" . }}
+    {{ end }}
+
+
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ block "footer" . }}
+      {{ partial "footer.html" . }}
+    {{ end }}
+
+    {{ partialCached "search.html" . }}
+  </body>
+</html>

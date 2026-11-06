@@ -1,0 +1,25 @@
+{{- $current := .RelPermalink }}
+{{- with site.GetPage "/blog" }}
+  <nav aria-label="Categories">
+    <ul class="pills flex flex-wrap gap-2xs list-none">
+      <li>
+        <a
+          href="{{ .RelPermalink }}"
+          {{ if eq .RelPermalink $current }}aria-current="page"{{ end }}
+          >all ({{ len .RegularPages }})</a
+        >
+      </li>
+      {{- range $name, $pages := site.Taxonomies.categories }}
+        {{- with site.GetPage (printf "/categories/%s" $name) }}
+          <li>
+            <a
+              href="{{ .RelPermalink }}"
+              {{ if eq .RelPermalink $current }}aria-current="page"{{ end }}
+              >{{ $name }} ({{ len $pages }})</a
+            >
+          </li>
+        {{- end }}
+      {{- end }}
+    </ul>
+  </nav>
+{{- end }}

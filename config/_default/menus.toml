@@ -1,0 +1,31 @@
+# icon has to match the assets/icons
+
+[[main]]
+name = "Home"
+pageRef = "/"
+weight = 10
+params.icon = "home"
+
+[[main]]
+name = "Writes"
+pageRef = "/personal_writings"
+weight = 40
+params.icon = "pen-tool"
+
+[[main]]
+name = "Blog"
+pageRef = "/blog"
+weight = 30
+params.icon = "edit"
+
+[[main]]
+name = "Gallery"
+pageRef = "/gallery"
+weight = 50
+params.icon = "camera"
+
+[[main]]
+name = "Contact"
+pageRef = "/contact"
+weight = 60
+params.icon = "user"

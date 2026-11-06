@@ -1,0 +1,319 @@
+/*
+ * prose: everything markdown can put in a post. The base reset zeroes all
+ * margins and padding, so spacing, list indents and markers are set here.
+ * Borders use the heading accents: images/quotes --accent-2, tables --accent-3,
+ * details --accent-4, kbd --accent-5, code/hr --accent-6.
+ */
+.prose {
+  font-family: var(--font-mono);
+  font-size: clamp(var(--text-base), 0.9rem + 0.4vw, var(--text-lg));
+  line-height: 1.7;
+  overflow-wrap: break-word;
+
+  /* flow: space between blocks, more before headings, less after them */
+  > * + * {
+    margin-block-start: var(--space-s);
+  }
+
+  > :is(h1, h2, h3, h4, h5, h6) {
+    margin-block-start: var(--space-l);
+  }
+
+  > :is(h1, h2, h3, h4, h5, h6) + * {
+    margin-block-start: var(--space-2xs);
+  }
+
+  > :first-child {
+    margin-block-start: 0;
+  }
+
+  /* headings: colours come from --accent-1…6 in style.css */
+  :is(h1, h2, h3, h4, h5, h6) {
+    line-height: 1.25;
+    text-wrap: balance;
+    /* clear the sticky header when jumping to an anchor */
+    scroll-margin-block-start: 6rem;
+  }
+
+  h1 {
+    font-size: var(--text-3xl);
+  }
+
+  h2 {
+    font-size: var(--text-2xl);
+  }
+
+  h3 {
+    font-size: var(--text-xl);
+  }
+
+  h4 {
+    font-size: var(--text-lg);
+  }
+
+  h5 {
+    font-size: var(--text-base);
+  }
+
+  h6 {
+    font-size: var(--text-sm);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* links */
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+
+    &:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: var(--radius-s);
+    }
+  }
+
+  strong {
+    color: var(--base);
+    font-weight: 700;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  mark {
+    padding-inline: 0.2em;
+    border-radius: var(--radius-s);
+    background-color: color-mix(in oklch, var(--accent) 35%, transparent);
+    color: inherit;
+  }
+
+  :is(sup, sub) {
+    font-size: 0.75em;
+    line-height: 0;
+  }
+
+  abbr[title] {
+    text-decoration: underline dotted;
+    cursor: help;
+  }
+
+  /* lists, nested: markers change at each level */
+  :is(ul, ol) {
+    padding-inline-start: 1.5em;
+  }
+
+  li + li,
+  li > :is(ul, ol) {
+    margin-block-start: 0.35em;
+  }
+
+  li > p + p {
+    margin-block-start: 0.5em;
+  }
+
+  li::marker {
+    color: var(--accent);
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ul ul {
+    list-style: circle;
+  }
+
+  ul ul ul {
+    list-style: square;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ol ol {
+    list-style: lower-alpha;
+  }
+
+  ol ol ol {
+    list-style: lower-roman;
+  }
+
+  /* task lists: - [x] done */
+  ul:has(> li > input[type="checkbox"]) {
+    padding-inline-start: 0.25em;
+    list-style: none;
+  }
+
+  li > input[type="checkbox"] {
+    margin-inline-end: 0.5em;
+    accent-color: var(--accent);
+  }
+
+  dl {
+    display: grid;
+    gap: 0.25em;
+  }
+
+  dt {
+    font-weight: 700;
+  }
+
+  dd {
+    padding-inline-start: 1.5em;
+  }
+
+  /* quotes */
+  blockquote {
+    padding: var(--space-xs) var(--space-s);
+    border-inline-start: 0.25rem solid var(--accent-2);
+    border-radius: 0 var(--radius-m) var(--radius-m) 0;
+    background-color: var(--glass-dark);
+    font-style: italic;
+
+    > * + * {
+      margin-block-start: var(--space-xs);
+    }
+  }
+
+  hr {
+    margin-block: var(--space-l);
+    border: 0;
+    border-block-start: var(--border-width) solid color-mix(in oklch, var(--accent-6) 60%, transparent);
+  }
+
+  /* code: inline, keys, and highlighted blocks (colours in code.css) */
+  :not(pre) > code {
+    padding: 0.1em 0.35em;
+    border-radius: var(--radius-s);
+    background-color: var(--glass-dark);
+    font-size: 0.9em;
+  }
+
+  kbd {
+    padding: 0.1em 0.4em;
+    border: var(--border-width) solid var(--accent-5);
+    border-radius: var(--radius-s);
+    background-color: var(--glass-layer);
+    box-shadow: inset 0 -2px 0 var(--accent-5);
+    font-size: 0.85em;
+  }
+
+  :is(pre, .highlight) {
+    overflow-x: auto;
+    border-radius: var(--radius-m);
+  }
+
+  /* one border round each code block, not one on the wrapper and one on the pre */
+  :is(.highlight, :not(.highlight) > pre) {
+    border: var(--border-width) solid var(--surface);
+  }
+
+  :is(pre, .highlight) {
+    font-size: 0.875em;
+    line-height: 1.5;
+  }
+
+  pre {
+    padding: var(--space-s);
+  }
+
+  /* hugo's line-number table: the numbers and the code sit side by side */
+  .highlight pre {
+    padding: var(--space-s) var(--space-2xs);
+  }
+
+  .lntable {
+    border-spacing: 0;
+  }
+
+  /* media */
+  :is(img, video, iframe) {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+    margin-inline: auto;
+    border-radius: var(--radius-m);
+  }
+
+  :is(img, video) {
+    border: var(--border-width) solid var(--surface);
+  }
+
+  p > img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  figure {
+    display: grid;
+    gap: var(--space-2xs);
+    justify-items: center;
+  }
+
+  figcaption {
+    color: var(--muted);
+    font-size: var(--text-sm);
+    text-align: center;
+  }
+
+  /* tables (not the code line-number table): scroll sideways when too wide */
+  table:not(.lntable) {
+    display: block;
+    max-inline-size: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-size: 0.9em;
+  }
+
+  :is(th, td):not(.lntd) {
+    padding: 0.5em 0.75em;
+    border-block-end: var(--border-width) solid color-mix(in oklch, var(--accent-3) 40%, transparent);
+    text-align: start;
+  }
+
+  thead th {
+    border-block-end: 2px solid var(--accent-3);
+    color: var(--accent-3);
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: var(--glass-layer);
+  }
+
+  details {
+    padding: var(--space-xs) var(--space-s);
+    border: var(--border-width) solid var(--accent-4);
+    border-radius: var(--radius-m);
+
+    > summary {
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    &[open] > summary {
+      margin-block-end: var(--space-xs);
+    }
+  }
+
+  /* footnotes */
+  .footnotes {
+    margin-block-start: var(--space-l);
+    padding-block-start: var(--space-s);
+    border-block-start: var(--border-width) solid color-mix(in oklch, var(--accent-6) 60%, transparent);
+    color: var(--muted);
+    font-size: var(--text-sm);
+  }
+}

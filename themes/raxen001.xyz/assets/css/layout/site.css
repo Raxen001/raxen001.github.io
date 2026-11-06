@@ -1,0 +1,22 @@
+/* page is at least one screen tall and main takes the spare room, so on short
+   pages the footer sits at the bottom of the viewport; long pages scroll as usual */
+body {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100dvh;
+}
+
+main {
+  flex: 1;
+}
+
+/* the old site's graph paper (gallery, posts): a big grid every --cell, a fine one at a fifth of it */
+body:has(> main > :is(.gallery, .post)) {
+  --cell: 100px;
+  --line: #0000 90deg, var(--charcoal) 0;
+
+  background:
+    conic-gradient(from 90deg at 2px 2px, var(--line)) 0 0 / var(--cell) var(--cell),
+    conic-gradient(from 90deg at 1px 1px, var(--line)) 0 0 / calc(var(--cell) / 5) calc(var(--cell) / 5),
+    var(--bg);
+}

@@ -1,0 +1,27 @@
+{{- /*
+  A full-size image popover, opened by a button with popovertarget="id".
+  Only <span>s inside, so it's valid even within a paragraph (post images).
+
+  @context {resource} image The image.
+  @context {string} id The popover id.
+  @context {string} caption The title shown next to the image.
+*/}}
+<span class="lightbox glass" id="{{ .id }}" popover data-pagefind-ignore>
+  <span class="lightbox__body">
+    {{- partial "image.html" (dict "image" .image "alt" .caption "widths" (slice 960 1440 1920) "sizes" "(width >= 65rem) 80vw, 100vw") }}
+    <span class="lightbox__info">
+      <span class="lightbox__title">{{ .caption }}</span>
+      <span class="pills">
+        <a href="{{ .image.RelPermalink }}">
+          {{- with .image.Filter images.AutoOrient -}}
+            Full image ({{ .Width }}×{{ .Height }})
+          {{- end -}}
+        </a>
+      </span>
+    </span>
+  </span>
+  <button class="lightbox__close" type="button" popovertarget="{{ .id }}" popovertargetaction="hide">
+    {{- partialCached "icon.html" "x" "x" }}
+    <span class="hidden">Close</span>
+  </button>
+</span>

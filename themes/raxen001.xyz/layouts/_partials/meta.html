@@ -1,0 +1,34 @@
+{{- /*
+  Title / author / date (and categories) block, shared by list cards and posts.
+
+  @context {page} page The page.
+  @context {int} level Heading level for the title (default 1).
+  @context {bool} terms Also list categories as pill links (not inside a card
+    link: links can't nest).
+*/}}
+{{- $page := .page }}
+{{- $level := .level | default 1 }}
+<dl class="meta">
+  <dt>Title:</dt>
+  <dd>{{ printf "<h%d>%s</h%d>" $level ($page.Title | htmlEscape) $level | safeHTML }}</dd>
+  <dt>Author:</dt>
+  <dd>{{ site.Params.author.name }}</dd>
+  <dt>Date:</dt>
+  <dd>
+    <time datetime="{{ $page.Date.Format "2006-01-02" }}">
+      {{- $page.Date | time.Format ":date_long" -}}
+    </time>
+  </dd>
+  {{- if .terms }}
+    {{- with $page.GetTerms "categories" }}
+      <dt>Categories:</dt>
+      <dd>
+        <ul class="pills flex flex-wrap gap-2xs list-none">
+          {{- range . }}
+            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+          {{- end }}
+        </ul>
+      </dd>
+    {{- end }}
+  {{- end }}
+</dl>

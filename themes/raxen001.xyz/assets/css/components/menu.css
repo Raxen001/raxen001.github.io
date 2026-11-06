@@ -1,0 +1,20 @@
+/* every menu.html list; per-item accents come from accent-cycle.css */
+.menu > li {
+  /* icon in the item's accent when hovered, focused or the current page */
+  > :is(a, button):is(:hover, :focus-visible, [aria-current="page"]) .icon {
+    color: var(--accent);
+  }
+
+  /* the old site's icon nudge, on hover / focus only */
+  > :is(a, button):is(:hover, :focus-visible) .icon {
+    transform: translateX(-10%) scale(1.09);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .icon {
+      transition:
+        color 100ms ease-out,
+        transform 100ms ease-out;
+    }
+  }
+}

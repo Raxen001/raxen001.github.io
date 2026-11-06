@@ -1,0 +1,138 @@
+/*
+ * Giscus theme in the site's palette. Not part of main.css: giscus loads it
+ * into its iframe from data-theme (see _partials/comments.html), so it can't
+ * use the site's custom properties and repeats the colours here.
+ * Variable list from giscus/styles/themes/dark.css (MIT, GitHub Inc.).
+ */
+
+main {
+  /* site palette */
+  --site-surface: #1e1e1e;
+  --site-deep: #121212;
+  --site-fg: #c5c9c5;
+  --site-muted: #697d7b;
+  --site-accent: #df8e1d;
+  --site-accent-rgb: 223, 142, 29;
+  --site-green: #40a02b;
+  --site-peach: #fe640b;
+  --site-pink: #ea76cb;
+  --site-edge: rgb(197 201 197 / 12%);
+
+  /* code: kanagawa-dragon, same as the site's code blocks */
+  --color-prettylights-syntax-comment: #737c73;
+  --color-prettylights-syntax-constant: #b6927b;
+  --color-prettylights-syntax-entity: #8ba4b0;
+  --color-prettylights-syntax-storage-modifier-import: #c5c9c5;
+  --color-prettylights-syntax-entity-tag: #8ba4b0;
+  --color-prettylights-syntax-keyword: #8992a7;
+  --color-prettylights-syntax-string: #8a9a7b;
+  --color-prettylights-syntax-variable: #c4b28a;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #e82424;
+  --color-prettylights-syntax-invalid-illegal-text: #c5c9c5;
+  --color-prettylights-syntax-invalid-illegal-bg: #43242b;
+  --color-prettylights-syntax-carriage-return-text: #c5c9c5;
+  --color-prettylights-syntax-carriage-return-bg: #43242b;
+  --color-prettylights-syntax-string-regexp: #c4746e;
+  --color-prettylights-syntax-markup-list: #c4b28a;
+  --color-prettylights-syntax-markup-heading: #8ba4b0;
+  --color-prettylights-syntax-markup-italic: #c5c9c5;
+  --color-prettylights-syntax-markup-bold: #c5c9c5;
+  --color-prettylights-syntax-markup-deleted-text: #c34043;
+  --color-prettylights-syntax-markup-deleted-bg: #43242b;
+  --color-prettylights-syntax-markup-inserted-text: #76946a;
+  --color-prettylights-syntax-markup-inserted-bg: #2b3328;
+  --color-prettylights-syntax-markup-changed-text: #c4b28a;
+  --color-prettylights-syntax-markup-changed-bg: #393836;
+  --color-prettylights-syntax-markup-ignored-text: #c5c9c5;
+  --color-prettylights-syntax-markup-ignored-bg: #393836;
+  --color-prettylights-syntax-meta-diff-range: #a292a3;
+  --color-prettylights-syntax-brackethighlighter-angle: #737c73;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #625e5a;
+  --color-prettylights-syntax-constant-other-reference-link: #8a9a7b;
+
+  /* buttons: dark glass, the accent for the primary one */
+  --color-btn-text: var(--site-fg);
+  --color-btn-bg: var(--site-surface);
+  --color-btn-border: var(--site-edge);
+  --color-btn-shadow: 0 0 transparent;
+  --color-btn-inset-shadow: inset 0 1px 0 rgb(255 255 255 / 10%);
+  --color-btn-hover-bg: rgba(var(--site-accent-rgb), 0.1);
+  --color-btn-hover-border: rgba(var(--site-accent-rgb), 0.6);
+  --color-btn-active-bg: rgba(var(--site-accent-rgb), 0.3);
+  --color-btn-active-border: var(--site-accent);
+  --color-btn-selected-bg: rgba(var(--site-accent-rgb), 0.2);
+  --color-btn-primary-text: var(--site-deep);
+  --color-btn-primary-bg: var(--site-accent);
+  --color-btn-primary-border: var(--site-accent);
+  --color-btn-primary-shadow: 0 0 transparent;
+  --color-btn-primary-inset-shadow: 0 0 transparent;
+  --color-btn-primary-hover-bg: #f0a03a;
+  --color-btn-primary-hover-border: #f0a03a;
+  --color-btn-primary-selected-bg: var(--site-accent);
+  --color-btn-primary-selected-shadow: 0 0 transparent;
+  --color-btn-primary-disabled-text: rgb(18 18 18 / 60%);
+  --color-btn-primary-disabled-bg: rgba(var(--site-accent-rgb), 0.5);
+  --color-btn-primary-disabled-border: rgba(var(--site-accent-rgb), 0.5);
+  --color-action-list-item-default-hover-bg: rgba(var(--site-accent-rgb), 0.1);
+  --color-segmented-control-bg: var(--site-surface);
+  --color-segmented-control-button-bg: var(--site-deep);
+  --color-segmented-control-button-selected-border: var(--site-accent);
+
+  /* text and surfaces */
+  --color-fg-default: var(--site-fg);
+  --color-fg-muted: var(--site-muted);
+  --color-fg-subtle: var(--site-muted);
+  --color-canvas-default: rgb(30 30 30 / 85%);
+  --color-canvas-overlay: var(--site-surface);
+  --color-canvas-inset: var(--site-deep);
+  --color-canvas-subtle: rgb(18 18 18 / 85%);
+  --color-border-default: var(--site-edge);
+  --color-border-muted: var(--site-edge);
+  --color-neutral-muted: rgb(197 201 197 / 15%);
+  --color-accent-fg: var(--site-accent);
+  --color-accent-emphasis: var(--site-accent);
+  --color-accent-muted: rgba(var(--site-accent-rgb), 0.4);
+  --color-accent-subtle: rgba(var(--site-accent-rgb), 0.12);
+  --color-success-fg: var(--site-green);
+  --color-attention-fg: var(--site-accent);
+  --color-attention-muted: rgba(var(--site-accent-rgb), 0.4);
+  --color-attention-subtle: rgba(var(--site-accent-rgb), 0.15);
+  --color-danger-fg: var(--site-peach);
+  --color-danger-muted: rgb(254 100 11 / 40%);
+  --color-danger-subtle: rgb(254 100 11 / 10%);
+  --color-primer-shadow-inset: 0 0 transparent;
+  --color-scale-gray-7: var(--site-surface);
+  --color-scale-blue-8: rgba(var(--site-accent-rgb), 0.2);
+
+  /*! Extensions from @primer/css/alerts/flash.scss */
+  --color-social-reaction-bg-hover: var(--color-scale-gray-7);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-8);
+
+  /* the site's monospace look; the iframe can't load the site's own font files */
+  font-family: ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
+}
+
+/* rounder, like the site's glass cards and pills */
+main .gsc-comment-box,
+main .gsc-comment > div,
+main .gsc-reply-box {
+  border-radius: 0.5rem;
+}
+
+main .btn,
+main .gsc-direct-reaction-button,
+main .gsc-social-reaction-summary-item {
+  border-radius: 999px;
+}
+
+main a {
+  color: var(--site-accent);
+}
+
+main .pagination-loader-container {
+  background-image: url("https://github.com/images/modules/pulls/progressive-disclosure-line-dark.svg");
+}
+
+main .gsc-loading-image {
+  background-image: url("https://github.githubassets.com/images/mona-loading-dark.gif");
+}

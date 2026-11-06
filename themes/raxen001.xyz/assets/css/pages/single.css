@@ -1,0 +1,122 @@
+/*
+ * a post: one glass sheet over the graph paper (layout/site.css). Borders
+ * follow the heading accents: cover --accent-2, meta --accent-1, toc --accent-5.
+ */
+
+/* on posts only the table of contents sticks, the site header scrolls away */
+body:has(> main > .post) > header {
+  position: static;
+}
+
+.post {
+  display: grid;
+  /* minmax(0, …): a wide image, code block or table can't stretch the column */
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-m);
+  inline-size: min(100% - 2 * var(--space-2xs), 64rem);
+  margin: var(--space-m) auto;
+  padding: var(--space-s);
+  border-radius: var(--radius-l);
+
+  > header {
+    display: grid;
+    gap: var(--space-s);
+
+    img {
+      inline-size: 100%;
+      block-size: auto;
+      max-block-size: 32rem;
+      object-fit: cover;
+      border: var(--border-width) solid var(--surface);
+      border-radius: var(--radius-m);
+    }
+  }
+
+  /* the old site's cat-on-window scene behind the meta block and the toc */
+  :is(.meta, .toc) {
+    background: url("../../images/bg/cat-on-window.gif") center bottom / cover fixed var(--surface);
+  }
+
+  > header .meta {
+    border: 2px solid var(--accent-6);
+    border-radius: var(--radius-m);
+    font-size: clamp(var(--text-sm), 0.8rem + 0.6vw, var(--text-xl));
+    /* keep the labels readable over the animated scene */
+    text-shadow: 0 1px 2px var(--bg);
+  }
+
+  /* table of contents: the only sticky thing on a post */
+  .toc {
+    position: sticky;
+    inset-block-start: var(--space-2xs);
+    z-index: 1;
+    border: 2px solid var(--accent-5);
+    border-radius: var(--radius-m);
+    text-shadow: 0 1px 2px var(--bg);
+
+    summary {
+      padding: var(--space-xs) var(--space-s);
+      color: var(--accent-3);
+      font-family: var(--font-banner);
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    nav {
+      max-block-size: 50dvh;
+      overflow: auto;
+      padding: 0 var(--space-s) var(--space-s);
+      font-family: var(--font-mono);
+    }
+
+    ul {
+      padding-inline-start: 1.25em;
+      list-style: disc;
+    }
+
+    ul ul {
+      list-style: circle;
+    }
+
+    li + li,
+    li > ul {
+      margin-block-start: 0.3em;
+    }
+
+    li::marker {
+      color: var(--accent-1);
+    }
+
+    li li::marker {
+      color: var(--accent-2);
+    }
+
+    a {
+      color: var(--fg);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--accent-3);
+      }
+    }
+  }
+
+  > footer {
+    padding-block-start: var(--space-m);
+    border-block-start: var(--border-width) solid var(--glass-edge);
+  }
+}
+
+/* mobile: the fixed ☰ button sits in the toc's top-right corner */
+@container style(--breakpoint: mobile) {
+  .post .toc summary {
+    padding-inline-end: 3.5rem;
+  }
+}
+
+@container style(--breakpoint: tablet) or style(--breakpoint: desktop) {
+  .post {
+    inline-size: min(100% - 2 * var(--space-m), 64rem);
+    padding: var(--space-l);
+  }
+}

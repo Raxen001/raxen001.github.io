@@ -1,0 +1,44 @@
+{{- $page := .page }}
+{{- $icons := .icons | default false }}
+{{- $hideCurrent := .hideCurrent | default false }}
+{{- with index site.Menus .menuID }}
+
+<ul class="menu{{ with $.class }} {{ . }}{{ end }}">
+  {{- if $.search }}
+  <li>
+    <button type="button" commandfor="search" command="show-modal">
+      {{- partialCached "icon.html" "search" "search" -}}
+      Search
+    </button>
+  </li>
+  {{- end }}
+  {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" . "icons" $icons "hideCurrent" $hideCurrent) }}
+</ul>
+{{- end }}
+
+{{- define "_partials/inline/menu/walk.html" }}
+  {{- $page := .page }}
+  {{- $icons := .icons }}
+  {{- $hideCurrent := .hideCurrent }}
+  {{- range .menuEntries }}
+    {{- $current := "" }}
+    {{- if $page.IsMenuCurrent .Menu . }}
+      {{- $current = "page" }}
+    {{- else if $page.HasMenuCurrent .Menu . }}
+      {{- $current = "true" }}
+    {{- end }}
+    {{- if not (and $hideCurrent (eq $current "page")) }}
+  <li>
+    <a href="{{ .URL }}"{{ with $current }} aria-current="{{ . }}"{{ end }}>
+      {{- if $icons }}{{ with .Params.icon }}{{ partialCached "icon.html" . . }}{{ end }}{{ end -}}
+      {{ .Name -}}
+    </a>
+    {{- with .Children }}
+    <ul>
+      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" . "icons" $icons "hideCurrent" $hideCurrent) }}
+    </ul>
+    {{- end }}
+  </li>
+    {{- end }}
+  {{- end }}
+{{- end }}

@@ -1,0 +1,250 @@
+body>header {
+  font-family: var(--font-banner);
+  text-transform: uppercase;
+  /* the fixed menu button takes no space, so reserve its corner: top offset
+     + button (0.5rem padding × 2 + 1.5rem icon + glass border) + the same gap below */
+  margin-block-end: calc(2 * var(--space-s) + 2.5rem + 2 * var(--border-width));
+
+  /* menu + close buttons: round icon buttons in the same corner, so ☰ turns into ✕ */
+  >button,
+  nav>button {
+    position: fixed;
+    inset-block-start: var(--space-s);
+    inset-inline-end: var(--space-s);
+    z-index: var(--z-header);
+    display: inline-grid;
+    place-items: center;
+    padding: 0.5rem;
+    border-radius: var(--radius-full);
+    color: var(--fg);
+    cursor: pointer;
+
+    /* the menu button is .glass, whose background wins from the utilities
+       layer, so tint it through --glass-bg; the close button uses the plain one */
+    &:hover {
+      --glass-bg: color-mix(in oklch, var(--accent) var(--state-hover), var(--glass-tint));
+      background-color: color-mix(in oklch, var(--accent) var(--state-hover), transparent);
+      color: var(--accent);
+
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .icon {
+      inline-size: 1.5rem;
+      block-size: 1.5rem;
+    }
+  }
+
+  nav>button {
+    position: absolute;
+    border: 0;
+    background: none;
+  }
+
+  /* nav: full-screen panel that drops down from the top */
+  nav {
+    --glass-bg: var(--glass-tint-hi);
+
+    /* undo the UA [popover] box */
+    inset: 0;
+    margin: 0;
+    inline-size: 100%;
+    block-size: 100dvh;
+    max-inline-size: none;
+    max-block-size: none;
+    padding: var(--space-l) var(--space-s);
+
+    /* firefox has no `overlay`, so the panel leaves the top layer before
+       the exit transition ends; keep it above the page while it slides */
+    z-index: var(--z-header);
+    color: var(--fg);
+    translate: 0 -100%;
+
+    &:popover-open {
+      translate: 0 0;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        translate var(--dur-med) var(--ease-standard),
+        display var(--dur-med) allow-discrete,
+        overlay var(--dur-med) allow-discrete;
+    }
+
+    /*
+     * links: a centred two-column grid (icon | label); each li and link is a
+     * subgrid of it, so every icon shares column 1 and stays in one line
+     */
+    >ul {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: center;
+      align-content: center;
+      row-gap: var(--space-2xs);
+      column-gap: var(--space-xs);
+      block-size: 100%;
+    }
+
+    li {
+      display: grid;
+      grid-column: 1 / -1;
+      grid-template-columns: subgrid;
+    }
+
+    li> :is(a, button) {
+      display: grid;
+      grid-column: 1 / -1;
+      grid-template-columns: subgrid;
+      align-items: center;
+      /* <button> centres its text by default; labels start at the column edge */
+      text-align: start;
+      padding: var(--space-s) var(--space-l);
+      border: 0;
+      border-radius: var(--radius-full);
+      background-color: transparent;
+      color: inherit;
+      font: inherit;
+      font-size: var(--text-2xl);
+      text-transform: inherit;
+      text-decoration: none;
+      cursor: pointer;
+
+
+      &:hover {
+        background-color: color-mix(in oklch, var(--accent) var(--state-hover), transparent);
+        color: var(--accent);
+        border-radius: var(--radius-full);
+      }
+
+      &:focus-visible {
+        background-color: color-mix(in oklch, var(--accent) var(--state-focus), transparent);
+        outline: 2px solid var(--accent);
+        outline-offset: -2px;
+      }
+
+      &:active {
+        background-color: color-mix(in oklch, var(--accent) var(--state-pressed), transparent);
+        border-radius: var(--radius-full);
+      }
+
+      &[aria-current="page"] {
+        background-color: color-mix(in oklch, var(--accent-container) var(--state-focus), transparent);
+
+        color: var(--accent);
+        border-radius: var(--radius-full);
+      }
+
+      &[aria-current="true"] {
+        color: var(--accent);
+      }
+
+      .icon {
+        inline-size: 1em;
+        block-size: 1em;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        transition: background-color var(--dur-med) var(--ease-standard);
+      }
+    }
+  }
+}
+
+/* page behind the full-screen panel shouldn't scroll */
+body:has(> header #site-nav:popover-open) {
+  overflow: hidden;
+}
+
+/* drawer entry animation: must stay after the :popover-open rules */
+@starting-style {
+  body>header nav:popover-open {
+    translate: 0 -100%;
+  }
+}
+
+/* tablet + desktop: the nav is always visible as a centred glass bar */
+@container style(--breakpoint: tablet) or style(--breakpoint: desktop) {
+  body>header {
+    /* sticky has to be on header: a sticky nav could only stick inside it */
+    position: sticky;
+    inset-block-start: 0;
+    z-index: var(--z-header);
+    /* padding, not nav margin: a margin collapses through header and the
+       stuck bar would touch the top of the screen */
+    padding-block-start: var(--space-s);
+    margin-block-end: 0;
+
+    >button,
+    nav>button {
+      display: none;
+    }
+
+    nav {
+      --glass-bg: var(--glass-tint);
+
+      /* show the closed [popover] and drop the full-screen panel */
+      display: block;
+      position: static;
+      translate: none;
+      transition: none;
+      inline-size: min(100% - 2 * var(--space-l), 63rem);
+      block-size: 3rem;
+      margin: 0 auto;
+      padding: 0;
+      border-radius: var(--radius-full);
+
+      /* one row, every link an equal share of the bar, no gaps between */
+      >ul {
+        grid-template-columns: none;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        justify-content: stretch;
+        align-content: stretch;
+        gap: 0;
+      }
+
+      li {
+        display: flex;
+        grid-column: auto;
+      }
+
+      /* highlights fill the whole cell: square in the middle,
+         rounded only where they meet the bar's own rounded ends */
+      li> :is(a, button) {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-2xs);
+        inline-size: 100%;
+        padding: 0 var(--space-xs);
+        border-radius: 0;
+        font-size: var(--text-base);
+        white-space: nowrap;
+      }
+
+      li:first-child> :is(a, button) {
+        border-start-start-radius: var(--radius-full);
+        border-end-start-radius: var(--radius-full);
+      }
+
+      li:last-child> :is(a, button) {
+        border-start-end-radius: var(--radius-full);
+        border-end-end-radius: var(--radius-full);
+      }
+    }
+  }
+}
+
+/* tablet: icon + label doesn't fit the bar at 40rem, so labels only */
+@container style(--breakpoint: tablet) {
+  body>header nav li> :is(a, button) {
+    padding-inline: 0;
+
+    .icon {
+      display: none;
+    }
+  }
+}

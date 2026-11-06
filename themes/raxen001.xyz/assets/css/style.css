@@ -1,0 +1,156 @@
+:root {
+  color-scheme: dark;
+
+  /* palette */
+  --heavy-black: #000;
+  --light-black: #1E1E1E;
+  --dragon-white: #c5c9c5;
+  --stay-the-night: #2f4860;
+  --endless-river: #5276aa;
+  --royal-fig: #7d5063;
+  --oceanic-noir: #102538;
+  --wine-tasting: #4e2834;
+  --underwater-world: #697d7b;
+  --stone-age-queen: #7f3729;
+  --queen-of-trees: #153827;
+  --charcoal: #313b36;
+  /* heading colours, from the old site */
+  --peach: #fe640b;
+  --base: #eff1f5;
+  --yellow: #df8e1d;
+  --green: #40a02b;
+  --sky: #04a5e5;
+  --teal: #179299;
+  --pink: #ea76cb;
+
+  /* roles */
+  --bg: var(--heavy-black);
+  --surface: var(--light-black);
+  --fg: var(--dragon-white);
+  --muted: var(--underwater-world);
+  --accent: var(--yellow);
+  --border: var(--queen-of-trees);
+
+  /* h1 - h6 */
+  --accent-1: var(--peach);
+  --accent-2: var(--yellow);
+  --accent-3: var(--teal);
+  --accent-4: var(--sky);
+  --accent-5: var(--green);
+  --accent-6: var(--royal-fig);
+
+  /* fonts */
+  --font-body: "Space Mono", ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
+  --font-mono: "Fira Code", ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
+  --font-display: "VT323", ui-monospace, monospace;
+  --font-banner: "Color Basic", ui-monospace, monospace;
+
+  /* font sizes: tailwind's scale (rem, so they follow the root size) */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  /* spacing */
+  --space-2xs: clamp(0.35rem, 0.4783rem + 0.1087vw, 0.5625rem);
+  --space-xs: clamp(0.75rem, 0.7174rem + 0.163vw, 0.8438rem);
+  --space-s: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+  --space-m: clamp(1.5rem, 1.4348rem + 0.3261vw, 1.6875rem);
+  --space-l: clamp(2rem, 1.913rem + 0.4348vw, 2.25rem);
+
+  /* radius */
+  --radius-s: 0.25rem;
+  --radius-m: 0.5rem;
+  --radius-l: 1rem;
+  --radius-full: calc(infinity * 1px);
+  --border-width: 0.0625rem;
+  --border-width-hover: 3px;
+
+  /* motion */
+  --dur-med: 200ms;
+
+  /* glass */
+  --blur: 1rem;
+
+  --glass-tint: color-mix(in oklch, var(--surface) 70%, transparent);
+  --glass-tint-hi: color-mix(in oklch, var(--surface) 85%, transparent);
+  --glass-edge: color-mix(in oklch, var(--fg) 10%, transparent);
+  --glass-highlight: color-mix(in oklch, white 10%, transparent);
+  --glass-layer: color-mix(in oklch, var(--fg) 6%, transparent);
+  /* darker layer on glass, for text that needs contrast */
+  --glass-dark: color-mix(in oklch, var(--bg) 54%, transparent);
+  --glass-blur: blur(var(--blur)) saturate(140%);
+
+  /* material state layers */
+  --state-hover: 10%;
+  --state-focus: 20%;
+  --state-pressed: 30%;
+  --accent-container: color-mix(in oklch, var(--accent) 33%, transparent);
+
+  --ease-standard: cubic-bezier(.2, 0, 0, 1);
+  --z-header: 10;
+
+  /*
+   * breakpoints: the only place widths live; @media can't read var(),
+   * so everything else matches the name with @container style(--breakpoint: …)
+   */
+  --breakpoint: mobile;
+
+  @media (width >= 40rem) {
+    --breakpoint: tablet;
+  }
+
+  @media (width >= 65rem) {
+    --breakpoint: desktop;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--fg);
+  /* same as the old site: cover the page, repeat only downwards */
+  background: url("../images/bg/bg.webp") center / cover no-repeat repeat var(--surface);
+}
+
+h1 {
+  color: var(--accent-1);
+}
+
+h2 {
+  color: var(--accent-2);
+}
+
+h3 {
+  color: var(--accent-3);
+}
+
+h4 {
+  color: var(--accent-4);
+}
+
+h5 {
+  color: var(--accent-5);
+}
+
+h6 {
+  color: var(--accent-6);
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--font-mono);
+}

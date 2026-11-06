@@ -1,0 +1,57 @@
+body:has(> main > .list) {
+  background: url("../../images/bg/girl-smoking.webp") left bottom / cover no-repeat fixed var(--bg);
+}
+
+.list {
+  inline-size: min(100% - 2 * var(--space-s), 40rem);
+  margin-block: var(--space-m);
+}
+
+.card {
+  display: grid;
+  min-block-size: 30rem;
+  max-block-size: 40rem;
+  border-radius: var(--radius-l);
+
+  &:hover {
+    --glass-edge: var(--accent-4);
+  }
+
+  > a {
+    grid-template-rows: auto auto 1fr;
+    overflow: hidden;
+    padding: var(--space-s);
+    color: inherit;
+    font-family: var(--font-mono);
+    font-size: clamp(0.95rem, 0.6496rem + 0.9615vw, 1.225rem);
+    line-height: 1.6;
+    text-decoration: none;
+  }
+
+  img {
+    inline-size: 100%;
+    block-size: clamp(10rem, 30vw, 14rem);
+    object-fit: cover;
+    border-radius: var(--radius-m);
+  }
+
+  :is(.meta, p) {
+    border-radius: var(--radius-m);
+    background-color: var(--glass-dark);
+  }
+
+  :is(h2, p) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  h2 {
+    -webkit-line-clamp: 2;
+  }
+
+  p {
+    -webkit-line-clamp: 4;
+    padding: 1rem;
+  }
+}

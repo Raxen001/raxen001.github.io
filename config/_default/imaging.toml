@@ -1,0 +1,7 @@
+bgColor = "#000"
+
+# random option from https://gohugo.io/configuration/imaging/#resamplefilter
+resampleFilter = "mitchellNetravali"
+
+[meta]
+fields = ["Orientation"]

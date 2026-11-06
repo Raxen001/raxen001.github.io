@@ -1,0 +1,15 @@
+[highlight]
+codeFences = true
+guessSyntax = false
+noClasses = false
+lineNos = true
+lineNumbersInTable = true
+tabWidth = 4
+
+[tableOfContents]
+startLevel = 2
+endLevel = 3
+ordered = false
+
+[goldmark.parser]
+wrapStandAloneImageWithinParagraph = false

@@ -1,12 +1,8 @@
----
-title: "Parallax With Only Css"
-date: 2025-01-02T12:52:06+05:30
-author: "Raxen"
-draft: false
-tags: ['html', 'css']
-categories: ['programming']
-customcss: ""
----
++++
+title = "Parallax With Only Css"
+date = 2025-01-02T12:52:06+05:30
+draft = false
++++
 
 # Parallax with only CSS
 

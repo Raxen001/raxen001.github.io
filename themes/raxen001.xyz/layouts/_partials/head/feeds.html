@@ -1,0 +1,14 @@
+{{- $title := site.Title }}
+{{- $feed := .OutputFormats.Get "rss" }}
+{{- if and $feed (not .IsHome) }}
+  {{- $title = printf "%s | %s" .Title site.Title }}
+{{- end }}
+
+{{- with or $feed (site.Home.OutputFormats.Get "rss") }}
+  <link
+    rel="{{ .Rel }}"
+    type="{{ .MediaType.Type }}"
+    href="{{ .Permalink }}"
+    title="{{ $title }}"
+  />
+{{- end }}

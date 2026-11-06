@@ -1,0 +1,32 @@
+{{/* removed header and footer by emptying it check baseof.html*/}}
+{{ define "header" }}{{ "" }}{{ end }}
+{{ define "footer" }}{{ "" }}{{ end }}
+
+{{ define "main" }}
+  <div class="home glass grid">
+    <figure class="grid place-center">
+      {{- with resources.Get "images/cowboy.webp" }}
+        <img
+          src="{{ .RelPermalink }}"
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+          alt="Spike Spiegel"
+          fetchpriority="high"
+        />
+      {{- end }}
+    </figure>
+
+    <nav aria-label="Main">
+      {{- partial "menu.html" (dict "menuID" "main" "page" . "icons" true "search" true "hideCurrent" true "class" "list-none grid") }}
+    </nav>
+
+    <header class="grid place-center">
+      <h1>{{ site.Params.author.handle }}</h1>
+    </header>
+
+    <article>
+      {{ .Content }}
+      {{- partialCached "analytics-badge.html" . }}
+    </article>
+  </div>
+{{ end }}
