@@ -31,22 +31,30 @@ body:has(> main > :is(.gallery, .post)) {
 }
 
 /*
- * star streams behind the grid: uneven spokes from three spacings that don't
- * line up. Hidden until the warp fades them in.
+ * shooting stars behind the grid: short streaks whose tails fade towards the
+ * centre, drawn once into two SVG masks (different stars in each). Hidden
+ * unless the warp below runs.
  */
-html:has(> body > main > :is(.gallery, .post))::before {
-  content: "";
-  position: fixed;
-  inset: -25%;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0;
-  background:
-    repeating-conic-gradient(from 3deg, var(--streak-1) 0 0.12deg, transparent 0.12deg 7deg),
-    repeating-conic-gradient(from 1deg, var(--streak-2) 0 0.08deg, transparent 0.08deg 11deg),
-    repeating-conic-gradient(from 5deg, var(--streak-3) 0 0.1deg, transparent 0.1deg 13deg);
-  /* empty middle (the point we fly towards), streams only towards the edges */
-  mask: radial-gradient(circle closest-side, transparent 18%, #000a 55%, #000 100%);
+html:has(> body > main > :is(.gallery, .post)) {
+  &::before,
+  &::after {
+    content: "";
+    position: fixed;
+    inset: -25%;
+    z-index: -1;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  &::before {
+    background-color: var(--streak-1);
+    mask: url("../../images/stars-a.svg") center / cover no-repeat;
+  }
+
+  &::after {
+    background-color: var(--streak-2);
+    mask: url("../../images/stars-b.svg") center / cover no-repeat;
+  }
 }
 
 /*
@@ -57,13 +65,26 @@ html:has(> body > main > :is(.gallery, .post))::before {
  *
  * - parallax depth: the heavy grid is "nearer", rushes past faster and fades
  *   first; the fine grid follows more slowly
- * - the streams fade in, stretch and spin slowly the deeper you scroll
+ * - past the warp point the shooting stars grow out of the middle of the
+ *   screen, then stream outwards on a loop and spin slowly as you scroll
+ *
+ * kept gentle on purpose (WCAG 2.3.1, 2.3.3):
+ * - everything that follows the scroll is continuous and reversible: nothing
+ *   switches on or off at a point, so scrolling never makes anything pop
+ * - the only thing on a clock is the star loop: dim grey on black, fading in
+ *   and out smoothly, slower than one cycle every 2s, so nothing flashes
+ * - jump links scroll smoothly instead of teleporting the warp
+ * - off entirely for reduced motion, more contrast, or forced colours: the
+ *   page keeps the plain static grid and no stars
  */
 @supports (animation-timeline: scroll()) {
-  @media (prefers-reduced-motion: no-preference) {
+  @media (prefers-reduced-motion: no-preference) and (not (prefers-contrast: more)) and (not (forced-colors: active)) {
+    html:has(> body > main > :is(.gallery, .post)) {
+      scroll-behavior: smooth;
+    }
+
     body:has(> main > :is(.gallery, .post))::before,
-    body:has(> main > :is(.gallery, .post))::after,
-    html:has(> body > main > :is(.gallery, .post))::before {
+    body:has(> main > :is(.gallery, .post))::after {
       will-change: transform, opacity;
       animation: linear both;
       animation-timeline: scroll(root block);
@@ -77,8 +98,29 @@ html:has(> body > main > :is(.gallery, .post))::before {
       animation-name: warp-near;
     }
 
-    html:has(> body > main > :is(.gallery, .post))::before {
-      animation-name: warp-streams;
+    /*
+     * the stars loop on the clock and spin with the scroll; warp-reveal grows
+     * them out of the middle between 15% and 30% of the page (the warp point),
+     * in step with the scroll. Each animation has its own property (transform,
+     * opacity, rotate, scale) so they add up instead of fighting. The two
+     * layers loop at different speeds so the stars never repeat in step.
+     */
+    html:has(> body > main > :is(.gallery, .post)) {
+      &::before,
+      &::after {
+        visibility: visible;
+        will-change: transform, opacity, rotate, scale;
+        animation:
+          shooting-stars 2.4s ease-in-out infinite,
+          warp-spin linear both,
+          warp-reveal ease-out both;
+        animation-timeline: auto, scroll(root block), scroll(root block);
+        animation-range: normal, normal, 15% 30%;
+      }
+
+      &::after {
+        animation-duration: 3.1s, auto, auto;
+      }
     }
   }
 }
@@ -96,8 +138,22 @@ html:has(> body > main > :is(.gallery, .post))::before {
   100% { scale: 3; opacity: 0; }
 }
 
-@keyframes warp-streams {
-  0% { opacity: 0; scale: 0.6; rotate: 0deg; }
-  15% { opacity: 0.25; }
-  100% { opacity: 0.6; scale: 1.3; rotate: 12deg; }
+/* scale 0 is nothing on screen, so before the range the stars simply aren't there */
+@keyframes warp-reveal {
+  from { scale: 0; }
+  to { scale: 1; }
+}
+
+/* stars come out of the empty middle and fade as they pass the edge; never
+   fully bright and invisible at both ends, so the loop restarts without a jump */
+@keyframes shooting-stars {
+  0% { transform: scale(0.5); opacity: 0; }
+  40% { opacity: 0.8; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* rotate is its own property, so it adds to the looping transform above */
+@keyframes warp-spin {
+  from { rotate: 0deg; }
+  to { rotate: 12deg; }
 }
