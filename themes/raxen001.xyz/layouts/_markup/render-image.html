@@ -13,7 +13,7 @@
   {{- if reflect.IsImageResourceProcessable . }}
     {{- $id := printf "img-%d" $.Ordinal }}
     {{- $caption := or $.Title $.PlainText (path.BaseName .Name) }}
-    {{- $html = printf `<button class="zoom" type="button" popovertarget="%s"><span class="hidden">Open full size: %s</span>%s</button>%s` $id ($caption | htmlEscape) $html (partial "lightbox.html" (dict "image" . "id" $id "caption" $caption)) }}
+    {{- $html = printf `<button class="zoom" type="button" popovertarget="%s"><span class="hidden" data-pagefind-ignore>Open full size: %s</span>%s</button>%s` $id ($caption | htmlEscape) $html (partial "lightbox.html" (dict "image" . "id" $id "caption" $caption)) }}
   {{- end }}
 {{- else }}
   {{- $html = printf `<img src=%q alt=%q loading="lazy" decoding="async">` .Destination .PlainText }}

@@ -7,7 +7,9 @@
   @context {string} id Instead of href: opens the image full size in a popover with this id.
 */}}
 {{- $span := partial "gallery/span.html" .image }}
-<li class="tile{{ with $span }} {{ . }}{{ end }}">
+{{- /* built here, not in the attribute: prettier drops the space there */}}
+{{- $class := trim (printf "tile %s" $span) " " }}
+<li class="{{ $class }}">
   {{- $tile := partial "image.html" (dict "image" .image "widths" (slice 480 960) "sizes" "(width >= 40rem) 30rem, 100vw") }}
   {{- with .id }}
     <button class="glass" type="button" popovertarget="{{ . }}">

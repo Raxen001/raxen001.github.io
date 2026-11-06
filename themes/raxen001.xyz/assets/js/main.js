@@ -17,13 +17,19 @@ if (dialog) {
   let active = -1;
   let query = 0;
 
-  // load the index on first open only
+  // load the index on first open only. init must finish before the first
+  // search, or that search can come back empty; a failed load can retry.
   const load = () =>
-    (pagefind ??= import(`${dialog.dataset.pagefind}pagefind.js`).then(async (pf) => {
-      await pf.options({ excerptLength: 16 });
-      pf.init();
-      return pf;
-    }));
+    (pagefind ??= import(`${dialog.dataset.pagefind}pagefind.js`)
+      .then(async (pf) => {
+        await pf.options({ excerptLength: 16 });
+        await pf.init();
+        return pf;
+      })
+      .catch((error) => {
+        pagefind = undefined;
+        throw error;
+      }));
 
   const open = () => {
     if (!dialog.open) dialog.showModal();
@@ -96,7 +102,13 @@ if (dialog) {
     const term = input.value.trim();
     if (!term) return render([], 0);
 
-    const pf = await load();
+    let pf;
+    try {
+      pf = await load();
+    } catch {
+      status.textContent = "Search isn't available right now.";
+      return;
+    }
     const search = await pf.debouncedSearch(term, {}, 120);
     if (search === null || id !== query) return; // a newer search took over
 
@@ -147,7 +159,8 @@ if (dialog) {
 
   // ⌘K / Ctrl+K anywhere, or "/" when not already typing
   document.addEventListener("keydown", (event) => {
-    const typing = event.target.closest("input, textarea, select, [contenteditable]");
+    const typing = event.target instanceof Element &&
+      event.target.closest("input, textarea, select, [contenteditable]");
     if (((event.metaKey || event.ctrlKey) && event.key === "k") || (event.key === "/" && !typing)) {
       event.preventDefault();
       open();

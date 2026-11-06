@@ -10,13 +10,31 @@ main {
   flex: 1;
 }
 
-/* the old site's graph paper (gallery, posts): a big grid every --cell, a fine one at a fifth of it */
+/*
+ * the old site's graph paper (gallery, posts): fine lines every 20px, heavier
+ * ones every 100px. SVG tiles used as masks on two fixed layers, so the colours
+ * come from --grid-minor / --grid-major and nothing repaints while scrolling
+ * (the conic-gradient version cost ~70ms a frame when scrolling a post).
+ */
 body:has(> main > :is(.gallery, .post)) {
-  --cell: 100px;
-  --line: #0000 90deg, var(--charcoal) 0;
+  background: var(--bg);
 
-  background:
-    conic-gradient(from 90deg at 2px 2px, var(--line)) 0 0 / var(--cell) var(--cell),
-    conic-gradient(from 90deg at 1px 1px, var(--line)) 0 0 / calc(var(--cell) / 5) calc(var(--cell) / 5),
-    var(--bg);
+  &::before,
+  &::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &::before {
+    background-color: var(--grid-minor);
+    mask: url("../../images/grid-minor.svg") 0 0 / 20px 20px;
+  }
+
+  &::after {
+    background-color: var(--grid-major);
+    mask: url("../../images/grid-major.svg") 0 0 / 100px 100px;
+  }
 }

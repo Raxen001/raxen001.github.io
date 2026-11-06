@@ -2,15 +2,21 @@
 {{- $widths := .widths | default (slice 480 960 1440) }}
 {{- $sizes := .sizes | default "100vw" }}
 {{- $priority := .priority | default false }}
+{{- /* loading / fetchpriority can also be set directly, e.g. eager + low */}}
 {{- $attrs := dict
   "alt" (.alt | default "")
   "class" .class
-  "loading" (cond $priority "eager" "lazy")
-  "fetchpriority" (cond $priority "high" "")
+  "loading" (.loading | default (cond $priority "eager" "lazy"))
+  "fetchpriority" (.fetchpriority | default (cond $priority "high" ""))
   "decoding" "async"
 }}
 
-{{- if and $img (reflect.IsImageResourceProcessable $img) (ne $img.MediaType.SubType "gif") }}
+{{- /* resizing keeps only the first frame, so animated gif / webp are served as-is */}}
+{{- $animated := false }}
+{{- with $img }}
+  {{- $animated = or (eq .MediaType.SubType "gif") (and (eq .MediaType.SubType "webp") (strings.Contains .Content "ANIM")) }}
+{{- end }}
+{{- if and $img (reflect.IsImageResourceProcessable $img) (not $animated) }}
   {{- $img = $img.Filter images.AutoOrient }}
   {{- $largest := index (sort $widths) (sub (len $widths) 1) }}
   {{- $targets := slice }}

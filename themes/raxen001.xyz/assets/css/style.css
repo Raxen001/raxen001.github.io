@@ -31,6 +31,11 @@
   --accent: var(--yellow);
   --border: var(--queen-of-trees);
 
+  /* background grid (gallery, posts) */
+  /* on the pure black --bg: lines only just lighter than black */
+  --grid-minor: #0c0c0c;
+  --grid-major: #161616;
+
   /* h1 - h6 */
   --accent-1: var(--peach);
   --accent-2: var(--yellow);

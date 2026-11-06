@@ -8,7 +8,9 @@
 */}}
 <span class="lightbox glass" id="{{ .id }}" popover data-pagefind-ignore>
   <span class="lightbox__body">
-    {{- partial "image.html" (dict "image" .image "alt" .caption "widths" (slice 960 1440 1920) "sizes" "(width >= 65rem) 80vw, 100vw") }}
+    {{- /* fetched up front at low priority (after the visible page), so it's
+      ready when the popover opens; lazy would wait for the click */}}
+    {{- partial "image.html" (dict "image" .image "alt" .caption "widths" (slice 960 1440 1920) "sizes" "(width >= 65rem) 80vw, 100vw" "loading" "eager" "fetchpriority" "low") }}
     <span class="lightbox__info">
       <span class="lightbox__title">{{ .caption }}</span>
       <span class="pills">
