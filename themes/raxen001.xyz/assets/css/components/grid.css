@@ -1,12 +1,3 @@
-/*
- * the old site's graph paper (gallery, posts): fine lines every 20px, heavier
- * ones every 100px. SVG tiles used as masks on two fixed layers, so the colours
- * come from --grid-minor / --grid-major and nothing repaints while scrolling
- * (the conic-gradient version cost ~70ms a frame when scrolling a post).
- *
- * the tiles are centred on the viewport so the warp below zooms out of the
- * middle of the screen and the fine lines stay on the heavy ones.
- */
 body:has(> main > :is(.gallery, .post)) {
   background: var(--bg);
 
