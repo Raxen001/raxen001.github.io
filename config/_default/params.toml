@@ -1,0 +1,94 @@
+googleVerify = "kr1eNY9d-jnw2rqdGnrVPmvFmiMejl4rM_dwhRNjFBQ"
+
+[giscus]
+repo = "Raxen001/website-comments"
+repoId = "R_kgDOMbZkuQ"
+category = "Announcements"
+categoryId = "DIC_kwDOMbZkuc4ChMcD"
+theme = "noborder_gray"
+
+[author]
+name = "Raxen"
+handle = "raxen001"
+email = "raxen001@tutamail.com"
+
+[analytics]
+simpleAnalytics = true
+
+[[social]]
+name = "linkedin"
+url = "https://linkedin.com/in/rithesh-s-05617b22a"
+footer = true
+
+[[social]]
+name = "github"
+url = "https://github.com/raxen001"
+footer = true
+
+[[social]]
+name = "email"
+url = "mailto:raxen001@tutamail.com"
+footer = true
+
+[[social]]
+name = "link"
+url = "https://raxen001.xyz"
+
+[[social]]
+name = "discord"
+url = "https://discord.gg/2Dw7bK3Uba"
+
+[[social]]
+name = "steam"
+url = "https://steamcommunity.com/id/raxen001/"
+
+[[social]]
+name = "youtube"
+url = "https://youtube.com/@raxen001"
+
+[[social]]
+name = "pinterest"
+url = "https://pinterest.com/RaxenGamer001"
+
+[[social]]
+name = "reddit"
+url = "https://reddit.com/user/raxengamer001"
+
+[[social]]
+name = "lastfm"
+url = "https://last.fm/user/raxen001"
+
+[[social]]
+name = "listenbrainz"
+url = "https://listenbrainz.org/user/raxen001"
+
+[[social]]
+name = "instagram"
+url = "https://instagram.com/raxen001"
+
+[[social]]
+name = "snapchat"
+url = "https://snapchat.com/add/raxen001"
+
+[[social]]
+name = "anilist"
+url = "https://anilist.co/user/raxen001/"
+
+[[social]]
+name = "resume"
+url = "/resume.pdf"
+
+[[madeWith]]
+name = "Firefox"
+icon = "firefox"
+url = "https://www.firefox.com"
+
+[[madeWith]]
+name = "Neovim"
+icon = "neovim"
+url = "https://neovim.io/"
+
+[[madeWith]]
+name = "Fedora"
+icon = "fedora"
+url = "https://fedoraproject.org/"

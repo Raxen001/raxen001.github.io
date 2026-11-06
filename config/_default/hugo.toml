@@ -1,0 +1,13 @@
+baseURL = "https://raxen001.xyz/"
+locale = "en-gb"
+title = "Raxen001's abode."
+theme = "raxen001.xyz"
+
+[taxonomies]
+category = "categories"
+
+[frontmatter]
+lastmod = ["lastmod", "date"]
+
+[pagination]
+pagerSize = 5

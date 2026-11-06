@@ -1,0 +1,45 @@
+<footer class="glass">
+  <div class="container flex flex-wrap items-center justify-between gap-m">
+    <span class="flex flex-col items-center gap-2xs">
+      <p>{{ site.Params.author.name }}</p>
+      <p>&copy; {{ now.Year }}</p>
+    </span>
+
+    {{- with where site.Params.social "footer" true }}
+      <nav aria-label="Social" class="flex flex-col items-center gap-2xs">
+        <span>
+          <a href="{{ "contact/" | relURL }}">Socials</a>
+        </span>
+        <ul class="flex flex-wrap list-none gap-2xs">
+          {{- range . }}
+            <li>
+              {{ partial "footer/icon-link.html" (dict "url" .url "icon" (or .icon .name) "label" .name "rel" "me") }}
+            </li>
+          {{- end }}
+        </ul>
+      </nav>
+    {{- end }}
+
+    {{- with site.Params.madeWith }}
+      <div class="flex flex-col items-center gap-2xs">
+        <span id="made-with">Made using</span>
+        <ul
+          class="flex flex-wrap list-none gap-2xs"
+          aria-labelledby="made-with"
+        >
+          {{- range . }}
+            <li>
+              {{ partial "footer/icon-link.html" (dict "url" .url "icon" .icon "label" .name) }}
+            </li>
+          {{- end }}
+        </ul>
+      </div>
+    {{- end }}
+
+
+    <span>
+      <p>Analytics by</p>
+      {{- partialCached "analytics-badge.html" . }}
+    </span>
+  </div>
+</footer>

@@ -1,0 +1,23 @@
+{{- /*
+  Picks a tile shape for an image at build time, the one that crops it least.
+  On square cells a 1x1 tile is ratio 1 and a 2x1 tile ratio 2; they crop
+  equally at the geometric mean √2, so ≥ √2 spans 2 columns, ≤ 1/√2 2 rows.
+  Near-square images with ≥ 1000px a side (sharp at 2x2 on hi-dpi) get 2x2.
+
+  @context {resource} The image.
+  @returns {string} "tile--wide", "tile--tall", "tile--big" or "".
+*/}}
+{{- $span := "" }}
+{{- if reflect.IsImageResourceProcessable . }}
+  {{- $img := .Filter images.AutoOrient }}
+  {{- $ratio := div (float $img.Width) $img.Height }}
+  {{- $sqrt2 := math.Sqrt 2 }}
+  {{- if ge $ratio $sqrt2 }}
+    {{- $span = "tile--wide" }}
+  {{- else if le $ratio (div 1 $sqrt2) }}
+    {{- $span = "tile--tall" }}
+  {{- else if and (gt $ratio 0.84) (lt $ratio 1.19) (ge (math.Min $img.Width $img.Height) 1000) }}
+    {{- $span = "tile--big" }}
+  {{- end }}
+{{- end }}
+{{- return $span }}

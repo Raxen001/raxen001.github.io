@@ -1,0 +1,5 @@
+{{- with resources.Get (printf "icons/%s.svg" .) }}
+  {{- replaceRE `^\s*<svg\b` `<svg class="icon" aria-hidden="true" focusable="false"` .Content 1 | safeHTML }}
+{{- else }}
+  {{- warnf "icon.html: assets/icons/%s.svg not found" . }}
+{{- end }}

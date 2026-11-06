@@ -1,0 +1,27 @@
+{{ define "main" }}
+  <article class="post glass" data-pagefind-body data-pagefind-meta="title:{{ .Title }}">
+    <header data-pagefind-ignore>
+      {{- with partial "helper/get_cover.html" . }}
+        {{- partial "image.html" (dict "image" . "priority" true "widths" (slice 480 960 1440) "sizes" "(width >= 52rem) 48rem, 100vw") }}
+      {{- end }}
+      {{- partial "meta.html" (dict "page" . "terms" true) }}
+    </header>
+
+    {{- if in .TableOfContents "<li>" }}
+      <details class="toc" data-pagefind-ignore>
+        <summary>Table of contents</summary>
+        {{ replace .TableOfContents `<nav id="TableOfContents">` `<nav id="TableOfContents" aria-label="Table of contents">` | safeHTML }}
+      </details>
+    {{- end }}
+
+    <div class="prose">
+      {{ .Content }}
+    </div>
+
+    {{- if ne .Params.comments false }}
+      <footer data-pagefind-ignore>
+        {{- partial "comments.html" . }}
+      </footer>
+    {{- end }}
+  </article>
+{{ end }}

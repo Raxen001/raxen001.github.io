@@ -1,5 +1,0 @@
-{{- $icon_name := .path }}
-{{ $icon := path.Join "/static" "img" "icons" (printf "%s.svg" .path)  }}
-{{ if $icon }}
-    {{ readFile $icon | safeHTML }}
-{{ end }}

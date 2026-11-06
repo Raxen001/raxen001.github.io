@@ -1,0 +1,16 @@
+{{- $cover := "" }}
+{{- with .Params.cover }}
+  {{- $cover = $.Resources.Get . }}
+{{- end }}
+{{- if not $cover }}
+  {{- $cover = .Resources.GetMatch "{cover,thumbnail}.*" }}
+{{- end }}
+{{- if not $cover }}
+  {{- with .Resources.ByType "image" }}
+    {{- $cover = index . 0 }}
+  {{- end }}
+{{- end }}
+{{- if not $cover }}
+  {{- $cover = resources.Get "images/default-cover.png" }}
+{{- end }}
+{{- return $cover }}

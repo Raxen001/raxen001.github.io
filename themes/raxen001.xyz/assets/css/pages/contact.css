@@ -1,0 +1,67 @@
+body:has(> main > .contact) {
+  background: url("../../images/bg/cowboy-ship.gif") top / cover no-repeat var(--bg);
+}
+
+.contact {
+  inline-size: min(100%, 63rem);
+  margin-block: var(--space-m);
+  margin-bottom: 10svh;
+  padding: 1.3rem;
+  background-color: var(--glass-dark);
+  font-family: var(--font-mono);
+
+  ul {
+    grid-template-columns: repeat(auto-fit, minmax(min(8rem, 100%), 1fr));
+    gap: 3rem;
+  }
+
+  a {
+    --glass-bg: var(--glass-dark);
+    --glass-blur: blur(2rem);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    aspect-ratio: 1;
+    padding: 2rem;
+    border-radius: var(--radius-s);
+    color: var(--fg);
+    text-decoration: none;
+
+    &:hover {
+      transform: scale(1.05) translate(4%, -3%);
+      border-radius: var(--radius-m);
+      color: var(--base);
+
+      .icon {
+        transform: scale(1.07) translate(-3%, -5%);
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .icon {
+      inline-size: 100%;
+      block-size: auto;
+      aspect-ratio: 1;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .contact a {
+    transition:
+      transform 250ms linear,
+      border-radius 250ms linear,
+      color 250ms linear;
+
+    .icon {
+      transition: transform 200ms linear;
+    }
+  }
+}

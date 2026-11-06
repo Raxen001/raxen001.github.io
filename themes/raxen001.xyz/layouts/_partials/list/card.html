@@ -1,0 +1,9 @@
+<article class="card glass">
+  <a href="{{ .RelPermalink }}" class="grid gap-s">
+    {{- with partial "helper/get_cover.html" . }}
+      {{- partial "image.html" (dict "image" . "widths" (slice 480 960) "sizes" "(width >= 50rem) 50rem, 100vw") }}
+    {{- end }}
+    {{- partial "meta.html" (dict "page" . "level" 2) }}
+    <p>{{ .Summary | plainify | truncate 180 }}</p>
+  </a>
+</article>

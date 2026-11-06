@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <div class="contact container" data-pagefind-body>
+    <h1 class="hidden">{{ .Title }}</h1>
+    <ul class="list-none grid">
+      {{- range site.Params.social }}
+        <li>
+          <a class="glass" href="{{ .url }}" rel="me">
+            {{- partialCached "icon.html" (or .icon .name) (or .icon .name) }}
+            <span>{{ .name }}</span>
+          </a>
+        </li>
+      {{- end }}
+    </ul>
+  </div>
+{{ end }}

@@ -1,0 +1,34 @@
+{{- $current := .Paginator.PageNumber }}
+{{- with .Paginator }}
+  {{- if gt .TotalPages 1 }}
+    <nav aria-label="Pagination">
+      <ul class="pills flex flex-wrap justify-center gap-2xs list-none">
+        {{- with .Prev }}
+          <li>
+            <a href="{{ .URL }}" rel="prev">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="hidden">Previous page</span>
+            </a>
+          </li>
+        {{- end }}
+        {{- range .Pagers }}
+          <li>
+            <a
+              href="{{ .URL }}"
+              {{ if eq .PageNumber $current }}aria-current="page"{{ end }}
+              >{{ .PageNumber }}</a
+            >
+          </li>
+        {{- end }}
+        {{- with .Next }}
+          <li>
+            <a href="{{ .URL }}" rel="next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="hidden">Next page</span>
+            </a>
+          </li>
+        {{- end }}
+      </ul>
+    </nav>
+  {{- end }}
+{{- end }}

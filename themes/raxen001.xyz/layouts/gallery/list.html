@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <div class="gallery container">
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
+
+    <ul class="tiles list-none grid">
+      {{- range .Pages }}
+        {{- $album := . }}
+        {{- with partial "helper/get_cover.html" . }}
+          {{- partial "gallery/tile.html" (dict "image" . "href" $album.RelPermalink "caption" $album.Title) }}
+        {{- end }}
+      {{- end }}
+    </ul>
+  </div>
+{{ end }}

@@ -1,9 +1,5 @@
----
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-author: "Raxen"
-draft: true
-tags: []
-categories: []
-customcss: ""
----
++++
+date = '{{ .Date }}'
+draft = true
+title = '{{ replace .File.ContentBaseName "-" " " | title }}'
++++

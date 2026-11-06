@@ -1,7 +1,14 @@
----
-title: "~/"
-draft: false
----
++++
+title = "~/"
+draft = false
+
+[cascade.params]
+  comments = true
+
+[cascade.build]
+  publishResources = false
++++
+
 # Hello World,
 
 ## I am Raxen

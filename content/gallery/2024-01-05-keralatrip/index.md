@@ -1,6 +1,6 @@
----
-date: 2024-12-15T19:26:27+05:30
-title: "Kerala wayanad trip"
-draft: false
----
++++
+title = "Kerala wayanad trip"
+date = 2024-12-15T19:26:27+05:30
+draft = false
++++
 

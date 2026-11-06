@@ -1,0 +1,12 @@
+{{- $url_destination := urls.Parse .Destination }}
+{{- $href := .Destination }}
+
+{{- if not $url_destination.IsAbs }}
+  {{- $path := strings.TrimPrefix "./" $url_destination.Path }}
+  {{- with or (.PageInner.Resources.Get $path) (and $path (.PageInner.GetPage $path)) }}
+    {{- $href = .RelPermalink }}
+    {{- with $url_destination.Fragment }}{{ $href = printf "%s#%s" $href . }}{{ end }}
+  {{- end }}
+{{- end -}}
+
+<a href="{{ $href }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $url_destination.IsAbs }} rel="noopener"{{ end }}>{{ .Text }}</a>

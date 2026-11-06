@@ -1,0 +1,4 @@
++++
+title = "~/projects"
+aliases = ["/projects/"]
++++

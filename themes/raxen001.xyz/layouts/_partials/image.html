@@ -1,0 +1,52 @@
+{{- $img := .image }}
+{{- $widths := .widths | default (slice 480 960 1440) }}
+{{- $sizes := .sizes | default "100vw" }}
+{{- $priority := .priority | default false }}
+{{- $attrs := dict
+  "alt" (.alt | default "")
+  "class" .class
+  "loading" (cond $priority "eager" "lazy")
+  "fetchpriority" (cond $priority "high" "")
+  "decoding" "async"
+}}
+
+{{- if and $img (reflect.IsImageResourceProcessable $img) (ne $img.MediaType.SubType "gif") }}
+  {{- $img = $img.Filter images.AutoOrient }}
+  {{- $largest := index (sort $widths) (sub (len $widths) 1) }}
+  {{- $targets := slice }}
+  {{- range $widths }}
+    {{- if lt . $img.Width }}
+      {{- $targets = $targets | append . }}
+    {{- end }}
+  {{- end }}
+  {{- $targets = $targets | append (cond (lt $img.Width $largest) $img.Width $largest) | uniq }}
+  {{- $srcset := slice }}
+  {{- $src := "" }}
+  {{- range $targets }}
+    {{- $src = $img.Process (printf "resize %dx webp" .) }}
+    {{- $srcset = $srcset | append (printf "%s %dw" $src.RelPermalink $src.Width) }}
+  {{- end }}
+  {{- $attrs = merge $attrs (dict
+    "src" $src.RelPermalink
+    "srcset" (delimit $srcset ", ")
+    "sizes" (cond (gt (len $srcset) 1) $sizes "")
+    "width" $src.Width
+    "height" $src.Height
+    )
+  }}
+{{- else if $img }}
+  {{- $attrs = merge $attrs (dict "src" $img.RelPermalink) }}
+  {{- if reflect.IsImageResourceProcessable $img }}
+    {{- $attrs = merge $attrs (dict "width" $img.Width "height" $img.Height) }}
+  {{- end }}
+{{- end }}
+
+{{- with $attrs.src }}
+  <img
+    {{- range $k, $v := $attrs }}
+      {{- if or $v (eq $k "alt") }}
+        {{- printf " %s=%q" $k (string $v) | safeHTMLAttr }}
+      {{- end }}
+    {{- end }}
+  />
+{{- end }}

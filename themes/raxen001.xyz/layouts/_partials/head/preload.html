@@ -1,0 +1,18 @@
+{{- $preload := slice "SpaceMono-Regular" "ColorBasic" }}
+
+{{- range .Data.Artifacts }}
+  {{- $font := . }}
+  {{- if eq .MediaType.MainType "font" }}
+    {{- range $preload }}
+      {{- if hasPrefix (path.Base $font.RelPermalink) (printf "%s-" .) }}
+        <link
+          rel="preload"
+          href="{{ $font.RelPermalink }}"
+          as="font"
+          type="{{ $font.MediaType.Type }}"
+          crossorigin
+        />
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}

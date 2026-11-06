@@ -1,0 +1,82 @@
+{{- $description := site.Params.description }}
+{{- if not .IsHome }}
+  {{- $description = or .Description (.Summary | plainify | strings.TrimSpace | truncate 160) $description }}
+{{- end }}
+{{- $title := cond .IsHome site.Title .Title }}
+{{- $locale := split site.Language.Locale "-" }}
+{{- $ogLocale := cond (gt (len $locale) 1) (printf "%s_%s" (index $locale 0) (upper (index $locale 1))) (index $locale 0) }}
+
+
+<meta name="description" content="{{ $description }}" />
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<meta property="og:site_name" content="{{ site.Title }}" />
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:locale" content="{{ $ogLocale }}" />
+<meta property="og:type" content="{{ cond .IsPage "article" "website" }}" />
+
+{{- if .IsPage }}
+  <meta
+    property="article:published_time"
+    content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"
+  />
+  <meta
+    property="article:modified_time"
+    content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}"
+  />
+  <meta property="article:author" content="{{ site.Params.author.name }}" />
+  <meta property="article:section" content="{{ .Section }}" />
+{{- end }}
+
+{{- $image := "" }}
+{{- with partial "helper/get_cover.html" . }}
+  {{- if reflect.IsImageResourceProcessable . }}
+    {{- $image = (.Filter images.AutoOrient).Process "fill 1200x630 center jpg q75" }}
+  {{- end }}
+{{- end }}
+
+{{- with $image }}
+  <meta property="og:image" content="{{ .Permalink }}" />
+  <meta property="og:image:width" content="{{ .Width }}" />
+  <meta property="og:image:height" content="{{ .Height }}" />
+  <meta property="og:image:type" content="{{ .MediaType.Type }}" />
+  <meta property="og:image:alt" content="{{ $title }}" />
+{{- end }}
+<meta name="twitter:card" content="summary_large_image" />
+
+{{- $author := dict "@type" "Person" "name" site.Params.author.name "url" site.Home.Permalink }}
+{{- $data := slice }}
+{{- if .IsHome }}
+  {{- $sameAs := slice }}
+  {{- range site.Params.social }}
+    {{- if hasPrefix .url "https://" }}
+      {{- $sameAs = $sameAs | append .url }}
+    {{- end }}
+  {{- end }}
+  {{- $data = $data | append (dict "@context" "https://schema.org" "@type" "WebSite" "name" site.Title "url" site.Home.Permalink "description" $description) }}
+  {{- $data = $data | append (merge $author (dict "@context" "https://schema.org" "sameAs" $sameAs)) }}
+{{- else if and .IsPage (in (slice "blog" "personal_writings") .Section) }}
+  {{- $post := dict
+    "@context" "https://schema.org"
+    "@type" "BlogPosting"
+    "headline" .Title
+    "description" $description
+    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+    "url" .Permalink
+    "author" $author
+  }}
+  {{- with $image }}{{ $post = merge $post (dict "image" .Permalink) }}{{ end }}
+  {{- $data = $data | append $post }}
+{{- else if and .IsPage (eq .Section "gallery") }}
+  {{- $gallery := dict "@context" "https://schema.org" "@type" "ImageGallery" "name" .Title "url" .Permalink }}
+  {{- with $image }}
+    {{ $gallery = merge $gallery (dict "image" .Permalink) }}
+  {{ end }}
+  {{- $data = $data | append $gallery }}
+{{- end }}
+{{- range $data }}
+<script type="application/ld+json">{{ . | jsonify | safeJS }}</script>
+{{- end }}

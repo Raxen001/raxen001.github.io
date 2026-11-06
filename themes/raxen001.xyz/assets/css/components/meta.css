@@ -1,0 +1,30 @@
+/* title / author / date block (_partials/meta.html), on cards and posts */
+.meta {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: baseline;
+  gap: 0.7rem;
+  padding: 0.7rem;
+  font-family: var(--font-banner);
+
+  dt:nth-of-type(1) {
+    color: var(--accent-6);
+  }
+
+  dt:nth-of-type(2) {
+    color: var(--accent-3);
+  }
+
+  dt:nth-of-type(3) {
+    color: var(--accent-5);
+  }
+
+  dt:nth-of-type(4) {
+    color: var(--accent-4);
+  }
+
+  :is(h1, h2) {
+    color: inherit;
+    font: inherit;
+  }
+}

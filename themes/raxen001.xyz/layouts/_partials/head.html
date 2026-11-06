@@ -1,0 +1,19 @@
+{{- partial "head/meta.html" . }}
+
+
+<title>
+  {{ if .IsHome }}
+    {{ site.Title }}
+  {{ else }}
+    {{ printf "%s | %s" .Title site.Title }}
+  {{ end }}
+
+</title>
+
+{{- partial "head/seo.html" . }}
+{{- partial "head/feeds.html" . }}
+
+{{ partialCached "head/preload.html" . }}
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}
+{{- partialCached "head/analytics.html" . }}

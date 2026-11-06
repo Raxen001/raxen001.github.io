@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <div class="gallery container" data-pagefind-body>
+    <header>
+      <h1>{{ .Title }}</h1>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">
+        {{- .Date | time.Format ":date_long" -}}
+      </time>
+    </header>
+
+    <ul class="tiles list-none grid">
+      {{- range $i, $img := .Resources.ByType "image" }}
+        {{- partial "gallery/tile.html" (dict "image" $img "id" (printf "photo-%d" $i) "caption" (replace (path.BaseName $img.Name) "_" " ")) }}
+      {{- end }}
+    </ul>
+  </div>
+{{ end }}

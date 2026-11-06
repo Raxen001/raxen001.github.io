@@ -1,0 +1,34 @@
+/*
+ * list items take the heading accents in order, repeating every 6;
+ * anything they colour with --accent (text, hover pill, focus ring) follows.
+ * menus go 1 → 6, the marquee starts at 4: 4 5 6 1 2 3
+ */
+
+/* :root's --accent-container is mixed from the global accent; redo it per item */
+:is(.menu, .marquee ul) > li {
+  --accent-container: color-mix(in oklch, var(--accent) 33%, transparent);
+}
+
+:is(.menu > li:nth-child(6n + 1), .marquee li:nth-child(6n + 4)) {
+  --accent: var(--accent-1);
+}
+
+:is(.menu > li:nth-child(6n + 2), .marquee li:nth-child(6n + 5)) {
+  --accent: var(--accent-2);
+}
+
+:is(.menu > li:nth-child(6n + 3), .marquee li:nth-child(6n + 6)) {
+  --accent: var(--accent-3);
+}
+
+:is(.menu > li:nth-child(6n + 4), .marquee li:nth-child(6n + 1)) {
+  --accent: var(--accent-4);
+}
+
+:is(.menu > li:nth-child(6n + 5), .marquee li:nth-child(6n + 2)) {
+  --accent: var(--accent-5);
+}
+
+:is(.menu > li:nth-child(6n + 6), .marquee li:nth-child(6n + 3)) {
+  --accent: var(--accent-6);
+}

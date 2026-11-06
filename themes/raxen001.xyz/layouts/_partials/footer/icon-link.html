@@ -1,0 +1,8 @@
+<a
+  class="icon-link"
+  href="{{ .url }}"
+  {{ with .rel }}rel="{{ . }}"{{ end }}
+  aria-label="{{ .label | humanize }}"
+>
+  {{- partialCached "icon.html" .icon .icon -}}
+</a>

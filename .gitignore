@@ -13,3 +13,6 @@ hugo.linux
 # Temporary lock file while building
 /.hugo_build.lock
 .hugo_build.lock
+
+/static/pagefind/
+node_modules/
