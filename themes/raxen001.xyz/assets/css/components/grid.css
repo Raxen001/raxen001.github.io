@@ -40,7 +40,10 @@ html:has(> body > main > :is(.gallery, .post)) {
   &::after {
     content: "";
     position: fixed;
-    inset: -25%;
+    /* keep these viewport-sized: Firefox only runs animations on the
+       compositor for frames not much bigger than the viewport; any larger and
+       they fall back to the main thread and judder against smooth scrolling */
+    inset: 0;
     z-index: -1;
     pointer-events: none;
     visibility: hidden;
@@ -66,21 +69,37 @@ html:has(> body > main > :is(.gallery, .post)) {
  * - parallax depth: the heavy grid is "nearer", rushes past faster and fades
  *   first; the fine grid follows more slowly
  * - past the warp point the shooting stars grow out of the middle of the
- *   screen, then stream outwards on a loop and spin slowly as you scroll
+ *   screen, then keep streaming outwards on their own and spin slowly as
+ *   you scroll
+ *
+ * kept light on purpose, so the frame rate holds up (Firefox especially):
+ * - the glass on these pages drops its backdrop blur: it would be redone
+ *   every frame over the moving background, and over a near-black grid it
+ *   was hardly visible anyway
  *
  * kept gentle on purpose (WCAG 2.3.1, 2.3.3):
  * - everything that follows the scroll is continuous and reversible: nothing
  *   switches on or off at a point, so scrolling never makes anything pop
- * - the only thing on a clock is the star loop: dim grey on black, fading in
- *   and out smoothly, slower than one cycle every 2s, so nothing flashes
+ * - the stars are dim grey on black, fade in and out smoothly and loop
+ *   slower than once every 2s, so nothing flashes
  * - jump links scroll smoothly instead of teleporting the warp
  * - off entirely for reduced motion, more contrast, or forced colours: the
  *   page keeps the plain static grid and no stars
+ *
+ * desktop only: needs the tablet breakpoint (40rem, see --breakpoint in
+ * style.css; @media can't read var()) and no touch screen as the main
+ * pointer. On phones the post fills the screen so the warp is never seen,
+ * and on touch screens the fixed animated layers get drawn over the page
+ * during momentum scrolling.
  */
 @supports (animation-timeline: scroll()) {
-  @media (prefers-reduced-motion: no-preference) and (not (prefers-contrast: more)) and (not (forced-colors: active)) {
+  @media (width >= 40rem) and (not (pointer: coarse)) and (prefers-reduced-motion: no-preference) and (not (prefers-contrast: more)) and (not (forced-colors: active)) {
     html:has(> body > main > :is(.gallery, .post)) {
       scroll-behavior: smooth;
+    }
+
+    body:has(> main > :is(.gallery, .post)) {
+      --glass-blur: none;
     }
 
     body:has(> main > :is(.gallery, .post))::before,
@@ -99,11 +118,12 @@ html:has(> body > main > :is(.gallery, .post)) {
     }
 
     /*
-     * the stars loop on the clock and spin with the scroll; warp-reveal grows
-     * them out of the middle between 15% and 30% of the page (the warp point),
-     * in step with the scroll. Each animation has its own property (transform,
-     * opacity, rotate, scale) so they add up instead of fighting. The two
-     * layers loop at different speeds so the stars never repeat in step.
+     * the stars stream out on the clock; warp-spin turns them slowly with the
+     * scroll and warp-reveal grows them out of the middle between 15% and 30%
+     * of the page (the warp point). Each animation has its own property
+     * (transform + opacity, rotate, scale) so they add up instead of
+     * fighting. The two layers loop at different speeds so the stars never
+     * repeat in step.
      */
     html:has(> body > main > :is(.gallery, .post)) {
       &::before,

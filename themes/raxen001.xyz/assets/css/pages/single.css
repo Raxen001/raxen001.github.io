@@ -1,5 +1,5 @@
 /*
- * a post: one glass sheet over the graph paper (layout/site.css). Borders
+ * a post: one solid sheet over the graph paper (components/grid.css). Borders
  * follow the heading accents: cover --accent-2, meta --accent-1, toc --accent-5.
  */
 
@@ -9,6 +9,11 @@ body:has(> main > .post) > header {
 }
 
 .post {
+  /* solid, not see-through: the warp behind never shows through the text,
+     and with nothing to blur the browser skips the backdrop blur entirely */
+  --glass-bg: var(--surface-dim);
+  --glass-blur: none;
+
   display: grid;
   /* minmax(0, …): a wide image, code block or table can't stretch the column */
   grid-template-columns: minmax(0, 1fr);

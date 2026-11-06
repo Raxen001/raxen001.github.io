@@ -26,6 +26,8 @@
   /* roles */
   --bg: var(--heavy-black);
   --surface: var(--light-black);
+  /* opaque sheets over the moving background (posts): darker than --surface */
+  --surface-dim: #111;
   --fg: var(--dragon-white);
   --muted: var(--underwater-world);
   --accent: var(--yellow);
