@@ -21,12 +21,12 @@ body:has(> main > :is(.gallery, .post)) {
 
   &::before {
     background-color: var(--grid-minor);
-    mask: url("../../images/grid-minor.svg") center / 20px 20px;
+    mask: url("../../images/grid-minor.svg") center / 10px 10px;
   }
 
   &::after {
     background-color: var(--grid-major);
-    mask: url("../../images/grid-major.svg") center / 100px 100px;
+    mask: url("../../images/grid-major.svg") center / 50px 50px;
   }
 }
 
@@ -105,7 +105,7 @@ html:has(> body > main > :is(.gallery, .post)) {
     body:has(> main > :is(.gallery, .post))::before,
     body:has(> main > :is(.gallery, .post))::after {
       will-change: transform, opacity;
-      animation: linear both;
+      animation: ease-in-out both;
       animation-timeline: scroll(root block);
     }
 
@@ -131,15 +131,15 @@ html:has(> body > main > :is(.gallery, .post)) {
         visibility: visible;
         will-change: transform, opacity, rotate, scale;
         animation:
-          shooting-stars 2.4s ease-in-out infinite,
-          warp-spin linear both,
+          shooting-stars 2.5s ease-in-out infinite,
+          warp-spin ease-in both,
           warp-reveal ease-out both;
         animation-timeline: auto, scroll(root block), scroll(root block);
         animation-range: normal, normal, 15% 30%;
       }
 
       &::after {
-        animation-duration: 3.1s, auto, auto;
+        animation-duration: 3s, auto, auto;
       }
     }
   }

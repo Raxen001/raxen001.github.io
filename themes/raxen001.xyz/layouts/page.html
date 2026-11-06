@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <article class="post glass" data-pagefind-body data-pagefind-meta="title:{{ .Title }}">
+  <article class="post" data-pagefind-body data-pagefind-meta="title:{{ .Title }}">
     <header data-pagefind-ignore>
       {{- with partial "helper/get_cover.html" . }}
         {{- partial "image.html" (dict "image" . "priority" true "widths" (slice 480 960 1440) "sizes" "(width >= 52rem) 48rem, 100vw") }}

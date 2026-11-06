@@ -9,9 +9,9 @@ body:has(> main > .post) > header {
 }
 
 .post {
-  /* solid, not see-through: the warp behind never shows through the text,
-     and with nothing to blur the browser skips the backdrop blur entirely */
-  --glass-bg: var(--surface-dim);
+  /* a plain solid sheet, not .glass: nothing shows through, so there's no
+     backdrop blur to redo while the warp moves behind it. The pills inside
+     still read --glass-blur, so switch it off for them too */
   --glass-blur: none;
 
   display: grid;
@@ -21,7 +21,9 @@ body:has(> main > .post) > header {
   inline-size: min(100% - 2 * var(--space-2xs), 64rem);
   margin: var(--space-m) auto;
   padding: var(--space-s);
+  border: var(--border-width) solid var(--glass-edge);
   border-radius: var(--radius-l);
+  background-color: var(--surface-dim);
 
   > header {
     display: grid;
