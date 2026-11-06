@@ -1,0 +1,103 @@
+/*
+ * the old site's graph paper (gallery, posts): fine lines every 20px, heavier
+ * ones every 100px. SVG tiles used as masks on two fixed layers, so the colours
+ * come from --grid-minor / --grid-major and nothing repaints while scrolling
+ * (the conic-gradient version cost ~70ms a frame when scrolling a post).
+ *
+ * the tiles are centred on the viewport so the warp below zooms out of the
+ * middle of the screen and the fine lines stay on the heavy ones.
+ */
+body:has(> main > :is(.gallery, .post)) {
+  background: var(--bg);
+
+  &::before,
+  &::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &::before {
+    background-color: var(--grid-minor);
+    mask: url("../../images/grid-minor.svg") center / 20px 20px;
+  }
+
+  &::after {
+    background-color: var(--grid-major);
+    mask: url("../../images/grid-major.svg") center / 100px 100px;
+  }
+}
+
+/*
+ * star streams behind the grid: uneven spokes from three spacings that don't
+ * line up. Hidden until the warp fades them in.
+ */
+html:has(> body > main > :is(.gallery, .post))::before {
+  content: "";
+  position: fixed;
+  inset: -25%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    repeating-conic-gradient(from 3deg, var(--streak-1) 0 0.12deg, transparent 0.12deg 7deg),
+    repeating-conic-gradient(from 1deg, var(--streak-2) 0 0.08deg, transparent 0.08deg 11deg),
+    repeating-conic-gradient(from 5deg, var(--streak-3) 0 0.1deg, transparent 0.1deg 13deg);
+  /* empty middle (the point we fly towards), streams only towards the edges */
+  mask: radial-gradient(circle closest-side, transparent 18%, #000a 55%, #000 100%);
+}
+
+/*
+ * warp: scrolling flies the reader into the graph paper. No JS, just
+ * scroll-driven animations on the fixed layers. Only transform and opacity
+ * are animated, so the compositor scales the already-painted layers and
+ * nothing repaints while scrolling.
+ *
+ * - parallax depth: the heavy grid is "nearer", rushes past faster and fades
+ *   first; the fine grid follows more slowly
+ * - the streams fade in, stretch and spin slowly the deeper you scroll
+ */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    body:has(> main > :is(.gallery, .post))::before,
+    body:has(> main > :is(.gallery, .post))::after,
+    html:has(> body > main > :is(.gallery, .post))::before {
+      will-change: transform, opacity;
+      animation: linear both;
+      animation-timeline: scroll(root block);
+    }
+
+    body:has(> main > :is(.gallery, .post))::before {
+      animation-name: warp-far;
+    }
+
+    body:has(> main > :is(.gallery, .post))::after {
+      animation-name: warp-near;
+    }
+
+    html:has(> body > main > :is(.gallery, .post))::before {
+      animation-name: warp-streams;
+    }
+  }
+}
+
+/* scale steps grow geometrically, so the speed feels constant all the way */
+@keyframes warp-far {
+  0% { scale: 1; opacity: 1; }
+  50% { scale: 1.25; opacity: 0.6; }
+  100% { scale: 1.6; opacity: 0; }
+}
+
+@keyframes warp-near {
+  0% { scale: 1; opacity: 1; }
+  50% { scale: 1.7; opacity: 0.2; }
+  100% { scale: 3; opacity: 0; }
+}
+
+@keyframes warp-streams {
+  0% { opacity: 0; scale: 0.6; rotate: 0deg; }
+  15% { opacity: 0.25; }
+  100% { opacity: 0.6; scale: 1.3; rotate: 12deg; }
+}

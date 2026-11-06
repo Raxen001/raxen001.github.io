@@ -9,6 +9,7 @@
 @import "layout/footer.css" layer(layout);
 
 @import "components/code.css" layer(components);
+@import "components/grid.css" layer(components);
 @import "components/icon-link.css" layer(components);
 @import "components/accent-cycle.css" layer(components);
 @import "components/menu.css" layer(components);

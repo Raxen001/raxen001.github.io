@@ -35,6 +35,10 @@
   /* on the pure black --bg: lines only just lighter than black */
   --grid-minor: #0c0c0c;
   --grid-major: #161616;
+  /* warp streams behind the grid: light-black, a touch above the grid lines */
+  --streak-1: #2a2a2a;
+  --streak-2: #3a3a3a;
+  --streak-3: #222;
 
   /* h1 - h6 */
   --accent-1: var(--peach);
