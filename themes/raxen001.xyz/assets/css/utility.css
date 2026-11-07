@@ -59,6 +59,7 @@
   border: var(--border-width) solid var(--glass-edge);
   /* light catching the top edge */
   box-shadow: inset 0 1px 0 var(--glass-highlight);
+  transform: translateZ(0);
 
   /* clickable glass (a link or button, or a card wrapping one): thicker edge
      on hover, drawn as a ring so the box doesn't grow and shift its content */

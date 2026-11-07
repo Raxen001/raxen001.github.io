@@ -90,7 +90,7 @@ html:has(> body > main > :is(.gallery, .post)) {
     }
 
     body:has(> main > :is(.gallery, .post)) {
-      --glass-blur: none;
+      /* --glass-blur: none; */
     }
 
     body:has(> main > :is(.gallery, .post))::before,

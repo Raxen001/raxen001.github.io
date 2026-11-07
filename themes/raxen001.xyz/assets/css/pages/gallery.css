@@ -46,7 +46,7 @@
   /* the tile itself: a link (album cover) or a button (opens the lightbox) */
   > :is(a, button) {
     /* the photo covers the whole tile, so a blur behind it is never seen */
-    --glass-blur: none;
+    /* --glass-blur: none; */
 
     display: block;
     inline-size: 100%;

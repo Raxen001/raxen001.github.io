@@ -12,7 +12,7 @@ body:has(> main > .post) > header {
   /* a plain solid sheet, not .glass: nothing shows through, so there's no
      backdrop blur to redo while the warp moves behind it. The pills inside
      still read --glass-blur, so switch it off for them too */
-  --glass-blur: none;
+  /* --glass-blur: none; */
 
   display: grid;
   /* minmax(0, …): a wide image, code block or table can't stretch the column */
