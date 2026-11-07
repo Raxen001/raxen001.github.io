@@ -31,7 +31,10 @@ body:has(> main > .contact) {
     text-decoration: none;
 
     &:hover {
-      transform: scale(1.05) translate(4%, -3%);
+      /* scale + translate, not transform: .glass sets transform in the
+         utilities layer, which would win and cancel this */
+      scale: 1.05;
+      translate: 4% -3%;
       border-radius: var(--radius-m);
       color: var(--base);
 
@@ -56,7 +59,8 @@ body:has(> main > .contact) {
 @media (prefers-reduced-motion: no-preference) {
   .contact a {
     transition:
-      transform 250ms linear,
+      scale 250ms linear,
+      translate 250ms linear,
       border-radius 250ms linear,
       color 250ms linear;
 

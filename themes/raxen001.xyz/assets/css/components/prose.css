@@ -205,9 +205,10 @@
   kbd {
     padding: 0.1em 0.4em;
     border: var(--border-width) solid var(--accent-5);
+    /* thicker bottom edge for the key-cap look */
+    border-block-end-width: calc(var(--border-width) + 2px);
     border-radius: var(--radius-s);
     background-color: var(--glass-layer);
-    box-shadow: inset 0 -2px 0 var(--accent-5);
     font-size: 0.85em;
   }
 

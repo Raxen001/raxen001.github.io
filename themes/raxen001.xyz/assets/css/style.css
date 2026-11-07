@@ -91,7 +91,6 @@
   --glass-tint: color-mix(in oklch, var(--surface) 70%, transparent);
   --glass-tint-hi: color-mix(in oklch, var(--surface) 85%, transparent);
   --glass-edge: color-mix(in oklch, var(--fg) 10%, transparent);
-  --glass-highlight: color-mix(in oklch, white 10%, transparent);
   --glass-layer: color-mix(in oklch, var(--fg) 6%, transparent);
   /* darker layer on glass, for text that needs contrast */
   --glass-dark: color-mix(in oklch, var(--bg) 54%, transparent);
